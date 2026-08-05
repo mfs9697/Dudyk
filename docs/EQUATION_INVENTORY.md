@@ -45,7 +45,7 @@ line arguments use degrees.
 | \(\lambda_0\) | Intact broken bimaterial interface | \(D_0(-1-\lambda_0)=0\) | Printed as Eq. (A.2), PDF p. 9 | `D0` |
 | \(\lambda\) | Corner after formation of the symmetric interfacial shear crack | \(D(-1-\lambda)=0\) | Printed below Eq. (A.3), with \(D\) in Eq. (A.4), PDF pp. 9-10 | `D` |
 | \(\lambda_2\) | Process zone in material 2 | \(D_2(-1-\lambda_2)=0\) | Root relation omitted; inferred from the kernel in Eq. (5). The resulting curve reproduces Figure 4 | `D2_printed` |
-| \(\lambda_1\) | Process zone in material 1 | Material-swap image of the \(D_2\) problem: \(D_2^{\mathrm{swap}}(-1-\lambda_1;\pi-\alpha)=0\) | This is the transformation explicitly stated below Figure 3 and it reproduces Figure 4. Direct use of printed \(D_1\) does not | `D2_printed after material swap` |
+| \(\lambda_1\) | Process zone in material 1 | \(D_{1,\mathrm{corrected}}(-1-\lambda_1)=0\) | The corrected determinant is forced by the material-swap transformation stated below Figure 3 and reproduces Figure 4 | `D1_corrected` |
 
 For \(\lambda_0\) and \(\lambda\), the manuscript says to select the smallest
 root on \((-1,0)\), i.e. the most negative real exponent. The same selector is
@@ -153,7 +153,7 @@ D_i(-1-\lambda_i)=0.
 However, the direct printed-\(D_1\) calculation is not the curve labelled
 \(\lambda_1\) in Figure 4.
 
-## 6. Material-swap calculation of \(\lambda_1\)
+## 6. Symmetry correction and calculation of \(\lambda_1\)
 
 The manuscript states below Figure 3 that results for the reversed stiffness
 ratio follow from
@@ -172,7 +172,35 @@ For general unequal Poisson ratios, the complete swap is
 (E_1,\nu_1)\leftrightarrow(E_2,\nu_2).
 \]
 
-Accordingly, the implemented material-1 branch is
+Writing the printed \(D_2\) after this transformation and multiplying it by
+the nonzero factor \(e\) gives
+
+\[
+\begin{aligned}
+D_{1,\mathrm{corrected}}(p)={}&2e(1+\kappa_2)
+[\cos(2p\alpha)-\cos(2\alpha)]
+[\sin^2(p(\pi-\alpha))-p^2\sin^2\alpha]\\
+&+(1+\kappa_1)
+[\sin(2p\alpha)+p\sin(2\alpha)]
+[\sin(2p(\pi-\alpha))-p\sin(2\alpha)].
+\end{aligned}
+\]
+
+Thus, the two signs in the second product are opposite to those printed in
+Eq. (5). The corrected determinant satisfies the pointwise identity
+
+\[
+D_{1,\mathrm{corrected}}(p;\alpha,E_1,E_2,\nu_1,\nu_2)
+=eD_2(p;\pi-\alpha,E_2,E_1,\nu_2,\nu_1).
+\]
+
+The implemented material-1 calculation is therefore
+
+\[
+\boxed{D_{1,\mathrm{corrected}}(-1-\lambda_1)=0.}
+\]
+
+It is checked independently against
 
 \[
 \boxed{
@@ -181,9 +209,9 @@ D_2\!\left(-1-\lambda_1;
 }
 \]
 
-This calculation matches the blue/green \(\lambda_1\) branches in Figure 4.
-The direct root of the printed \(D_1\) is still returned as
-`lambda1_D1_printed` for diagnosis.
+Both calculations match the \(\lambda_1\) branch in Figure 4. The exact direct
+root of the printed \(D_1\) is still returned as `lambda1_D1_printed` for
+diagnosis.
 
 ## 7. Baseline numerical checkpoints
 
@@ -195,13 +223,14 @@ E_1/E_2=0.5,\qquad \nu_1=\nu_2=0.3,
 
 the tested values are:
 
-| \(\alpha\) | \(\lambda_0\) | \(\lambda\) | \(\lambda_1\), swap branch | \(\lambda_2\) | Direct printed \(D_1\) root |
+| \(\alpha\) | \(\lambda_0\) | \(\lambda\) | \(\lambda_1\), corrected \(D_1\) | \(\lambda_2\) | Direct printed \(D_1\) root |
 | ---: | ---: | ---: | ---: | ---: | ---: |
 | \(45^\circ\) | -0.0890898075 | -0.6131972266 | -0.3938308090 | -0.4675384157 | no interior sign-changing root |
 | \(135^\circ\) | -0.1115381682 | -0.5467577000 | -0.4585914004 | -0.3001639298 | -0.1658199669 |
 
 All selected determinant residuals at these checkpoints are below
-\(10^{-9}\) with the default scan.
+\(10^{-9}\) with the default Python scan and below \(10^{-14}\) in the
+independently executed MATLAB calculation.
 
 In the complete integer-angle sweep from \(1^\circ\) to \(179^\circ\), all
 four physical calculations return an interior root at every angle except the
@@ -218,9 +247,10 @@ sign-changing interior root at only 59 of the 179 sampled angles.
    \(\beta_1=0,\beta_2=\pi\).
 3. **Printed \(D_1\) versus Figure 4.** Direct use of the printed \(D_1\) does
    not reproduce the plotted material-1 exponent or the stated material-swap
-   symmetry. The transformed \(D_2\) calculation does. This may be a sign or
-   indexing error in \(D_1\), but it should be checked against the authors'
-   original algebra or calculation files before the paper is revised.
+   symmetry. Reversing the two `p sin(2 alpha)` signs in its second product
+   restores the exact determinant identity and Figure 4. This is the proposed
+   correction, subject to confirmation from the authors' original algebra or
+   calculation files.
 4. **Degenerate flat-interface case.** At \(\alpha=90^\circ\), the model is
    excluded and the determinants possess endpoint/degenerate behavior. Values
    shown as zero in a plot should be described as limits, not as ordinary
@@ -237,6 +267,7 @@ sign-changing interior root at only 59 of the 179 sampled angles.
 | \(D_0(p)\) | `determinant_D0` | `characteristic_determinant('D0',...)` |
 | \(D(p)\) | `determinant_D` | `characteristic_determinant('D',...)` |
 | Printed \(D_1(p)\) | `determinant_D1_printed` | `characteristic_determinant('D1_printed',...)` |
+| Corrected \(D_1(p)\) | `determinant_D1_corrected` | `characteristic_determinant('D1_corrected',...)` |
 | Printed \(D_2(p)\) | `determinant_D2_printed` | `characteristic_determinant('D2_printed',...)` |
 | All real roots and selector | `find_real_characteristic_roots` | `find_characteristic_roots.m` |
 | Four physical exponents | `calculate_four_characteristic_roots` | `calculate_characteristic_roots.m` |

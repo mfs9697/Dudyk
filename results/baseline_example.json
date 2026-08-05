@@ -32,9 +32,9 @@
     },
     "lambda1": {
       "alpha_deg": 45.0,
-      "determinant": "D2_printed after material swap",
-      "note": "Figure-4/material-symmetry branch for material 1.",
-      "residual": 6.41633413067666e-11,
+      "determinant": "D1_corrected",
+      "note": "Symmetry-corrected material-1 branch; reproduces Fig. 4.",
+      "residual": 3.2081004519568523e-11,
       "roots": [
         -0.39383080898669176
       ],
@@ -48,6 +48,17 @@
       "residual": null,
       "roots": [],
       "selected": null,
+      "selector": "smallest_lambda"
+    },
+    "lambda1_symmetry": {
+      "alpha_deg": 45.0,
+      "determinant": "D2_printed after material swap",
+      "note": "Independent symmetry check for the corrected material-1 branch.",
+      "residual": 6.41633413067666e-11,
+      "roots": [
+        -0.39383080898669176
+      ],
+      "selected": -0.39383080898669176,
       "selector": "smallest_lambda"
     },
     "lambda2": {

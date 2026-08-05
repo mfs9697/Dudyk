@@ -1,101 +1,125 @@
-# Characteristic-root reproducibility package
+# Dudyk paper reproducibility workspace
 
-This package implements the four stress-singularity exponents used in
-Figure 4 of the supplied manuscript:
+This repository contains the source manuscript, an equation audit, and two
+independent implementations of the four stress-singularity exponents plotted
+in Figure 4:
 
-- `lambda0`: intact broken interface;
+- `lambda0`: intact broken bimaterial interface;
 - `lambda`: interface after formation of the symmetric shear crack;
-- `lambda1`: post-zone exponent in material 1, calculated by material-swap
-  symmetry;
-- `lambda2`: post-zone exponent in material 2.
+- `lambda1`: process zone in material 1;
+- `lambda2`: process zone in material 2.
 
-The package also exposes the direct root of the printed `D1` determinant as a
-diagnostic because it does not reproduce the material-1 branch in Figure 4.
-See [EQUATION_INVENTORY.md](EQUATION_INVENTORY.md) for the complete formula
-audit.
+The calculation preserves the determinant printed as `D1_printed` for audit
+purposes and adds `D1_corrected`, the material-symmetry image of the printed
+`D2`. The two formulas differ in the signs of the two `p*sin(2*alpha)` terms
+in the second product. Only `D1_corrected` reproduces Figure 4 and the
+material-interchange rule stated in the manuscript.
 
-## Contents
+## Repository layout
 
-- `python/characteristic_roots.py`: tested, standard-library reference code;
-- `matlab/*.m`: MATLAB implementation for the manuscript workflow;
-- `tests/test_characteristic_roots.py`: regression, residual, and symmetry
-  tests;
-- `results/baseline_roots_1deg.csv`: recalculation for
-  `E1/E2=0.5`, `nu1=nu2=0.3`, and integer angles from 1 to 179 degrees;
-- `results/baseline_example.json`: detailed output at 45 degrees.
+- `manuscript/original/Стаття.pdf`: supplied Ukrainian manuscript;
+- `docs/EQUATION_INVENTORY.md`: equation-by-equation audit and proposed
+  correction;
+- `docs/REPRODUCIBILITY.md`: independent-recalculation protocol and acceptance
+  criteria;
+- `matlab/`: MATLAB R2023a implementation, regression tests, sweeps, and plots;
+- `python/`: standard-library reference calculation and optional plotting
+  script;
+- `tests/`: Python regression and symmetry tests;
+- `results/`: independently generated CSV and JSON reference results;
+- `figures/`: recalculated Figure 4 and a separate printed-`D1` audit plot.
 
-## Python usage
+## Verification status
 
-Python 3.10 or newer is recommended. No third-party packages are required.
+The Python regression suite contains six tests and passes. It verifies the
+reported roots at 45 and 135 degrees, determinant residuals, material-swap
+symmetry, the pointwise corrected-`D1` identity, and failure of the printed
+`D1` to satisfy that identity.
 
-```bash
-python python/characteristic_roots.py --alpha-deg 45
+The MATLAB R2023a regression suite was run independently on 5 August 2026 and
+reported:
+
+```text
+All characteristic-root tests passed.
 ```
 
-Generate the baseline one-degree sweep:
+All 179 MATLAB angle rows were compared with the Python reference. Maximum
+absolute differences for the four physical branches were:
 
-```bash
-python python/characteristic_roots.py \
-  --E1 0.5 --E2 1 --nu1 0.3 --nu2 0.3 \
-  --sweep-csv results/baseline_roots_1deg.csv
-```
+| Branch | Maximum absolute difference |
+| --- | ---: |
+| `lambda0` | `3.17e-10` |
+| `lambda` | `4.74e-9` |
+| `lambda1` | `5.17e-11` |
+| `lambda2` | `2.70e-10` |
 
-Run the tests from the package root:
+The largest residual in the independently generated MATLAB data was below
+`1.0e-14`. At 90 degrees the geometry is degenerate, so the CSV contains
+`NaN`/empty values rather than treating zero as an ordinary interior root.
 
-```bash
-python -m unittest discover -s tests -v
-```
+## MATLAB workflow
 
-## MATLAB usage
-
-Add the MATLAB folder to the path and run:
+From the repository root:
 
 ```matlab
 addpath('matlab');
-example_reproduce_roots
 run_characteristic_root_tests
+example_reproduce_roots
 generate_baseline_sweep
+generate_figure4
 ```
+
+The last two commands write:
+
+- `results/baseline_roots_matlab_1deg.csv`;
+- `figures/figure4_recalculated.pdf` and `.png`;
+- `figures/figure4_D1_audit.pdf` and `.png`.
 
 For one angle:
 
 ```matlab
-material = struct('E1',0.5,'E2',1.0,'nu1',0.3,'nu2',0.3);
+material = struct('E1', 0.5, 'E2', 1.0, 'nu1', 0.3, 'nu2', 0.3);
 roots = calculate_characteristic_roots(deg2rad(45), material);
 
 roots.lambda0.selected
 roots.lambda.selected
 roots.lambda1.selected
 roots.lambda2.selected
+roots.lambda1_symmetry.selected
+roots.lambda1_D1_printed.selected
 ```
 
-Each result also contains all detected real roots, the selected root, and the
-absolute determinant residual.
+`lambda1` is the direct root of `D1_corrected`. `lambda1_symmetry` is an
+independent calculation through transformed `D2`; the two values must agree.
+
+## Python workflow
+
+Python 3.10 or newer is recommended. The root calculation and tests use only
+the standard library.
+
+```bash
+python -m unittest discover -s tests -v
+
+python python/characteristic_roots.py \
+  --alpha-deg 45 \
+  --output-json results/baseline_example.json \
+  --sweep-csv results/baseline_roots_1deg.csv
+```
+
+The optional plotting script requires Matplotlib:
+
+```bash
+python python/plot_figure4.py
+```
 
 ## Root convention
 
-The code solves
+Every characteristic equation is solved using
 
 ```text
-p = -1 - lambda,   -1 < lambda < 0
+p = -1 - lambda,   -1 < lambda < 0.
 ```
 
-and selects the smallest real `lambda` by default. Endpoint roots are excluded.
-At the degenerate flat-interface value `alpha=90 degrees`, the code returns no
-interior root rather than inserting the limiting value zero.
-
-## Verification status
-
-The Python reference implementation has been executed in the supplied
-workspace. Five automated tests pass, covering:
-
-- the four baseline roots at 45 and 135 degrees;
-- characteristic-equation residuals;
-- material-swap symmetry;
-- the numerical disagreement between the direct printed `D1` and the
-  Figure-4 material-1 branch.
-
-The MATLAB code is a direct vectorized translation of the tested Python
-formulas. A MATLAB executable was not available in the build environment, so
-`run_characteristic_root_tests.m` is included for immediate verification in
-MATLAB R2023a.
+Endpoint roots are excluded. The selected physical branch is the most
+negative real root in this interval, continuously connected to the reported
+curve. All detected sign-changing roots are retained in the detailed result.

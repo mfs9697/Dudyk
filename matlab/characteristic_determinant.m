@@ -1,10 +1,11 @@
 function value = characteristic_determinant(kind, p, alpha, material)
-%CHARACTERISTIC_DETERMINANT Evaluate D0, D, printed D1, or printed D2.
+%CHARACTERISTIC_DETERMINANT Evaluate the manuscript determinants.
 %
 %   value = characteristic_determinant(kind, p, alpha, material)
 %
-% alpha is in radians. Operations are vectorized in p. The formulas are
-% transcribed from Eqs. (5), (A.2), and (A.4) of the supplied manuscript.
+% alpha is in radians. Operations are vectorized in p. D1_printed is an
+% exact transcription of Eq. (5). D1_corrected is the material-symmetry
+% image of D2_printed and differs from D1_printed in two signs.
 
 material = normalize_material(material);
 e = material.e;
@@ -47,6 +48,12 @@ switch char(kind)
             .* (sinpba2 - p.^2 .* sina2) ...
             + (1 + k1) .* (sin2pa - p .* sin2a) ...
             .* (sin2pba + p .* sin2a);
+
+    case 'D1_corrected'
+        value = 2 .* e .* (1 + k2) .* (cos2pa - cos2a) ...
+            .* (sinpba2 - p.^2 .* sina2) ...
+            + (1 + k1) .* (sin2pa + p .* sin2a) ...
+            .* (sin2pba - p .* sin2a);
 
     case 'D2_printed'
         value = 2 .* (1 + k1) .* (cos2pba - cos2a) ...

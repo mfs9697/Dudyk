@@ -8,5 +8,6 @@ outputDir = fullfile(fileparts(fileparts(mfilename('fullpath'))), 'results');
 if ~isfolder(outputDir)
     mkdir(outputDir);
 end
-writetable(results, fullfile(outputDir, 'baseline_roots_matlab_1deg.csv'));
-fprintf('Wrote %d angle rows to %s.\n', height(results), outputDir);
+outputPath = fullfile(outputDir, 'baseline_roots_matlab_1deg.csv');
+writetable(results, outputPath);
+fprintf('Wrote %d angle rows to %s.\n', height(results), outputPath);
