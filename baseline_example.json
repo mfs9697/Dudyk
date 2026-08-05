@@ -1,0 +1,65 @@
+{
+  "alpha_deg": 45.0,
+  "material": {
+    "E1": 0.5,
+    "E2": 1.0,
+    "e": 0.5,
+    "nu1": 0.3,
+    "nu2": 0.3
+  },
+  "results": {
+    "lambda": {
+      "alpha_deg": 45.0,
+      "determinant": "D",
+      "note": "",
+      "residual": 1.407252092633371e-11,
+      "roots": [
+        -0.6131972265730685
+      ],
+      "selected": -0.6131972265730685,
+      "selector": "smallest_lambda"
+    },
+    "lambda0": {
+      "alpha_deg": 45.0,
+      "determinant": "D0",
+      "note": "",
+      "residual": 4.582290102916886e-11,
+      "roots": [
+        -0.08908980745545543
+      ],
+      "selected": -0.08908980745545543,
+      "selector": "smallest_lambda"
+    },
+    "lambda1": {
+      "alpha_deg": 45.0,
+      "determinant": "D2_printed after material swap",
+      "note": "Figure-4/material-symmetry branch for material 1.",
+      "residual": 6.41633413067666e-11,
+      "roots": [
+        -0.39383080898669176
+      ],
+      "selected": -0.39383080898669176,
+      "selector": "smallest_lambda"
+    },
+    "lambda1_D1_printed": {
+      "alpha_deg": 45.0,
+      "determinant": "D1_printed",
+      "note": "Direct root of printed D1; retained to audit the manuscript inconsistency.",
+      "residual": null,
+      "roots": [],
+      "selected": null,
+      "selector": "smallest_lambda"
+    },
+    "lambda2": {
+      "alpha_deg": 45.0,
+      "determinant": "D2_printed",
+      "note": "",
+      "residual": 6.764355742205908e-11,
+      "roots": [
+        -0.46753841569973836
+      ],
+      "selected": -0.46753841569973836,
+      "selector": "smallest_lambda"
+    }
+  }
+}
