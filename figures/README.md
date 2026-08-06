@@ -41,5 +41,18 @@ copies are exported at 600 dpi for review and presentation.
 solid blue curve in the original Figure 2. Its three panels show `d1/l`,
 `delta1'`, and `J1'` against `sigma'` for `alpha=45 degrees`, `C<0`, and a
 process zone in material 1. It is generated entirely by the MATLAB
-Wiener-Hopf implementation and should be compared with the original curve
-before the remaining Figure-2 and Figure-3 cases are enabled.
+Wiener-Hopf implementation and provides the independently executed reference
+for the four-case calculation.
+
+`figure2_recalculated` contains all four mathematical Figure-2 curves with
+vertical ranges large enough to show every calculated value. The original
+green/blue and solid/dashed conventions identify load sign and process-zone
+material. `figure2_original_window` contains the same curves but uses the
+published panel ranges for direct visual comparison. Keeping both prevents
+clipping from being mistaken for agreement.
+
+The 45-, 105-, and 135-degree cases align with the original curves. The
+10-degree material-2 calculation reproduces `d_2/l` but not both
+`delta_2'` and `J_2'`; see `docs/REPRODUCIBILITY.md`. It is intentionally
+shown from the consistent printed equations and has not been fitted to the
+original pixels.

@@ -275,9 +275,10 @@ sign-changing interior root at only 59 of the 179 sampled angles.
 
 ## 10. Figure-2/3 process-zone equations
 
-The first process-zone reconstruction is deliberately restricted to the
-baseline case `alpha=45 degrees`, `C<0`, material 1. It uses the following
-equations before extending the calculation to complete angle sweeps.
+The process-zone reconstruction evaluates the four baseline cases printed in
+Figure 2: 10 degrees/material 2/positive load, 45 degrees/material 1/negative
+load, 105 degrees/material 2/negative load, and 135 degrees/material 1/positive
+load. The 45-degree case remains the controlled calibration.
 
 Appendix A.3 defines
 
@@ -372,6 +373,23 @@ For `E1/E2=0.5`, `nu1=nu2=0.3`, material 1:
 The negative `g1*q1` confirms `Q1<0`; therefore the material-1 process zone
 at 45 degrees is admissible only for `C<0`, as stated in Section 3.
 
+### Remaining Figure-2 endpoint checkpoints
+
+The three added endpoint calculations use contour truncation 60:
+
+| `alpha` | Material | `sigma'` | `d_i/l` | `delta_i'` | `J_i'` |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| 10 deg | 2 | +0.5 | 0.0313248064 | 0.0677727059 | 0.0217258213 |
+| 105 deg | 2 | -0.5 | 0.0370357093 | 0.0134427769 | 0.0039225730 |
+| 135 deg | 1 | +0.5 | 0.0510105194 | 0.0578658843 | 0.0133074138 |
+
+The 105- and 135-degree rows agree with the original curves at plot-reading
+precision. At 10 degrees, the length agrees but the recalculated opening and
+energy do not. Neither the printed material-2 kernel nor an index-swapped
+diagnostic kernel reproduces all three original panels consistently. This is
+an equation/index audit finding, not a basis for altering Eqs. (8)-(10) to fit
+the plotted pixels.
+
 ### Added MATLAB equation map
 
 | Mathematical object | MATLAB |
@@ -381,5 +399,7 @@ at 45 degrees is admissible only for `C<0`, as stated in Section 3.
 | `D'(-1-lambda)` | `characteristic_determinant_derivative.m` |
 | `g1`, `S_i`, `q_i` | `calculate_asymptotic_coefficients.m` |
 | Normalized Eqs. (8)-(10) | `calculate_process_zone_parameters.m` |
-| 45-degree regression suite | `run_process_zone_tests.m` |
-| Calibration CSV and plot | `generate_figure2_45deg_calibration.m` |
+| Four-case regression suite | `run_process_zone_tests.m` |
+| Case definitions | `figure2_case_definitions.m` |
+| 45-degree calibration CSV and plot | `generate_figure2_45deg_calibration.m` |
+| Complete Figure-2 CSV and plots | `generate_figure2.m` |

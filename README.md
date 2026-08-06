@@ -2,9 +2,8 @@
 
 This repository contains the source manuscript, an equation audit, and two
 independent implementations of the four stress-singularity exponents plotted
-in Figure 4. The MATLAB implementation also contains the first controlled
-Wiener-Hopf reconstruction for the 45-degree solid-blue case in Figures 2
-and 3. The four root quantities are:
+in Figure 4. The MATLAB implementation also contains the four Wiener-Hopf
+process-zone calculations plotted in Figure 2. The four root quantities are:
 
 - `lambda0`: intact broken bimaterial interface;
 - `lambda`: interface after formation of the symmetric shear crack;
@@ -30,8 +29,8 @@ material-interchange rule stated in the manuscript.
 - `tests/`: Python regression and symmetry tests;
 - `results/`: independently generated CSV and JSON reference results;
 - `figures/`: complete mathematical curves, the physically admissible
-  Figure-4 segments, a separate printed-`D1` audit plot, and the 45-degree
-  Figure-2 calibration output.
+  Figure-4 segments, a separate printed-`D1` audit plot, and Figure-2
+  recalculation outputs.
 
 ## Verification status
 
@@ -73,6 +72,7 @@ example_reproduce_roots
 generate_baseline_sweep
 generate_figure4
 generate_figure2_45deg_calibration
+generate_figure2
 ```
 
 The baseline sweep and Figure-4 commands write:
@@ -82,7 +82,7 @@ The baseline sweep and Figure-4 commands write:
 - `figures/figure4_admissible_segments.pdf` and `.png`;
 - `figures/figure4_D1_audit.pdf` and `.png`.
 
-The final command writes:
+The 45-degree calibration command writes:
 
 - `results/figure2_45deg_calibration.csv`;
 - `figures/figure2_45deg_calibration.pdf` and `.png`.
@@ -101,6 +101,27 @@ Wiener-Hopf plus factors, and normalized Eqs. (8)-(10). At
 The exponent controlling the load power law in Eqs. (8)-(10) is the common
 shear-cracked-corner exponent `lambda=-0.61319723`; it is not the Figure-4
 root `lambda1`.
+
+`generate_figure2` evaluates all four original Figure-2 configurations with
+a contour truncation of 60:
+
+| Half-angle | Load sign | Process-zone material | Original style |
+| ---: | --- | ---: | --- |
+| 10 degrees | `sigma'>0` | 2 | green dashed |
+| 45 degrees | `sigma'<0` | 1 | blue solid |
+| 105 degrees | `sigma'<0` | 2 | blue dashed |
+| 135 degrees | `sigma'>0` | 1 | green solid |
+
+It writes one long-format `results/figure2_recalculated.csv`, a complete-view
+`figures/figure2_recalculated` plot that does not conceal high values, and a
+`figures/figure2_original_window` plot with the original manuscript window
+for direct comparison; both plots are exported as PDF and PNG. The 45-,
+105-, and 135-degree
+calculations align with the corresponding manuscript curves. At 10 degrees,
+the consistent material-2 equations reproduce the process-zone length but
+not both opening and energy curves. This discrepancy is documented in
+`docs/REPRODUCIBILITY.md` and must be resolved from the authors' derivation or
+original calculation files before Figure 2 is claimed as fully reproduced.
 
 `figure4_recalculated` is the complete mathematical root map.
 `figure4_admissible_segments` overlays the original physical segments selected

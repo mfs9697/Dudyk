@@ -11,10 +11,12 @@ E_1/E_2=0.5,\qquad \nu_1=\nu_2=0.3,\qquad
 \]
 
 It tests the printed equations, the manuscript's material-interchange rule,
-and the proposed two-sign correction of `D1`. A second, MATLAB-only stage now
+and the proposed two-sign correction of `D1`. A second, MATLAB-only stage
 reconstructs the Wiener-Hopf factors and process-zone length, opening, and
-energy rate for the controlled 45-degree, material-1 calibration case. Full
-Figure-2 and Figure-3 sweeps remain a later stage.
+energy rate for all four Figure-2 cases. The 45-degree calculation is the
+independently verified calibration; the other cases expose one manuscript
+discrepancy at 10 degrees. The complete Figure-3 angle sweep remains a later
+stage.
 
 ## Independent implementations
 
@@ -42,6 +44,7 @@ run_process_zone_tests
 generate_baseline_sweep
 generate_figure4
 generate_figure2_45deg_calibration
+generate_figure2
 ```
 
 Python:
@@ -135,21 +138,60 @@ MATLAB helper rejects material pairs other than this verified baseline.
 - the `g2` sign changes for the Figure-4 baseline agree with Table 1 at
   approximately 12.9 and 107.1 degrees.
 
-For the 45-degree process-zone calibration:
+For the Figure-2 process-zone calculations:
 
 - the base, material-1, and material-2 kernel limits at zero match their
   analytic Taylor limits;
 - the corrected material-1 kernel equals the material-swapped material-2
   kernel both on the real axis and on the factorization contour;
 - the kernels are real and positive on the sampled imaginary axis;
-- factor values computed with contour truncations 20 and 40 agree within
-  `2e-8`;
-- the calculated signs are `Q1<0` and `Q2>0`;
-- a positive `sigma'` is rejected for material 1 at 45 degrees;
+- factor values at 45 degrees computed with contour truncations 20 and 40
+  agree within `2e-8`;
+- the more slowly converging 10-degree base and material-2 factors computed
+  with truncations 40 and 60 agree within `1e-6`;
+- the calculated `Q_i` and `g2` signs admit exactly the four load/material
+  combinations printed in the Figure-2 legend;
+- the opposite load sign is rejected for every case;
 - `d1/l` follows the exact power law `|sigma'|^(-1/lambda)`;
 - `delta1'` and `J1'` remain proportional to `d1/l`;
 - at `sigma'=-0.5`, the three normalized values agree with the recorded
   calibration checkpoints within the test tolerances.
+
+## Four-case Figure-2 endpoints
+
+The generator uses 201 load points on each applicable half-axis and the
+same baseline material pair as Figure 4. With contour truncation 60, the
+endpoint checkpoints are:
+
+| `alpha` | Material | `sigma'` | `lambda` | `d_i/l` | `delta_i'` | `J_i'` |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 10 deg | 2 | +0.5 | -0.8716344816 | 0.0313248064 | 0.0677727059 | 0.0217258213 |
+| 45 deg | 1 | -0.5 | -0.6131972266 | 0.1474343617 | 0.1454422653 | 0.0371646165 |
+| 105 deg | 2 | -0.5 | -0.2615246972 | 0.0370357093 | 0.0134427769 | 0.0039225730 |
+| 135 deg | 1 | +0.5 | -0.5467577000 | 0.0510105194 | 0.0578658843 | 0.0133074138 |
+
+The 45-degree row was independently generated in MATLAB R2023a and supplied
+for comparison. The 105- and 135-degree endpoints fall on the corresponding
+original curves to the precision readable from the published plot. They
+remain marked for an independent MATLAB run after this four-case extension.
+
+### 10-degree manuscript discrepancy
+
+The original green dashed curve at `sigma'=+0.5` is visually approximately
+`d_2/l=0.030`, `delta_2'=0.045`, and `J_2'=0.010`. Direct, internally
+consistent use of Eqs. (8)-(10) with the printed material-2 kernel gives the
+10-degree row in the table: the length agrees, whereas opening and energy are
+substantially higher.
+
+This is not removed by increasing the contour truncation. As a diagnostic,
+substituting the corrected material-1 kernel while retaining the material-2
+load coefficient gives approximately `0.03005`, `0.02888`, and `0.01005`.
+That mixed-index calculation reproduces length and energy but not opening and
+is not a mathematically consistent solution. Consequently, the repository
+does not use it for the publication curve. The mismatch is consistent with
+the manuscript's conflicting `beta_1,beta_2` direction labels and indicates
+that an index, normalization, or kernel used in the original calculation is
+missing or incorrect in the printed paper.
 
 ## Verified result
 
@@ -166,8 +208,10 @@ by the manuscript's exact material-swap symmetry and by reproduction of
 Figure 4, but it should still be checked against the authors' original notes
 before the revised equation is described as the recovered original formula.
 
-The 45-degree calibration is the first implemented Wiener-Hopf case. It must
-be run in MATLAB R2023a before it is marked independently verified in this
-protocol. Reproduction of all four Figure-2 curves and the complete Figure-3
-angle sweep also requires systematic contour-convergence checks near the
-admissibility boundaries and the degenerate 90-degree limit.
+The 45-degree calibration has been independently run in MATLAB R2023a. The
+new 10-, 105-, and 135-degree cases must also be run there and their generated
+CSV committed before they are marked independently verified. The 10-degree
+paper discrepancy requires author-side algebra or original source code; it
+must not be hidden by curve fitting. The complete Figure-3 angle sweep also
+requires systematic contour-convergence checks near the admissibility
+boundaries and the degenerate 90-degree limit.
