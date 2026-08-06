@@ -11,9 +11,10 @@ E_1/E_2=0.5,\qquad \nu_1=\nu_2=0.3,\qquad
 \]
 
 It tests the printed equations, the manuscript's material-interchange rule,
-and the proposed two-sign correction of `D1`. It does not reproduce the later
-Wiener-Hopf factorization or the process-zone length, opening, and energy
-curves; those require a separate inventory and calculation stage.
+and the proposed two-sign correction of `D1`. A second, MATLAB-only stage now
+reconstructs the Wiener-Hopf factors and process-zone length, opening, and
+energy rate for the controlled 45-degree, material-1 calibration case. Full
+Figure-2 and Figure-3 sweeps remain a later stage.
 
 ## Independent implementations
 
@@ -37,8 +38,10 @@ MATLAB:
 ```matlab
 addpath('matlab');
 run_characteristic_root_tests
+run_process_zone_tests
 generate_baseline_sweep
 generate_figure4
+generate_figure2_45deg_calibration
 ```
 
 Python:
@@ -132,6 +135,22 @@ MATLAB helper rejects material pairs other than this verified baseline.
 - the `g2` sign changes for the Figure-4 baseline agree with Table 1 at
   approximately 12.9 and 107.1 degrees.
 
+For the 45-degree process-zone calibration:
+
+- the base, material-1, and material-2 kernel limits at zero match their
+  analytic Taylor limits;
+- the corrected material-1 kernel equals the material-swapped material-2
+  kernel both on the real axis and on the factorization contour;
+- the kernels are real and positive on the sampled imaginary axis;
+- factor values computed with contour truncations 20 and 40 agree within
+  `2e-8`;
+- the calculated signs are `Q1<0` and `Q2>0`;
+- a positive `sigma'` is rejected for material 1 at 45 degrees;
+- `d1/l` follows the exact power law `|sigma'|^(-1/lambda)`;
+- `delta1'` and `J1'` remain proportional to `d1/l`;
+- at `sigma'=-0.5`, the three normalized values agree with the recorded
+  calibration checkpoints within the test tolerances.
+
 ## Verified result
 
 The MATLAB suite passed on 5 August 2026. Across all 179 rows, the maximum
@@ -139,10 +158,16 @@ MATLAB-Python differences were `3.17e-10`, `4.74e-9`, `5.17e-11`, and
 `2.70e-10` for `lambda0`, `lambda`, `lambda1`, and `lambda2`, respectively.
 There were no mismatches in root availability.
 
-## Remaining limitation
+## Remaining limitations
 
 The original source code and symbolic derivation used to produce the
 manuscript are unavailable. The proposed correction is therefore established
 by the manuscript's exact material-swap symmetry and by reproduction of
 Figure 4, but it should still be checked against the authors' original notes
 before the revised equation is described as the recovered original formula.
+
+The 45-degree calibration is the first implemented Wiener-Hopf case. It must
+be run in MATLAB R2023a before it is marked independently verified in this
+protocol. Reproduction of all four Figure-2 curves and the complete Figure-3
+angle sweep also requires systematic contour-convergence checks near the
+admissibility boundaries and the degenerate 90-degree limit.

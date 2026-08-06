@@ -1,4 +1,4 @@
-# Equation inventory: characteristic roots
+# Equation inventory: characteristic roots and process-zone parameters
 
 This inventory records the four characteristic-exponent calculations needed
 to reproduce the singularity curves in Figure 4 of the supplied manuscript.
@@ -272,3 +272,114 @@ sign-changing interior root at only 59 of the 179 sampled angles.
 | All real roots and selector | `find_real_characteristic_roots` | `find_characteristic_roots.m` |
 | Four physical exponents | `calculate_four_characteristic_roots` | `calculate_characteristic_roots.m` |
 | Material exchange | `MaterialPair.swapped` | `swap_materials.m` |
+
+## 10. Figure-2/3 process-zone equations
+
+The first process-zone reconstruction is deliberately restricted to the
+baseline case `alpha=45 degrees`, `C<0`, material 1. It uses the following
+equations before extending the calculation to complete angle sweeps.
+
+Appendix A.3 defines
+
+\[
+Q_i=g_1q_i l^{\lambda_0-\lambda},
+\]
+
+where
+
+\[
+q_i=\frac{2S_i(-1-\lambda)K^+(-1-\lambda)G^+(-1-\lambda)}
+{(\lambda-\lambda_0)D'(-1-\lambda)
+K^+(-1-\lambda_0)G^+(-1-\lambda_0)}.
+\]
+
+The gamma-function factor printed below Eq. (6) is
+
+\[
+K^+(p)=\frac{\Gamma(1-p)}{\Gamma(1/2-p)}.
+\]
+
+The base and process-zone kernels are
+
+\[
+G(p)=\frac{(e+\kappa_1)(1+e\kappa_2)\sin(\pi p)D(p)}
+{(e+\kappa_1+1+e\kappa_2)\cos(\pi p)D_0(p)},
+\qquad
+G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
+\]
+
+For a real factorization point `p<0`, both verified kernels are positive and
+even on the imaginary axis. The contour factorization used in the code is
+therefore the real integral
+
+\[
+\log G_i^+(p)=-\frac{p}{\pi}\int_0^\infty
+\frac{\log G_i(it)}{t^2+p^2}\,dt,
+\]
+
+with the same formula for `G^+`. The code checks positivity, reality, decay
+to one, and convergence with respect to the contour truncation.
+
+Using
+
+\[
+\sigma'=\frac{Cl^{\lambda_0}}{\sigma_i},
+\]
+
+the normalized Eqs. (8)-(10) are
+
+\[
+\frac{d_i}{l}=\left[
+\sigma'\frac{g_1q_iK^+(-1-\lambda)G_i^+(-1)}
+{(1+\lambda)K^+(-1)G_i^+(-1-\lambda)}
+\right]^{-1/\lambda},
+\]
+
+\[
+\delta_i'=-\frac{\lambda K^+(-1)}
+{\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1-\lambda)}
+\frac{d_i}{l},
+\]
+
+\[
+J_i'=-\frac{16\lambda}
+{9\pi(\lambda+2)[G_i^+(-1)]^2}\frac{d_i}{l}.
+\]
+
+The radical in Eq. (9) covers `pi*G_i(0)`. The exponent in all three
+relations is the root `lambda` of `D(-1-lambda)=0`; the separate Figure-4
+roots `lambda1` and `lambda2` do not replace it.
+
+### 45-degree calibration checkpoints
+
+For `E1/E2=0.5`, `nu1=nu2=0.3`, material 1:
+
+| Quantity | Recalculated value |
+| --- | ---: |
+| `lambda0` | `-0.0890898074555` |
+| `lambda` | `-0.613197226573` |
+| `G(0)` | `0.823850242588` |
+| `G1(0)` | `1.049443226928` |
+| `G+(-1-lambda)` | `0.986840102537` |
+| `G+(-1-lambda0)` | `1.009817796010` |
+| `G1+(-1-lambda)` | `0.998663862615` |
+| `G1+(-1)` | `0.996302154171` |
+| `g1*q1` | `-0.328831437124` |
+| `d1/l` at `sigma'=-0.5` | `0.147434361718` |
+| `delta1'` at `sigma'=-0.5` | `0.145442265271` |
+| `J1'` at `sigma'=-0.5` | `0.0371646165433` |
+
+The negative `g1*q1` confirms `Q1<0`; therefore the material-1 process zone
+at 45 degrees is admissible only for `C<0`, as stated in Section 3.
+
+### Added MATLAB equation map
+
+| Mathematical object | MATLAB |
+| --- | --- |
+| `G`, corrected `G1`, printed `G2`, and their zero limits | `characteristic_kernel.m` |
+| Wiener-Hopf plus factor | `wiener_hopf_plus_factor.m` |
+| `D'(-1-lambda)` | `characteristic_determinant_derivative.m` |
+| `g1`, `S_i`, `q_i` | `calculate_asymptotic_coefficients.m` |
+| Normalized Eqs. (8)-(10) | `calculate_process_zone_parameters.m` |
+| 45-degree regression suite | `run_process_zone_tests.m` |
+| Calibration CSV and plot | `generate_figure2_45deg_calibration.m` |

@@ -2,7 +2,9 @@
 
 This repository contains the source manuscript, an equation audit, and two
 independent implementations of the four stress-singularity exponents plotted
-in Figure 4:
+in Figure 4. The MATLAB implementation also contains the first controlled
+Wiener-Hopf reconstruction for the 45-degree solid-blue case in Figures 2
+and 3. The four root quantities are:
 
 - `lambda0`: intact broken bimaterial interface;
 - `lambda`: interface after formation of the symmetric shear crack;
@@ -28,7 +30,8 @@ material-interchange rule stated in the manuscript.
 - `tests/`: Python regression and symmetry tests;
 - `results/`: independently generated CSV and JSON reference results;
 - `figures/`: complete mathematical curves, the physically admissible
-  Figure-4 segments, and a separate printed-`D1` audit plot.
+  Figure-4 segments, a separate printed-`D1` audit plot, and the 45-degree
+  Figure-2 calibration output.
 
 ## Verification status
 
@@ -65,17 +68,39 @@ From the repository root:
 ```matlab
 addpath('matlab');
 run_characteristic_root_tests
+run_process_zone_tests
 example_reproduce_roots
 generate_baseline_sweep
 generate_figure4
+generate_figure2_45deg_calibration
 ```
 
-The last two commands write:
+The baseline sweep and Figure-4 commands write:
 
 - `results/baseline_roots_matlab_1deg.csv`;
 - `figures/figure4_recalculated.pdf` and `.png`;
 - `figures/figure4_admissible_segments.pdf` and `.png`;
 - `figures/figure4_D1_audit.pdf` and `.png`.
+
+The final command writes:
+
+- `results/figure2_45deg_calibration.csv`;
+- `figures/figure2_45deg_calibration.pdf` and `.png`.
+
+The calibration case is
+
+```text
+alpha = 45 degrees, C < 0, material 1,
+E1/E2 = 0.5, nu1 = nu2 = 0.3.
+```
+
+It evaluates the Appendix-A coefficients, the base and material-1
+Wiener-Hopf plus factors, and normalized Eqs. (8)-(10). At
+`sigma'=-0.5`, the regression checkpoints are approximately
+`d1/l=0.14743436`, `delta1'=0.14544227`, and `J1'=0.03716462`.
+The exponent controlling the load power law in Eqs. (8)-(10) is the common
+shear-cracked-corner exponent `lambda=-0.61319723`; it is not the Figure-4
+root `lambda1`.
 
 `figure4_recalculated` is the complete mathematical root map.
 `figure4_admissible_segments` overlays the original physical segments selected

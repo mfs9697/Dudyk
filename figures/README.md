@@ -36,3 +36,10 @@ Figure 4.
 
 All PDF files are vector outputs suitable for manuscript preparation. PNG
 copies are exported at 600 dpi for review and presentation.
+
+`figure2_45deg_calibration` is the first controlled reconstruction of the
+solid blue curve in the original Figure 2. Its three panels show `d1/l`,
+`delta1'`, and `J1'` against `sigma'` for `alpha=45 degrees`, `C<0`, and a
+process zone in material 1. It is generated entirely by the MATLAB
+Wiener-Hopf implementation and should be compared with the original curve
+before the remaining Figure-2 and Figure-3 cases are enabled.
