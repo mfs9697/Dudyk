@@ -1,8 +1,19 @@
 # Figure outputs
 
-`figure4_recalculated` contains the four physical singularity-exponent
-branches recalculated from the independently verified MATLAB CSV. The missing
-90-degree values break the curves at the degenerate flat-interface limit.
+`figure4_recalculated` contains the four complete mathematical
+singularity-exponent branches recalculated from the independently verified
+MATLAB CSV. These full curves are useful for checking the characteristic
+equations, but not every `lambda1` or `lambda2` point represents a physically
+admissible process zone. The missing 90-degree values break the curves at the
+degenerate flat-interface limit.
+
+`figure4_admissible_segments` reconstructs the physical content of the
+original Figure 4. Thin gray lines retain the complete `lambda1` and `lambda2`
+solutions for context. Saturated green and blue segments enforce both model
+conditions, `C*g2 < 0` and `C*Qi > 0`, for the baseline material pair. The
+solid/dashed style identifies material 1/material 2, while green/blue
+identifies `C>0`/`C<0`. The transition angles calculated from the printed `g2`
+equation are approximately 12.9 and 107.1 degrees, in agreement with Table 1.
 
 `figure4_D1_audit` compares the physical `lambda1` branch with roots obtained
 by applying the characteristic-root inference directly to the determinant
@@ -10,5 +21,5 @@ printed as `D1` in Eq. (5). The printed determinant returns a sign-changing
 interior root at only 59 of the 179 sampled angles and does not reproduce
 Figure 4.
 
-Both PDF files are vector outputs suitable for manuscript preparation. PNG
+All PDF files are vector outputs suitable for manuscript preparation. PNG
 copies are exported at 600 dpi for review and presentation.

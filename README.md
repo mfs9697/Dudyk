@@ -27,7 +27,8 @@ material-interchange rule stated in the manuscript.
   script;
 - `tests/`: Python regression and symmetry tests;
 - `results/`: independently generated CSV and JSON reference results;
-- `figures/`: recalculated Figure 4 and a separate printed-`D1` audit plot.
+- `figures/`: complete mathematical curves, the physically admissible
+  Figure-4 segments, and a separate printed-`D1` audit plot.
 
 ## Verification status
 
@@ -73,7 +74,14 @@ The last two commands write:
 
 - `results/baseline_roots_matlab_1deg.csv`;
 - `figures/figure4_recalculated.pdf` and `.png`;
+- `figures/figure4_admissible_segments.pdf` and `.png`;
 - `figures/figure4_D1_audit.pdf` and `.png`.
+
+`figure4_recalculated` is the complete mathematical root map.
+`figure4_admissible_segments` overlays the original physical segments selected
+by `C*g2 < 0` and `C*Qi > 0`. The admissibility helper is deliberately limited
+to the documented Figure-4 baseline; other material pairs require a verified
+calculation of the `Q1` and `Q2` signs before they can be plotted this way.
 
 For one angle:
 

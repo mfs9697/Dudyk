@@ -1,5 +1,5 @@
 function generate_figure4()
-%GENERATE_FIGURE4 Reconstruct Fig. 4 and create a separate D1 audit plot.
+%GENERATE_FIGURE4 Plot complete roots, admissible segments, and the D1 audit.
 
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 resultsDir = fullfile(projectRoot, 'results');
@@ -9,15 +9,24 @@ if ~isfolder(figuresDir)
 end
 
 csvPath = fullfile(resultsDir, 'baseline_roots_matlab_1deg.csv');
+material = struct('E1', 0.5, 'E2', 1.0, 'nu1', 0.3, 'nu2', 0.3);
 if isfile(csvPath)
     data = readtable(csvPath);
 else
-    material = struct('E1', 0.5, 'E2', 1.0, 'nu1', 0.3, 'nu2', 0.3);
     data = sweep_characteristic_roots((1:179)', material);
     writetable(data, csvPath);
 end
+requiredVariables = {'alpha_deg', 'lambda0', 'lambda', 'lambda1', ...
+    'lambda2', 'lambda1_D1_printed'};
+if ~all(ismember(requiredVariables, data.Properties.VariableNames))
+    error('characteristic_roots:Figure4DataColumns', ...
+        'The baseline CSV lacks one or more columns required by Figure 4.');
+end
+admissibility = calculate_figure4_admissibility( ...
+    data.alpha_deg, data.lambda0, material);
 
-% Physical branches. NaN at 90 degrees intentionally breaks the curves.
+% Complete mathematical branches. NaN at 90 degrees intentionally breaks
+% the curves at the degenerate flat-interface limit.
 fig = figure('Color', 'w', 'Position', [100, 100, 780, 520]);
 hold on;
 plot(data.alpha_deg, data.lambda0, 'Color', [0.45, 0.22, 0.65], ...
@@ -28,8 +37,7 @@ plot(data.alpha_deg, data.lambda1, 'Color', [0.10, 0.55, 0.22], ...
     'LineWidth', 1.8, 'DisplayName', '\lambda_1');
 plot(data.alpha_deg, data.lambda2, 'Color', [0.05, 0.35, 0.75], ...
     'LineWidth', 1.8, 'DisplayName', '\lambda_2');
-xline(90, ':', 'Degenerate limit', 'LabelVerticalAlignment', 'bottom', ...
-    'Color', [0.35, 0.35, 0.35], 'HandleVisibility', 'off');
+mark_degenerate_limit(gca);
 hold off;
 format_axes(gca);
 legend('Location', 'south', 'NumColumns', 4, 'Box', 'off');
@@ -39,6 +47,50 @@ exportgraphics(fig, fullfile(figuresDir, 'figure4_recalculated.png'), ...
     'Resolution', 600);
 close(fig);
 
+% Reconstruct the physical content of the original Fig. 4. Thin gray lines
+% show the complete lambda1/lambda2 solutions; saturated line segments show
+% only where C*g2 < 0 and C*Qi > 0 are simultaneously satisfied.
+fig = figure('Color', 'w', 'Position', [100, 100, 820, 540]);
+hold on;
+plot(data.alpha_deg, data.lambda1, ':', 'Color', [0.70, 0.70, 0.70], ...
+    'LineWidth', 1.0, 'HandleVisibility', 'off');
+plot(data.alpha_deg, data.lambda2, ':', 'Color', [0.70, 0.70, 0.70], ...
+    'LineWidth', 1.0, 'HandleVisibility', 'off');
+
+green = [0.10, 0.58, 0.25];
+blue = [0.05, 0.38, 0.78];
+hCpos2 = plot_masked_curve(data.alpha_deg, data.lambda2, ...
+    admissibility.C_positive.material2, '--', green, ...
+    'C>0: \lambda_2 (material 2)', admissibility.alpha1_deg);
+hCneg2 = plot_masked_curve(data.alpha_deg, data.lambda2, ...
+    admissibility.C_negative.material2, '--', blue, ...
+    'C<0: \lambda_2 (material 2)', ...
+    [90, admissibility.alpha2_deg]);
+hCneg1 = plot_masked_curve(data.alpha_deg, data.lambda1, ...
+    admissibility.C_negative.material1, '-', blue, ...
+    'C<0: \lambda_1 (material 1)', ...
+    [admissibility.alpha1_deg, 90]);
+hCpos1 = plot_masked_curve(data.alpha_deg, data.lambda1, ...
+    admissibility.C_positive.material1, '-', green, ...
+    'C>0: \lambda_1 (material 1)', admissibility.alpha2_deg);
+hLambda0 = plot(data.alpha_deg, data.lambda0, ...
+    'Color', [0.45, 0.22, 0.65], 'LineWidth', 1.8, ...
+    'DisplayName', '\lambda_0');
+hLambda = plot(data.alpha_deg, data.lambda, ...
+    'Color', [0.78, 0.12, 0.12], 'LineWidth', 1.8, ...
+    'DisplayName', '\lambda');
+mark_degenerate_limit(gca);
+hold off;
+format_axes(gca);
+legend([hCpos2, hCneg2, hCneg1, hCpos1, hLambda0, hLambda], ...
+    'Location', 'south', 'NumColumns', 2, 'Box', 'off', ...
+    'Interpreter', 'tex');
+exportgraphics(fig, fullfile(figuresDir, ...
+    'figure4_admissible_segments.pdf'), 'ContentType', 'vector');
+exportgraphics(fig, fullfile(figuresDir, ...
+    'figure4_admissible_segments.png'), 'Resolution', 600);
+close(fig);
+
 % Keep the manuscript defect outside the publication figure.
 fig = figure('Color', 'w', 'Position', [100, 100, 780, 520]);
 hold on;
@@ -46,8 +98,7 @@ plot(data.alpha_deg, data.lambda1, 'Color', [0.10, 0.55, 0.22], ...
     'LineWidth', 1.8, 'DisplayName', 'Corrected D_1');
 plot(data.alpha_deg, data.lambda1_D1_printed, 'k--', ...
     'LineWidth', 1.4, 'DisplayName', 'Printed D_1');
-xline(90, ':', 'Degenerate limit', 'LabelVerticalAlignment', 'bottom', ...
-    'Color', [0.35, 0.35, 0.35], 'HandleVisibility', 'off');
+mark_degenerate_limit(gca);
 hold off;
 format_axes(gca);
 legend('Location', 'southwest', 'Box', 'off');
@@ -57,7 +108,38 @@ exportgraphics(fig, fullfile(figuresDir, 'figure4_D1_audit.png'), ...
     'Resolution', 600);
 close(fig);
 
-fprintf('Wrote Figure 4 and D1 audit plots to %s.\n', figuresDir);
+fprintf(['Figure 4 admissibility transitions: alpha1 = %.3f deg, ', ...
+    'alpha2 = %.3f deg.\n'], admissibility.alpha1_deg, ...
+    admissibility.alpha2_deg);
+fprintf(['Wrote complete curves, admissible segments, and D1 audit ', ...
+    'plots to %s.\n'], figuresDir);
+end
+
+function handle = plot_masked_curve(alphaDeg, values, mask, ...
+        lineStyle, color, displayName, boundaryAngles)
+segmentAngles = alphaDeg(mask);
+segmentValues = values(mask);
+finiteValues = isfinite(values);
+for k = 1:numel(boundaryAngles)
+    boundary = boundaryAngles(k);
+    if boundary == 90
+        boundaryValue = 0;
+    else
+        boundaryValue = interp1(alphaDeg(finiteValues), ...
+            values(finiteValues), boundary, 'linear');
+    end
+    segmentAngles(end + 1, 1) = boundary; %#ok<AGROW>
+    segmentValues(end + 1, 1) = boundaryValue; %#ok<AGROW>
+end
+[segmentAngles, order] = sort(segmentAngles);
+segmentValues = segmentValues(order);
+handle = plot(segmentAngles, segmentValues, lineStyle, 'Color', color, ...
+    'LineWidth', 2.2, 'DisplayName', displayName);
+end
+
+function mark_degenerate_limit(ax)
+xline(ax, 90, ':', 'Color', [0.35, 0.35, 0.35], ...
+    'LineWidth', 1.0, 'HandleVisibility', 'off');
 end
 
 function format_axes(ax)
