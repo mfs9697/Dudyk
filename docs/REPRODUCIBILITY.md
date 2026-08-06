@@ -97,6 +97,21 @@ with the computed `g2` signs produces exactly four admissible segments:
 | `C<0` | `lambda2` | 2 | `90 < alpha < alpha2` | blue dashed |
 | `C>0` | `lambda1` | 1 | `alpha2 < alpha < 180` | green solid |
 
+The legend follows the original manuscript by identifying these colored
+segments with the representative normalized loads `sigma'=+0.5` and
+`sigma'=-0.5`. Since
+
+\[
+\sigma'=\frac{C l^{\lambda_0}}{\sigma_i},
+\]
+
+its sign is the sign of `C` and therefore selects the admissible branch. Its
+magnitude controls the process-zone length, opening, and energy-release rate
+in the later calculations, but it does not change any of the four
+characteristic exponents in Figure 4. The remaining portions of `lambda1` and
+`lambda2` are shown as gray dotted complete mathematical branches and are
+identified as such in the legend.
+
 Linear interpolation of the one-degree `g2` sweep gives
 `alpha1=12.9141 degrees` and `alpha2=107.0842 degrees`, matching the rounded
 Table-1 values 12.9 and 107.1 degrees. Because the `Q1/Q2` sign calculation
