@@ -7,31 +7,29 @@ be transferred from the verified repository documentation and CSV outputs.
 
 ## Compile
 
-From `manuscript/latex`:
+From `manuscript/latex`, the most portable MiKTeX command sequence is:
 
 ```bash
-latexmk -lualatex -interaction=nonstopmode main.tex
+xelatex -interaction=nonstopmode main.tex
+xelatex -interaction=nonstopmode main.tex
 ```
 
-If the local LuaLaTeX installation does not contain `luaotfload`, use
-XeLaTeX instead:
+If `latexmk` is configured, the equivalent one-command build is:
 
 ```bash
 latexmk -xelatex -interaction=nonstopmode main.tex
 ```
 
-or, without `latexmk`:
+LuaLaTeX can also be used when `luaotfload` is available:
 
 ```bash
-lualatex -interaction=nonstopmode main.tex
-bibtex main
-lualatex -interaction=nonstopmode main.tex
-lualatex -interaction=nonstopmode main.tex
+latexmk -lualatex -interaction=nonstopmode main.tex
 ```
 
-The source prefers `TeX Gyre Termes`, `Heros`, and `Cursor` and falls back to
-the DejaVu family when they are unavailable. Corrected plots are loaded
-directly from the repository-level `figures/` directory.
+On Windows, the source uses `Times New Roman`, `Arial`, and `Consolas`, all of
+which contain Ukrainian glyphs. On other systems it falls back to the DejaVu
+family. Corrected plots are loaded directly from the repository-level
+`figures/` directory.
 
 ## Working mode
 

@@ -9,26 +9,22 @@
 \usepackage{polyglossia}
 \setdefaultlanguage{ukrainian}
 \setotherlanguage{english}
-\IfFontExistsTF{TeX Gyre Termes}{
-  \setmainfont{TeX Gyre Termes}
-  \newfontfamily\cyrillicfont{TeX Gyre Termes}
+% TeX Gyre Termes can be present without Cyrillic glyphs. Prefer the
+% Windows fonts, which cover Ukrainian, and use DejaVu elsewhere.
+\IfFontExistsTF{Times New Roman}{
+  \setmainfont{Times New Roman}
+  \setsansfont{Arial}
+  \setmonofont{Consolas}
+  \newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic]
+  \newfontfamily\cyrillicfontsf{Arial}[Script=Cyrillic]
+  \newfontfamily\cyrillicfonttt{Consolas}[Script=Cyrillic]
 }{
   \setmainfont{DejaVu Serif}
-  \newfontfamily\cyrillicfont{DejaVu Serif}
-}
-\IfFontExistsTF{TeX Gyre Heros}{
-  \setsansfont{TeX Gyre Heros}
-  \newfontfamily\cyrillicfontsf{TeX Gyre Heros}
-}{
   \setsansfont{DejaVu Sans}
-  \newfontfamily\cyrillicfontsf{DejaVu Sans}
-}
-\IfFontExistsTF{TeX Gyre Cursor}{
-  \setmonofont{TeX Gyre Cursor}
-  \newfontfamily\cyrillicfonttt{TeX Gyre Cursor}
-}{
   \setmonofont{DejaVu Sans Mono}
-  \newfontfamily\cyrillicfonttt{DejaVu Sans Mono}
+  \newfontfamily\cyrillicfont{DejaVu Serif}[Script=Cyrillic]
+  \newfontfamily\cyrillicfontsf{DejaVu Sans}[Script=Cyrillic]
+  \newfontfamily\cyrillicfonttt{DejaVu Sans Mono}[Script=Cyrillic]
 }
 
 \usepackage[a4paper,margin=25mm]{geometry}
@@ -43,7 +39,6 @@
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{caption}
-\usepackage{float}
 
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{xcolor}
@@ -63,7 +58,7 @@
   \fi}
 
 \newcommand{\resultfigure}[4][0.98\linewidth]{%
-  \begin{figure}[H]
+  \begin{figure}[htbp]
     \centering
     \IfFileExists{../../figures/#2}{%
       \includegraphics[width=#1]{#2}%
