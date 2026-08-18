@@ -51,17 +51,46 @@ and approximates \(G_2(0)\) by \(G_2(10^{-5})\). The MATLAB publication
 calculation uses contour truncation 60 and the analytic zero limit. These
 implementation details account for the observed differences.
 
+## Subsequent small-angle convergence audit
+
+The 10-degree comparison validates the corrected equations and material index,
+but the full Figure-3 sweep revealed that the fixed Mathcad truncation
+\(T=40\) is not converged at the smallest angles. Direct evaluation could not
+initially extend beyond approximately \(T=80\) because numerator and
+denominator determinants separately overflow while their ratios remain
+finite. The MATLAB implementation now removes their common
+\(\exp(2\pi t)\) scale on the imaginary axis and uses an angle-adaptive
+contour.
+
+At \(\alpha=1^\circ\), material 2, and \(\sigma'=+0.5\):
+
+| Quantity | Author procedure, \(T=40\) | Converged MATLAB, \(T=690\) | Signed relative change |
+| --- | ---: | ---: | ---: |
+| \(d_2/l\) | 0.000335848036383 | 0.000334567324703 | -0.3813% |
+| \(\delta_2'\) | 0.000277858135311 | 0.000276833276375 | -0.3688% |
+| \(J_2'\) | 0.000234391474616 | 0.000235061074026 | +0.2857% |
+
+Increasing the adaptive tail exponent from 24 to 30 changes the computed plus
+factors by at most \(8.69\times10^{-13}\) over the tested boundary angles;
+the maximum terminal kernel log-deviation is \(1.40\times10^{-8}\).
+Therefore the author table is retained as an independent reproduction test at
+its stated \(T=40\), whereas the replacement Figure 3 uses the converged
+adaptive values.
+
 ## Consequences
 
 - The repository's consistent 10-degree calculation is independently
   validated.
 - The previously plotted 10-degree Figure-2 curve is obsolete.
-- The small-angle material-2 branch in Figure 3 must also be regenerated.
+- The small-angle material-2 branch and the complete admissible Figure 3
+  have now been regenerated with contour-convergence checks.
 - Figure 4 may be retained numerically after correcting the printed
   \(D_1(p)\) formula and clarifying physical admissibility.
-- Recalculated author tables should be compared with the repository CSV before
-  replacement figures are accepted.
+- The revised manuscript should replace its historical Figures 2 and 3 with
+  the corrected repository outputs.
+- Any complete recalculated author table should be compared automatically with
+  `results/figure3_recalculated.csv`.
 
-The next computational stage is a complete Figure-3 angle sweep with
-contour-convergence and admissibility checks, followed by an automated
-comparison with the recalculated author tables.
+The complete Figure-3 angle sweep, contour-convergence audit, and admissibility
+checks are now finished. The remaining task is manuscript integration and,
+if supplied, external comparison with a complete author table.
