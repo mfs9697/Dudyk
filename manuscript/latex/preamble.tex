@@ -1,0 +1,98 @@
+% Compile with LuaLaTeX or XeLaTeX. The working source is Ukrainian; the same
+% structure can be retained when the article is translated into English.
+\usepackage{iftex}
+\ifPDFTeX
+  \PackageError{dudyk-manuscript}{Compile this manuscript with LuaLaTeX or XeLaTeX}{}
+\fi
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{ukrainian}
+\setotherlanguage{english}
+\IfFontExistsTF{TeX Gyre Termes}{
+  \setmainfont{TeX Gyre Termes}
+  \newfontfamily\cyrillicfont{TeX Gyre Termes}
+}{
+  \setmainfont{DejaVu Serif}
+  \newfontfamily\cyrillicfont{DejaVu Serif}
+}
+\IfFontExistsTF{TeX Gyre Heros}{
+  \setsansfont{TeX Gyre Heros}
+  \newfontfamily\cyrillicfontsf{TeX Gyre Heros}
+}{
+  \setsansfont{DejaVu Sans}
+  \newfontfamily\cyrillicfontsf{DejaVu Sans}
+}
+\IfFontExistsTF{TeX Gyre Cursor}{
+  \setmonofont{TeX Gyre Cursor}
+  \newfontfamily\cyrillicfonttt{TeX Gyre Cursor}
+}{
+  \setmonofont{DejaVu Sans Mono}
+  \newfontfamily\cyrillicfonttt{DejaVu Sans Mono}
+}
+
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.08}
+
+\usepackage{amsmath,amssymb,mathtools,bm}
+
+\usepackage{graphicx}
+\graphicspath{{../../figures/}}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{float}
+
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{authblk}
+
+\definecolor{worknotebg}{RGB}{245,247,250}
+\definecolor{worknotefg}{RGB}{70,78,90}
+\newif\ifworkingdraft
+\workingdrafttrue
+\newcommand{\worknote}[1]{%
+  \ifworkingdraft
+    \par\smallskip
+    \noindent\colorbox{worknotebg}{%
+      \parbox{0.96\linewidth}{\small\color{worknotefg}\textbf{Робоча примітка.} #1}}%
+    \par\smallskip
+  \fi}
+
+\newcommand{\resultfigure}[4][0.98\linewidth]{%
+  \begin{figure}[H]
+    \centering
+    \IfFileExists{../../figures/#2}{%
+      \includegraphics[width=#1]{#2}%
+    }{%
+      \fbox{\parbox[c][45mm][c]{0.9\linewidth}{\centering
+        Файл рисунка ще не знайдено: \texttt{\detokenize{#2}}}}%
+    }
+    \caption{#3}
+    \label{#4}
+  \end{figure}}
+
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\sigmap}{\sigma^{\prime}}
+\newcommand{\deltap}{\delta^{\prime}}
+\newcommand{\Jp}{J^{\prime}}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Відгалуження міжфазної зсувної тріщини у кутовій точці ламаної межі поділу},
+  pdfauthor={А. О. Камінський; М. Ф. Селіванов; М. В. Дудик; Т. В. Поліщук}
+}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\captionsetup{font=small,labelfont=bf}
+
+\newif\ifbibliographyready
+\bibliographyreadyfalse

@@ -1,0 +1,25 @@
+\documentclass[11pt,a4paper]{article}
+
+\input{preamble}
+\input{metadata}
+
+\begin{document}
+
+\maketitle
+
+\input{sections/00_abstract}
+\input{sections/01_introduction}
+\input{sections/02_problem_statement}
+\input{sections/03_process_zone_parameters}
+\input{sections/04_numerical_results}
+\input{sections/05_conclusions}
+
+\appendix
+\input{appendices/appendix_a}
+
+\ifbibliographyready
+  \bibliographystyle{unsrtnat}
+  \bibliography{bibliography/references}
+\fi
+
+\end{document}
