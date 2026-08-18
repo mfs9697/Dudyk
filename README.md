@@ -23,6 +23,8 @@ material-interchange rule stated in the manuscript.
   correction;
 - `docs/REPRODUCIBILITY.md`: independent-recalculation protocol and acceptance
   criteria;
+- `docs/AUTHOR_VALIDATION_2026-08-18.md`: technical record of the authors'
+  confirmation and independent Mathcad/MATLAB comparison;
 - `matlab/`: MATLAB R2023a implementation, regression tests, sweeps, and plots;
 - `python/`: standard-library reference calculation and optional plotting
   script;
@@ -115,13 +117,15 @@ a contour truncation of 60:
 It writes one long-format `results/figure2_recalculated.csv`, a complete-view
 `figures/figure2_recalculated` plot that does not conceal high values, and a
 `figures/figure2_original_window` plot with the original manuscript window
-for direct comparison; both plots are exported as PDF and PNG. The 45-,
-105-, and 135-degree
-calculations align with the corresponding manuscript curves. At 10 degrees,
-the consistent material-2 equations reproduce the process-zone length but
-not both opening and energy curves. This discrepancy is documented in
-`docs/REPRODUCIBILITY.md` and must be resolved from the authors' derivation or
-original calculation files before Figure 2 is claimed as fully reproduced.
+for direct comparison; both plots are exported as PDF and PNG. All four calculations have been executed independently in MATLAB R2023a.
+The authors subsequently traced the original 10-degree mismatch to an
+incorrect material index in a Wiener-Hopf plus factor and confirmed the
+material-direction convention and the two-sign correction of `D1`. Their
+corrected Mathcad calculation gives `d2/l=0.0313248086`,
+`delta2'=0.0677727100`, and `J2'=0.0217258199`, agreeing with the MATLAB
+values to better than `7.3e-8` relatively. The published Figure-2 and
+Figure-3 curves still need to be regenerated from the corrected calculation;
+see `docs/AUTHOR_VALIDATION_2026-08-18.md`.
 
 `figure4_recalculated` is the complete mathematical root map.
 `figure4_admissible_segments` overlays the original physical segments selected

@@ -13,9 +13,10 @@ E_1/E_2=0.5,\qquad \nu_1=\nu_2=0.3,\qquad
 It tests the printed equations, the manuscript's material-interchange rule,
 and the proposed two-sign correction of `D1`. A second, MATLAB-only stage
 reconstructs the Wiener-Hopf factors and process-zone length, opening, and
-energy rate for all four Figure-2 cases. The 45-degree calculation is the
-independently verified calibration; the other cases expose one manuscript
-discrepancy at 10 degrees. The complete Figure-3 angle sweep remains a later
+energy rate for all four Figure-2 cases. All four calculations were
+executed independently in MATLAB R2023a. The original 10-degree discrepancy
+was subsequently traced by the authors to an incorrect material index in a
+Wiener-Hopf plus factor. The complete Figure-3 angle sweep remains a later
 stage.
 
 ## Independent implementations
@@ -175,43 +176,58 @@ for comparison. The 105- and 135-degree endpoints fall on the corresponding
 original curves to the precision readable from the published plot. They
 remain marked for an independent MATLAB run after this four-case extension.
 
-### 10-degree manuscript discrepancy
+### 10-degree discrepancy: author-confirmed resolution
 
 The original green dashed curve at `sigma'=+0.5` is visually approximately
 `d_2/l=0.030`, `delta_2'=0.045`, and `J_2'=0.010`. Direct, internally
-consistent use of Eqs. (8)-(10) with the printed material-2 kernel gives the
-10-degree row in the table: the length agrees, whereas opening and energy are
-substantially higher.
+consistent use of Eqs. (8)-(10) with the material-2 kernel gives the
+10-degree row in the table and therefore exposes the original plotted
+discrepancy rather than reproducing it by curve fitting.
 
-This is not removed by increasing the contour truncation. As a diagnostic,
-substituting the corrected material-1 kernel while retaining the material-2
-load coefficient gives approximately `0.03005`, `0.02888`, and `0.01005`.
-That mixed-index calculation reproduces length and energy but not opening and
-is not a mathematically consistent solution. Consequently, the repository
-does not use it for the publication curve. The mismatch is consistent with
-the manuscript's conflicting `beta_1,beta_2` direction labels and indicates
-that an index, normalization, or kernel used in the original calculation is
-missing or incorrect in the printed paper.
+On 18 August 2026 the authors confirmed that the original calculation
+contained an incorrect material index in a Wiener-Hopf plus factor in the
+material-2 opening calculation. They also confirmed
+`beta_1=pi, beta_2=0` and supplied a corrected Mathcad worksheet in which
+the material-2 kernel and its plus factors are used consistently. At
+`alpha=10 degrees`, material 2, and `sigma'=+0.5`, the worksheet gives:
+
+| Quantity | Author Mathcad | MATLAB (truncation 60) | Relative difference |
+| --- | ---: | ---: | ---: |
+| `d_2/l` | 0.031324808641 | 0.031324806384 | 7.22e-8 |
+| `delta_2'` | 0.067772709985 | 0.067772705874 | 6.07e-8 |
+| `J_2'` | 0.021725819934 | 0.021725821310 | 6.34e-8 |
+
+The small differences are consistent with the Mathcad contour truncation
+`[-40,40]` and its evaluation of `G_2(0)` as `G_2(1e-5)`. The corrected
+calculation therefore independently validates the repository implementation.
+The old Figure-2 and small-angle Figure-3 curves remain historical outputs and
+must be regenerated. Because the old Figure-2 energy curve also differs from
+the corrected `J_2'` value, the replacement tables should be checked across
+all three panels when the authors provide them.
 
 ## Verified result
 
-The MATLAB suite passed on 5 August 2026. Across all 179 rows, the maximum
-MATLAB-Python differences were `3.17e-10`, `4.74e-9`, `5.17e-11`, and
-`2.70e-10` for `lambda0`, `lambda`, `lambda1`, and `lambda2`, respectively.
-There were no mismatches in root availability.
+The characteristic-root MATLAB suite passed on 5 August 2026. Across all
+179 rows, the maximum MATLAB-Python differences were `3.17e-10`, `4.74e-9`,
+`5.17e-11`, and `2.70e-10` for `lambda0`, `lambda`, `lambda1`, and `lambda2`,
+respectively. There were no mismatches in root availability. The complete
+four-case Figure-2 MATLAB suite was subsequently run and all process-zone
+tests passed. The independently supplied author Mathcad result now provides a
+second implementation of the corrected 10-degree endpoint.
 
 ## Remaining limitations
 
-The original source code and symbolic derivation used to produce the
-manuscript are unavailable. The proposed correction is therefore established
-by the manuscript's exact material-swap symmetry and by reproduction of
-Figure 4, but it should still be checked against the authors' original notes
-before the revised equation is described as the recovered original formula.
+The author has confirmed that the printed `D1` contained the two sign errors
+identified by the material-swap audit and that the original calculation
+program used the corrected expression. The author has also confirmed the
+direction convention `beta_1=pi, beta_2=0` and supplied a corrected Mathcad
+worksheet for the process-zone parameters. The private correspondence,
+edited manuscript, and Mathcad source are not committed to this public
+repository; only the non-confidential technical conclusions and numerical
+checkpoints are recorded here.
 
-The 45-degree calibration has been independently run in MATLAB R2023a. The
-new 10-, 105-, and 135-degree cases must also be run there and their generated
-CSV committed before they are marked independently verified. The 10-degree
-paper discrepancy requires author-side algebra or original source code; it
-must not be hidden by curve fitting. The complete Figure-3 angle sweep also
-requires systematic contour-convergence checks near the admissibility
-boundaries and the degenerate 90-degree limit.
+The published Figure-2 and Figure-3 curves have not yet been replaced. The
+authors plan to provide recalculated numerical tables. The next implementation
+stage is a complete Figure-3 angle sweep with systematic contour-convergence
+checks near the admissibility boundaries and the degenerate 90-degree limit,
+followed by an automated comparison with those author tables.

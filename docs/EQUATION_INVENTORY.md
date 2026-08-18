@@ -45,7 +45,7 @@ line arguments use degrees.
 | \(\lambda_0\) | Intact broken bimaterial interface | \(D_0(-1-\lambda_0)=0\) | Printed as Eq. (A.2), PDF p. 9 | `D0` |
 | \(\lambda\) | Corner after formation of the symmetric interfacial shear crack | \(D(-1-\lambda)=0\) | Printed below Eq. (A.3), with \(D\) in Eq. (A.4), PDF pp. 9-10 | `D` |
 | \(\lambda_2\) | Process zone in material 2 | \(D_2(-1-\lambda_2)=0\) | Root relation omitted; inferred from the kernel in Eq. (5). The resulting curve reproduces Figure 4 | `D2_printed` |
-| \(\lambda_1\) | Process zone in material 1 | \(D_{1,\mathrm{corrected}}(-1-\lambda_1)=0\) | The corrected determinant is forced by the material-swap transformation stated below Figure 3 and reproduces Figure 4 | `D1_corrected` |
+| \(\lambda_1\) | Process zone in material 1 | \(D_{1,\mathrm{corrected}}(-1-\lambda_1)=0\) | The authors confirmed that the printed determinant contains two sign errors; their original programs used the corrected expression, which reproduces Figure 4 | `D1_corrected` |
 
 For \(\lambda_0\) and \(\lambda\), the manuscript says to select the smallest
 root on \((-1,0)\), i.e. the most negative real exponent. The same selector is
@@ -187,7 +187,9 @@ D_{1,\mathrm{corrected}}(p)={}&2e(1+\kappa_2)
 \]
 
 Thus, the two signs in the second product are opposite to those printed in
-Eq. (5). The corrected determinant satisfies the pointwise identity
+Eq. (5). On 18 August 2026 the authors confirmed that these were typographical
+errors and that their original calculation programs used the corrected
+expression. The corrected determinant satisfies the pointwise identity
 
 \[
 D_{1,\mathrm{corrected}}(p;\alpha,E_1,E_2,\nu_1,\nu_2)
@@ -238,24 +240,30 @@ excluded flat-interface value \(90^\circ\); the maximum residual is below
 \(10^{-10}\). In contrast, the direct printed-\(D_1\) calculation produces a
 sign-changing interior root at only 59 of the 179 sampled angles.
 
-## 8. Audit findings that must be corrected in the paper
+## 8. Author-confirmed corrections and remaining manuscript actions
 
 1. **Missing equations.** The paper must explicitly state how
    \(\lambda_1,\lambda_2\) are calculated and how the relevant root is chosen.
-2. **Conflicting material-direction labels.** Section 1 uses
-   \(\beta_1=\pi,\beta_2=0\), whereas Appendix A.3 uses
-   \(\beta_1=0,\beta_2=\pi\).
-3. **Printed \(D_1\) versus Figure 4.** Direct use of the printed \(D_1\) does
-   not reproduce the plotted material-1 exponent or the stated material-swap
-   symmetry. Reversing the two `p sin(2 alpha)` signs in its second product
-   restores the exact determinant identity and Figure 4. This is the proposed
-   correction, subject to confirmation from the authors' original algebra or
-   calculation files.
-4. **Degenerate flat-interface case.** At \(\alpha=90^\circ\), the model is
+2. **Material-direction labels.** The authors confirmed
+   \(\beta_1=\pi,\beta_2=0\). The reversed labels in Appendix A.3 of the
+   earlier paper and the draft manuscript were typographical errors.
+3. **Printed \(D_1\).** The authors confirmed that the two
+   `p sin(2 alpha)` signs in the second product were transposed in print.
+   Their original programs used the corrected expression, explaining why the
+   reported Figure-4 roots are valid.
+4. **Process-zone index.** The original material-2 calculation at
+   \(\alpha=10^\circ\) used an incorrect index in a Wiener-Hopf plus factor.
+   The corrected Mathcad worksheet uses the material-2 kernel consistently and
+   agrees with the MATLAB implementation.
+5. **Missing powers.** The draft lost the factor \(\sigma_i^2\) in the
+   potential-energy and energy-release-rate expressions. The authors marked
+   the corresponding powers for restoration; the normalized formula for
+   \(J_i'\) used by this repository is unchanged.
+6. **Degenerate flat-interface case.** At \(\alpha=90^\circ\), the model is
    excluded and the determinants possess endpoint/degenerate behavior. Values
    shown as zero in a plot should be described as limits, not as ordinary
    interior roots.
-5. **Root terminology.** “Smallest root” should be replaced by an unambiguous
+7. **Root terminology.** “Smallest root” should be replaced by an unambiguous
    definition such as “the most negative real root in \((-1,0)\), continuously
    connected to the reported branch.”
 
@@ -384,11 +392,12 @@ The three added endpoint calculations use contour truncation 60:
 | 135 deg | 1 | +0.5 | 0.0510105194 | 0.0578658843 | 0.0133074138 |
 
 The 105- and 135-degree rows agree with the original curves at plot-reading
-precision. At 10 degrees, the length agrees but the recalculated opening and
-energy do not. Neither the printed material-2 kernel nor an index-swapped
-diagnostic kernel reproduces all three original panels consistently. This is
-an equation/index audit finding, not a basis for altering Eqs. (8)-(10) to fit
-the plotted pixels.
+precision. The authors confirmed that the original 10-degree material-2
+calculation contained an incorrect index in a Wiener-Hopf plus factor. Their
+corrected Mathcad endpoint (`0.0313248086`, `0.0677727100`, `0.0217258199`)
+agrees with the MATLAB row to better than `7.3e-8` relatively. The original
+Figure-2 and small-angle Figure-3 curves must therefore be regenerated rather
+than fitted or retained.
 
 ### Added MATLAB equation map
 
