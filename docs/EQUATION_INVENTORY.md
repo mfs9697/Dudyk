@@ -266,6 +266,12 @@ sign-changing interior root at only 59 of the 179 sampled angles.
 7. **Root terminology.** “Smallest root” should be replaced by an unambiguous
    definition such as “the most negative real root in \((-1,0)\), continuously
    connected to the reported branch.”
+8. **Small-angle contour convergence.** The author's fixed contour
+   \([-40,40]\) reproduces the corrected Mathcad table but is not converged
+   at the smallest angles. The publication calculation must use stable
+   imaginary-axis kernel ratios and an angle-adaptive contour; at one degree
+   the converged results differ from the fixed-\(T=40\) values by up to
+   \(0.3813\%\).
 
 ## 9. Equation-to-code map
 
@@ -286,7 +292,10 @@ sign-changing interior root at only 59 of the 179 sampled angles.
 The process-zone reconstruction evaluates the four baseline cases printed in
 Figure 2: 10 degrees/material 2/positive load, 45 degrees/material 1/negative
 load, 105 degrees/material 2/negative load, and 135 degrees/material 1/positive
-load. The 45-degree case remains the controlled calibration.
+load. The 45-degree case remains the controlled calibration. The same
+relations are evaluated over all 178 nondegenerate integer angles for the
+corrected Figure 3, with the admissible material and load sign selected at
+each angle.
 
 Appendix A.3 defines
 
@@ -396,8 +405,51 @@ precision. The authors confirmed that the original 10-degree material-2
 calculation contained an incorrect index in a Wiener-Hopf plus factor. Their
 corrected Mathcad endpoint (`0.0313248086`, `0.0677727100`, `0.0217258199`)
 agrees with the MATLAB row to better than `7.3e-8` relatively. The original
-Figure-2 and small-angle Figure-3 curves must therefore be regenerated rather
+Figure-2 and small-angle Figure-3 curves must therefore be replaced rather
 than fitted or retained.
+
+### Complete Figure-3 contour rule
+
+On the imaginary axis, every determinant entering the kernels has the common
+large-\(t\) scale \(\exp(2\pi t)\). Forming the unscaled ratios eventually
+produces `Inf/Inf` near the smallest and largest angles. The MATLAB kernel
+implementation removes this common factor before division; this is an
+algebraically identical evaluation, not a change to the Wiener-Hopf kernels.
+
+The slowest remaining hyperbolic correction is governed by
+
+\[
+\exp[-2t\min(\alpha,\pi-\alpha)].
+\]
+
+Accordingly, the corrected Figure-3 generator uses
+
+\[
+T(\alpha)=10\left\lceil\frac{1}{10}
+\max\left(60,\frac{12}{\min(\alpha,\pi-\alpha)}\right)
+\right\rceil ,
+\]
+
+with \(\alpha\) in radians. This gives a minimum decay exponent of 24 and
+uses \(T=690\) at \(1^\circ\) and \(179^\circ\). Increasing the target
+exponent from 24 to 30 changes the four plus factors by at most
+\(8.69\times10^{-13}\) at the tested outer, admissibility-boundary, and
+flat-interface-adjacent angles. The maximum baseline terminal log-deviation
+is \(1.40\times10^{-8}\).
+
+The author table for \(1^\circ\) through \(12^\circ\) is tested
+separately using its original \(T=40\). At \(1^\circ\), the converged
+publication values are
+
+\[
+\frac{d_2}{l}=0.000334567324703,\qquad
+\delta_2'=0.000276833276375,\qquad
+J_2'=0.000235061074026.
+\]
+
+Thus, agreement with the fixed-\(T=40\) Mathcad table establishes independent
+formula reproduction, while the adaptive calculation supplies the converged
+Figure-3 values.
 
 ### Added MATLAB equation map
 
@@ -412,3 +464,7 @@ than fitted or retained.
 | Case definitions | `figure2_case_definitions.m` |
 | 45-degree calibration CSV and plot | `generate_figure2_45deg_calibration.m` |
 | Complete Figure-2 CSV and plots | `generate_figure2.m` |
+| Stable large-imaginary-axis kernel ratios | `characteristic_kernel.m` |
+| Figure-3 angle-adaptive contour | `figure3_factor_options.m` |
+| Author-table and contour-extension tests | `run_figure3_tests.m` |
+| Complete Figure-3 CSV and plots | `generate_figure3.m` |
