@@ -2,8 +2,8 @@
 
 This repository contains the source manuscript, an equation audit, and two
 independent implementations of the four stress-singularity exponents plotted
-in Figure 4. The MATLAB implementation also contains the four Wiener-Hopf
-process-zone calculations plotted in Figure 2. The four root quantities are:
+in Figure 4. The MATLAB implementation also contains the Wiener-Hopf
+process-zone calculations for Figures 2 and 3. The four root quantities are:
 
 - `lambda0`: intact broken bimaterial interface;
 - `lambda`: interface after formation of the symmetric shear crack;
@@ -31,8 +31,8 @@ material-interchange rule stated in the manuscript.
 - `tests/`: Python regression and symmetry tests;
 - `results/`: independently generated CSV and JSON reference results;
 - `figures/`: complete mathematical curves, the physically admissible
-  Figure-4 segments, a separate printed-`D1` audit plot, and Figure-2
-  recalculation outputs.
+  Figure-4 segments, a separate printed-`D1` audit plot, and converged
+  Figure-2 and Figure-3 recalculation outputs.
 
 ## Verification status
 
@@ -75,6 +75,8 @@ generate_baseline_sweep
 generate_figure4
 generate_figure2_45deg_calibration
 generate_figure2
+run_figure3_tests
+generate_figure3
 ```
 
 The baseline sweep and Figure-4 commands write:
@@ -124,9 +126,33 @@ incorrect material index in a Wiener-Hopf plus factor and confirmed the
 material-direction convention and the two-sign correction of `D1`. Their
 corrected Mathcad calculation gives `d2/l=0.0313248086`,
 `delta2'=0.0677727100`, and `J2'=0.0217258199`, agreeing with the MATLAB
-values to better than `7.3e-8` relatively. The published Figure-2 and
-Figure-3 curves still need to be regenerated from the corrected calculation;
-see `docs/AUTHOR_VALIDATION_2026-08-18.md`.
+values to better than `7.3e-8` relatively. Corrected replacement plots for
+Figures 2 and 3 have now been regenerated; the revised manuscript must replace
+the historical graphics. See `docs/AUTHOR_VALIDATION_2026-08-18.md`.
+
+`generate_figure3` evaluates the 178 physically admissible integer-angle
+rows from 1 through 179 degrees, excluding the degenerate 90-degree geometry.
+It writes:
+
+- `results/figure3_recalculated.csv`;
+- `figures/figure3_recalculated.pdf`;
+- `figures/figure3_recalculated.png`.
+
+Near 0 and 180 degrees, the Wiener-Hopf kernels converge slowly. Their
+imaginary-axis determinants are therefore evaluated after removal of the
+common `exp(2*pi*t)` scale, and the contour is chosen from
+
+```text
+T(alpha) = 10*ceil(max(60, 12/min(alpha,pi-alpha))/10),
+```
+
+with `alpha` in radians. This gives `T=690` at 1 and 179 degrees.
+The Figure-3 regression suite reproduces the author's 12-row Mathcad table
+separately with its original `T=40`, then verifies the converged sweep by
+extending the adaptive contour. The maximum plus-factor change was
+`8.69e-13`, and the maximum terminal kernel log-deviation was `1.40e-8`.
+At one degree the converged values are `d2/l=0.000334567324703`,
+`delta2'=0.000276833276375`, and `J2'=0.000235061074026`.
 
 `figure4_recalculated` is the complete mathematical root map.
 `figure4_admissible_segments` overlays the original physical segments selected
