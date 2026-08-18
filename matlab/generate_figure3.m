@@ -8,7 +8,9 @@ function generate_figure3()
 % The one-degree sweep contains only physically admissible combinations
 % selected by C*g2<0 and C*Q_i>0. The degenerate flat-interface value at
 % alpha=90 degrees is excluded from the CSV and inserted only as the
-% theoretical zero limit of the two adjacent plotted segments.
+% theoretical zero limit of the two adjacent plotted segments. Wiener-Hopf
+% contours are extended near 0 and 180 degrees according to the slowest
+% exponential kernel tail.
 
 projectRoot = fileparts(fileparts(mfilename('fullpath')));
 resultsDir = fullfile(projectRoot, 'results');
@@ -40,16 +42,13 @@ if any(coverage(physicalRows) ~= 1) || any(coverage(~physicalRows) ~= 0)
         'load/material case, and 90 degrees must select none.']);
 end
 
-factorOptions = struct('truncation', 60, ...
-    'relative_tolerance', 1e-10, 'absolute_tolerance', 1e-12);
-options = struct('factor_options', factorOptions);
-
 calculatedRows = find(physicalRows);
 n = numel(calculatedRows);
 alphaOut = alphaDeg(calculatedRows);
 caseId = strings(n, 1);
 materialIndex = nan(n, 1);
 sigmaPrime = nan(n, 1);
+factorTruncation = nan(n, 1);
 dOverL = nan(n, 1);
 deltaPrime = nan(n, 1);
 JPrime = nan(n, 1);
@@ -64,13 +63,17 @@ for row = 1:n
     sourceRow = calculatedRows(row);
     selectedCase = find(caseMasks(sourceRow, :));
     currentCase = cases(selectedCase);
+    alpha = deg2rad(alphaOut(row));
+    factorOptions = figure3_factor_options(alpha);
+    options = struct('factor_options', factorOptions);
     result = calculate_process_zone_parameters( ...
-        deg2rad(alphaOut(row)), material, ...
-        currentCase.material_index, currentCase.sigma_prime, options);
+        alpha, material, currentCase.material_index, ...
+        currentCase.sigma_prime, options);
 
     caseId(row) = string(currentCase.id);
     materialIndex(row) = currentCase.material_index;
     sigmaPrime(row) = currentCase.sigma_prime;
+    factorTruncation(row) = factorOptions.truncation;
     dOverL(row) = result.d_over_l;
     deltaPrime(row) = result.delta_prime;
     JPrime(row) = result.J_prime;
@@ -87,17 +90,18 @@ for row = 1:n
 
     if row == 1 || row == n || mod(alphaOut(row), 10) == 0
         fprintf(['Figure 3: alpha=%3.0f deg, material %d, ', ...
-            'sigmaPrime=%+.1f.\n'], alphaOut(row), ...
-            materialIndex(row), sigmaPrime(row));
+            'sigmaPrime=%+.1f, T=%.0f.\n'], alphaOut(row), ...
+            materialIndex(row), sigmaPrime(row), factorTruncation(row));
     end
 end
 
 data = table(alphaOut, caseId, materialIndex, sigmaPrime, ...
-    dOverL, deltaPrime, JPrime, lambda0, lambda, g2, Qprefactor, ...
-    baseTerminalLogDeviation, processTerminalLogDeviation, ...
+    factorTruncation, dOverL, deltaPrime, JPrime, lambda0, lambda, ...
+    g2, Qprefactor, baseTerminalLogDeviation, ...
+    processTerminalLogDeviation, ...
     'VariableNames', {'alpha_deg', 'case_id', 'material_index', ...
-    'sigma_prime', 'd_over_l', 'delta_prime', 'J_prime', ...
-    'lambda0', 'lambda', 'g2', 'Q_prefactor', ...
+    'sigma_prime', 'factor_truncation', 'd_over_l', 'delta_prime', ...
+    'J_prime', 'lambda0', 'lambda', 'g2', 'Q_prefactor', ...
     'base_terminal_log_deviation', ...
     'process_terminal_log_deviation'});
 writetable(data, fullfile(resultsDir, 'figure3_recalculated.csv'));
@@ -107,10 +111,13 @@ write_figure(data, cases, figuresDir);
 fprintf(['Figure-3 admissibility transitions: alpha1=%.4f deg, ', ...
     'alpha2=%.4f deg.\n'], admissibility.alpha1_deg, ...
     admissibility.alpha2_deg);
+fprintf(['Maximum terminal kernel log-deviation: base %.3g, ', ...
+    'process %.3g.\n'], max(data.base_terminal_log_deviation), ...
+    max(data.process_terminal_log_deviation));
 fprintf('Wrote the Figure-3 CSV and plots to %s and %s.\n', ...
     resultsDir, figuresDir);
-fprintf(['Run run_figure3_tests to compare the corrected 1-12 degree ', ...
-    'branch with the independent author Mathcad table.\n']);
+fprintf(['Run run_figure3_tests to reproduce the author T=40 table ', ...
+    'separately and verify convergence of the scientific sweep.\n']);
 end
 
 function write_figure(data, cases, figuresDir)
