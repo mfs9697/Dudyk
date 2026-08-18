@@ -117,7 +117,8 @@ a contour truncation of 60:
 It writes one long-format `results/figure2_recalculated.csv`, a complete-view
 `figures/figure2_recalculated` plot that does not conceal high values, and a
 `figures/figure2_original_window` plot with the original manuscript window
-for direct comparison; both plots are exported as PDF and PNG. All four calculations have been executed independently in MATLAB R2023a.
+for direct comparison; both plots are exported as PDF and PNG. All four
+calculations have been executed independently in MATLAB R2023a.
 The authors subsequently traced the original 10-degree mismatch to an
 incorrect material index in a Wiener-Hopf plus factor and confirmed the
 material-direction convention and the two-sign correction of `D1`. Their

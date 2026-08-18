@@ -11,7 +11,8 @@ E_1/E_2=0.5,\qquad \nu_1=\nu_2=0.3,\qquad
 \]
 
 It tests the printed equations, the manuscript's material-interchange rule,
-and the proposed two-sign correction of `D1`. A second, MATLAB-only stage
+and the author-confirmed two-sign correction of `D1`. A second, MATLAB-only
+stage
 reconstructs the Wiener-Hopf factors and process-zone length, opening, and
 energy rate for all four Figure-2 cases. All four calculations were
 executed independently in MATLAB R2023a. The original 10-degree discrepancy
@@ -171,10 +172,11 @@ endpoint checkpoints are:
 | 105 deg | 2 | -0.5 | -0.2615246972 | 0.0370357093 | 0.0134427769 | 0.0039225730 |
 | 135 deg | 1 | +0.5 | -0.5467577000 | 0.0510105194 | 0.0578658843 | 0.0133074138 |
 
-The 45-degree row was independently generated in MATLAB R2023a and supplied
-for comparison. The 105- and 135-degree endpoints fall on the corresponding
-original curves to the precision readable from the published plot. They
-remain marked for an independent MATLAB run after this four-case extension.
+All four rows were generated independently in MATLAB R2023a and the complete
+process-zone regression suite passed. The 105- and 135-degree endpoints fall
+on the corresponding original curves to the precision readable from the
+published plot. The corrected author Mathcad worksheet supplies a second,
+independent implementation of the 10-degree endpoint.
 
 ### 10-degree discrepancy: author-confirmed resolution
 
