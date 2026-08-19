@@ -1,20 +1,308 @@
 \section{Визначення параметрів зони передруйнування}
 \label{sec:derivation}
 
-\worknote{Крок 3 заповнення. Перенести рівняння (5)--(10) лише після
-звірення з \texttt{docs/EQUATION\_INVENTORY.md}. Обов'язково використати
-виправлений $D_1$, правильні $\beta_1=\pi$, $\beta_2=0$ та відновлені
-множники $\sigma_i^2$ у формулах енергії.}
-
 \subsection{Перетворення Мелліна і функціональне рівняння}
 \label{subsec:mellin}
+
+Для побудови локального розв'язку вводимо безрозмірну радіальну
+координату
+\begin{equation*}
+  \rho=\frac{r}{d_i}
+\end{equation*}
+і застосовуємо інтегральне перетворення Мелліна до крайової задачі
+\eqref{eq:interface-boundary-conditions}--\eqref{eq:matched-far-field}.
+Трансформанти нормального напруження поза зоною та градієнта нормального
+переміщення в зоні визначаємо відповідно як
+\begin{equation*}
+\begin{aligned}
+  \Phi_i^+(p)
+    &=\int_1^\infty
+      \sigma_\theta(\rho d_i,\beta_i)\rho^p\,\dd\rho,\\
+  \Phi_i^-(p)
+    &=\frac{E_i}{2(1-\nu_i^2)}
+      \int_0^1
+      \left.
+      \frac{\partial u_\theta}{\partial r}
+      \right|_{\substack{r=\rho d_i\\\theta=\beta_i}}
+      \rho^p\,\dd\rho.
+\end{aligned}
+\end{equation*}
+Верхні індекси в $\Phi_i^+$ і $\Phi_i^-$ позначають функції, аналітичні
+у лівій та правій півплощинах відповідно, а не знак фізичної величини.
+
+Після виключення трансформант внутрішнього поля отримуємо функціональне
+рівняння
+\begin{equation}
+\label{eq:wiener-hopf-functional}
+  \Phi_i^+(p)
+  +\frac{\sigma_i}{p+1}
+  -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
+  =-\tan(\pi p)G_i(p)\Phi_i^-(p),
+\end{equation}
+справедливе у спільній смузі аналітичності
+$-\varepsilon_2<\operatorname{Re}p<\varepsilon_1$, де
+$\varepsilon_1,\varepsilon_2>0$ є достатньо малими. Ядро рівняння має
+вигляд
+\begin{equation*}
+  G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
+\end{equation*}
+Тут $D(p)$ є характеристичним визначником задачі про кутову точку з
+міжфазною зсувною тріщиною, наведеним у додатку~\ref{app:asymptotics}.
+Для плоскої деформації вводимо
+\begin{equation*}
+  e=\frac{1+\nu_2}{1+\nu_1}\frac{E_1}{E_2},
+  \qquad
+  \kappa_i=3-4\nu_i.
+\end{equation*}
+Визначники, що відповідають зоні передруйнування в матеріалах 1 і 2,
+дорівнюють
+\begin{equation*}
+\begin{aligned}
+  D_1(p)={}&2e(1+\kappa_2)
+    [\cos(2p\alpha)-\cos(2\alpha)]
+    \{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
+  &+(1+\kappa_1)
+    [\sin(2p\alpha)+p\sin(2\alpha)]
+    [\sin(2p(\pi-\alpha))-p\sin(2\alpha)],\\[2pt]
+  D_2(p)={}&2(1+\kappa_1)
+    [\cos(2p(\pi-\alpha))-\cos(2\alpha)]
+    [\sin^2(p\alpha)-p^2\sin^2\alpha]\\
+  &+e(1+\kappa_2)
+    [\sin(2p(\pi-\alpha))-p\sin(2\alpha)]
+    [\sin(2p\alpha)+p\sin(2\alpha)].
+\end{aligned}
+\end{equation*}
+Зокрема, показник сингулярності після утворення зони в матеріалі $i$
+визначається рівнянням
+\begin{equation*}
+  D_i(-1-\lambda_i)=0,
+\end{equation*}
+де $\lambda_i$ є найвід'ємнішим дійсним коренем у $(-1,0)$, неперервно
+пов'язаним із відповідною фізичною гілкою. Як і раніше, випадок
+$\alpha=\pi/2$ розуміємо лише як вироджену границю.
+
+\worknote{У формулі для $D_1$ використано підтверджене авторами
+виправлення двох знаків: у другому доданку мають стояти множники
+$[\sin(2p\alpha)+p\sin(2\alpha)]$ і
+$[\sin(2p(\pi-\alpha))-p\sin(2\alpha)]$. Саме цей вираз реалізовано у
+MATLAB-коді та використано для побудови виправленого рис.~4.}
 
 \subsection{Факторизація Вінера--Гопфа}
 \label{subsec:wiener-hopf}
 
-\subsection{Довжина, розкриття та швидкість вивільнення енергії}
+Рівняння~\eqref{eq:wiener-hopf-functional} розв'язуємо методом
+Вінера--Гопфа [32] аналогічно до спорідненої задачі [21]. Запишемо
+факторизацію ядра у вигляді
+\begin{equation*}
+  \exp\left\{
+    \frac{1}{2\pi\ii}
+    \int_{-\ii\infty}^{\ii\infty}
+      \frac{\log G_i(z)}{z-p}\,\dd z
+  \right\}
+  =
+  \begin{cases}
+    G_i^+(p), & \operatorname{Re}p<0,\\
+    G_i^-(p), & \operatorname{Re}p>0,
+  \end{cases}
+\end{equation*}
+і введемо допоміжні гамма-функціональні множники
+\begin{equation*}
+  K^\pm(p)=
+  \frac{\Gamma(1\mp p)}{\Gamma(\tfrac12\mp p)}.
+\end{equation*}
+За нормування $G_i^\pm(p)\to1$ на нескінченності розв'язок
+функціонального рівняння має вигляд
+\begin{equation}
+\label{eq:wiener-hopf-solution}
+\begin{aligned}
+  \Phi_i^+(p)={}&
+  -\frac{pG_i^+(p)}{K^+(p)}
+  \Bigg\{
+    \frac{\sigma_i}{p+1}
+    \left[
+      \frac{K^+(p)}{pG_i^+(p)}
+      +\frac{K^+(-1)}{G_i^+(-1)}
+    \right]\\
+  &\hspace{37mm}
+    -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
+    \left[
+      \frac{K^+(p)}{pG_i^+(p)}
+      +\frac{K^+(-\lambda-1)}
+      {(\lambda+1)G_i^+(-\lambda-1)}
+    \right]
+  \Bigg\},
+  \qquad \operatorname{Re}p<0,\\[3pt]
+  \Phi_i^-(p)={}&
+  K^-(p)G_i^-(p)
+  \Bigg\{
+    \frac{\sigma_iK^+(-1)}{(p+1)G_i^+(-1)}
+    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+    {(\lambda+1)(p+\lambda+1)G_i^+(-\lambda-1)}
+  \Bigg\},
+  \qquad \operatorname{Re}p>0.
+\end{aligned}
+\end{equation}
+
+Для дійсного $p<0$ ядра, що використовуються далі, є додатними й
+парними на уявній осі та прямують до одиниці. Тому числове обчислення
+плюс-фактора можна виконувати за дійсною формулою
+\begin{equation*}
+  \log G_i^+(p)
+  =-\frac{p}{\pi}\int_0^\infty
+    \frac{\log G_i(\ii t)}{t^2+p^2}\,\dd t,
+  \qquad p<0.
+\end{equation*}
+Саме ця форма використана у перевіреній MATLAB-реалізації; обчислення
+супроводжується контролем додатності ядра, його дійсності та збіжності
+до одиниці на кінці контуру.
+
+\subsection{Довжина зони передруйнування}
+\label{subsec:zone-length}
+
+Із другого співвідношення~\eqref{eq:wiener-hopf-solution} при
+$p\to+\infty$ випливає
+\begin{equation*}
+  \Phi_i^-(p)\sim\frac{1}{\sqrt{p}}
+  \left[
+    \frac{\sigma_iK^+(-1)}{G_i^+(-1)}
+    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+    {(\lambda+1)G_i^+(-\lambda-1)}
+  \right].
+\end{equation*}
+З іншого боку, застосування теореми абелевого типу [32] до
+асимптотики~\eqref{eq:zone-tip-asymptotics} дає
+\begin{equation*}
+  \Phi_i^-(p)\sim-\frac{k_i}{\sqrt{2pd_i}}.
+\end{equation*}
+Порівняння цих співвідношень дає локальний коефіцієнт інтенсивності
+напружень
+\begin{equation*}
+  k_i=-\sqrt{2d_i}
+  \left[
+    \frac{\sigma_iK^+(-1)}{G_i^+(-1)}
+    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+    {(\lambda+1)G_i^+(-\lambda-1)}
+  \right].
+\end{equation*}
+Умова обмеженості напружень $k_i=0$ визначає довжину зони:
+\begin{equation}
+\label{eq:process-zone-length}
+  d_i=
+  \left[
+    \frac{CQ_iK^+(-\lambda-1)G_i^+(-1)}
+    {\sigma_i(1+\lambda)K^+(-1)G_i^+(-\lambda-1)}
+  \right]^{-1/\lambda}.
+\end{equation}
+Оскільки $-1<\lambda<0$, дійсність і додатність $d_i$ вимагають
+$CQ_i>0$, що узгоджується з критерієм фізичної допустимості у
+підрозділі~\ref{subsec:boundary-conditions}. За незмінної геометрії
+формула~\eqref{eq:process-zone-length} також дає степеневий закон
+$d_i\propto C^{-1/\lambda}$.
+
+Використовуючи співвідношення
+\begin{equation*}
+  Q_i=g_1q_i l^{\lambda_0-\lambda},
+\end{equation*}
+де $g_1$ і $q_i$ наведено в додатку~\ref{app:asymptotics}, із
+формули~\eqref{eq:process-zone-length} отримуємо
+\begin{equation}
+\label{eq:normalized-process-zone-length}
+  \frac{d_i}{l}=
+  \left[
+    \frac{Cl^{\lambda_0}}{\sigma_i}
+    \frac{g_1q_iK^+(-1-\lambda)G_i^+(-1)}
+    {(1+\lambda)K^+(-1)G_i^+(-1-\lambda)}
+  \right]^{-1/\lambda}.
+\end{equation}
+Це співвідношення одночасно дає змогу перевірити припущення
+$d_i/l\ll1$, покладене під час формулювання локальної задачі.
+
+\subsection{Розкриття та швидкість вивільнення енергії}
 \label{subsec:zone-parameters}
 
-\worknote{У цьому підрозділі потрібно чітко відокремити розмірні величини
-$d_i$, $\delta_i$, $J_i$ від нормованих $d_i/l$, $\delta_i'$, $J_i'$ і
-ввести $\sigma'=Cl^{\lambda_0}/\sigma_i$ до першого використання.}
+Розходження берегів зони в кутовій точці визначимо як
+$\delta_i=\jump{u_\theta(0,\beta_i)}$. Із означення $\Phi_i^-(p)$
+випливає
+\begin{equation*}
+  \delta_i
+  =-2
+    \left.
+      \left(\frac{\partial u_\theta}{\partial r}\right)^*
+    \right|_{p=0,\,\theta=\beta_i}
+  =-\frac{4(1-\nu_i^2)d_i}{E_i}\Phi_i^-(0).
+\end{equation*}
+Підставляючи розв'язок~\eqref{eq:wiener-hopf-solution} та
+використовуючи~\eqref{eq:process-zone-length}, дістаємо
+\begin{equation}
+\label{eq:process-zone-opening}
+  \delta_i=
+  -\frac{4(1-\nu_i^2)\sigma_i\lambda K^+(-1)}
+  {E_i\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-\lambda-1)}d_i.
+\end{equation}
+
+Потенціальну енергію, накопичену в зоні передруйнування, в межах
+прийнятої моделі визначаємо рівністю [8]
+\begin{equation*}
+  W_i=\sigma_i\int_0^{d_i}
+      \jump{u_\theta(r,\beta_i)}\,\dd r
+  =-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
+\end{equation*}
+З урахуванням~\eqref{eq:wiener-hopf-solution} маємо
+\begin{equation*}
+  W_i=-\frac{32\lambda(1-\nu_i^2)\sigma_i^2}
+  {9\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i^2.
+\end{equation*}
+Диференціювання за довжиною зони приводить до швидкості вивільнення
+енергії
+\begin{equation}
+\label{eq:process-zone-energy-release-rate}
+  J_i=\frac{\dd W_i}{\dd d_i}
+  =-\frac{64\lambda(1-\nu_i^2)\sigma_i^2}
+  {9\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i.
+\end{equation}
+Відновлений множник $\sigma_i^2$ забезпечує правильну розмірність як
+$W_i$, так і $J_i$.
+
+Для числового аналізу вводимо безрозмірні параметри
+\begin{equation*}
+  \sigmap=\frac{Cl^{\lambda_0}}{\sigma_i},
+  \qquad
+  \delta_i'=\frac{E_i\delta_i}
+  {4(1-\nu_i^2)\sigma_i l},
+  \qquad
+  J_i'=\frac{E_iJ_i}
+  {4(1-\nu_i^2)\sigma_i^2l}.
+\end{equation*}
+\newpage
+Тоді формули~\eqref{eq:normalized-process-zone-length},
+\eqref{eq:process-zone-opening} і
+\eqref{eq:process-zone-energy-release-rate} набувають форми, безпосередньо
+реалізованої в MATLAB:
+\begin{equation*}
+\begin{aligned}
+  \frac{d_i}{l}
+    &=\left[
+      \sigmap\,
+      \frac{g_1q_iK^+(-1-\lambda)G_i^+(-1)}
+      {(1+\lambda)K^+(-1)G_i^+(-1-\lambda)}
+    \right]^{-1/\lambda},\\[2pt]
+  \delta_i'
+    &=-\frac{\lambda K^+(-1)}
+      {\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1-\lambda)}
+      \frac{d_i}{l},\\[2pt]
+  J_i'
+    &=-\frac{16\lambda}
+      {9\pi(\lambda+2)[G_i^+(-1)]^2}
+      \frac{d_i}{l}.
+\end{aligned}
+\end{equation*}
+У всіх трьох співвідношеннях використовується показник $\lambda$ задачі
+про кутову точку з міжфазною зсувною тріщиною, тобто корінь
+$D(-1-\lambda)=0$. Показники $\lambda_1$ і $\lambda_2$, що описують
+сингулярність після появи зони, не підставляються замість $\lambda$ у
+формули її параметрів.
+
+Прирівнюючи~\eqref{eq:process-zone-energy-release-rate} критичному
+значенню $J_{ic}$ для матеріалу $i$, отримуємо рівняння для навантаження,
+за якого зона передруйнування трансформується у тріщину нормального
+відриву, що відгалужується від початкової міжфазної тріщини.
