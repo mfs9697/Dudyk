@@ -8,7 +8,13 @@ This register mirrors the substantive Author Queries inserted inline in the work
 
 **Питання автору.** Михайле Володимировичу, яку саме роль Ви відводите у Вступі роботам про вдавлювання клина? Чи розглядаєте Ви їх як фізичний/методологічний аналог задач із локалізованим руйнуванням біля кутового концентратора, чи вважаєте нашу задачу безпосереднім розвитком цього напряму? Нам здається доцільнішим перше трактування, оскільки конфігурації wedge indentation і відгалуження міжфазної тріщини механічно істотно відрізняються.
 
-Status: **open; not yet inserted inline** (Introduction will be rewritten after the citation audit).
+Status: **open; not yet inserted inline** (Introduction will be rewritten after the citation audit and independent literature sweep).
+
+### AQ-INTRO-02 — geometry of the wedge-contact literature
+
+**Питання автору.** Михайле Володимировичу, у новому Вступі в один історичний ряд об’єднано роботи Галіна та Александрова–Бабешка [17,2], де штамп має клиноподібну форму в плані і діє на тривимірний пружний півпростір, та роботи Brock–Georgiadis–Zisis [6,18,48], де розглядається двовимірне вдавлювання клиноподібного індентора/профілю у півплощину. Це різні контактні геометрії. Чи Ви свідомо хочете представити їх як одну лінію розвитку? Ми пропонуємо або явно розділити ці два класи задач, або залишити лише ту підгрупу, яка потрібна як фізична аналогія до нашої кутової точки.
+
+Status: **open; not yet inserted inline** (Introduction will be rewritten after the independent literature sweep).
 
 ### AQ-PS-01 — bisector direction and local symmetry
 
