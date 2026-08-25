@@ -47,6 +47,8 @@
 
 \definecolor{worknotebg}{RGB}{245,247,250}
 \definecolor{worknotefg}{RGB}{70,78,90}
+\definecolor{authorqueryborder}{RGB}{150,35,35}
+\definecolor{authorquerybg}{RGB}{255,250,230}
 \newif\ifworkingdraft
 \workingdrafttrue
 \newcommand{\worknote}[1]{%
@@ -54,6 +56,17 @@
     \par\smallskip
     \noindent\colorbox{worknotebg}{%
       \parbox{0.96\linewidth}{\small\color{worknotefg}\textbf{Робоча примітка.} #1}}%
+    \par\smallskip
+  \fi}
+\newcommand{\AuthorQuery}[2]{%
+  \ifworkingdraft
+    \par\smallskip\noindent
+    {\footnotesize
+    \fcolorbox{authorqueryborder}{authorquerybg}{%
+      \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
+        \textcolor{authorqueryborder}{\textbf{Питання автору #1.}}%
+        \textcolor{black}{\ #2}}}%
+    }%
     \par\smallskip
   \fi}
 
