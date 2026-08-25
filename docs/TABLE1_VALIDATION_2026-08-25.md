@@ -21,11 +21,11 @@ where \(\lambda_0\in(-1,0)\) is the selected intact-corner singularity exponent 
 D_0(-1-\lambda_0)=0.
 \]
 
-The formulas for \(D_0\) and \(g_2\) are the same expressions implemented in `python/characteristic_roots.py` and `matlab/calculate_asymptotic_coefficients.m`.
+The formulas for \(D_0\) and \(g_2\) are the same expressions implemented independently in the Python and MATLAB verification paths in this repository.
 
 ## Independent calculation
 
-The values below were obtained by solving the coupled equations \(D_0=0\) and \(g_2=0\) for \((\lambda_0,\alpha)\). A high-precision independent calculation was used to avoid the interpolation error introduced by the previous one-degree angular sweep.
+The values below were obtained by solving the coupled equations \(D_0=0\) and \(g_2=0\) for \((\lambda_0,\alpha)\). A high-precision Python calculation was first used to avoid the interpolation error introduced by the previous one-degree angular sweep.
 
 | \(E_1/E_2\) | Author \(\alpha_1\), deg | Recalculated \(\alpha_1\), deg | Author \(\alpha_2\), deg | Recalculated \(\alpha_2\), deg |
 | ---: | ---: | ---: | ---: | ---: |
@@ -41,7 +41,17 @@ The values below were obtained by solving the coupled equations \(D_0=0\) and \(
 | 0.90 | 15.6 | 15.647354880 | 106.3 | 106.323194478 |
 | 0.99 | 16.1 | 16.107098612 | 106.2 | 106.172081737 |
 
-The machine-readable comparison is stored in `results/table1_transition_angles.csv`.
+The machine-readable Python comparison is stored in `results/table1_transition_angles.csv`.
+
+## Independent MATLAB confirmation
+
+The same eleven material contrasts were then recalculated with `matlab/verify_table1_transition_angles.m`, using the existing audited MATLAB functions `find_characteristic_roots.m`, `characteristic_determinant.m`, and `normalize_material.m`. The MATLAB run independently solved for the selected intact-corner root \(\lambda_0\) and then located both zeros of \(g_2\) with `fzero`.
+
+The MATLAB values agree with the Python values to all nine decimal places printed in the verification output. At every transition, both defining residuals are at machine-precision level: the reported \(|g_2|\) and \(|D_0(-1-\lambda_0)|\) values are approximately \(10^{-17}\)–\(10^{-16}\), with several values exactly zero at floating-point precision.
+
+The MATLAB output is stored in `results/table1_transition_angles_matlab.csv`.
+
+This two-code agreement removes the earlier ambiguity between exact transition roots and values obtained by linear interpolation of the one-degree Figure-4 sweep.
 
 ## Main findings
 
@@ -52,7 +62,7 @@ The machine-readable comparison is stored in `results/table1_transition_angles.c
    \alpha_1=7.029918876^\circ,
    \]
    which rounds to \(7.0^\circ\), not \(7.1^\circ\). This entry should be corrected if the table is retained at one-decimal precision.
-4. For the baseline \(E_1/E_2=0.5\), the exact transition angles are
+4. For the baseline \(E_1/E_2=0.5\), the independently confirmed transition angles are
    \[
    \boxed{\alpha_1=12.920209601^\circ,\qquad
    \alpha_2=107.089673026^\circ.}
@@ -68,4 +78,4 @@ For Table 1, two decimals are a reasonable compromise between reproducibility an
 | \(\alpha_1\), deg | 2.58 | 7.03 | 9.25 | 10.77 | 11.95 | 12.92 | 13.74 | 14.45 | 15.08 | 15.65 | 16.11 |
 | \(\alpha_2\), deg | 108.02 | 107.90 | 107.72 | 107.52 | 107.30 | 107.09 | 106.88 | 106.69 | 106.50 | 106.32 | 106.17 |
 
-The four-decimal baseline values may still be quoted in the text when precise transition locations are useful for defining the admissible angular intervals.
+The four-decimal baseline values may be quoted in the text when precise transition locations are useful for defining the admissible angular intervals.
