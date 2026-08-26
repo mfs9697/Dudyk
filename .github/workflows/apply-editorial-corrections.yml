@@ -20,7 +20,7 @@ jobs:
       - name: Prepare one-off script
         run: |
           sed -i '142,145d' scripts/apply_editorial_corrections.py
-          grep -RIl "найвід" manuscript/latex --include='*.tex' | xargs -r sed -i "s/найвід'ємніший/найменший/g; s/найвід’ємніший/найменший/g"
+          grep -RIl "найвід" manuscript/latex --include='*.tex' | xargs -r sed -i "s/найвід'ємніший/найменший/g; s/найвід’ємніший/найменший/g; s/найвід'ємнішим/найменшим/g; s/найвід’ємнішим/найменшим/g"
           grep -RIn "найвід" manuscript/latex --include='*.tex' || true
 
       - name: Apply corrections
