@@ -1,4 +1,5 @@
 name: Manuscript build
+# Compile and verify the current author-review manuscript after source edits.
 
 on:
   push:
