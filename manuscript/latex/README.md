@@ -7,9 +7,12 @@ be transferred from the verified repository documentation and CSV outputs.
 
 ## Compile
 
-From `manuscript/latex`, the most portable MiKTeX command sequence is:
+The bibliography is now active. From `manuscript/latex`, a portable MiKTeX
+build sequence is:
 
 ```bash
+xelatex -interaction=nonstopmode main.tex
+bibtex main
 xelatex -interaction=nonstopmode main.tex
 xelatex -interaction=nonstopmode main.tex
 ```
@@ -35,11 +38,12 @@ family. Corrected plots are loaded directly from the repository-level
 
 Visible gray boxes are working notes controlled by `\workingdrafttrue` in
 `preamble.tex`. Change it to `\workingdraftfalse` only after every section is
-scientifically complete.
+scientifically complete. Author-query boxes are controlled by the same working
+mode and disappear automatically in the clean version.
 
-The bibliography is intentionally disabled while `references.bib` is empty.
-After transferring and checking the references, change
-`\bibliographyreadyfalse` to `\bibliographyreadytrue` in `preamble.tex`.
+The integrated Introduction uses stable BibTeX keys from
+`bibliography/references.bib`. New references should be added only after
+bibliographic verification; do not renumber citations manually.
 
 See `notes/WORKFLOW.md` for the filling order and `notes/CORRECTIONS.md` for
 corrections that must not be lost during manuscript reconstruction.
