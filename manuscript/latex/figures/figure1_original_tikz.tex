@@ -1,0 +1,69 @@
+% Vector redraw of the author's original Figure 1.
+% The figure is intentionally kept as TikZ so that all labels are typeset
+% by LaTeX and remain vector objects in the compiled manuscript PDF.
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line cap=round,line join=round]
+\tikzset{
+  panel/.style={draw=black,line width=.6pt,rounded corners=6pt},
+  interface/.style={draw=black,line width=.7pt},
+  axis/.style={draw=black,line width=.45pt},
+  crack/.style={draw=black,double=white,double distance=2.0pt,line width=.45pt},
+  processzone/.style={draw=black,line width=2.0pt},
+  alternativezone/.style={draw=black,line width=1.2pt,dashed}
+}
+
+% Common panel geometry.  The interface rays are symmetric about the
+% horizontal bisector of material 2, as in the author's original sketch.
+\newcommand{\failurepanel}[2]{%
+  \begin{scope}[xshift=#1cm]
+    \draw[panel] (-2.20,-1.55) rectangle (2.20,1.55);
+    \coordinate (O) at (0,0);
+    \coordinate (Iu) at ($(O)+(118:2.05)$);
+    \coordinate (Il) at ($(O)+(242:2.05)$);
+    \draw[interface] (O)--(Iu);
+    \draw[interface] (O)--(Il);
+    \draw[axis] (-2.05,0)--(2.05,0);
+
+    % Polar coordinates and the half-angle alpha.
+    \draw[->,line width=.65pt] (O)--++(27:1.62)
+      node[above right=-1pt,font=\small] {$r$};
+    \draw[->,line width=.5pt] (0.58,0)
+      arc[start angle=0,end angle=27,radius=.58];
+    \node[font=\small] at (0.64,0.08) {$\theta$};
+    \draw[->,line width=.5pt] (0.83,0)
+      arc[start angle=0,end angle=118,radius=.83];
+    \node[font=\small] at (-0.03,0.74) {$\alpha$};
+
+    \node[font=\small] at (-0.18,-0.20) {$O$};
+    \node[font=\small] at (-1.45,-0.92) {$E_1,\,\nu_1$};
+    \node[font=\small] at ( 1.30,-0.92) {$E_2,\,\nu_2$};
+    #2
+  \end{scope}%
+}
+
+% (a) Intact broken interface.
+\failurepanel{0}{%
+  \node[font=\small] at (0,-1.88) {(a)};
+}
+
+% (b) Symmetric interfacial shear cracks of length l.
+\failurepanel{5.00}{%
+  \draw[crack] (O)--++(118:1.30);
+  \draw[crack] (O)--++(242:1.30);
+  \node[font=\small] at (-0.77, 1.18) {$l$};
+  \node[font=\small] at (-0.77,-1.18) {$l$};
+  \node[font=\small] at (0,-1.88) {(b)};
+}
+
+% (c) Mode-I process-zone alternatives along the two material bisectors.
+\failurepanel{10.00}{%
+  \draw[crack] (O)--++(118:1.30);
+  \draw[crack] (O)--++(242:1.30);
+  \node[font=\small] at (-0.77, 1.18) {$l$};
+  \node[font=\small] at (-0.77,-1.18) {$l$};
+  \draw[processzone] (O)--(-1.35,0);
+  \draw[alternativezone] (O)--(1.35,0);
+  \node[font=\small,below=2pt] at (-0.75,0) {$d_1$};
+  \node[font=\small,below=2pt] at ( 0.75,0) {$d_2$};
+  \node[font=\small] at (0,-1.88) {(c)};
+}
+\end{tikzpicture}
