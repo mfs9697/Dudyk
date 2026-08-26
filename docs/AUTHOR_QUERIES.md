@@ -4,6 +4,12 @@ This register mirrors the substantive Author Queries inserted inline in the work
 
 ## Open queries
 
+### AQ-INTRO-03 — logic and novelty framing of the integrated Introduction
+
+**Питання автору.** Після повного citation-by-citation audit Вашої останньої версії та незалежного пошуку близької літератури Вступ перебудовано не за порядком первинного списку посилань, а за механічною логікою задачі: (1) сингулярні поля кутових біматеріальних меж; (2) зародження руйнування в початково неушкоджених кутах і роль маломасштабної зони руйнування; (3) відхилення/відгалуження вже існуючих міжфазних тріщин; (4) найближчі моделі процес-зон біля ламаних меж і контактуючих міжфазних тріщин; (5) роботи Nazarenko--Kipnis як безпосередній граничний нестійкий стан; (6) вузький gap цієї роботи --- післякритичний перехід від контактуючих міжфазних зсувних тріщин до малої розтягувальної зони передруйнування та можливого Mode-I відгалуження. Через це частину Ваших посилань не використано у Вступі як віддалені, дублюючі або суто методичні; деякі перенесено до технічних розділів; натомість додано знайдені незалежно первинні роботи, ближчі до конкретного механізму. Чи погоджуєтесь Ви з такою логікою побудови Вступу і, зокрема, з тим, що новизну доцільно формулювати саме вузько --- як модель цього post-instability transition, а не як новизну відгалуження міжфазної тріщини загалом?
+
+Status: **open; inserted immediately after the integrated Introduction**.
+
 ### AQ-PS-01 — bisector direction and local symmetry
 
 **Питання автору.** Чи правильно ми розуміємо, що напрямок зони передруйнування вздовж бісектриси приймається насамперед унаслідок симетрії геометрії та навантаження, а принцип локальної симетрії використовується як додаткове фізичне обґрунтування цього вибору? Оскільки в роботі не розглядаються зони з довільною орієнтацією, нам здається обережнішим стверджувати, що бісектрисний напрямок **узгоджується** з умовою локального $K_{II}=0$, а не що він однозначно визначається нею.
@@ -32,13 +38,13 @@ Status: **open; inserted inline in the numerical-results section**.
 
 ### AQ-INTRO-01 — role of wedge-indentation literature
 
-The citation audit and independent literature sweep resolved the editorial role of this material. Wedge indentation is retained only as a short **physical analogy** for the sequence “local stress concentration → localized damage/process zone → tensile fracture”; it is not presented as the direct research lineage of the bimaterial-corner problem. No inline query is required in the integrated Introduction.
+The citation audit and independent literature sweep showed that wedge indentation is at most a remote physical analogy and is not part of the direct bimaterial-corner lineage. After the final scientific/editorial sweep the entire indentation detour was removed because the closer corner-fracture and process-zone literature already provides the necessary bridge.
 
-Status: **resolved editorially by the literature audit/sweep**.
+Status: **resolved editorially by the literature audit/sweep; no inline query remains**.
 
 ### AQ-INTRO-02 — geometry of the wedge-contact literature
 
-The integrated Introduction no longer combines the Galin/Aleksandrov wedge-planform contact geometry with two-dimensional wedge-profile indentation. The historical Galin line is omitted from the compact Introduction; only the two-dimensional Brock and Chen–Labuz papers are used in the analogy paragraph.
+The integrated Introduction no longer combines the Galin/Aleksandrov wedge-planform contact geometry with two-dimensional wedge-profile indentation. Both branches are omitted from the final compact Introduction because neither materially sharpens the manuscript-specific novelty boundary.
 
 Status: **resolved editorially by restructuring the Introduction**.
 
