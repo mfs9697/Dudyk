@@ -1,0 +1,53 @@
+name: Manuscript build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'manuscript/latex/**'
+      - '.github/workflows/manuscript-build.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-latex-extra texlive-lang-cyrillic \
+            texlive-bibtex-extra latexmk fonts-dejavu-core
+
+      - name: Compile manuscript
+        working-directory: manuscript/latex
+        run: |
+          set -o pipefail
+          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee xelatex-1.log
+          bibtex main | tee bibtex.log
+          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee xelatex-2.log
+          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee xelatex-3.log
+
+      - name: Check bibliography and cross-references
+        working-directory: manuscript/latex
+        run: |
+          if grep -E "Citation .* undefined|There were undefined citations|There were undefined references|I didn't find a database entry|Warning--I didn't find a database entry" main.log bibtex.log; then
+            echo 'Unresolved citation/reference warning detected.'
+            exit 1
+          fi
+          echo 'No unresolved citation/reference warnings detected.'
+
+      - name: Upload compiled manuscript
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dudyk-manuscript-build
+          path: |
+            manuscript/latex/main.pdf
+            manuscript/latex/main.log
+            manuscript/latex/bibtex.log
+          if-no-files-found: warn
