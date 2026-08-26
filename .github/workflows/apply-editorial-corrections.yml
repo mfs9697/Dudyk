@@ -17,28 +17,63 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Prepare one-off script
-        run: |
-          sed -i '142,145d' scripts/apply_editorial_corrections.py
-          grep -RIl "найвід" manuscript/latex --include='*.tex' | xargs -r sed -i "s/найвід'ємніший/найменший/g; s/найвід’ємніший/найменший/g; s/найвід'ємнішим/найменшим/g; s/найвід’ємнішим/найменшим/g"
-          grep -RIn "найвід" manuscript/latex --include='*.tex' || true
-
-      - name: Apply corrections
-        run: python scripts/apply_editorial_corrections.py
-
-      - name: Normalize AQ-NR-02 in query register
+      - name: Polish wording and audit author queries
         run: |
           python - <<'PY'
           from pathlib import Path
           import re
-          p = Path('docs/AUTHOR_QUERIES.md')
-          t = p.read_text(encoding='utf-8')
-          pattern = r"\*\*Питання автору\.\*\* У новій редакції максимум \$J_i\$.*?саме так сформулювати цей результат\."
-          replacement = "**Питання автору.** Чи правильно трактувати максимум $J_i$ при певних кутах не як «найменшу тріщиностійкість з'єднання», а як прояв більшої рушійної сили відгалуження і, за фіксованого $J_{i\\mathrm{c}}$, нижчого критичного зовнішнього навантаження? Я пропоную саме так сформулювати цей результат."
-          t, n = re.subn(pattern, lambda m: replacement, t, count=1, flags=re.S)
-          if n != 1:
-              raise SystemExit(f'Expected one AQ-NR-02 register replacement, got {n}')
-          p.write_text(t, encoding='utf-8')
+
+          replacements = {
+              'manuscript/latex/sections/02_problem_statement.tex': [
+                  ('умовою сталої відривної\nнапруження', 'умовою сталого відривного\nнапруження'),
+              ],
+              'manuscript/latex/sections/04_numerical_results.tex': [
+                  ('Під час редакційної перевірки я незалежно\nперерахували',
+                   'Під час редакційної перевірки я незалежно\nперерахував'),
+                  ('Якщо\nтакого незалежного матеріального параметра в цій роботі не використовується,\nпропоную',
+                   'Якщо\nтакий незалежний матеріальний параметр у цій роботі не використовується,\nпропоную'),
+              ],
+              'docs/AUTHOR_QUERIES.md': [
+                  ('Під час редакційної перевірки я незалежно перерахували',
+                   'Під час редакційної перевірки я незалежно перерахував'),
+                  ('Якщо такого незалежного матеріального параметра в цій роботі не використовується, пропоную',
+                   'Якщо такий незалежний матеріальний параметр у цій роботі не використовується, пропоную'),
+              ],
+          }
+
+          for name, pairs in replacements.items():
+              p = Path(name)
+              t = p.read_text(encoding='utf-8')
+              for old, new in pairs:
+                  if old not in t:
+                      raise SystemExit(f'Missing expected wording in {name}: {old!r}')
+                  t = t.replace(old, new)
+              p.write_text(t, encoding='utf-8')
+
+          # Basic terminology and notation checks across active manuscript.
+          tex = '\n'.join(p.read_text(encoding='utf-8')
+                          for p in Path('manuscript/latex').rglob('*.tex'))
+          forbidden = [
+              'найвід', 'Відновлений множник', 'У новій авторській редакції',
+              'У новій редакції максимум', 'J_{ic}', r'\delta_{ic}', r'K_{II}',
+              'відривної напруження', 'відривна напруга', 'відривної напруги'
+          ]
+          for item in forbidden:
+              if item in tex:
+                  raise SystemExit(f'Forbidden stale wording remains: {item}')
+
+          # Author-facing queries should not use a fictitious editorial “we”.
+          query_files = [
+              Path('manuscript/latex/notes/intro_logic_query.tex'),
+              Path('manuscript/latex/notes/reviewer_queries.tex'),
+              Path('manuscript/latex/sections/02_problem_statement.tex'),
+              Path('manuscript/latex/sections/04_numerical_results.tex'),
+          ]
+          for p in query_files:
+              for lineno, line in enumerate(p.read_text(encoding='utf-8').splitlines(), 1):
+                  if re.search(r'\b[Мм]и\b', line):
+                      print(f'CHECK plural voice {p}:{lineno}: {line}')
+          print('Editorial cleanup audit passed.')
           PY
 
       - name: Commit corrections
@@ -47,5 +82,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add manuscript/latex docs/AUTHOR_QUERIES.md
           git diff --cached --check
-          git commit -m "Apply author-review editorial corrections"
+          git commit -m "Polish author-review corrections"
           git push
