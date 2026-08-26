@@ -1,0 +1,251 @@
+name: Apply focused editorial corrections
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-editorial-corrections.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply editorial corrections
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          root = Path('.')
+
+          def read(path):
+              return (root / path).read_text(encoding='utf-8')
+
+          def write(path, text):
+              (root / path).write_text(text, encoding='utf-8')
+
+          def replace_exact(text, old, new, label, required=True):
+              n = text.count(old)
+              if required and n == 0:
+                  raise RuntimeError(f'Missing expected text for {label}')
+              if n:
+                  print(f'{label}: {n} replacement(s)')
+                  text = text.replace(old, new)
+              return text
+
+          # 1. Introduction: state the contribution positively rather than
+          # defining it by what is not novel.
+          path = 'manuscript/latex/sections/01_introduction.tex'
+          text = read(path)
+          old = ('Таким чином, ні відхилення\n'
+                 'міжфазної тріщини від межі, ні його процес-зонне моделювання самі по собі\n'
+                 'не становлять новизни цієї роботи; визначальною є конкретна початкова\n'
+                 'конфігурація і механічний перехід до відгалуження.')
+          new = ('Ці результати формують методичну основу для подальшого розвитку\n'
+                 'процес-зонного підходу. Специфіка цієї роботи визначається вихідною\n'
+                 'конфігурацією контактуючих міжфазних зсувних тріщин у кутовій точці\n'
+                 'ламаної межі та механічним переходом до відгалуження.')
+          text = replace_exact(text, old, new, 'positive novelty wording')
+          write(path, text)
+
+          # 2--4, 6--8, 10. Scientific wording and notation in active TeX.
+          tex_paths = list((root / 'manuscript/latex').rglob('*.tex'))
+          for p in tex_paths:
+              text = p.read_text(encoding='utf-8')
+
+              # Cleaner wording for the material-sector bisectors.
+              text = text.replace('бісектриса\nвідповідного матеріалу',
+                                  'бісектриса кутового сектора,\nзайнятого цим матеріалом')
+              text = text.replace('бісектриса відповідного матеріалу',
+                                  'бісектриса кутового сектора, зайнятого цим матеріалом')
+              text = text.replace('бісектрисі матеріалу, в якому',
+                                  'бісектрисі кутового сектора матеріалу, в якому')
+              text = text.replace('бісектрисі матеріалу $i$',
+                                  'бісектрисі кутового сектора матеріалу $i$')
+              text = text.replace('бісектриси одного з матеріалів',
+                                  'бісектриси кутового сектора одного з матеріалів')
+
+              # Standard root terminology.
+              text = re.sub(r"найвід[’']ємніший дійсний корінь", 'найменший дійсний корінь', text)
+
+              # Stress terminology: Ukrainian mechanics uses "напруження".
+              text = text.replace('стала відривна напруга', 'стале відривне напруження')
+              text = text.replace('сталої відривної напруги', 'сталого відривного напруження')
+              text = text.replace('сталою відривною напругою', 'сталим відривним напруженням')
+              text = text.replace('відривна напруга', 'відривне напруження')
+              text = text.replace('відривної напруги', 'відривного напруження')
+              text = text.replace('відривною напругою', 'відривним напруженням')
+              text = re.sub(r'\bнапруга\b', 'напруження', text)
+              text = re.sub(r'\bнапруги\b', 'напруження', text)
+              text = re.sub(r'\bнапругу\b', 'напруження', text)
+              text = re.sub(r'\bнапругою\b', 'напруженням', text)
+              text = re.sub(r'\bнапрузі\b', 'напруженні', text)
+
+              # Descriptor indices are upright; material index i remains italic.
+              text = text.replace('J_{ic}', r'J_{i\mathrm{c}}')
+              text = text.replace(r'\delta_{ic}', r'\delta_{i\mathrm{c}}')
+              text = text.replace(r'K_{II}', r'K_{\mathrm{II}}')
+
+              p.write_text(text, encoding='utf-8')
+
+          # 4. Separate boundedness from the additional closure condition k_i=0.
+          path = 'manuscript/latex/sections/02_problem_statement.tex'
+          text = read(path)
+          old = (r'''Невідому довжину $d_i$ визначаємо з умови усунення кореневої
+сингулярності
+\begin{equation*}
+  k_i=0,
+\end{equation*}
+яка замикає сформульовану крайову задачу.''')
+          new = (r'''Для замикання крайової задачі далі використовується умова усунення
+кореневого сингулярного доданка
+\begin{equation*}
+  k_i=0.
+\end{equation*}
+
+\AuthorQuery{AQ-PS-02}{У тексті я відокремив вимогу обмеженості напружень
+від додаткової умови $k_i=0$: обмеженість сама по собі не означає
+нульового напруження, тоді як $k_i=0$ зануляє коефіцієнт кореневого
+сингулярного доданка і використовується для визначення $d_i$. Чи
+правильно саме так трактувати умову замикання крайової задачі? Якщо так,
+чи можна додати коротке фізичне обґрунтування або посилання на роботу, де
+ця умова використовується для визначення довжини зони передруйнування?}''')
+          text = replace_exact(text, old, new, 'closure-condition query')
+          # 9. Singular voice in the inline author query.
+          text = text.replace('Чи правильно ми розуміємо', 'Чи правильно я розумію')
+          text = text.replace('нам здається', 'мені здається')
+          write(path, text)
+
+          path = 'manuscript/latex/sections/03_process_zone_parameters.tex'
+          text = read(path)
+          text = replace_exact(
+              text,
+              'Умова обмеженості напружень $k_i=0$ визначає довжину зони:',
+              'Накладаючи умову $k_i=0$, тобто усуваючи кореневий сингулярний '
+              'доданок у прийнятій асимптотиці, отримуємо рівняння для довжини зони:',
+              'boundedness wording')
+          text = re.sub(
+              r'\nВідновлений множник \$\\sigma_i\^2\$ забезпечує правильну розмірність як\n\$W_i\$, так і \$J_i\$\.\n',
+              '\n', text)
+          write(path, text)
+
+          # 8--10. Numerical discussion and its author queries.
+          path = 'manuscript/latex/sections/04_numerical_results.tex'
+          text = read(path)
+          old = ("У новій авторській редакції запропоновано інтерпретувати графіки\n"
+                 "$\\delta_i'$ і $J_i'$ також як основу відповідно деформаційного та\n"
+                 "енергетичного критеріїв зародження відгалуженої тріщини.")
+          new = ("Окремо розглядається можливість інтерпретації графіків $\\delta_i'$ і\n"
+                 "$J_i'$ як основи відповідно деформаційного та енергетичного критеріїв\n"
+                 "зародження відгалуженої тріщини.")
+          text = replace_exact(text, old, new, 'version-neutral criterion wording')
+          text = text.replace('Під час редакційної перевірки ми незалежно',
+                              'Під час редакційної перевірки я незалежно')
+          text = text.replace('ми не використовуємо,\nпропонуємо',
+                              'в цій роботі не використовується,\nпропоную')
+          old_q = (r'''\AuthorQuery{AQ-NR-02}{У новій редакції максимум $J_i$ при певних кутах
+інтерпретовано як ``найменшу тріщиностійкість з'єднання''. Чи Ви маєте на
+увазі не зміну матеріальної тріщиностійкості $J_{i\mathrm{c}}$, а найменше
+критичне зовнішнє навантаження, необхідне для ініціювання відгалуження за
+фіксованого $J_{i\mathrm{c}}$? Ми пропонуємо саме так сформулювати цей результат.}''')
+          new_q = (r'''\AuthorQuery{AQ-NR-02}{Чи правильно трактувати максимум $J_i$ при певних
+кутах не як ``найменшу тріщиностійкість з'єднання'', а як прояв більшої
+рушійної сили відгалуження і, за фіксованого $J_{i\mathrm{c}}$, нижчого
+критичного зовнішнього навантаження? Я пропоную саме так сформулювати цей
+результат.}''')
+          text = replace_exact(text, old_q, new_q, 'version-neutral AQ-NR-02')
+          text = text.replace('Ми схиляємося до', 'Я схиляюся до')
+          write(path, text)
+
+          # 5. Move Figure-1 labels clear of interface/axis lines and give them
+          # a small white backing so no line can cross a symbol after scaling.
+          path = 'manuscript/latex/figures/figure1_original_tikz.tex'
+          text = read(path)
+          text = replace_exact(text,
+              r'\node[font=\small] at (0.64,0.08) {$\theta$};',
+              r'\node[font=\small,fill=white,inner sep=.7pt] at (0.93,0.18) {$\theta$};',
+              'Figure 1 theta label')
+          text = replace_exact(text,
+              r'\node[font=\small] at (-0.03,0.74) {$\alpha$};',
+              r'\node[font=\small,fill=white,inner sep=.7pt] at (0.16,0.88) {$\alpha$};',
+              'Figure 1 alpha label')
+          text = replace_exact(text,
+              r'\node[font=\small] at (-0.18,-0.20) {$O$};',
+              r'\node[font=\small,fill=white,inner sep=.7pt] at (0.18,-0.20) {$O$};',
+              'Figure 1 O label')
+          write(path, text)
+
+          # 9. Author-facing blocks use singular voice when referring to the
+          # editor's own assessment, not a fictitious editorial collective.
+          path = 'manuscript/latex/notes/reviewer_queries.tex'
+          text = read(path)
+          text = text.replace('Як рецензент, ми бачимо тут потенційне питання:',
+                              'Під час редакційного перегляду я бачу тут потенційне питання:')
+          text = text.replace('а в нашій роботі будується', 'а в цій роботі будується')
+          text = text.replace('пропонуємо обережніше', 'пропоную обережніше')
+          text = text.replace('на нашу думку', 'на мою думку')
+          text = text.replace('просимо вказати', 'прошу вказати')
+          write(path, text)
+
+          # Mirror all open-query wording in the durable query register.
+          path = 'docs/AUTHOR_QUERIES.md'
+          text = read(path)
+          text = text.replace('Чи правильно ми розуміємо', 'Чи правильно я розумію')
+          text = text.replace('нам здається', 'мені здається')
+          text = text.replace('Під час редакційної перевірки ми незалежно',
+                              'Під час редакційної перевірки я незалежно')
+          text = text.replace('ми не використовуємо, пропонуємо',
+                              'в цій роботі не використовується, пропоную')
+          text = text.replace('У новій редакції максимум $J_i$ при певних кутах інтерпретовано як «найменшу тріщиностійкість з\'єднання». Чи Ви маєте на увазі не зміну матеріальної тріщиностійкості $J_{i\\mathrm{c}}$, а найменше критичне зовнішнє навантаження, необхідне для ініціювання відгалуження за фіксованого $J_{i\\mathrm{c}}$? Ми пропонуємо саме так сформулювати цей результат.',
+                              'Чи правильно трактувати максимум $J_i$ при певних кутах не як «найменшу тріщиностійкість з\'єднання», а як прояв більшої рушійної сили відгалуження і, за фіксованого $J_{i\\mathrm{c}}$, нижчого критичного зовнішнього навантаження? Я пропоную саме так сформулювати цей результат.')
+          text = text.replace('Ми схиляємося до', 'Я схиляюся до')
+          text = text.replace('Як рецензент, ми бачимо тут потенційне питання:',
+                              'Під час редакційного перегляду я бачу тут потенційне питання:')
+          text = text.replace('а в нашій роботі будується', 'а в цій роботі будується')
+          text = text.replace('пропонуємо обережніше', 'пропоную обережніше')
+          text = text.replace('на нашу думку', 'на мою думку')
+          text = text.replace('просимо вказати', 'прошу вказати')
+          text = text.replace('J_{ic}', r'J_{i\mathrm{c}}')
+          text = text.replace(r'\delta_{ic}', r'\delta_{i\mathrm{c}}')
+          text = text.replace(r'K_{II}', r'K_{\mathrm{II}}')
+
+          marker = '### AQ-PS-02 — closure condition at the process-zone tip\n\n'
+          if marker not in text:
+              insert_after = ('Status: **open; inserted inline in the problem statement**.\n\n')
+              aq = (marker +
+                    '**Питання автору.** У тексті я відокремив вимогу обмеженості напружень від додаткової умови $k_i=0$: обмеженість сама по собі не означає нульового напруження, тоді як $k_i=0$ зануляє коефіцієнт кореневого сингулярного доданка і використовується для визначення $d_i$. Чи правильно саме так трактувати умову замикання крайової задачі? Якщо так, чи можна додати коротке фізичне обґрунтування або посилання на роботу, де ця умова використовується для визначення довжини зони передруйнування?\n\n'
+                    'Status: **open; inserted inline after the process-zone-tip asymptotics**.\n\n')
+              idx = text.find(insert_after, text.find('### AQ-PS-01'))
+              if idx < 0:
+                  raise RuntimeError('Could not place AQ-PS-02 in query register')
+              idx += len(insert_after)
+              text = text[:idx] + aq + text[idx:]
+          write(path, text)
+
+          # Final notation/terminology audit on the active manuscript.
+          active = '\n'.join(p.read_text(encoding='utf-8') for p in tex_paths)
+          bad = re.findall(r'\bнапруг(?:а|и|у|ою|і)\b', active)
+          if bad:
+              raise RuntimeError(f'Uncorrected stress terminology remains: {bad[:10]}')
+          if re.search(r"найвід[’']ємніш", active):
+              raise RuntimeError('Nonstandard root wording remains')
+          if 'J_{ic}' in active or r'\delta_{ic}' in active or r'K_{II}' in active:
+              raise RuntimeError('Descriptor-index italics remain uncorrected')
+
+          print('Editorial correction batch completed.')
+
+      - name: Commit corrections
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manuscript/latex docs/AUTHOR_QUERIES.md
+          git diff --cached --check
+          git commit -m "Apply author-review editorial corrections"
+          git push
