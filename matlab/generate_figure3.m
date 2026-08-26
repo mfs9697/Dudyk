@@ -121,7 +121,7 @@ fprintf(['Run run_figure3_tests to reproduce the author T=40 table ', ...
 end
 
 function write_figure(data, cases, figuresDir)
-fig = figure('Color', 'w', 'Position', [100, 100, 1180, 405]);
+fig = figure('Color', 'w', 'Position', [100, 100, 1180, 440]);
 layout = tiledlayout(fig, 1, 3, 'TileSpacing', 'compact', ...
     'Padding', 'compact');
 yFields = {'d_over_l', 'delta_prime', 'J_prime'};
@@ -151,14 +151,15 @@ for panel = 1:3
 
         handle = plot(ax, segmentAlpha, segmentValues, ...
             cases(k).line_style, 'Color', cases(k).color, ...
-            'LineWidth', 2.0, 'DisplayName', cases(k).display_name);
+            'LineWidth', 2.2, 'DisplayName', cases(k).display_name);
         if panel == 1
             legendHandles(k) = handle;
         end
     end
     hold(ax, 'off');
     format_axes(ax, yLabels{panel}, yMaximum(panel), panel);
-    title(ax, panelLabels{panel}, 'FontWeight', 'normal');
+    title(ax, panelLabels{panel}, 'FontName', 'Times New Roman', ...
+        'FontSize', 12, 'FontWeight', 'normal');
 end
 
 % MATLAB fills a multi-column legend column-wise. This sequence preserves
@@ -168,6 +169,7 @@ legendHandle = legend(legendHandles(legendOrder), ...
     {cases(legendOrder).display_name}, ...
     'Interpreter', 'tex', 'NumColumns', 2, 'Box', 'off');
 legendHandle.FontName = 'Times New Roman';
+legendHandle.FontSize = 11;
 legendHandle.Layout.Tile = 'south';
 export_with_fallback(fig, ...
     fullfile(figuresDir, 'figure3_recalculated.pdf'), ...
@@ -180,12 +182,13 @@ end
 
 function format_axes(ax, yLabelText, yMaximum, panel)
 ax.FontName = 'Times New Roman';
-ax.FontSize = 11;
-ax.LineWidth = 0.8;
+ax.FontSize = 12;
+ax.LineWidth = 0.9;
 ax.Box = 'on';
 ax.XGrid = 'on';
 ax.YGrid = 'on';
 ax.GridAlpha = 0.15;
+ax.TickLabelInterpreter = 'tex';
 xlim(ax, [0, 180]);
 ylim(ax, [0, yMaximum]);
 xticks(ax, 0:30:180);
@@ -194,8 +197,10 @@ if panel < 3
 else
     yticks(ax, 0:0.01:yMaximum);
 end
-xlabel(ax, '\alpha (deg)', 'Interpreter', 'tex');
-ylabel(ax, yLabelText, 'Interpreter', 'tex');
+xlabel(ax, '\alpha (deg)', 'Interpreter', 'tex', ...
+    'FontName', 'Times New Roman', 'FontSize', 13);
+ylabel(ax, yLabelText, 'Interpreter', 'tex', ...
+    'FontName', 'Times New Roman', 'FontSize', 13);
 end
 
 function export_with_fallback(fig, destination, varargin)
