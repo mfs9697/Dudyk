@@ -27,20 +27,22 @@ admissibility = calculate_figure4_admissibility( ...
 
 % Complete mathematical branches. NaN at 90 degrees intentionally breaks
 % the curves at the degenerate flat-interface limit.
-fig = figure('Color', 'w', 'Position', [100, 100, 780, 520]);
+fig = figure('Color', 'w', 'Position', [100, 100, 820, 560]);
 hold on;
 plot(data.alpha_deg, data.lambda0, 'Color', [0.45, 0.22, 0.65], ...
-    'LineWidth', 1.8, 'DisplayName', '\lambda_0');
+    'LineWidth', 2.0, 'DisplayName', '\lambda_0');
 plot(data.alpha_deg, data.lambda, 'Color', [0.78, 0.12, 0.12], ...
-    'LineWidth', 1.8, 'DisplayName', '\lambda');
+    'LineWidth', 2.0, 'DisplayName', '\lambda');
 plot(data.alpha_deg, data.lambda1, 'Color', [0.10, 0.55, 0.22], ...
-    'LineWidth', 1.8, 'DisplayName', '\lambda_1');
+    'LineWidth', 2.0, 'DisplayName', '\lambda_1');
 plot(data.alpha_deg, data.lambda2, 'Color', [0.05, 0.35, 0.75], ...
-    'LineWidth', 1.8, 'DisplayName', '\lambda_2');
+    'LineWidth', 2.0, 'DisplayName', '\lambda_2');
 mark_degenerate_limit(gca);
 hold off;
 format_axes(gca);
-legend('Location', 'south', 'NumColumns', 4, 'Box', 'off');
+legendHandle = legend('Location', 'south', 'NumColumns', 4, 'Box', 'off', ...
+    'Interpreter', 'tex');
+format_legend(legendHandle);
 exportgraphics(fig, fullfile(figuresDir, 'figure4_recalculated.pdf'), ...
     'ContentType', 'vector');
 exportgraphics(fig, fullfile(figuresDir, 'figure4_recalculated.png'), ...
@@ -50,13 +52,13 @@ close(fig);
 % Reconstruct the physical content of the original Fig. 4. Thin gray lines
 % show the complete lambda1/lambda2 solutions; saturated line segments show
 % only where C*g2 < 0 and C*Qi > 0 are simultaneously satisfied.
-fig = figure('Color', 'w', 'Position', [100, 100, 820, 540]);
+fig = figure('Color', 'w', 'Position', [100, 100, 860, 590]);
 hold on;
 hComplete = plot(data.alpha_deg, data.lambda1, ':', ...
-    'Color', [0.65, 0.65, 0.65], 'LineWidth', 1.1, ...
+    'Color', [0.65, 0.65, 0.65], 'LineWidth', 1.2, ...
     'DisplayName', 'Complete \lambda_1, \lambda_2');
 plot(data.alpha_deg, data.lambda2, ':', 'Color', [0.65, 0.65, 0.65], ...
-    'LineWidth', 1.1, 'HandleVisibility', 'off');
+    'LineWidth', 1.2, 'HandleVisibility', 'off');
 
 green = [0.10, 0.58, 0.25];
 blue = [0.05, 0.38, 0.78];
@@ -77,10 +79,10 @@ hCpos1 = plot_masked_curve(data.alpha_deg, data.lambda1, ...
     '\sigma^{\prime}=+0.5 (C>0), \lambda_1', ...
     admissibility.alpha2_deg);
 hLambda0 = plot(data.alpha_deg, data.lambda0, ...
-    'Color', [0.45, 0.22, 0.65], 'LineWidth', 1.8, ...
+    'Color', [0.45, 0.22, 0.65], 'LineWidth', 2.0, ...
     'DisplayName', '\lambda_0');
 hLambda = plot(data.alpha_deg, data.lambda, ...
-    'Color', [0.78, 0.12, 0.12], 'LineWidth', 1.8, ...
+    'Color', [0.78, 0.12, 0.12], 'LineWidth', 2.0, ...
     'DisplayName', '\lambda');
 mark_degenerate_limit(gca);
 hold off;
@@ -88,10 +90,11 @@ format_axes(gca);
 % With two columns this order pairs the two C>0 branches, the two C<0
 % branches, and lambda0/lambda on common rows; the gray audit entry occupies
 % the last row by itself.
-legend([hCpos2, hCneg2, hLambda0, hComplete, ...
+legendHandle = legend([hCpos2, hCneg2, hLambda0, hComplete, ...
     hCpos1, hCneg1, hLambda], ...
     'Location', 'south', 'NumColumns', 2, 'Box', 'off', ...
     'Interpreter', 'tex');
+format_legend(legendHandle);
 exportgraphics(fig, fullfile(figuresDir, ...
     'figure4_admissible_segments.pdf'), 'ContentType', 'vector');
 exportgraphics(fig, fullfile(figuresDir, ...
@@ -99,16 +102,18 @@ exportgraphics(fig, fullfile(figuresDir, ...
 close(fig);
 
 % Keep the manuscript defect outside the publication figure.
-fig = figure('Color', 'w', 'Position', [100, 100, 780, 520]);
+fig = figure('Color', 'w', 'Position', [100, 100, 820, 560]);
 hold on;
 plot(data.alpha_deg, data.lambda1, 'Color', [0.10, 0.55, 0.22], ...
-    'LineWidth', 1.8, 'DisplayName', 'Corrected D_1');
+    'LineWidth', 2.0, 'DisplayName', 'Corrected D_1');
 plot(data.alpha_deg, data.lambda1_D1_printed, 'k--', ...
-    'LineWidth', 1.4, 'DisplayName', 'Printed D_1');
+    'LineWidth', 1.6, 'DisplayName', 'Printed D_1');
 mark_degenerate_limit(gca);
 hold off;
 format_axes(gca);
-legend('Location', 'southwest', 'Box', 'off');
+legendHandle = legend('Location', 'southwest', 'Box', 'off', ...
+    'Interpreter', 'tex');
+format_legend(legendHandle);
 exportgraphics(fig, fullfile(figuresDir, 'figure4_D1_audit.pdf'), ...
     'ContentType', 'vector');
 exportgraphics(fig, fullfile(figuresDir, 'figure4_D1_audit.png'), ...
@@ -141,7 +146,7 @@ end
 [segmentAngles, order] = sort(segmentAngles);
 segmentValues = segmentValues(order);
 handle = plot(segmentAngles, segmentValues, lineStyle, 'Color', color, ...
-    'LineWidth', 2.2, 'DisplayName', displayName);
+    'LineWidth', 2.3, 'DisplayName', displayName);
 end
 
 function mark_degenerate_limit(ax)
@@ -152,15 +157,23 @@ end
 function format_axes(ax)
 ax.FontName = 'Times New Roman';
 ax.FontSize = 12;
-ax.LineWidth = 0.8;
+ax.LineWidth = 0.9;
 ax.Box = 'on';
 ax.XGrid = 'on';
 ax.YGrid = 'on';
 ax.GridAlpha = 0.15;
+ax.TickLabelInterpreter = 'tex';
 xlim(ax, [0, 180]);
 ylim(ax, [-1, 0]);
 xticks(ax, 0:30:180);
 yticks(ax, -1:0.1:0);
-xlabel(ax, 'Half-angle, \alpha (deg)', 'Interpreter', 'tex');
-ylabel(ax, 'Stress-singularity exponent', 'Interpreter', 'tex');
+xlabel(ax, 'Half-angle, \alpha (deg)', 'Interpreter', 'tex', ...
+    'FontName', 'Times New Roman', 'FontSize', 13);
+ylabel(ax, 'Stress-singularity exponent', 'Interpreter', 'tex', ...
+    'FontName', 'Times New Roman', 'FontSize', 13);
+end
+
+function format_legend(legendHandle)
+legendHandle.FontName = 'Times New Roman';
+legendHandle.FontSize = 11;
 end
