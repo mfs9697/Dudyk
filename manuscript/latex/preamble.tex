@@ -6,6 +6,7 @@
 \fi
 
 \usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
 \usepackage{polyglossia}
 \setdefaultlanguage{ukrainian}
 \setotherlanguage{english}
@@ -15,16 +16,16 @@
   \setmainfont{Times New Roman}
   \setsansfont{Arial}
   \setmonofont{Consolas}
-  \newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic]
-  \newfontfamily\cyrillicfontsf{Arial}[Script=Cyrillic]
-  \newfontfamily\cyrillicfonttt{Consolas}[Script=Cyrillic]
+  \newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic,Ligatures=TeX]
+  \newfontfamily\cyrillicfontsf{Arial}[Script=Cyrillic,Ligatures=TeX]
+  \newfontfamily\cyrillicfonttt{Consolas}[Script=Cyrillic,Ligatures=TeX]
 }{
   \setmainfont{DejaVu Serif}
   \setsansfont{DejaVu Sans}
   \setmonofont{DejaVu Sans Mono}
-  \newfontfamily\cyrillicfont{DejaVu Serif}[Script=Cyrillic]
-  \newfontfamily\cyrillicfontsf{DejaVu Sans}[Script=Cyrillic]
-  \newfontfamily\cyrillicfonttt{DejaVu Sans Mono}[Script=Cyrillic]
+  \newfontfamily\cyrillicfont{DejaVu Serif}[Script=Cyrillic,Ligatures=TeX]
+  \newfontfamily\cyrillicfontsf{DejaVu Sans}[Script=Cyrillic,Ligatures=TeX]
+  \newfontfamily\cyrillicfonttt{DejaVu Sans Mono}[Script=Cyrillic,Ligatures=TeX]
 }
 
 \usepackage[a4paper,margin=25mm]{geometry}
@@ -45,21 +46,17 @@
 \usepackage{enumitem}
 \usepackage{authblk}
 
-\definecolor{worknotebg}{RGB}{245,247,250}
-\definecolor{worknotefg}{RGB}{70,78,90}
 \definecolor{authorqueryborder}{RGB}{150,35,35}
 \definecolor{authorquerybg}{RGB}{255,250,230}
-\newif\ifworkingdraft
-\workingdrafttrue
-\newcommand{\worknote}[1]{%
-  \ifworkingdraft
-    \par\smallskip
-    \noindent\colorbox{worknotebg}{%
-      \parbox{0.96\linewidth}{\small\color{worknotefg}\textbf{Робоча примітка.} #1}}%
-    \par\smallskip
-  \fi}
+\definecolor{manuscriptlink}{RGB}{0,75,145}
+
+% Working notes are suppressed in the integrated manuscript. Author queries
+% remain visible until they are resolved with the authors.
+\newcommand{\worknote}[1]{}
+\newif\ifshowauthorqueries
+\showauthorqueriestrue
 \newcommand{\AuthorQuery}[2]{%
-  \ifworkingdraft
+  \ifshowauthorqueries
     \par\smallskip\noindent
     {\footnotesize
     \fcolorbox{authorqueryborder}{authorquerybg}{%
@@ -91,8 +88,12 @@
 \newcommand{\Jp}{J^{\prime}}
 \newcommand{\jump}[1]{\left[\!\left[#1\right]\!\right]}
 
-\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
 \hypersetup{
+  colorlinks=true,
+  linkcolor=manuscriptlink,
+  citecolor=manuscriptlink,
+  urlcolor=manuscriptlink,
   pdftitle={Відгалуження міжфазної зсувної тріщини у кутовій точці ламаної межі поділу},
   pdfauthor={А. О. Камінський; М. Ф. Селіванов; М. В. Дудик; Т. В. Поліщук}
 }
