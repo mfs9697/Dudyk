@@ -4,18 +4,6 @@ This register mirrors the substantive Author Queries inserted inline in the work
 
 ## Open queries
 
-### AQ-INTRO-01 — role of wedge-indentation literature
-
-**Питання автору.** Михайле Володимировичу, яку саме роль Ви відводите у Вступі роботам про вдавлювання клина? Чи розглядаєте Ви їх як фізичний/методологічний аналог задач із локалізованим руйнуванням біля кутового концентратора, чи вважаєте нашу задачу безпосереднім розвитком цього напряму? Нам здається доцільнішим перше трактування, оскільки конфігурації wedge indentation і відгалуження міжфазної тріщини механічно істотно відрізняються.
-
-Status: **open; not yet inserted inline** (Introduction will be rewritten after the citation audit and independent literature sweep).
-
-### AQ-INTRO-02 — geometry of the wedge-contact literature
-
-**Питання автору.** Михайле Володимировичу, у новому Вступі в один історичний ряд об’єднано роботи Галіна та Александрова–Бабешка [17,2], де штамп має клиноподібну форму в плані і діє на тривимірний пружний півпростір, та роботи Brock–Georgiadis–Zisis [6,18,48], де розглядається двовимірне вдавлювання клиноподібного індентора/профілю у півплощину. Це різні контактні геометрії. Чи Ви свідомо хочете представити їх як одну лінію розвитку? Ми пропонуємо або явно розділити ці два класи задач, або залишити лише ту підгрупу, яка потрібна як фізична аналогія до нашої кутової точки.
-
-Status: **open; not yet inserted inline** (Introduction will be rewritten after the independent literature sweep).
-
 ### AQ-PS-01 — bisector direction and local symmetry
 
 **Питання автору.** Чи правильно ми розуміємо, що напрямок зони передруйнування вздовж бісектриси приймається насамперед унаслідок симетрії геометрії та навантаження, а принцип локальної симетрії використовується як додаткове фізичне обґрунтування цього вибору? Оскільки в роботі не розглядаються зони з довільною орієнтацією, нам здається обережнішим стверджувати, що бісектрисний напрямок **узгоджується** з умовою локального $K_{II}=0$, а не що він однозначно визначається нею.
@@ -39,6 +27,20 @@ Status: **open; inserted inline in the numerical-results section**.
 **Питання автору.** На рис. 3(a) максимальне значення $d_i/l$ сягає приблизно $0.18$, тоді як локальна постановка ґрунтується на припущенні $d_i\ll l$. Як Ви пропонуєте трактувати цю область? Ми схиляємося до того, щоб залишити повну математичну криву, але прямо зазначити, що поблизу максимуму кількісна точність маломасштабної моделі потребує обережності, і візуально/текстово позначити область послаблення припущення $d_i/l\ll1$.
 
 Status: **open; inserted inline in the numerical-results section**.
+
+## Resolved editorial questions
+
+### AQ-INTRO-01 — role of wedge-indentation literature
+
+The citation audit and independent literature sweep resolved the editorial role of this material. Wedge indentation is retained only as a short **physical analogy** for the sequence “local stress concentration → localized damage/process zone → tensile fracture”; it is not presented as the direct research lineage of the bimaterial-corner problem. No inline query is required in the integrated Introduction.
+
+Status: **resolved editorially by the literature audit/sweep**.
+
+### AQ-INTRO-02 — geometry of the wedge-contact literature
+
+The integrated Introduction no longer combines the Galin/Aleksandrov wedge-planform contact geometry with two-dimensional wedge-profile indentation. The historical Galin line is omitted from the compact Introduction; only the two-dimensional Brock and Chen–Labuz papers are used in the analogy paragraph.
+
+Status: **resolved editorially by restructuring the Introduction**.
 
 ## Resolved/confirmed technical points
 
