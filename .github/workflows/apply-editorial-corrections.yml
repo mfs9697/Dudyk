@@ -18,7 +18,9 @@ jobs:
           fetch-depth: 0
 
       - name: Prepare one-off script
-        run: sed -i '142,145d' scripts/apply_editorial_corrections.py
+        run: |
+          sed -i '142,145d' scripts/apply_editorial_corrections.py
+          grep -RIl "найвід" manuscript/latex --include='*.tex' | xargs -r sed -i "s/найвід'ємніший/найменший/g; s/найвід’ємніший/найменший/g"
 
       - name: Apply corrections
         run: python scripts/apply_editorial_corrections.py
