@@ -4,13 +4,229 @@
 \setcounter{equation}{0}
 \renewcommand{\theequation}{A.\arabic{equation}}
 
-\worknote{Крок 6 заповнення. Перенести $D_0(p)$, $D(p)$, $D_i(p)$,
-$g_1$, $g_2$, $S_i$, $q_i$ та Wiener--Hopf factors із перевіреного
-інвентарю рівнянь. Формулу друкованого $D_1$ не використовувати як
-основну; її можна згадати лише в примітці про виправлення.}
+У цьому додатку зібрано характеристичні співвідношення та коефіцієнти
+асимптотичних полів, які використовуються в основному тексті. Для плоскої
+деформації вводимо безрозмірні параметри пружної невідповідності
+\begin{equation*}
+  e=\frac{1+\nu_2}{1+\nu_1}\frac{E_1}{E_2},
+  \qquad
+  \kappa_i=3-4\nu_i,\qquad i=1,2.
+\end{equation*}
+Для всіх характеристичних показників використовується зв'язок між
+меллінівською змінною і показником сингулярності
+\begin{equation*}
+  p=-1-\lambda_*,
+  \qquad -1<\lambda_*<0.
+\end{equation*}
+Під фізичним показником надалі розуміємо найвід'ємніший дійсний корінь у
+$(-1,0)$, неперервно пов'язаний із відповідною гілкою розв'язку. Випадок
+$\alpha=\pi/2$ є виродженою границею плоскої межі поділу і не трактується
+як звичайна внутрішня точка характеристичної гілки.
 
 \subsection{Інтактна кутова точка}
 
+До утворення міжфазної зсувної тріщини сингулярна частина напружень на
+межі поділу має вигляд~\cite{NazarenkoKipnis2022Stress}
+\begin{equation}
+\label{eq:app-intact-field}
+\begin{aligned}
+  \tau_{r\theta}(r,\alpha)
+    &=Cg_1r^{\lambda_0}+o\!\left(r^{\lambda_0}\right),\\
+  \sigma_\theta(r,\alpha)
+    &=Cg_2r^{\lambda_0}+o\!\left(r^{\lambda_0}\right),
+    \qquad r\to0,
+\end{aligned}
+\end{equation}
+де
+\begin{equation*}
+\begin{aligned}
+  g_1={}&(1-e)\sin[\lambda_0(\pi-\alpha)]
+  \bigl[(\lambda_0+1)\sin2\alpha
+       +\sin\{2(\lambda_0+1)\alpha\}\bigr]\\
+  &+e(1+\kappa_2)\sin(\lambda_0\pi)
+      \sin[(\lambda_0+2)\alpha],\\[2pt]
+  g_2={}&(1-e)\cos[\lambda_0(\pi-\alpha)]
+  \bigl[(\lambda_0+1)\sin2\alpha
+       +\sin\{2(\lambda_0+1)\alpha\}\bigr]\\
+  &+e(1+\kappa_2)\sin(\lambda_0\pi)
+      \cos[(\lambda_0+2)\alpha].
+\end{aligned}
+\end{equation*}
+
+Показник $\lambda_0$ визначається характеристичним рівнянням
+\begin{equation}
+\label{eq:app-D0-root}
+  D_0(-1-\lambda_0)=0,
+  \qquad -1<\lambda_0<0,
+\end{equation}
+де
+\begin{equation*}
+  D_0(p)=b_0(p)+e\,b_1(p)+e^2b_2(p),
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+  b_0(p)={}&
+  [\sin(2p\alpha)+p\sin(2\alpha)]
+  [\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)],\\[2pt]
+  b_1(p)={}&(1+\kappa_1)(1+\kappa_2)\sin^2(p\pi)\\
+  &-[\sin(2p\alpha)+p\sin(2\alpha)]
+    [\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)]\\
+  &-[\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]
+    [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)],\\[2pt]
+  b_2(p)={}&
+  [\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]
+  [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)].
+\end{aligned}
+\end{equation*}
+
 \subsection{Кутова точка з міжфазною зсувною тріщиною}
 
-\subsection{Коефіцієнти зони передруйнування}
+Після утворення симетричної міжфазної зсувної тріщини довжиною $l$
+нормальне напруження на бісектрисі матеріалу $i$ при $r\ll l$ має
+асимптотику~\cite{NazarenkoKipnis2022Stress}
+\begin{equation}
+\label{eq:app-cracked-field}
+  \sigma_\theta(r,\beta_i)
+  =CQ_i r^\lambda+o\!\left(r^\lambda\right),
+  \qquad r\to0,
+  \qquad
+  \beta_1=\pi,\quad \beta_2=0.
+\end{equation}
+Коефіцієнт $Q_i$ записується у вигляді
+\begin{equation*}
+  Q_i=g_1q_i l^{\lambda_0-\lambda},
+\end{equation*}
+де
+\begin{equation*}
+  q_i=
+  \frac{2S_i(-1-\lambda)K^+(-1-\lambda)G^+(-1-\lambda)}
+  {(\lambda-\lambda_0)D'(-1-\lambda)
+   K^+(-1-\lambda_0)G^+(-1-\lambda_0)},
+  \qquad
+  D'(p)=\frac{\dd D(p)}{\dd p}.
+\end{equation*}
+Тут
+\begin{equation*}
+\begin{aligned}
+  S_1(p)={}&2e(1+\kappa_2)s_{11}(p)\sin[(p+1)\alpha]\\
+  &+s_{12}(p)
+  \Bigl[(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}
+        +2(1-e)s_{13}(p)\Bigr],\\[2pt]
+  S_2(p)={}&s_{21}(p)
+  \Bigl[e(1+\kappa_2)\sin[(p+1)\alpha]
+        +2(1-e)s_{22}(p)\Bigr]\\
+  &-2(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}\,s_{23}(p),
+\end{aligned}
+\end{equation*}
+а допоміжні функції дорівнюють
+\begin{equation*}
+\begin{aligned}
+  s_{11}(p)&=p\cos(p\pi-\alpha)\sin\alpha
+             -\sin[p(\pi-\alpha)]\cos(p\alpha),\\
+  s_{12}(p)&=p\sin2\alpha+\sin(2p\alpha),\\
+  s_{13}(p)&=p\cos[p(\pi-\alpha)]\sin\alpha
+             -\sin[p(\pi-\alpha)]\cos\alpha,\\
+  s_{21}(p)&=\sin[2p(\pi-\alpha)]-p\sin2\alpha,\\
+  s_{22}(p)&=p\cos(p\alpha)\sin\alpha
+             +\sin(p\alpha)\cos\alpha,\\
+  s_{23}(p)&=p\cos(p\pi+\alpha)\sin\alpha
+             +\cos[p(\pi-\alpha)]\sin(p\alpha).
+\end{aligned}
+\end{equation*}
+
+Показник сингулярності $\lambda$ кутової точки після утворення
+міжфазної тріщини визначається рівнянням
+\begin{equation}
+\label{eq:app-D-root}
+  D(-1-\lambda)=0,
+  \qquad -1<\lambda<0,
+\end{equation}
+де
+\begin{equation*}
+  D(p)=a_0(p)+e\,a_1(p),
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+  a_0(p)={}&(1+\kappa_1)
+  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]
+  [\sin(2p\alpha)+p\sin2\alpha],\\
+  a_1(p)={}&(1+\kappa_2)
+  [\cos(2p\alpha)-\cos2\alpha]
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha].
+\end{aligned}
+\end{equation*}
+
+Для коефіцієнтів $q_i$ використовується базове ядро
+\begin{equation*}
+  G(p)=
+  \frac{(e+\kappa_1)(1+e\kappa_2)\sin(\pi p)D(p)}
+  {(e+\kappa_1+1+e\kappa_2)\cos(\pi p)D_0(p)}
+\end{equation*}
+та його плюс-фактор
+\begin{equation*}
+  G^+(p)=
+  \exp\!\left\{
+    \frac{1}{2\pi\ii}
+    \int_{-\ii\infty}^{\ii\infty}
+    \frac{\log G(z)}{z-p}\,\dd z
+  \right\},
+  \qquad \operatorname{Re}p<0.
+\end{equation*}
+Гамма-функціональний множник має вигляд
+\begin{equation*}
+  K^+(p)=\frac{\Gamma(1-p)}{\Gamma(\tfrac12-p)}.
+\end{equation*}
+Для дійсного $p<0$ фактор $G^+(p)$ у перевіреному числовому алгоритмі
+еквівалентно обчислюється за дійсною формою
+\begin{equation*}
+  \log G^+(p)
+  =-\frac{p}{\pi}\int_0^\infty
+    \frac{\log G(\ii t)}{t^2+p^2}\,\dd t.
+\end{equation*}
+
+\subsection{Кутова точка після утворення зони передруйнування}
+
+Для зони передруйнування в матеріалі $i$ ядро функціонального рівняння
+розділу~\ref{sec:derivation} визначається як
+\begin{equation*}
+  G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
+\end{equation*}
+Відповідні характеристичні визначники мають вигляд
+\begin{equation}
+\label{eq:app-post-zone-determinants}
+\begin{aligned}
+  D_1(p)={}&2e(1+\kappa_2)
+  [\cos(2p\alpha)-\cos2\alpha]
+  \{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
+  &+(1+\kappa_1)
+  [\sin(2p\alpha)+p\sin2\alpha]
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha],\\[3pt]
+  D_2(p)={}&2(1+\kappa_1)
+  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]
+  [\sin^2(p\alpha)-p^2\sin^2\alpha]\\
+  &+e(1+\kappa_2)
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha]
+  [\sin(2p\alpha)+p\sin2\alpha].
+\end{aligned}
+\end{equation}
+
+\worknote{У $D_1(p)$ використано підтверджене авторами виправлення двох
+знаків у другому добутку. У друкованій формулі авторської версії стояли
+$[\sin(2p\alpha)-p\sin2\alpha]$
+і $[\sin\{2p(\pi-\alpha)\}+p\sin2\alpha]$; автори підтвердили, що це
+друкарська помилка, а вихідні програми використовували наведений вище
+симетрійно узгоджений вираз.}
+
+Показник $\lambda_i$ після утворення зони в матеріалі $i$ визначається
+рівнянням
+\begin{equation}
+\label{eq:app-post-zone-root}
+  D_i(-1-\lambda_i)=0,
+  \qquad -1<\lambda_i<0,
+  \qquad i=1,2.
+\end{equation}
+Саме ці два корені використовуються для кривих $\lambda_1$ і $\lambda_2$
+на рис.~\ref{fig:singularity-exponents}. Вони характеризують порядок
+кутової сингулярності після утворення зони передруйнування і не повинні
+підміняти показник $\lambda$ у формулах для $d_i$, $\delta_i$ та $J_i$,
+де $\lambda$ задається рівнянням~\eqref{eq:app-D-root}.
