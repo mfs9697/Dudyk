@@ -121,14 +121,17 @@ fprintf(['Run run_figure3_tests to reproduce the author T=40 table ', ...
 end
 
 function write_figure(data, cases, figuresDir)
-fig = figure('Color', 'w', 'Position', [100, 100, 1180, 440]);
+% Compact 3:1 canvas keeps the full three-panel angular sweep readable
+% without allowing the legend to dominate the manuscript page.
+fig = figure('Color', 'w', 'Position', [100, 100, 900, 300]);
 layout = tiledlayout(fig, 1, 3, 'TileSpacing', 'compact', ...
     'Padding', 'compact');
 yFields = {'d_over_l', 'delta_prime', 'J_prime'};
-yLabels = {'d_i/l', '\delta_i^{\prime}', 'J_i^{\prime}'};
+yLabels = {'$d_i/l$', '$\delta_i^{\prime}$', '$J_i^{\prime}$'};
 yMaximum = [0.25, 0.25, 0.06];
 panelLabels = {'(a)', '(b)', '(c)'};
 legendHandles = gobjects(1, numel(cases));
+legendLabels = figure3_legend_labels(cases);
 
 for panel = 1:3
     ax = nexttile(layout);
@@ -151,25 +154,24 @@ for panel = 1:3
 
         handle = plot(ax, segmentAlpha, segmentValues, ...
             cases(k).line_style, 'Color', cases(k).color, ...
-            'LineWidth', 2.2, 'DisplayName', cases(k).display_name);
+            'LineWidth', 1.8);
         if panel == 1
             legendHandles(k) = handle;
         end
     end
     hold(ax, 'off');
     format_axes(ax, yLabels{panel}, yMaximum(panel), panel);
-    title(ax, panelLabels{panel}, 'FontName', 'Times New Roman', ...
-        'FontSize', 12, 'FontWeight', 'normal');
+    title(ax, panelLabels{panel}, 'Interpreter', 'latex', ...
+        'FontSize', 11, 'FontWeight', 'normal');
 end
 
 % MATLAB fills a multi-column legend column-wise. This sequence preserves
 % the manuscript's visual row order: +m2, -m1, -m2, then +m1.
 legendOrder = [1, 3, 2, 4];
 legendHandle = legend(legendHandles(legendOrder), ...
-    {cases(legendOrder).display_name}, ...
-    'Interpreter', 'tex', 'NumColumns', 2, 'Box', 'off');
-legendHandle.FontName = 'Times New Roman';
-legendHandle.FontSize = 11;
+    legendLabels(legendOrder), ...
+    'Interpreter', 'latex', 'NumColumns', 2, 'Box', 'off');
+legendHandle.FontSize = 9.5;
 legendHandle.Layout.Tile = 'south';
 export_with_fallback(fig, ...
     fullfile(figuresDir, 'figure3_recalculated.pdf'), ...
@@ -182,13 +184,13 @@ end
 
 function format_axes(ax, yLabelText, yMaximum, panel)
 ax.FontName = 'Times New Roman';
-ax.FontSize = 12;
-ax.LineWidth = 0.9;
+ax.FontSize = 10.5;
+ax.LineWidth = 0.8;
 ax.Box = 'on';
 ax.XGrid = 'on';
 ax.YGrid = 'on';
 ax.GridAlpha = 0.15;
-ax.TickLabelInterpreter = 'tex';
+ax.TickLabelInterpreter = 'latex';
 xlim(ax, [0, 180]);
 ylim(ax, [0, yMaximum]);
 xticks(ax, 0:30:180);
@@ -197,10 +199,24 @@ if panel < 3
 else
     yticks(ax, 0:0.01:yMaximum);
 end
-xlabel(ax, '\alpha (deg)', 'Interpreter', 'tex', ...
-    'FontName', 'Times New Roman', 'FontSize', 13);
-ylabel(ax, yLabelText, 'Interpreter', 'tex', ...
-    'FontName', 'Times New Roman', 'FontSize', 13);
+xlabel(ax, '$\alpha\;({}^{\circ})$', 'Interpreter', 'latex', ...
+    'FontSize', 11.5);
+ylabel(ax, yLabelText, 'Interpreter', 'latex', ...
+    'FontSize', 11.5);
+end
+
+function labels = figure3_legend_labels(cases)
+labels = cell(1, numel(cases));
+for k = 1:numel(cases)
+    if cases(k).sigma_prime > 0
+        signText = '>';
+    else
+        signText = '<';
+    end
+    labels{k} = sprintf( ...
+        '$\\sigma^{\\prime}=%+.1f,\\;C%s0,\\;i=%d$', ...
+        cases(k).sigma_prime, signText, cases(k).material_index);
+end
 end
 
 function export_with_fallback(fig, destination, varargin)
