@@ -74,3 +74,20 @@ plots before modifying any results.
 The derivative J_i = dW_i/dd_i was also checked directly against the
 printed W_i proportional to d_i^2: the factor of two is consistent.
 This limited check does not validate the complete transform solution.
+
+
+### Batch 3 numerical-implementation check — September 22, 2026
+
+The current MATLAB routine \`calculate_process_zone_parameters.m\` evaluates
+the process-zone plus factor at both \(p=-1-\lambda\) and \(p=-1\). Its
+opening multiplier is implemented as
+
+    -lambda K^+(-1) /
+    [sqrt(pi G_i(0)) (1+lambda) G_i^+(-1-lambda)],
+
+so the numerical Figure-2 and Figure-3 opening curves follow the printed
+opening formula. The independently compared corrected author Mathcad values
+documented in \`docs/AUTHOR_VALIDATION_2026-08-18.md\` use the same factor
+convention. Therefore the excellent numerical reproduction establishes
+implementation agreement, but it does not choose between the printed formula
+and the direct algebraic reduction recorded above. AQ-AN-02 remains open.
