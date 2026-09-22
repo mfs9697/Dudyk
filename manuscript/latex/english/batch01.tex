@@ -1,0 +1,21 @@
+% Compile from manuscript/latex: xelatex -jobname=Dudyk_English_Batch01 english/batch01.tex
+\documentclass[11pt,a4paper]{article}
+\input{english/preamble}
+\hypersetup{pdftitle={Dudyk manuscript: English translation, batch 1},pdfauthor={}}
+% Appendix A remains in the approved Ukrainian source; it is not part of this extract.
+\newcommand{\AsymptoticsAppendix}{Appendix~A}
+\begin{document}
+\noindent{\large\bfseries English translation: Batch 1}\par
+\smallskip
+\noindent Problem formulation and model assumptions\par
+\smallskip
+\noindent{\small Source: approved Ukrainian manuscript, commit
+\texttt{0522cdae9e86}. September 22, 2026.\\
+This extract retains the manuscript section number. References to
+Appendix~A refer to the source manuscript.}
+\medskip
+\setcounter{section}{1}
+\input{english/sections/02_problem_statement}
+\bibliographystyle{unsrtnat}
+\bibliography{bibliography/references}
+\end{document}
