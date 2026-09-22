@@ -1,0 +1,344 @@
+\section{Determination of the process-zone parameters}
+\label{sec:derivation}
+
+\subsection{Mellin transform and functional equation}
+\label{subsec:mellin}
+
+To construct the local solution, we introduce the dimensionless radial
+coordinate
+\begin{equation*}
+  \rho=\frac{r}{d_i}
+\end{equation*}
+and apply the Mellin integral transform to the boundary-value problem
+\eqref{eq:interface-boundary-conditions}--\eqref{eq:matched-far-field}.
+Let $p$ be the complex Mellin variable. The transforms of the normal
+stress outside the zone and the normal displacement gradient within the
+zone are defined, respectively, by
+\begin{equation*}
+\begin{aligned}
+  \Phi_i^+(p)
+    &=\int_1^\infty
+      \sigma_\theta(\rho d_i,\beta_i)\rho^p\,\dd\rho,\\
+  \Phi_i^-(p)
+    &=\frac{E_i}{2(1-\nu_i^2)}
+      \int_0^1
+      \left.
+      \frac{\partial u_\theta}{\partial r}
+      \right|_{\substack{r=\rho d_i\\\theta=\beta_i}}
+      \rho^p\,\dd\rho.
+\end{aligned}
+\end{equation*}
+The superscripts on $\Phi_i^+$ and $\Phi_i^-$ identify functions assigned
+to the left and right half-planes, respectively; they do not indicate
+the sign of a physical quantity.
+% AQ-AN-01: the integral definition and the claimed strip require clarification;
+% see AUTHOR_QUERIES_BATCH02.md. The approved equations are retained.
+
+Eliminating the transforms of the interior field yields the functional
+equation
+\begin{equation}
+\label{eq:wiener-hopf-functional}
+  \Phi_i^+(p)
+  +\frac{\sigma_i}{p+1}
+  -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
+  =-\tan(\pi p)G_i(p)\Phi_i^-(p),
+\end{equation}
+in the common strip of analyticity
+$-\varepsilon_2<\operatorname{Re}p<\varepsilon_1$, where
+$\operatorname{Re}p$ denotes the real part of $p$ and
+$\varepsilon_1,\varepsilon_2>0$ are sufficiently small constants.
+The kernel $G_i(p)$ is
+\begin{equation*}
+  G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
+\end{equation*}
+Here, $D(p)$ is the characteristic determinant for the corner with an
+interfacial shear crack, given in Appendix~\ref{app:asymptotics}.
+For plane strain, define the dimensionless elastic ratio $e$ and the
+material parameters $\kappa_i$ by
+\begin{equation*}
+  e=\frac{1+\nu_2}{1+\nu_1}\frac{E_1}{E_2},
+  \qquad
+  \kappa_i=3-4\nu_i.
+\end{equation*}
+The characteristic determinants $D_1(p)$ and $D_2(p)$ for configurations
+with a process zone in materials~1 and~2, respectively, are
+\begin{equation*}
+\begin{aligned}
+  D_1(p)={}&2e(1+\kappa_2)
+    [\cos(2p\alpha)-\cos(2\alpha)]
+    \{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
+  &+(1+\kappa_1)
+    [\sin(2p\alpha)+p\sin(2\alpha)]
+    [\sin(2p(\pi-\alpha))-p\sin(2\alpha)],\\[2pt]
+  D_2(p)={}&2(1+\kappa_1)
+    [\cos(2p(\pi-\alpha))-\cos(2\alpha)]
+    [\sin^2(p\alpha)-p^2\sin^2\alpha]\\
+  &+e(1+\kappa_2)
+    [\sin(2p(\pi-\alpha))-p\sin(2\alpha)]
+    [\sin(2p\alpha)+p\sin(2\alpha)].
+\end{aligned}
+\end{equation*}
+In particular, the corner singularity exponent $\lambda_i$ in the
+presence of a zone in material~$i$ is determined by
+\begin{equation*}
+  D_i(-1-\lambda_i)=0,
+\end{equation*}
+where $\lambda_i$ is the smallest real root in $(-1,0)$ continuously
+connected to the corresponding physical branch. As before,
+$\alpha=\pi/2$ is understood only as a degenerate limit.
+
+\subsection{Wiener--Hopf factorization}
+\label{subsec:wiener-hopf}
+
+We solve Eq.~\eqref{eq:wiener-hopf-functional} by the Wiener--Hopf
+method~\cite{noble1958wienerhopf}, following the approach used for a related
+boundary-value problem~\cite{KaminskyDudykPolishchuk2024}.
+The factors $G_i^\pm(p)$ are defined by the Cauchy integral
+\begin{equation*}
+  \exp\left\{
+    \frac{1}{2\pi\ii}
+    \int_{-\ii\infty}^{\ii\infty}
+      \frac{\log G_i(z)}{z-p}\,\dd z
+  \right\}
+  =
+  \begin{cases}
+    G_i^+(p), & \operatorname{Re}p<0,\\
+    G_i^-(p), & \operatorname{Re}p>0,
+  \end{cases}
+\end{equation*}
+where $z$ is the complex integration variable and $\ii^2=-1$.
+The contour runs upward along the imaginary axis. We also introduce
+the auxiliary gamma-function factors
+\begin{equation*}
+  K^\pm(p)=
+  \frac{\Gamma(1\mp p)}{\Gamma(\tfrac12\mp p)}.
+\end{equation*}
+where $\Gamma$ is the Euler gamma function.
+With the normalization $G_i^\pm(p)\to1$ at infinity, the solution of
+the functional equation is
+\begin{equation}
+\label{eq:wiener-hopf-solution}
+\begin{aligned}
+  \Phi_i^+(p)={}&
+  -\frac{pG_i^+(p)}{K^+(p)}
+  \Bigg\{
+    \frac{\sigma_i}{p+1}
+    \left[
+      \frac{K^+(p)}{pG_i^+(p)}
+      +\frac{K^+(-1)}{G_i^+(-1)}
+    \right]\\
+  &\hspace{37mm}
+    -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
+    \left[
+      \frac{K^+(p)}{pG_i^+(p)}
+      +\frac{K^+(-\lambda-1)}
+      {(\lambda+1)G_i^+(-\lambda-1)}
+    \right]
+  \Bigg\},
+  \qquad \operatorname{Re}p<0,\\[3pt]
+  \Phi_i^-(p)={}&
+  K^-(p)G_i^-(p)
+  \Bigg\{
+    \frac{\sigma_iK^+(-1)}{(p+1)G_i^+(-1)}
+    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+    {(\lambda+1)(p+\lambda+1)G_i^+(-\lambda-1)}
+  \Bigg\},
+  \qquad \operatorname{Re}p>0.
+\end{aligned}
+\end{equation}
+For the kernels used below, $G_i(\ii t)$ is positive and even in the
+real variable $t$, and tends to unity as $|t|\to\infty$.
+Thus, for real $p<0$, the plus factor can be evaluated numerically
+using the real integral
+\begin{equation*}
+  \log G_i^+(p)
+  =-\frac{p}{\pi}\int_0^\infty
+    \frac{\log G_i(\ii t)}{t^2+p^2}\,\dd t,
+  \qquad p<0.
+\end{equation*}
+In the numerical calculations, we check that the kernel is real and
+positive on the factorization contour and approaches unity at its
+far end.
+
+\subsection{Process-zone length}
+\label{subsec:zone-length}
+
+As $p\to+\infty$, the second relation in
+Eq.~\eqref{eq:wiener-hopf-solution} gives
+\begin{equation*}
+  \Phi_i^-(p)\sim\frac{1}{\sqrt{p}}
+  \left[
+    \frac{\sigma_iK^+(-1)}{G_i^+(-1)}
+    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+    {(\lambda+1)G_i^+(-\lambda-1)}
+  \right].
+\end{equation*}
+Applying an Abelian-type theorem~\cite{noble1958wienerhopf} to the
+tip asymptotics~\eqref{eq:zone-tip-asymptotics} also gives
+\begin{equation*}
+  \Phi_i^-(p)\sim-\frac{k_i}{\sqrt{2pd_i}}.
+\end{equation*}
+Comparing these expressions yields the local stress intensity factor
+\begin{equation*}
+  k_i=-\sqrt{2d_i}
+  \left[
+    \frac{\sigma_iK^+(-1)}{G_i^+(-1)}
+    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+    {(\lambda+1)G_i^+(-\lambda-1)}
+  \right].
+\end{equation*}
+Imposing $k_i=0$, which removes the inverse-square-root singular term
+from the assumed tip asymptotics, gives the zone length:
+\begin{equation}
+\label{eq:process-zone-length}
+  d_i=
+  \left[
+    \frac{CQ_iK^+(-\lambda-1)G_i^+(-1)}
+    {\sigma_i(1+\lambda)K^+(-1)G_i^+(-\lambda-1)}
+  \right]^{-1/\lambda}.
+\end{equation}
+Since $-1<\lambda<0$, a real, positive $d_i$ requires $CQ_i>0$,
+consistent with the physical admissibility condition in
+Section~\ref{subsec:boundary-conditions}. With geometry and material
+properties fixed, Eq.~\eqref{eq:process-zone-length} also gives the
+power law $d_i\propto C^{-1/\lambda}$ on the admissible loading branch.
+
+Alternatively, with the geometry, interfacial crack length, elastic
+properties, and applied loading fixed, the same equation gives the
+dependence on the normal cohesive traction:
+\begin{equation*}
+  d_i\propto \sigma_i^{1/\lambda}
+  =\sigma_i^{-1/|\lambda|}.
+\end{equation*}
+Because $-1<\lambda<0$, decreasing $\sigma_i$ increases the
+process-zone length.
+
+Using the relation
+\begin{equation*}
+  Q_i=g_1q_i l^{\lambda_0-\lambda},
+\end{equation*}
+where $g_1$ is the intact-corner angular coefficient and $q_i$ is a
+dimensionless amplitude coefficient, both given in
+Appendix~\ref{app:asymptotics}, we obtain from
+Eq.~\eqref{eq:process-zone-length}
+\begin{equation}
+\label{eq:normalized-process-zone-length}
+  \frac{d_i}{l}=
+  \left[
+    \frac{Cl^{\lambda_0}}{\sigma_i}
+    \frac{g_1q_iK^+(-1-\lambda)G_i^+(-1)}
+    {(1+\lambda)K^+(-1)G_i^+(-1-\lambda)}
+  \right]^{-1/\lambda}.
+\end{equation}
+This relation also provides a check on the small-scale assumption
+$d_i/l\ll1$ used in the local formulation.
+
+\subsection{Opening and energy parameter}
+\label{subsec:zone-parameters}
+
+Define the separation of the zone faces at the corner by
+$\delta_i=\jump{u_\theta(0,\beta_i)}$.
+The definition of $\Phi_i^-(p)$ gives
+\begin{equation*}
+  \delta_i
+  =-2
+    \left.
+      \left(\frac{\partial u_\theta}{\partial r}\right)^*
+    \right|_{p=0,\,\theta=\beta_i}
+  =-\frac{4(1-\nu_i^2)d_i}{E_i}\Phi_i^-(0).
+\end{equation*}
+Here, the asterisk denotes the dimensional transform moment:
+for $f(r)=\partial u_\theta(r,\beta_i)/\partial r$,
+$f^*(p)=\int_0^{d_i}f(r)(r/d_i)^p\,\dd r$.
+The factor of two accounts for the symmetric displacement of the two
+zone faces. Substitution of Eq.~\eqref{eq:wiener-hopf-solution},
+together with Eq.~\eqref{eq:process-zone-length}, gives
+% AQ-AN-02: verify the factor argument in the opening formula;
+% see AUTHOR_QUERIES_BATCH02.md. The approved expression is retained.
+\begin{equation}
+\label{eq:process-zone-opening}
+  \delta_i=
+  -\frac{4(1-\nu_i^2)\sigma_i\lambda K^+(-1)}
+  {E_i\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-\lambda-1)}d_i.
+\end{equation}
+For fixed material properties and geometry, the coefficient multiplying
+$d_i$ in Eq.~\eqref{eq:process-zone-opening} is constant. The opening
+therefore scales with the zone length as the applied loading varies:
+$\delta_i\propto d_i$. If the applied loading is fixed and $\sigma_i$
+is varied, the preceding power law instead gives
+\begin{equation*}
+  \delta_i\propto \sigma_i d_i
+  \propto \sigma_i^{1+1/\lambda}
+  =\sigma_i^{1-1/|\lambda|}.
+\end{equation*}
+The exponent $1-1/|\lambda|$ is negative. A decrease in the resistance
+to separation therefore increases both the zone length and its opening.
+
+Within the adopted model, the work $W_i$ done against the resistance
+to separation, per unit out-of-plane thickness, is defined
+by~\cite{Cherepanov1986}
+\begin{equation*}
+  W_i=\sigma_i\int_0^{d_i}
+      \jump{u_\theta(r,\beta_i)}\,\dd r
+  =-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
+\end{equation*}
+Using Eq.~\eqref{eq:wiener-hopf-solution}, we obtain
+\begin{equation*}
+  W_i=-\frac{32\lambda(1-\nu_i^2)\sigma_i^2}
+  {9\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i^2.
+\end{equation*}
+Differentiating with respect to the zone length along the family of
+equilibrium states, with the geometry and material properties fixed,
+defines the zone-related energy parameter $J_i$:
+\begin{equation}
+\label{eq:process-zone-energy-release-rate}
+  J_i=\frac{\dd W_i}{\dd d_i}
+  =-\frac{64\lambda(1-\nu_i^2)\sigma_i^2}
+  {9\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i.
+\end{equation}
+For the numerical analysis, introduce the dimensionless loading,
+opening, and energy parameters $\sigmap$, $\delta_i'$, and $J_i'$,
+respectively:
+\begin{equation*}
+  \sigmap=\frac{Cl^{\lambda_0}}{\sigma_i},
+  \qquad
+  \delta_i'=\frac{E_i\delta_i}
+  {4(1-\nu_i^2)\sigma_i l},
+  \qquad
+  J_i'=\frac{E_iJ_i}
+  {4(1-\nu_i^2)\sigma_i^2l}.
+\end{equation*}
+The primes here denote normalization, not differentiation.
+Equations~\eqref{eq:normalized-process-zone-length},
+\eqref{eq:process-zone-opening}, and
+\eqref{eq:process-zone-energy-release-rate} then take the form
+\begin{equation*}
+\begin{aligned}
+  \frac{d_i}{l}
+    &=\left[
+      \sigmap\,
+      \frac{g_1q_iK^+(-1-\lambda)G_i^+(-1)}
+      {(1+\lambda)K^+(-1)G_i^+(-1-\lambda)}
+    \right]^{-1/\lambda},\\[2pt]
+  \delta_i'
+    &=-\frac{\lambda K^+(-1)}
+      {\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1-\lambda)}
+      \frac{d_i}{l},\\[2pt]
+  J_i'
+    &=-\frac{16\lambda}
+      {9\pi(\lambda+2)[G_i^+(-1)]^2}
+      \frac{d_i}{l}.
+\end{aligned}
+\end{equation*}
+All three relations use the corner exponent $\lambda$ for the
+interfacial shear crack, i.e., the root of $D(-1-\lambda)=0$.
+The exponents $\lambda_1$ and $\lambda_2$, which describe the corner
+singularity in the presence of a zone, do not replace $\lambda$
+in the formulas for the zone parameters.
+
+Equating Eq.~\eqref{eq:process-zone-energy-release-rate} to an
+independently specified critical value $J_{i\mathrm{c}}$ for material~$i$
+provides a condition for the applied loading at which the process zone
+develops into a Mode~I crack branching from the original interfacial
+crack. This criterion concerns local branching initiation within the
+adopted model.
