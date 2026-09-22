@@ -1,0 +1,239 @@
+\section{Stress and displacement fields near the corner}
+\label{app:asymptotics}
+\providecommand{\SingularityExponentFigure}{Figure~\ref{fig:singularity-exponents}}
+
+\setcounter{equation}{0}
+\renewcommand{\theequation}{A.\arabic{equation}}
+
+This appendix collects the characteristic relations and asymptotic-field
+coefficients used in the main text. For plane strain, the dimensionless
+elastic ratio $e$ and material parameters $\kappa_i$ are
+\begin{equation*}
+  e=\frac{1+\nu_2}{1+\nu_1}\frac{E_1}{E_2},
+  \qquad
+  \kappa_i=3-4\nu_i,\qquad i=1,2.
+\end{equation*}
+For each characteristic exponent, the complex Mellin variable $p$ and
+the generic singularity exponent $\lambda_*$ are related by
+\begin{equation*}
+  p=-1-\lambda_*,
+  \qquad -1<\lambda_*<0.
+\end{equation*}
+The physical exponent is taken to be the smallest real root in
+$(-1,0)$ that is continuously connected to the corresponding solution
+branch. The case $\alpha=\pi/2$ is the degenerate straight-interface
+limit and is not treated as an ordinary interior point of a
+characteristic branch.
+
+\subsection{Intact corner}
+
+For the intact interface, the singular part of the interfacial stress
+field is~\cite{NazarenkoKipnis2022Stress}
+\begin{equation}
+\label{eq:app-intact-field}
+\begin{aligned}
+  \tau_{r\theta}(r,\alpha)
+    &=Cg_1r^{\lambda_0}+o\!\left(r^{\lambda_0}\right),\\
+  \sigma_\theta(r,\alpha)
+    &=Cg_2r^{\lambda_0}+o\!\left(r^{\lambda_0}\right),
+    \qquad r\to0,
+\end{aligned}
+\end{equation}
+where $C$ is the generalized stress intensity factor, $\lambda_0$ is
+the intact-corner singularity exponent, and the dimensionless angular
+coefficients $g_1$ and $g_2$ are
+\begin{equation*}
+\begin{aligned}
+  g_1={}&(1-e)\sin[\lambda_0(\pi-\alpha)]
+  \bigl[(\lambda_0+1)\sin2\alpha
+       +\sin\{2(\lambda_0+1)\alpha\}\bigr]\\
+  &+e(1+\kappa_2)\sin(\lambda_0\pi)
+      \sin[(\lambda_0+2)\alpha],\\[2pt]
+  g_2={}&(1-e)\cos[\lambda_0(\pi-\alpha)]
+  \bigl[(\lambda_0+1)\sin2\alpha
+       +\sin\{2(\lambda_0+1)\alpha\}\bigr]\\
+  &+e(1+\kappa_2)\sin(\lambda_0\pi)
+      \cos[(\lambda_0+2)\alpha].
+\end{aligned}
+\end{equation*}
+The exponent $\lambda_0$ is determined by the characteristic equation
+\begin{equation}
+\label{eq:app-D0-root}
+  D_0(-1-\lambda_0)=0,
+  \qquad -1<\lambda_0<0,
+\end{equation}
+where the intact-corner determinant $D_0(p)$ is
+\begin{equation*}
+  D_0(p)=b_0(p)+e\,b_1(p)+e^2b_2(p),
+\end{equation*}
+with auxiliary functions $b_0(p)$, $b_1(p)$, and $b_2(p)$ given by
+\begin{equation*}
+\begin{aligned}
+  b_0(p)={}&
+  [\sin(2p\alpha)+p\sin(2\alpha)]
+  [\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)],\\[2pt]
+  b_1(p)={}&(1+\kappa_1)(1+\kappa_2)\sin^2(p\pi)\\
+  &-[\sin(2p\alpha)+p\sin(2\alpha)]
+    [\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)]\\
+  &-[\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]
+    [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)],\\[2pt]
+  b_2(p)={}&
+  [\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]
+  [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)].
+\end{aligned}
+\end{equation*}
+\subsection{Corner with an interfacial shear crack}
+
+For the prescribed symmetric interfacial shear crack, each branch has
+length $l$. At distances $r\ll l$, the normal stress along the bisector
+of the sector occupied by material~$i$ has the asymptotic
+form~\cite{NazarenkoKipnis2022Stress}
+\begin{equation}
+\label{eq:app-cracked-field}
+  \sigma_\theta(r,\beta_i)
+  =CQ_i r^\lambda+o\!\left(r^\lambda\right),
+  \qquad r\to0,
+  \qquad
+  \beta_1=\pi,\quad \beta_2=0.
+\end{equation}
+Here, $\lambda$ is the corner singularity exponent for the cracked
+configuration and $\beta_i$ is the corresponding bisector direction.
+The amplitude coefficient $Q_i$ is expressed as
+\begin{equation*}
+  Q_i=g_1q_i l^{\lambda_0-\lambda},
+\end{equation*}
+where the dimensionless coefficient $q_i$ and the derivative $D'(p)$
+of the cracked-corner determinant are
+\begin{equation*}
+  q_i=
+  \frac{2S_i(-1-\lambda)K^+(-1-\lambda)G^+(-1-\lambda)}
+  {(\lambda-\lambda_0)D'(-1-\lambda)
+   K^+(-1-\lambda_0)G^+(-1-\lambda_0)},
+  \qquad
+  D'(p)=\frac{\dd D(p)}{\dd p}.
+\end{equation*}
+The functions $S_i(p)$ are auxiliary numerator functions defined below.
+The factors $K^+(p)$ and $G^+(p)$ are specified later in this subsection;
+$G^+$ belongs to the base kernel $G$, distinct from the zone kernel
+$G_i$ in Section~\ref{sec:derivation}. Explicitly,
+\begin{equation*}
+\begin{aligned}
+  S_1(p)={}&2e(1+\kappa_2)s_{11}(p)\sin[(p+1)\alpha]\\
+  &+s_{12}(p)
+  \Bigl[(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}
+        +2(1-e)s_{13}(p)\Bigr],\\[2pt]
+  S_2(p)={}&s_{21}(p)
+  \Bigl[e(1+\kappa_2)\sin[(p+1)\alpha]
+        +2(1-e)s_{22}(p)\Bigr]\\
+  &-2(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}\,s_{23}(p),
+\end{aligned}
+\end{equation*}
+where the auxiliary functions $s_{mn}(p)$, with $m=1,2$ and
+$n=1,2,3$, are
+\begin{equation*}
+\begin{aligned}
+  s_{11}(p)&=p\cos(p\pi-\alpha)\sin\alpha
+             -\sin[p(\pi-\alpha)]\cos(p\alpha),\\
+  s_{12}(p)&=p\sin2\alpha+\sin(2p\alpha),\\
+  s_{13}(p)&=p\cos[p(\pi-\alpha)]\sin\alpha
+             -\sin[p(\pi-\alpha)]\cos\alpha,\\
+  s_{21}(p)&=\sin[2p(\pi-\alpha)]-p\sin2\alpha,\\
+  s_{22}(p)&=p\cos(p\alpha)\sin\alpha
+             +\sin(p\alpha)\cos\alpha,\\
+  s_{23}(p)&=p\cos(p\pi+\alpha)\sin\alpha
+             +\cos[p(\pi-\alpha)]\sin(p\alpha).
+\end{aligned}
+\end{equation*}
+The corner singularity exponent $\lambda$ for the configuration
+containing the interfacial crack satisfies
+\begin{equation}
+\label{eq:app-D-root}
+  D(-1-\lambda)=0,
+  \qquad -1<\lambda<0,
+\end{equation}
+where the characteristic determinant $D(p)$ is
+\begin{equation*}
+  D(p)=a_0(p)+e\,a_1(p),
+\end{equation*}
+with auxiliary functions $a_0(p)$ and $a_1(p)$ given by
+\begin{equation*}
+\begin{aligned}
+  a_0(p)={}&(1+\kappa_1)
+  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]
+  [\sin(2p\alpha)+p\sin2\alpha],\\
+  a_1(p)={}&(1+\kappa_2)
+  [\cos(2p\alpha)-\cos2\alpha]
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha].
+\end{aligned}
+\end{equation*}
+The coefficients $q_i$ use the base kernel
+\begin{equation*}
+  G(p)=
+  \frac{(e+\kappa_1)(1+e\kappa_2)\sin(\pi p)D(p)}
+  {(e+\kappa_1+1+e\kappa_2)\cos(\pi p)D_0(p)}
+\end{equation*}
+and its plus factor
+\begin{equation*}
+  G^+(p)=
+  \exp\!\left\{
+    \frac{1}{2\pi\ii}
+    \int_{-\ii\infty}^{\ii\infty}
+    \frac{\log G(z)}{z-p}\,\dd z
+  \right\},
+  \qquad \operatorname{Re}p<0.
+\end{equation*}
+Here, $z$ is the complex integration variable, $\ii^2=-1$, and the
+contour runs upward along the imaginary axis. The gamma-function factor is
+\begin{equation*}
+  K^+(p)=\frac{\Gamma(1-p)}{\Gamma(\tfrac12-p)}.
+\end{equation*}
+where $\Gamma$ is the Euler gamma function. For real $p<0$, the
+verified numerical algorithm evaluates $G^+(p)$ equivalently using
+the real integral
+\begin{equation*}
+  \log G^+(p)
+  =-\frac{p}{\pi}\int_0^\infty
+    \frac{\log G(\ii t)}{t^2+p^2}\,\dd t.
+\end{equation*}
+where $t$ is a real integration variable.
+
+\subsection{Corner with a process zone}
+
+For a process zone in material~$i$, the kernel of the functional equation
+in Section~\ref{sec:derivation} is
+\begin{equation*}
+  G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
+\end{equation*}
+The corresponding characteristic determinants are
+\begin{equation}
+\label{eq:app-post-zone-determinants}
+\begin{aligned}
+  D_1(p)={}&2e(1+\kappa_2)
+  [\cos(2p\alpha)-\cos2\alpha]
+  \{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
+  &+(1+\kappa_1)
+  [\sin(2p\alpha)+p\sin2\alpha]
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha],\\[3pt]
+  D_2(p)={}&2(1+\kappa_1)
+  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]
+  [\sin^2(p\alpha)-p^2\sin^2\alpha]\\
+  &+e(1+\kappa_2)
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha]
+  [\sin(2p\alpha)+p\sin2\alpha].
+\end{aligned}
+\end{equation}
+% The author-confirmed signs in D_1 are preserved. Their provenance is
+% recorded in EDITORIAL_LOG.md rather than in the clean manuscript.
+The exponent $\lambda_i$ for a configuration with a zone in
+material~$i$ is determined by
+\begin{equation}
+\label{eq:app-post-zone-root}
+  D_i(-1-\lambda_i)=0,
+  \qquad -1<\lambda_i<0,
+  \qquad i=1,2.
+\end{equation}
+These two roots are used for the $\lambda_1$ and $\lambda_2$ curves in
+\SingularityExponentFigure. They characterize the corner singularity
+in the presence of a process zone and must not replace $\lambda$ in
+the formulas for $d_i$, $\delta_i$, and $J_i$, where $\lambda$ is
+defined by Eq.~\eqref{eq:app-D-root}.

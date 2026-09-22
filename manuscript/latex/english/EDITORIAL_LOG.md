@@ -90,3 +90,75 @@ one-sided tip limits are explained.
 - Recheck definitions in final manuscript order after the Introduction and
   abstract are translated; define abbreviations independently in the abstract
   only if they are actually needed.
+
+
+## Batch 2 - September 22, 2026
+
+Scope: Section 3, all four subsections, and Appendix A, all three
+subsections. Based on main after the merge of PR #2 (edc53c0fe262).
+US spelling; no new literature, numerical results, or equation corrections.
+
+### Definitions and terminology
+
+- Introduced the complex Mellin variable p, real-part notation, strip
+  constants, kernel, factors, contour variable z, imaginary unit, real
+  integration variable t, and Euler gamma function at first use.
+- Identified e as a dimensionless elastic ratio and kappa_i as material
+  parameters (they are not both mismatch measures).
+- Distinguished the base kernel G and its factor from the zone kernels G_i.
+- Identified the auxiliary determinant coefficients, S_i and s_mn functions,
+  q_i, derivative D', and generic exponent lambda_* in Appendix A.
+- Defined the asterisk in the opening relation as the dimensional transform
+  moment consistent with the printed equality and the rho = r/d_i scaling.
+  This explicit convention replaces otherwise undefined notation; it is
+  not a separate new physical assumption.
+- Distinguished normalization primes from differentiation and introduced
+  J_ic as an independently specified material threshold.
+- Used process zone, normal cohesive traction, and Mode I consistently;
+  no unnecessary abbreviations were introduced.
+
+### Scope and energy interpretation
+
+- Harmonized W_i and J_i with the approved September Introduction:
+  work against separation resistance per unit out-of-plane thickness,
+  and a zone-related energy parameter. The printed W_i and J_i equations
+  and the legacy equation label are unchanged.
+- Specified differentiation along the equilibrium family with geometry and
+  material properties fixed. Did not identify J_i with a global energy
+  release rate or a separately established contour integral.
+- Retained the independent critical material property and the local scope
+  of the branching-initiation criterion.
+- Replaced sequential-crack-formation wording in Appendix A with the
+  prescribed stationary configuration, and clarified that l is branch length.
+- The author-confirmed signs in D_1 are preserved. The Ukrainian hidden
+  worknote says the earlier printed second product had minus then plus
+  signs, whereas the original programs and corrected expression use plus
+  then minus. This provenance remains here, outside the clean manuscript.
+
+### Analytical issues found
+
+See AUTHOR_QUERIES_BATCH02.md for derivations and requested decisions.
+AQ-AN-01 concerns convergence/regularization of the raw stress transform
+and the claimed strip across the imaginary axis. The earlier o(r^-1)
+matching remainder was checked and left unchanged.
+AQ-AN-02 concerns G_i^+(-1-lambda) versus G_i^+(-1) in the opening
+coefficient. Both source opening formulas remain unchanged pending review
+against the analytical conventions and numerical implementation.
+The derivative of the printed W_i gives the printed J_i correctly.
+
+### Verification
+
+The combined wrapper includes Batch 1 for definitions and live appendix
+references. Figure 2 remains outside this extract and is explicitly cited
+as a figure in the source manuscript; no artificial label is supplied.
+Source-equation, label, and citation comparisons and the final build are
+recorded below after verification.
+
+- Verified exact preservation of 26 Section 3 and 22 Appendix A display
+  environments against the remote source, plus all labels and citation keys.
+- Final XeLaTeX/BibTeX build: 11 pages; no warnings, missing glyphs,
+  unresolved references/citations, or overfull/underfull boxes.
+- All 11 pages visually inspected; the appendix heading was shortened
+  to avoid an awkward word break and the revised page was rechecked.
+- This is translation and internal consistency checking, not a fresh
+  validation of the numerical method or resolution of the two queries.

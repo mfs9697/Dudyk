@@ -1,0 +1,28 @@
+% Compile from manuscript/latex with XeLaTeX, then BibTeX and XeLaTeX twice.
+\documentclass[11pt,a4paper]{article}
+\input{english/preamble}
+\hypersetup{pdftitle={Dudyk manuscript: English translation, batches 1 and 2},pdfauthor={}}
+% Figure 2 is outside this extract. Restore the live reference on integration.
+\newcommand{\SingularityExponentFigure}{Figure~2 of the source manuscript}
+\begin{document}
+\noindent{\large\bfseries English translation: Batches 1 and 2}\par
+\smallskip
+\noindent Problem formulation, analytical derivation, and Appendix A\par
+\smallskip
+\noindent{\small Source: approved Ukrainian manuscript, commit
+\texttt{0522cdae9e86}. September 22, 2026.\\
+Section numbers are retained. Figure 2 belongs to the source manuscript.
+Two analytical queries are recorded in \texttt{AUTHOR\_QUERIES\_BATCH02.md};
+the source equations are retained pending review.}
+\medskip
+\setcounter{section}{1}
+\input{english/sections/02_problem_statement}
+\clearpage
+\input{english/sections/03_process_zone_parameters}
+\clearpage
+\appendix
+\input{english/appendices/appendix_a}
+\clearpage
+\bibliographystyle{unsrtnat}
+\bibliography{bibliography/references}
+\end{document}
