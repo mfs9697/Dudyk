@@ -1,0 +1,175 @@
+\section{Numerical analysis and discussion of results}
+\label{sec:numerical-results}
+
+The numerical analysis is performed for the normalized parameters
+$\,d_i/l$, $\delta_i'$, and $J_i'$ defined in
+Section~\ref{sec:derivation}. Only combinations of material, angle, and
+loading sign for which
+\begin{equation*}
+  Cg_2<0,\qquad CQ_i>0
+\end{equation*}
+hold simultaneously are regarded as physically admissible. The first
+inequality ensures compressive contact between the faces of the
+interfacial shear crack, whereas the second ensures tensile normal stress
+along the bisector of the angular sector of the material in which the
+process zone forms.
+
+For the baseline material pair
+\begin{equation*}
+  E_1/E_2=0.5,\qquad \nu_1=\nu_2=0.3,
+\end{equation*}
+the sign changes of the coefficient $g_2$ occur at
+\begin{equation*}
+  \alpha_1=12.9202^\circ,\qquad
+  \alpha_2=107.0897^\circ.
+\end{equation*}
+These values are obtained by directly solving
+$D_0(-1-\lambda_0)=0$ together with $g_2=0$. For $C>0$, a process zone
+is physically admissible in material~2 for $0<\alpha<\alpha_1$ and in
+material~1 for $\alpha_2<\alpha<180^\circ$. For $C<0$, the corresponding
+intervals are $\alpha_1<\alpha<90^\circ$ for material~1 and
+$90^\circ<\alpha<\alpha_2$ for material~2. The value
+$\alpha=90^\circ$ corresponds to a straight interface and is treated
+below as a degenerate analytical limit rather than as an ordinary
+interior point of a numerical branch.
+
+To assess the effect of elastic contrast, the same two transition angles
+were calculated for a range of $E_1/E_2<1$ with
+$\nu_1=\nu_2=0.3$. The results are given in
+Table~\ref{tab:g2-transition-angles}. As $E_1/E_2$ increases, the first
+transition angle $\alpha_1$ increases monotonically, whereas $\alpha_2$
+decreases monotonically. Thus, elastic contrast systematically shifts
+the boundaries of the angular intervals of physical admissibility.
+
+\input{english/tables/table1_transition_angles.tex}
+
+\subsection{Dependence on normalized loading}
+\label{subsec:figure2}
+
+Figure~\ref{fig:load-dependence} shows the process-zone parameters as
+functions of
+\begin{equation*}
+  \sigma'=\frac{Cl^{\lambda_0}}{\sigma_i}
+\end{equation*}
+for four reference configurations:
+$\alpha=10^\circ$ ($i=2$, $C>0$),
+$45^\circ$ ($i=1$, $C<0$),
+$105^\circ$ ($i=2$, $C<0$), and
+$135^\circ$ ($i=1$, $C>0$). For each configuration, only the physically
+admissible half-axis of the loading parameter is shown.
+
+\resultfigure{figure2_recalculated.pdf}{%
+Dependence of the normalized process-zone parameters on the
+dimensionless loading parameter $\sigma'$ for four reference angles and
+the physically admissible materials.}{fig:load-dependence}
+
+In all four cases, $d_i/l$, $\delta_i'$, and $J_i'$ increase
+monotonically with $|\sigma'|$. This synchronous behavior follows
+directly from the analytical relations
+$\delta_i'\propto d_i/l$ and $J_i'\propto d_i/l$ for fixed geometry.
+Among the four reference configurations shown, the largest values of all
+three parameters at $|\sigma'|=0.5$ occur for
+$\alpha=45^\circ$, $C<0$; specifically,
+\begin{equation*}
+  \frac{d_1}{l}=0.14743436,\qquad
+  \delta_1'=0.14544227,\qquad
+  J_1'=0.03716462.
+\end{equation*}
+This result is also relevant to the small-scale assumption: increasing
+the load simultaneously increases the branching-driving measures and
+moves the model closer to the limit of its asymptotic applicability.
+
+For a fixed configuration, the opening $\delta_i$ and the zone-related
+energy parameter $J_i$ are both uniquely linked to the equilibrium zone
+length $d_i$. Consequently, either quantity may be used as the basis of
+a deformation or energy criterion for branching initiation, provided
+that the corresponding critical material parameters are specified
+consistently. The present curves therefore describe two equivalent
+representations of the same one-parameter family of local equilibrium
+states rather than two independent evolution laws.
+
+\subsection{Dependence on the interface half-angle}
+\label{subsec:figure3}
+
+Figure~\ref{fig:angle-dependence} shows the dependence of the normalized
+process-zone parameters on the half-angle $\alpha$ for the same baseline
+material pair at $\sigma'=\pm0.5$. Only material/loading-sign
+combinations satisfying the physical-admissibility conditions are
+retained. Transitions between admissible branches occur at
+$\alpha_1$, $90^\circ$, and $\alpha_2$.
+
+\resultfigure{figure3_recalculated.pdf}{%
+Dependence of the normalized process-zone parameters on the half-angle
+$\alpha$ at $\sigma'=\pm0.5$. Only physically admissible combinations
+of material and loading sign are shown; $\alpha=90^\circ$ is an
+analytical limit.}%
+{fig:angle-dependence}
+
+Within each principal admissible interval, the angular dependence has a
+pronounced maximum. Because $\delta_i'$ and $J_i'$ are proportional to
+$d_i/l$ at fixed $\alpha$, the maxima of all three parameters are
+coincident. Physically, the broken-interface geometry affects not the
+material resistance threshold $J_{i\mathrm{c}}$ itself, but the value of
+the zone-related energetic driving measure attained at a prescribed
+external load. Hence, for a fixed $J_{i\mathrm{c}}$, angles near a
+maximum correspond to less favorable geometrical configurations and a
+lower critical applied load.
+
+The maximum of the blue branch in
+Figure~\ref{fig:angle-dependence} corresponds to $d_i/l$ of order
+$0.18$. This value is no longer unambiguously small compared with unity,
+whereas the local formulation is based on the assumption
+$d_i/l\ll1$. The complete curve is therefore useful for examining the
+structure of the solution, but quantitative interpretation in the
+vicinity of the largest maximum should account for this limitation of
+the small-scale approximation.
+
+Numerical evaluation of the plus factors for
+Figure~\ref{fig:angle-dependence} requires particular care as
+$\alpha\to0$ and $\alpha\to180^\circ$. A fixed factorization contour
+converges slowly near these limits. The calculations therefore use
+adaptive contour extension; a further increase in the tail changed the
+checked plus factors by at most $8.69\times10^{-13}$. Accordingly,
+Figure~\ref{fig:angle-dependence} is based on the converged adaptive
+values.
+
+\subsection{Singularity exponents and physical admissibility}
+\label{subsec:figure4}
+
+For comparison, consider three local configurations: the intact
+bimaterial corner, the corner containing the prescribed interfacial
+shear crack, and the crack-plus-process-zone configuration. For the
+baseline material pair, their stress singularities are characterized by
+the exponents $\lambda_0$, $\lambda$, and $\lambda_i$, respectively.
+
+\resultfigure{figure4_admissible_segments.pdf}{%
+Singularity exponents and physically admissible segments for the
+baseline material pair. Complete mathematical branches and physically
+admissible portions are distinguished according to the conditions
+$Cg_2<0$ and $CQ_i>0$.}%
+{fig:singularity-exponents}
+
+Within the physically admissible segments for the baseline material pair
+examined here, the configuration containing the interfacial shear crack
+has a substantially stronger singularity than the intact corner:
+$|\lambda|$ exceeds $|\lambda_0|$. Introducing the process zone partly
+reduces this concentration, and for the corresponding material
+\begin{equation*}
+  |\lambda_0|<|\lambda_i|<|\lambda|.
+\end{equation*}
+Thus, the process zone has a local shielding effect: it reduces the
+order of the singularity associated with the interfacial shear crack but
+does not eliminate the stress concentration completely. This relation
+is established here for the material pair considered and its physically
+admissible branches; it should not be extended to arbitrary elastic
+contrasts without additional verification.
+
+The stronger singularity of the crack-containing configuration creates
+conditions favorable to local fracture in one of the materials, but the
+existence of a process zone is governed not by the singularity exponent
+alone. It also depends on the conditions $Cg_2<0$ and $CQ_i>0$, the
+separation resistance $\sigma_i$, and the level of external loading.
+This interpretation relates the sequence
+$\lambda_0\to\lambda\to\lambda_i$ to the mechanical model for branching
+initiation without treating the singularity itself as a sufficient
+fracture criterion.
