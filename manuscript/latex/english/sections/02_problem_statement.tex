@@ -1,0 +1,221 @@
+\section{Problem formulation}
+\label{sec:problem}
+\providecommand{\AsymptoticsAppendix}{Appendix~\ref{app:asymptotics}}
+
+\subsection{Geometry and local fracture configurations}
+\label{subsec:geometry}
+
+Consider a piecewise homogeneous body under plane strain, consisting of
+two dissimilar isotropic elastic materials joined along a V-shaped interface.
+Material $i$ has Young's modulus $E_i$ and Poisson's ratio $\nu_i$, where
+$i=1,2$ identifies the material. The angle between the two interface rays,
+measured through material~2, is $2\alpha$, where $\alpha$ is the half-angle and
+\begin{equation*}
+  0<\alpha<\pi, \qquad \alpha\ne\frac{\pi}{2}.
+\end{equation*}
+The value $\alpha=\pi/2$ corresponds to a straight interface and is treated
+only as a limiting case.
+
+The origin of the polar coordinate system $(r,\theta)$ is placed at the
+interface corner $O$, where $r$ is the distance from $O$ and $\theta$ is
+measured from the bisector of the sector occupied by material~2. Symmetry
+about this bisector allows the analysis to be restricted to the half-plane
+$0\leq\theta\leq\pi$. Material~2 occupies $0<\theta<\alpha$, material~1
+occupies $\alpha<\theta<\pi$, and the interface lies along
+$\theta=\alpha$. The radial and circumferential displacement components
+are denoted by $u_r$ and $u_\theta$, respectively. The circumferential normal
+stress is $\sigma_\theta$, and the shear stress in polar coordinates is
+$\tau_{r\theta}$. On a radial line, these are the normal and tangential
+traction components, respectively.
+
+The loading produces a local field that is symmetric about the bisector.
+For the intact interface, the singular part of the stress field along the
+interface is
+\begin{equation*}
+\begin{aligned}
+  \tau_{r\theta}(r,\alpha)
+    &= Cg_1 r^{\lambda_0}+o\!\left(r^{\lambda_0}\right),\\
+  \sigma_\theta(r,\alpha)
+    &= Cg_2 r^{\lambda_0}+o\!\left(r^{\lambda_0}\right),
+    \qquad r\to0.
+\end{aligned}
+\end{equation*}
+Here, $C$ is the generalized stress intensity factor incorporating the
+effects of the applied loading and the global body geometry; $g_1$ and
+$g_2$ are angular coefficients that depend on $\alpha$ and the elastic
+properties of the materials; and $\lambda_0\in(-1,0)$ is the singularity
+exponent of the intact corner. The notation $o(r^{\lambda_0})$ denotes a
+remainder whose ratio to $r^{\lambda_0}$ tends to zero as $r\to0$.
+The exponent $\lambda_0$ is the smallest real root of
+$D_0(-1-\lambda_0)=0$ in the open interval $(-1,0)$ that is continuously
+connected to the physical solution branch. Here, $D_0$ is the characteristic
+determinant for the intact corner. Expressions for $D_0$, $g_1$, and $g_2$
+are given in \AsymptoticsAppendix.
+
+When
+\begin{equation*}
+  Cg_2<0,
+\end{equation*}
+the normal stress along the interface is compressive. We consider a
+prescribed stationary V-shaped interfacial shear crack with two symmetric
+branches whose faces are in frictionless contact. Each branch has length
+$l$, measured from $O$ along its interface ray, so the total crack length
+is $2l$. Consistent with the scope of the model, the applied loading is
+assumed insufficient to cause loss of local stability at the outer crack
+tips. Branching at the corner and further interfacial propagation from the
+outer tips are competing mechanisms; the latter is not modeled here.
+
+The corner of the cracked interface retains a power-law stress
+singularity~\cite{NazarenkoKipnis2022Stress}. This field can support a
+process zone in one of the materials, with subsequent formation of an
+opening-mode (Mode~I) crack. Under the assumed symmetry of the geometry
+and loading, the bisector of the sector occupied by that material is a
+natural direction for the zone. Along this direction, the local in-plane
+shear-mode (Mode~II) component at the zone tip vanishes by symmetry,
+consistent with the principle of local
+symmetry~\cite{BarenblattCherepanov1961,GoldsteinSalganik1974}. Zones with
+arbitrary orientations are not considered. The bisector direction is
+therefore part of the assumed symmetric model and is not obtained by
+separately optimizing the branching direction.
+
+Let $\beta_i$ denote the polar angle of the bisector in material~$i$:
+\begin{equation*}
+  \beta_1=\pi,\qquad \beta_2=0.
+\end{equation*}
+The subscript $i$ on quantities associated with the process zone always
+identifies the material containing that zone.
+
+The process zone in material~$i$ is modeled as a line of normal displacement
+discontinuity of length $d_i$, subject to a constant normal cohesive
+traction $\sigma_i>0$, representing the material's resistance to
+separation. Figure~\ref{fig:failure-stages} shows the zone in material~1
+as a solid line and the alternative zone in material~2 as a dashed line.
+These are alternative configurations, considered separately.
+
+\begin{figure}[htbp]
+  \centering
+  \input{figures/figure1_original_tikz}
+  \caption{Local configurations near the interface corner:
+  (a) intact V-shaped interface; (b) symmetric V-shaped interfacial shear
+  crack with each branch of length $l$; (c) process zone of length $d_1$
+  in material~1 and the alternative zone of length $d_2$ in material~2
+  (dashed line).}
+  \label{fig:failure-stages}
+\end{figure}
+
+\subsection{Local problem and boundary conditions}
+\label{subsec:boundary-conditions}
+
+Let $L$ be a characteristic outer dimension of the body. We assume the
+separation of scales
+\begin{equation*}
+  d_i\ll l\ll L
+\end{equation*}
+and neglect friction between the interfacial crack faces. In the local
+problem, the piecewise homogeneous body is replaced by an infinite plane,
+and the two interfacial crack branches are treated as semi-infinite.
+Their finite length and the applied loading enter through an asymptotic
+matching condition~\cite{Nayfeh1973Perturbation}.
+
+For a field quantity $f$ defined on both sides of the ray
+$\theta=\alpha$, its jump across the interface is defined by
+\begin{equation*}
+  \jump{f}
+  =f(r,\alpha+0)-f(r,\alpha-0),
+\end{equation*}
+where $\alpha+0$ and $\alpha-0$ denote the limiting values approached
+from materials~1 and~2, respectively. Symmetry, traction continuity, and
+frictionless contact give
+\begin{equation}
+\label{eq:interface-boundary-conditions}
+\begin{aligned}
+  &\theta\in\{0,\pi\}: &&\tau_{r\theta}=0,\\
+  &\theta=\alpha: &&
+    \jump{\sigma_\theta}=0,
+    \quad \jump{\tau_{r\theta}}=0,
+    \quad \tau_{r\theta}=0,
+    \quad \jump{u_\theta}=0.
+\end{aligned}
+\end{equation}
+The condition $\jump{u_\theta}=0$ imposes normal contact between the crack
+faces, whereas $\tau_{r\theta}=0$ expresses the absence of friction.
+
+On the bisector of the material sector containing the process zone, the
+following mixed boundary conditions apply:
+\begin{equation}
+\label{eq:process-zone-boundary-conditions}
+\begin{aligned}
+  &\theta=\beta_i,\quad 0<r<d_i:
+    &&\sigma_\theta(r,\beta_i)=\sigma_i,\\
+  &\theta=\beta_i,\quad r>d_i:
+    &&u_\theta(r,\beta_i)=0,\\
+  &\theta=\beta_j,\quad r>0,\quad j\ne i:
+    &&u_\theta(r,\beta_j)=0.
+\end{aligned}
+\end{equation}
+Here, $j\in\{1,2\}$ identifies the other material. Thus, the symmetry
+condition on $u_\theta$ is replaced by a prescribed constant normal
+traction only over $0<r<d_i$ along the active direction
+$\theta=\beta_i$.
+
+At intermediate distances $d_i\ll r\ll l$, the solution must match the
+asymptotic field of the interfacial crack without a process
+zone~\cite{NazarenkoKipnis2022Stress}. In the inner problem, this matching
+condition is written as
+\begin{equation}
+\label{eq:matched-far-field}
+  \sigma_\theta(r,\beta_i)
+    =CQ_i r^\lambda+o\!\left(r^{-1}\right),
+    \qquad r\to\infty.
+\end{equation}
+Here, $Q_i$ is the amplitude coefficient for material~$i$, which depends
+on the interface angle, the elastic properties, and the branch length
+$l$, as specified in \AsymptoticsAppendix. The exponent
+$\lambda\in(-1,0)$ characterizes the corner singularity in the presence
+of the interfacial crack. It is the smallest real root of
+$D(-1-\lambda)=0$ in $(-1,0)$ that is continuously connected to the
+physical branch, where $D$ is the characteristic determinant for the
+cracked configuration. Expressions for $D$ and $Q_i$ are given in
+\AsymptoticsAppendix. The limit $r\to\infty$ is understood in the
+inner-scale sense of asymptotic matching, rather than as the far field
+of the finite body; the remainder $o(r^{-1})$ decays faster than $r^{-1}$
+in that limit.
+
+A process zone can form in material~$i$ only if the normal stress on its
+bisector is tensile. Equation~\eqref{eq:matched-far-field} therefore gives
+the physical admissibility condition
+\begin{equation*}
+  CQ_i>0.
+\end{equation*}
+The model thus requires both $Cg_2<0$, for contact between the
+interfacial crack faces, and $CQ_i>0$, for formation of a process zone
+in material~$i$.
+
+\subsection{Asymptotic fields near the process-zone tip}
+\label{subsec:zone-tip-asymptotics}
+
+Near the outer tip of the displacement discontinuity, the stress and
+normal displacement gradient have the standard inverse-square-root
+asymptotic form for a homogeneous material:
+\begin{equation}
+\label{eq:zone-tip-asymptotics}
+\begin{aligned}
+  &\theta=\beta_i,\quad r\to d_i+0:
+  &&\sigma_\theta(r,\beta_i)
+    \sim \frac{k_i}{\sqrt{2\pi(r-d_i)}},\\[3pt]
+  &\theta=\beta_i,\quad r\to d_i-0:
+  &&\frac{\partial u_\theta}{\partial r}(r,\beta_i)
+    \sim -\frac{2(1-\nu_i^2)}{E_i}
+    \frac{k_i}{\sqrt{2\pi(d_i-r)}}.
+\end{aligned}
+\end{equation}
+Here, $k_i$ is the local Mode~I stress intensity factor at the process-zone
+tip; $r\to d_i+0$ and $r\to d_i-0$ denote approach from ahead of the
+zone and from within it, respectively. The boundary-value problem is
+closed by imposing the stress-regularity condition
+\begin{equation*}
+  k_i=0.
+\end{equation*}
+This condition removes the inverse-square-root singular term and is
+used below to determine the equilibrium zone length $d_i$. It does not
+require the bounded part of the stress at the zone tip to vanish.

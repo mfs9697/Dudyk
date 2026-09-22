@@ -1,0 +1,33 @@
+% Shared preamble for English translation batches. Compile with XeLaTeX.
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=american]{english}
+\setmainfont{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{microtype,setspace}
+\setstretch{1.08}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,tikz}
+\usetikzlibrary{arrows.meta,calc}
+\usepackage{booktabs,array,caption}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor,enumitem,authblk}
+\definecolor{manuscriptlink}{RGB}{0,75,145}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\sigmap}{\sigma^{\prime}}
+\newcommand{\deltap}{\delta^{\prime}}
+\newcommand{\Jp}{J^{\prime}}
+\newcommand{\jump}[1]{\left[\!\left[#1\right]\!\right]}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=manuscriptlink,
+  citecolor=manuscriptlink,urlcolor=manuscriptlink}
+\providecommand{\doi}[1]{\href{https://doi.org/#1}{doi:\ \nolinkurl{#1}}}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{4em}
+\captionsetup{font=small,labelfont=bf}
