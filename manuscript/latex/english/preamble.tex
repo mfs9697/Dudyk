@@ -11,6 +11,18 @@
 \setstretch{1.08}
 \usepackage{amsmath,amssymb,mathtools,bm}
 \usepackage{graphicx,tikz}
+\newcommand{\resultfigure}[4][0.98\linewidth]{%
+  \begin{figure}[htbp]
+    \centering
+    \IfFileExists{../../figures/#2}{%
+      \includegraphics[width=#1]{../../figures/#2}%
+    }{%
+      \fbox{\parbox[c][45mm][c]{0.9\linewidth}{\centering
+        Figure file not found: \texttt{\detokenize{#2}}}}%
+    }
+    \caption{#3}
+    \label{#4}
+  \end{figure}}
 \usetikzlibrary{arrows.meta,calc}
 \usepackage{booktabs,array,caption}
 \usepackage[numbers,sort&compress]{natbib}
