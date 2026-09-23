@@ -1,0 +1,279 @@
+% !TeX program = xelatex
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}
+  {\setmainfont{Times New Roman}}
+  {\setmainfont{DejaVu Serif}}
+\usepackage[ukrainian]{babel}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{stmaryrd}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[hidelinks,bookmarks=false]{hyperref}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0.25em}
+\setlist[itemize]{leftmargin=1.6em}
+\setlist[enumerate]{leftmargin=1.8em}
+
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\jump}[1]{\llbracket #1\rrbracket}
+\newcommand{\RePart}{\operatorname{Re}}
+
+\title{\textbf{Незалежна перевірка співвідношень для розкриття\\
+та енергетичного параметра зони передруйнування}}
+\author{Технічна записка для обговорення}
+\date{23 вересня 2026 р.}
+
+\begin{document}
+
+\maketitle
+
+\section*{Мета записки}
+
+Метою цієї записки є незалежна алгебраїчна перевірка двох співвідношень
+поточного рукопису:
+\begin{enumerate}
+  \item формули для розкриття зони передруйнування $\delta_i$;
+  \item формул для роботи сил опору відриву $W_i$ та пов'язаного з нею
+  енергетичного параметра
+  \[
+    J_i=\frac{\dd W_i}{\dd d_i}.
+  \]
+\end{enumerate}
+
+Перевірка виконується \emph{за умови прийняття наведеного в рукописі
+розв'язку функціонального рівняння Вінера--Гопфа}. Тобто тут не
+перевиводяться характеристичні визначники, ядра $G_i$ та сама процедура
+факторизації; перевіряється лише подальше використання вже отриманого
+$\Phi_i^-(p)$ при $p=0$ і $p=1$.
+
+Такий спосіб дозволяє локалізувати можливу розбіжність і не змішувати її
+з іншими питаннями аналітичного продовження або області збіжності
+перетворення Мелліна.
+
+\section{Вихідні співвідношення}
+
+У поточному рукописі функціональне рівняння має вигляд
+\begin{equation}
+\label{eq:WH}
+  \Phi_i^+(p)
+  +\frac{\sigma_i}{p+1}
+  -\frac{C Q_i d_i^\lambda}{p+1+\lambda}
+  =
+  -\tan(\pi p)\,G_i(p)\Phi_i^-(p),
+\end{equation}
+де $-1<\lambda<0$.
+
+Використовується факторизація
+\begin{equation}
+\label{eq:Kdef}
+  K^\pm(p)=
+  \frac{\Gamma(1\mp p)}
+       {\Gamma\!\left(\tfrac12\mp p\right)}
+\end{equation}
+та фактори $G_i^\pm(p)$, нормовані до одиниці на нескінченності.
+
+Для правої трансформанти наведено розв'язок
+\begin{equation}
+\label{eq:PhiMinus}
+\begin{aligned}
+\Phi_i^-(p)
+={}&K^-(p)G_i^-(p)
+\Bigg[
+\frac{\sigma_iK^+(-1)}
+     {(p+1)G_i^+(-1)}
+\\
+&\qquad\qquad
+-
+\frac{C Q_i d_i^\lambda K^+(-1-\lambda)}
+     {(1+\lambda)(p+1+\lambda)G_i^+(-1-\lambda)}
+\Bigg].
+\end{aligned}
+\end{equation}
+
+Для подальшого аналізу зручно ввести
+\begin{equation}
+\label{eq:AB}
+  A_i=
+  \frac{\sigma_iK^+(-1)}{G_i^+(-1)},
+  \qquad
+  B_i=
+  \frac{C Q_i d_i^\lambda K^+(-1-\lambda)}
+       {(1+\lambda)G_i^+(-1-\lambda)}.
+\end{equation}
+Тоді
+\begin{equation}
+\label{eq:PhiAB}
+  \Phi_i^-(p)=
+  K^-(p)G_i^-(p)
+  \left[
+    \frac{A_i}{p+1}
+    -\frac{B_i}{p+1+\lambda}
+  \right].
+\end{equation}
+
+\section{Умова регулярності на вершині зони}
+
+При $p\to+\infty$ маємо
+\[
+  K^-(p)\sim p^{1/2},
+  \qquad
+  G_i^-(p)\to1,
+\]
+тому з \eqref{eq:PhiAB}
+\[
+  \Phi_i^-(p)
+  \sim
+  \frac{A_i-B_i}{\sqrt{p}}.
+\]
+
+З іншого боку, асимптотика біля вершини зони дає
+\[
+  \Phi_i^-(p)
+  \sim
+  -\frac{k_i}{\sqrt{2d_i p}}.
+\]
+Отже, умова відсутності кореневої сингулярності
+\[
+  k_i=0
+\]
+еквівалентна співвідношенню
+\begin{equation}
+\label{eq:AeqB}
+  \boxed{A_i=B_i}.
+\end{equation}
+
+Саме з \eqref{eq:AeqB} випливає чинна формула для довжини зони
+\begin{equation}
+\label{eq:di}
+  d_i=
+  \left[
+    \frac{C Q_iK^+(-1-\lambda)G_i^+(-1)}
+         {\sigma_i(1+\lambda)K^+(-1)G_i^+(-1-\lambda)}
+  \right]^{-1/\lambda}.
+\end{equation}
+Таким чином, подальша перевірка не ставить під сумнів
+формулу \eqref{eq:di}.
+
+Після підстановки \eqref{eq:AeqB} розв'язок
+\eqref{eq:PhiAB} істотно спрощується:
+\begin{align}
+  \Phi_i^-(p)
+  &=
+  A_iK^-(p)G_i^-(p)
+  \left[
+    \frac{1}{p+1}
+    -\frac{1}{p+1+\lambda}
+  \right]
+  \notag\\
+  &=
+  \boxed{
+  A_iK^-(p)G_i^-(p)
+  \frac{\lambda}
+       {(p+1)(p+1+\lambda)}
+  }.
+\label{eq:PhiReduced}
+\end{align}
+
+Саме формула \eqref{eq:PhiReduced} є вихідною для двох незалежних
+перевірок нижче.
+
+\section{Перевірка формули для розкриття}
+
+Розкриття зони в кутовій точці визначено як
+\[
+  \delta_i=\jump{u_\theta(0,\beta_i)}.
+\]
+З означення $\Phi_i^-(p)$ випливає
+\begin{equation}
+\label{eq:deltaPhi}
+  \delta_i
+  =
+  -\frac{4(1-\nu_i^2)d_i}{E_i}\,
+  \Phi_i^-(0).
+\end{equation}
+
+Покладемо $p=0$ у \eqref{eq:PhiReduced}. Тоді
+\begin{equation}
+\label{eq:Phi0}
+  \Phi_i^-(0)
+  =
+  A_iK^-(0)G_i^-(0)
+  \frac{\lambda}{1+\lambda}.
+\end{equation}
+
+Із \eqref{eq:Kdef}
+\begin{equation}
+\label{eq:K0}
+  K^-(0)
+  =
+  \frac{\Gamma(1)}{\Gamma(1/2)}
+  =
+  \frac{1}{\sqrt{\pi}}.
+\end{equation}
+
+Для додатного парного ядра, факторизованого у прийнятому в рукописі
+нормуванні,
+\begin{equation}
+\label{eq:Gsym}
+  G_i^-(p)=\frac{1}{G_i^+(-p)}.
+\end{equation}
+Зокрема,
+\begin{equation}
+\label{eq:G0}
+  G_i^-(0)=\frac{1}{\sqrt{G_i(0)}}.
+\end{equation}
+
+Підставляючи \eqref{eq:AB}, \eqref{eq:K0} і \eqref{eq:G0}
+у \eqref{eq:Phi0}, отримуємо
+\begin{equation}
+\label{eq:Phi0Final}
+  \Phi_i^-(0)
+  =
+  \frac{\sigma_iK^+(-1)}
+       {G_i^+(-1)}
+  \frac{\lambda}
+       {(1+\lambda)\sqrt{\pi G_i(0)}}.
+\end{equation}
+
+Отже, з \eqref{eq:deltaPhi}
+\begin{equation}
+\boxed{
+  \delta_i=
+  -\frac{4(1-\nu_i^2)\sigma_i\lambda K^+(-1)}
+  {E_i\sqrt{\pi G_i(0)}(1+\lambda)\,G_i^+(-1)}
+  d_i
+  }.
+\label{eq:deltaDerived}
+\end{equation}
+
+У поточному рукописі в знаменнику відповідної формули стоїть
+\begin{equation}
+\label{eq:deltaManuscript}
+  G_i^+(-1-\lambda)
+  \qquad\text{замість}\qquad
+  G_i^+(-1).
+\end{equation}
+
+Таким чином, якщо виходити безпосередньо з
+\eqref{eq:PhiMinus} та умови $k_i=0$, то аргумент
+плюс-фактора у формулі розкриття має бути
+\begin{equation}
+  \boxed{-1}.
+\end{equation}
+
+Важливо, що $G_i^+(-1-\lambda)$ закономірно входить до формули довжини
+\eqref{eq:di}: цей аргумент пов'язаний із полюсом
+зовнішнього сингÃлярного поля $p=-1-\lambda$.
+Натомість після використання умови $A_i=B_i$ значення
+$\Phi_i^-(0)$ визначається коефіцієнтом
+\[
+  A_i=
+  \frac{\sigma_iK^+(-1)}{G_i^+(-1)},
+SECB1
