@@ -190,7 +190,25 @@ $\Phi_i^-(p)$ при $p=0$ і $p=1$.
 \[
   \delta_i=\jump{u_\theta(0,\beta_i)}.
 \]
-З означення $\Phi_i^-(p)$ випливає
+За симетрії відносно бісектриси
+$\delta_i=2u_\theta(0,\beta_i)$, а на зовнішньому кінці зони
+$u_\theta(d_i,\beta_i)=0$. Тому безпосередньо з означення
+$\Phi_i^-(p)$
+\begin{align*}
+  \Phi_i^-(0)
+  &=
+  \frac{E_i}{2(1-\nu_i^2)}
+  \int_0^1
+  \frac{\partial u_\theta}{\partial r}(\rho d_i,\beta_i)
+  \,\dd\rho
+  \\
+  &=
+  \frac{E_i}{2(1-\nu_i^2)d_i}
+  \bigl[u_\theta(d_i,\beta_i)-u_\theta(0,\beta_i)\bigr]
+  =
+  -\frac{E_i\delta_i}{4(1-\nu_i^2)d_i}.
+\end{align*}
+Отже,
 \begin{equation}
 \label{eq:deltaPhi}
   \delta_i
@@ -224,11 +242,29 @@ $\Phi_i^-(p)$ при $p=0$ і $p=1$.
 \label{eq:Gsym}
   G_i^-(p)=\frac{1}{G_i^+(-p)}.
 \end{equation}
-Зокрема,
+Це співвідношення не є додатковим припущенням. Якщо позначити
+\[
+  \mathcal{L}_i(p)=
+  \frac{1}{2\pi\ii}
+  \int_{-\ii\infty}^{\ii\infty}
+  \frac{\log G_i(z)}{z-p}\,\dd z,
+\]
+то для додатного парного ядра на осі факторизації можна вибрати
+неперервну дійсну гілку $\log G_i(\ii t)$. Заміна $z\mapsto-z$
+дає
+\[
+  \mathcal{L}_i(-p)=-\mathcal{L}_i(p),
+\]
+а отже, відповідно до означення факторів,
+$G_i^+(-p)=1/G_i^-(p)$, що еквівалентно \eqref{eq:Gsym}.
+Разом із граничним співвідношенням
+$G_i(0)=G_i^+(0)/G_i^-(0)$ та вибором додатної гілки це дає
 \begin{equation}
 \label{eq:G0}
   G_i^-(0)=\frac{1}{\sqrt{G_i(0)}}.
 \end{equation}
+Значення факторів при $p=0$ тут і далі розуміються як відповідні
+граничні значення з областей їх аналітичності.
 
 Підставляючи \eqref{eq:AB}, \eqref{eq:K0} і \eqref{eq:G0}
 у \eqref{eq:Phi0}, отримуємо
@@ -268,12 +304,420 @@ $\Phi_i^-(p)$ при $p=0$ і $p=1$.
   \boxed{-1}.
 \end{equation}
 
-Важливо, що $G_i^+(-1-\lambda)$ закономірно входить до формули довжини
-\eqref{eq:di}: цей аргумент пов'язаний із полюсом
-зовнішнього сингÃлярного поля $p=-1-\lambda$.
+Важливо, що $G_i^+(-1-\lambda)$ закономірно входить до
+формули довжини \eqref{eq:di}: цей аргумент пов'язаний із полюсом
+зовнішнього сингулярного поля $p=-1-\lambda$.
 Натомість після використання умови $A_i=B_i$ значення
 $\Phi_i^-(0)$ визначається коефіцієнтом
 \[
   A_i=
   \frac{\sigma_iK^+(-1)}{G_i^+(-1)},
-SECB1
+\]
+тобто полюсом сталої напруги опору відриву при $p=-1$.
+
+\section{Перевірка роботи $W_i$ та параметра $J_i$}
+
+У поточному рукописі
+\begin{equation}
+\label{eq:Wdef}
+  W_i=
+  \sigma_i\int_0^{d_i}
+  \jump{u_\theta(r,\beta_i)}\,\dd r.
+\end{equation}
+
+За симетрії $\jump{u_\theta}=2u_\theta$, а
+$u_\theta(d_i,\beta_i)=0$. Тому інтегрування частинами дає
+\[
+  \int_0^{d_i}\jump{u_\theta}\,\dd r
+  =
+  -2\int_0^{d_i}
+  r\frac{\partial u_\theta}{\partial r}\,\dd r.
+\]
+З іншого боку,
+\[
+  \Phi_i^-(1)
+  =
+  \frac{E_i}{2(1-\nu_i^2)d_i^2}
+  \int_0^{d_i}
+  r\frac{\partial u_\theta}{\partial r}\,\dd r.
+\]
+Отже,
+\begin{equation}
+\label{eq:WPhi}
+  W_i=
+  -\frac{4(1-\nu_i^2)\sigma_i}{E_i}
+  d_i^2\Phi_i^-(1).
+\end{equation}
+
+Із \eqref{eq:PhiReduced} при $p=1$ маємо
+\begin{equation}
+\label{eq:Phi1}
+  \Phi_i^-(1)
+  =
+  A_iK^-(1)G_i^-(1)
+  \frac{\lambda}{2(2+\lambda)}.
+\end{equation}
+
+За \eqref{eq:Kdef}
+\begin{equation}
+\label{eq:Km1}
+  K^-(1)
+  =
+  \frac{\Gamma(2)}{\Gamma(3/2)}
+  =
+  \frac{2}{\sqrt{\pi}},
+  \qquad
+  K^+(-1)
+  =
+  \frac{\Gamma(2)}{\Gamma(3/2)}
+  =
+  \frac{2}{\sqrt{\pi}}.
+\end{equation}
+Крім того, з \eqref{eq:Gsym}
+\begin{equation}
+\label{eq:G1}
+  G_i^-(1)=\frac{1}{G_i^+(-1)}.
+\end{equation}
+
+Тому
+\begin{equation}
+\label{eq:Phi1Final}
+  \Phi_i^-(1)
+  =
+  \frac{2\sigma_i\lambda}
+  {\pi(2+\lambda)[G_i^+(-1)]^2}.
+\end{equation}
+
+Підстановка \eqref{eq:Phi1Final} у \eqref{eq:WPhi} дає
+\begin{equation}
+\boxed{
+  W_i=
+  -\frac{8\lambda(1-\nu_i^2)\sigma_i^2}
+  {\pi(2+\lambda)[G_i^+(-1)]^2E_i}
+  d_i^2
+  }.
+\label{eq:WDerived}
+\end{equation}
+
+Відповідно,
+\begin{equation}
+\boxed{
+  J_i=
+  \frac{\dd W_i}{\dd d_i}
+  =
+  -\frac{16\lambda(1-\nu_i^2)\sigma_i^2}
+  {\pi(2+\lambda)[G_i^+(-1)]^2E_i}
+  d_i
+  }.
+\label{eq:JDerived}
+\end{equation}
+
+У поточному рукописі наведено
+\begin{align}
+  W_i^{\mathrm{рук}}
+  &=
+  -\frac{32\lambda(1-\nu_i^2)\sigma_i^2}
+  {9\pi(2+\lambda)[G_i^+(-1)]^2E_i}
+  d_i^2,
+\label{eq:WCurrent}
+\\
+  J_i^{\mathrm{рук}}
+  &=
+  -\frac{64\lambda(1-\nu_i^2)\sigma_i^2}
+  {9\pi(2+\lambda)[G_i^+(-1)]^2E_i}
+  d_i.
+\label{eq:JCurrent}
+\end{align}
+
+Порівняння \eqref{eq:WDerived}--\eqref{eq:JDerived}
+з \eqref{eq:WCurrent}--\eqref{eq:JCurrent} дає
+\begin{equation}
+\boxed{
+  W_i=\frac94\,W_i^{\mathrm{рук}},
+  \qquad
+  J_i=\frac94\,J_i^{\mathrm{рук}}.
+}
+\label{eq:factor94}
+\end{equation}
+
+Для безрозмірного параметра
+\[
+  J_i'=
+  \frac{E_iJ_i}
+       {4(1-\nu_i^2)\sigma_i^2l}
+\]
+з \eqref{eq:JDerived} випливає
+\begin{equation}
+\boxed{
+  J_i'
+  =
+  -\frac{4\lambda}
+  {\pi(2+\lambda)[G_i^+(-1)]^2}
+  \frac{d_i}{l}
+  }.
+\label{eq:JprimeDerived}
+\end{equation}
+У рукописі замість цього використано коефіцієнт
+$-16/[9\pi]$.
+
+\subsection*{Зауваження щодо числового коефіцієнта}
+
+Коефіцієнт $32/(9\pi)$ можна точно відтворити, якщо замість
+значення, що безпосередньо випливає з \eqref{eq:Kdef},
+\[
+  K^+(-1)=K^-(1)=\frac{2}{\sqrt{\pi}},
+\]
+підставити
+\[
+  \frac{4}{3\sqrt{\pi}}
+  =
+  \frac{\Gamma(2)}{\Gamma(5/2)}.
+\]
+Оскільки за означенням \eqref{eq:Kdef} у знаменнику при
+$p=-1$ або $p=1$ має стояти $\Gamma(3/2)$, а не $\Gamma(5/2)$,
+це спостереження є можливим поясненням появи множника $4/9$.
+Водночас без первинних проміжних обчислень воно не доводить,
+що саме так історично виник відповідний коефіцієнт.
+
+\section{Числовий контроль для $\alpha=45^\circ$}
+
+Для базового випадку
+\[
+  \frac{E_1}{E_2}=0.5,
+  \qquad
+  \nu_1=\nu_2=0.3,
+  \qquad
+  \alpha=45^\circ
+\]
+у поточному числовому розрахунку отримано
+\[
+  \lambda=-0.613197226573,
+\]
+\[
+  G_1^+(-1-\lambda)=0.998663862615,
+  \qquad
+  G_1^+(-1)=0.996302154171.
+\]
+Ці значення плюс-факторів додатково відтворено прямим числовим
+інтегруванням дійсної формули факторизації
+\[
+  \log G_1^+(p)
+  =
+  -\frac{p}{\pi}
+  \int_0^\infty
+  \frac{\log G_1(\ii t)}{t^2+p^2}\,\dd t,
+  \qquad p<0.
+\]
+
+При $\sigma'=-0.5$ довжина зони
+\[
+  \frac{d_1}{l}=0.147434361703
+\]
+не змінюється, оскільки формула \eqref{eq:di} залишається тією самою.
+
+За чинною формулою розкриття
+\[
+  \delta_1'^{\,\mathrm{рук}}
+  =0.145442265256.
+\]
+Заміна лише аргументу плюс-фактора відповідно до
+\eqref{eq:deltaDerived} дає
+\[
+  \boxed{
+  \delta_1'=0.145787032378
+  },
+\]
+тобто збільшення приблизно на $0.237\%$.
+
+Для енергетичного параметра чинне значення
+\[
+  J_1'^{\,\mathrm{рук}}
+  =0.037164616540
+\]
+за \eqref{eq:factor94} переходить у
+\[
+  \boxed{
+  J_1'=0.083620387214
+  }.
+\]
+
+Отже, виправлення формули розкриття дає порівняно невелику,
+але залежну від кута зміну, тоді як виправлення енергетичного
+коефіцієнта множить усю криву $J_i'$ на сталий множник $9/4$.
+
+\section{Історична перевірка}
+
+Було переглянуто чотири попередні публікації, пов'язані з тією самою
+лінією аналітичних моделей.
+
+\subsection*{Робота 2006 року}
+
+У роботі A.~A.~Kaminsky, M.~V.~Dudik, L.~A.~Kipnis
+(International Applied Mechanics, 42, 2006)~\cite{Kaminsky2006}
+використано ту саму гамма-функціональну факторизацію
+\[
+  K^\pm(p)=
+  \frac{\Gamma(1\mp p)}
+       {\Gamma(\tfrac12\mp p)}.
+\]
+Робота присвячена зоні тангенціального розриву і не містить
+спрощених формул для $\delta_i$, $W_i$ або $J_i$, які перевіряються
+тут.
+
+\subsection*{Робота 2007 року}
+
+У роботі A.~A.~Kaminsky, M.~V.~Dudik, L.~A.~Kipnis
+(International Applied Mechanics, 43, 2007)~\cite{Kaminsky2007}
+розглянуто вже лінію
+\emph{нормального} розриву переміщень. У точному розв'язку
+$\Phi^-(p)$ внесок сталої напруги опору відриву містить
+\[
+  \frac{\sigma K^+(-1)}
+       {(p+1)G^+(-1)},
+\]
+тоді як полюси зовнішнього осцилюючого поля зберігають власні
+аргументи факторів. Така структура узгоджується з розділенням
+аргументів $-1$ і $-1-\lambda$ у наведеному вище незалежному
+виведенні.
+
+У тій самій роботі енергія визначається через момент
+$\Phi^-(1)$, що безпосередньо підтверджує використання
+$p=1$ для енергетичної характеристики. Окремої формули розкриття
+через $\Phi^-(0)$ у цій роботі не вводиться, тому робота 2007 року
+не використовується тут як підтвердження саме кроку $p=0$.
+
+Слід, однак, враховувати, що в роботі 2007 року використано інше
+визначення енергетичної величини з множником $1/2$:
+\[
+  W=\frac{\sigma}{2}\int \jump{u_\theta}\,\dd r.
+\]
+Тому її числовий коефіцієнт не слід безпосередньо переносити
+до поточного визначення \eqref{eq:Wdef}.
+
+\subsection*{Робота 2023 року}
+
+У роботі A.~Kaminsky, M.~Dudyk, Y.~Reshitnyk, Y.~Chornoivan
+(International Journal of Solids and Structures, 267, 2023)
+~\cite{Kaminsky2023} використано ту саму факторизацію
+\[
+  K^\pm(p)=
+  \frac{\Gamma(1\mp p)}
+       {\Gamma(\tfrac12\mp p)}.
+\]
+У ній енергетична характеристика явно виражається через
+трансформанти $\Phi_m^-(1)$, а стрибки переміщень у вершині
+тріщини --- через $\Phi_m^-(0)$. Отже, ця робота незалежно
+підтверджує сам вибір моментів $p=1$ та $p=0$ для відповідних
+фізичних величин, хоча її векторна задача не визначає числових
+коефіцієнтів поточної скалярної моделі.
+
+\subsection*{Робота 2024 року}
+
+У роботі A.~O.~Kaminsky, M.~V.~Dudyk, T.~V.~Polishchuk
+(International Applied Mechanics, 60, 2024)~\cite{Kaminsky2024}
+уже присутні обидва структурні елементи, що перевіряються:
+\begin{itemize}
+  \item у формулі розкриття використано
+  $G_i^+(-1-\lambda)$;
+  \item у формулах для $W_i$ та $J_i$ використано коефіцієнти
+  $32/(9\pi)$ та $64/(9\pi)$ відповідно.
+\end{itemize}
+
+Отже, ці дві розбіжності не виникли під час підготовки поточного
+рукопису: відповідний аргумент плюс-фактора та коефіцієнти вже
+були в опублікованих формулах 2024 року. Окремо зауважимо, що
+в друкованих формулах 2024 року для $W_i$ та $J_i$ міститься
+лише один множник $\sigma_i$, тоді як у поточному рукописі
+розмірнісно необхідний множник $\sigma_i^2$ уже відновлено.
+Це окреме виправлення не є предметом теперішньої перевірки.
+Водночас у роботах 2006--2007 років не знайдено відповідних
+спрощених співвідношень, які б вимагали саме таких аргументів
+або коефіцієнтів.
+
+\section{Питання для авторського рішення}
+
+На підставі наведеного виведення пропонується перевірити такі два
+пункти.
+
+\begin{enumerate}
+  \item Чи слід у формулі розкриття замінити
+  \[
+    \boxed{
+    G_i^+(-1-\lambda)\;\longrightarrow\;G_i^+(-1)
+    }?
+  \]
+
+  \item Чи слід замінити
+  \[
+    \boxed{
+    \frac{32}{9\pi}\;\longrightarrow\;\frac{8}{\pi}
+    }
+    \qquad\text{у }W_i,
+  \]
+  та відповідно
+  \[
+    \boxed{
+    \frac{64}{9\pi}\;\longrightarrow\;\frac{16}{\pi}
+    }
+    \qquad\text{у }J_i?
+  \]
+\end{enumerate}
+
+Якщо авторське виведення приводить до іншого результату, корисно
+уточнити додаткове співвідношення, інше нормування факторів або іншу
+інтерпретацію $\Phi_i^-(p)$, яка змінює перехід від
+\eqref{eq:PhiMinus} до значень при $p=0$ та $p=1$.
+
+До остаточного авторського рішення доцільно не змінювати
+формулу довжини зони та не перераховувати рисунки. Після
+підтвердження:
+\begin{itemize}
+  \item крива $d_i/l$ залишається незмінною;
+  \item криві $\delta_i'$ слід перерахувати з
+  $G_i^+(-1)$;
+  \item криві $J_i'$ слід помножити на $9/4$;
+  \item критичні навантаження, визначені з енергетичного критерію
+  $J_i=J_{ic}$, потребуватимуть окремого перерахунку.
+\end{itemize}
+
+\begin{thebibliography}{9}
+
+\bibitem{Kaminsky2006}
+A.~A.~Kaminsky, M.~V.~Dudik, and L.~A.~Kipnis,
+``On the Direction of Development of a Thin Fracture Process Zone
+at the Tip of an Interfacial Crack Between Dissimilar Media,''
+\emph{International Applied Mechanics}, vol.~42, no.~2,
+pp.~136--144, 2006.
+\href{https://doi.org/10.1007/s10778-006-0068-1}
+{doi:10.1007/s10778-006-0068-1}.
+
+\bibitem{Kaminsky2007}
+A.~A.~Kaminsky, M.~V.~Dudik, and L.~A.~Kipnis,
+``Initial Kinking of an Interface Crack Between Two Elastic Media,''
+\emph{International Applied Mechanics}, vol.~43, no.~10,
+pp.~1090--1099, 2007.
+\href{https://doi.org/10.1007/s10778-007-0109-4}
+{doi:10.1007/s10778-007-0109-4}.
+
+\bibitem{Kaminsky2023}
+A.~Kaminsky, M.~Dudyk, Y.~Reshitnyk, and Y.~Chornoivan,
+``An analytical method of modeling the process zone near the tip of
+an interface crack due to its kinking from the interface of
+quasi-elastic materials,''
+\emph{International Journal of Solids and Structures},
+vol.~267, art.~112117, 2023.
+\href{https://doi.org/10.1016/j.ijsolstr.2023.112117}
+{doi:10.1016/j.ijsolstr.2023.112117}.
+
+\bibitem{Kaminsky2024}
+A.~O.~Kaminsky, M.~V.~Dudyk, and T.~V.~Polishchuk,
+``Crack Initiation Model in Elastic Piecewise Homogeneous Body
+with Broken Interface,''
+\emph{International Applied Mechanics}, vol.~60, no.~6,
+pp.~677--688, 2024.
+\href{https://doi.org/10.1007/s10778-025-01319-8}
+{doi:10.1007/s10778-025-01319-8}.
+
+\end{thebibliography}
+
+\end{document}
