@@ -6,7 +6,8 @@
 \label{subsec:geometry}
 
 Consider a piecewise homogeneous body under plane strain composed of two
-dissimilar isotropic elastic materials joined along a V-shaped interface.
+dissimilar isotropic elastic materials joined along a kinked interface
+(Figure~\ref{fig:failure-stages}).
 Material $i$ has Young's modulus $E_i$ and Poisson's ratio $\nu_i$, where
 $i=1,2$ identifies the material. The angle between the two interface rays,
 measured through material~2, is $2\alpha$, where $\alpha$ is the half-angle and
@@ -40,7 +41,7 @@ interface is
     \qquad r\to0.
 \end{aligned}
 \end{equation*}
-Here, $C$ is the generalized stress intensity factor incorporating the
+Here, $C$ is the amplitude of the local singular field and incorporates the
 effects of the applied loading and the global body geometry; $g_1$ and
 $g_2$ are angular coefficients that depend on $\alpha$ and the elastic
 properties of the materials; and $\lambda_0\in(-1,0)$ is the singularity
@@ -52,22 +53,26 @@ connected to the physical solution branch. Here, $D_0$ is the characteristic
 determinant for the intact corner. Expressions for $D_0$, $g_1$, and $g_2$
 are given in \AsymptoticsAppendix.
 
-When
+The initial configuration considered here contains an already existing
+V-shaped interfacial shear crack formed by two symmetric branches emanating
+from the corner $O$ along the kinked interface. The crack faces are in
+frictionless contact. Each branch has length $l$, so the total length of the
+two branches is $2l$; below, $l$ is referred to as the crack half-length
+(the branch length). The contact state is consistent with
 \begin{equation*}
   Cg_2<0,
 \end{equation*}
-the normal stress along the interface is compressive. We consider a
-prescribed stationary V-shaped interfacial shear crack with two symmetric
-branches whose faces are in frictionless contact. Each branch has length
-$l$, measured from $O$ along its interface ray, so the total crack length
-is $2l$. Consistent with the scope of the model, the applied loading is
-assumed insufficient to cause loss of local stability at the outer crack
-tips. Branching at the corner and further interfacial propagation from the
-outer tips are competing mechanisms; the latter is not modeled here.
+for which the normal stress along the interface is compressive. The
+V-shaped interfacial crack is treated as a prescribed stationary
+configuration and $l$ as a prescribed fixed parameter. The applied loading
+is assumed insufficient to cause loss of local stability at the outer crack
+tips. Interfacial propagation from those tips is outside the local problem
+near $O$ and is considered below only as a competing fracture mechanism.
 
-The interfacial crack retains a power-law stress singularity at the
-corner~\cite{NazarenkoKipnis2022Stress}. This field can support a process zone in one of the materials that may
-develop into an opening-mode (Mode~I) branch. Under the assumed geometric and loading symmetry, the bisector of the sector
+The prescribed interfacial crack retains a power-law stress singularity at
+the corner~\cite{NazarenkoKipnis2022Stress}. This field can support a small
+tensile process zone in one of the materials; its characteristics are used
+below to formulate the conditions for branching initiation at the corner. Under the assumed geometric and loading symmetry, the bisector of the sector
 occupied by that material is a natural direction for the zone. Along this
 direction, the local Mode~II (in-plane shear) component at the zone tip
 vanishes by symmetry, consistent with the principle of local
@@ -80,22 +85,26 @@ Let $\beta_i$ denote the polar angle of the bisector in material~$i$:
 \begin{equation*}
   \beta_1=\pi,\qquad \beta_2=0.
 \end{equation*}
-The subscript $i$ on quantities associated with the process zone always
-identifies the material containing that zone.
+The subscript $i$ in $\beta_i$, $d_i$, $\sigma_i$, and $Q_i$ identifies
+the material throughout.
 
 The process zone in material~$i$ is modeled as a normal displacement
 discontinuity of length $d_i$ subjected to a constant normal cohesive
 traction $\sigma_i>0$, which represents the material's resistance to
 separation. Figure~\ref{fig:failure-stages} shows the zone in material~1
 as a solid line and the alternative zone in material~2 as a dashed line.
-These are alternative configurations, considered separately.
+These are alternative configurations, considered separately. For each
+admissible direction, the solution defines a quasi-static family of
+equilibrium process-zone states; the zone opening and energy characteristic
+are then used to formulate branching-initiation criteria.
 
 \begin{figure}[htbp]
   \centering
   \input{figures/figure1_original_tikz}
   \caption{Local configurations near the interface corner:
-  (a) intact V-shaped interface; (b) symmetric V-shaped interfacial shear
-  crack with each branch of length $l$; (c) process zone of length $d_1$
+  (a) intact kinked interface; (b) prescribed stationary V-shaped
+  interfacial shear crack with two branches of length $l$ each (total branch
+  length $2l$); (c) process zone of length $d_1$
   in material~1 and the alternative zone of length $d_2$ in material~2
   (dashed line). The panels compare the corresponding local configurations
   and do not prescribe the order in which they occur.}
@@ -110,11 +119,18 @@ separation of scales
 \begin{equation*}
   d_i\ll l\ll L
 \end{equation*}
-and neglect friction between the interfacial crack faces. In the local
-problem, the piecewise homogeneous body is replaced by an infinite plane,
-and the two interfacial crack branches are treated as semi-infinite.
+and neglect friction between the interfacial crack faces. Within this
+quasi-static formulation, the outer-field amplitude $C$ may vary, whereas
+the crack half-length $l$, and hence the total length $2l$ of the two
+branches, remain fixed. Changes in loading alter the equilibrium zone length
+$d_i$ and the associated local characteristics. In the local problem, the
+piecewise homogeneous body is replaced by an infinite plane, and the two
+branches of the V-shaped interfacial crack are treated as semi-infinite.
 Their finite length and the applied loading enter through an asymptotic
-matching condition~\cite{Nayfeh1973Perturbation}.
+matching condition~\cite{Nayfeh1973Perturbation}. This is a one-way local
+approximation: the known field of the stationary interfacial crack loads the
+inner problem near $O$, whereas the feedback of the small process zone on
+the fields at the outer crack tips is not determined.
 
 For a field quantity $f$ defined on both sides of the ray
 $\theta=\alpha$, its jump across the interface is defined by
@@ -152,7 +168,7 @@ following mixed boundary conditions apply:
     &&u_\theta(r,\beta_j)=0.
 \end{aligned}
 \end{equation}
-Here, $j\in\{1,2\}$ identifies the other material. Thus, the symmetry
+Here, $j=3-i$ identifies the other material. Thus, the symmetry
 condition on $u_\theta$ is replaced by a prescribed constant normal
 traction only over $0<r<d_i$ along the active direction
 $\theta=\beta_i$.
@@ -170,8 +186,8 @@ condition takes the form
 Here, $Q_i$ is the amplitude coefficient for material~$i$, which depends
 on the interface angle, the elastic properties, and the branch length
 $l$, as specified in \AsymptoticsAppendix. The exponent
-$\lambda\in(-1,0)$ characterizes the corner singularity in the presence
-of the interfacial crack. It is the smallest real root of
+$\lambda\in(-1,0)$ characterizes the corner singularity in the
+configuration with the prescribed stationary V-shaped interfacial crack. It is the smallest real root of
 $D(-1-\lambda)=0$ in $(-1,0)$ that is continuously connected to the
 physical branch, where $D$ is the characteristic determinant for the
 cracked configuration. Expressions for $D$ and $Q_i$ are given in
@@ -181,9 +197,8 @@ of the finite body; the remainder $o(r^{-1})$ decays faster than $r^{-1}$
 in that limit.
 
 For the subsequent Wiener--Hopf construction, we use superposition as in
-the related problem~\cite{KaminskyDudykPolishchuk2024}. We subtract the
-known field for the configuration without a process zone and introduce the
-correction normal stress
+the related problem~\cite{KaminskyDudykPolishchuk2024}. We subtract the known field of the stationary V-shaped interfacial crack
+without a process zone and introduce the correction normal stress
 \begin{equation*}
   \widehat{\sigma}_i(r)
   =\sigma_\theta(r,\beta_i)-CQ_i r^\lambda.
@@ -198,8 +213,8 @@ while on the process-zone segment $0<r<d_i$,
   \widehat{\sigma}_i(r)
   =\sigma_i-CQ_i r^\lambda.
 \end{equation*}
-The field without a process zone satisfies the bisector symmetry condition
-$u_\theta=0$, so subtracting it does not alter the displacement-gradient
+The field of the stationary V-shaped crack without a process zone satisfies
+the bisector symmetry condition $u_\theta=0$, so subtracting it does not alter the displacement-gradient
 transform used below. The functional problem is therefore formulated for the correction field,
 with the known power-law term included in the prescribed part.
 
@@ -211,7 +226,10 @@ the physical admissibility condition
 \end{equation*}
 The model thus requires both $Cg_2<0$, for contact between the
 interfacial crack faces, and $CQ_i>0$, for formation of a process zone
-in material~$i$.
+in material~$i$. For the parameter sets examined below, the numerical
+analysis shows that these conditions can hold simultaneously for only one
+of the two materials; only that material admits a physically admissible
+process zone.
 
 \subsection{Asymptotic fields near the process-zone tip}
 \label{subsec:zone-tip-asymptotics}
