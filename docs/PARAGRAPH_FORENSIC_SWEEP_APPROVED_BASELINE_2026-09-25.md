@@ -719,3 +719,8 @@ The patch deliberately leaves all B/C overrides untouched: corrected
 (G_i^+(-1)), (8/\pi) and (16/\pi) coefficients, AQ-AN-01 transform
 interpretation, AQ-AN-02 energy-parameter interpretation, recalculated figures
 and checkpoints, and the non-sequential competing-mechanism framing.
+
+Build verification: GitHub Actions **Manuscript build #99** completed
+successfully on head `9d8e94916f7c963f9eaa14ba0eb249e852677ee6`. The Ukrainian
+manuscript, complete English manuscript, bibliography/cross-reference checks,
+LaTeX-warning checks, and artifact upload all passed.
