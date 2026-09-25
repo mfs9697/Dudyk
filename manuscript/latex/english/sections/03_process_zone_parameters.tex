@@ -321,7 +321,7 @@ Differentiating with respect to the zone length along the family of
 equilibrium states, with the geometry and material properties fixed,
 defines the zone-related energy parameter $J_i$:
 \begin{equation}
-\label{eq:process-zone-energy-release-rate}
+\label{eq:process-zone-energy-parameter}
   J_i=\frac{\dd W_i}{\dd d_i}
   =-\frac{16\lambda(1-\nu_i^2)\sigma_i^2}
   {\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i.
@@ -341,7 +341,7 @@ respectively:
 The primes here denote normalization, not differentiation.
 Equations~\eqref{eq:normalized-process-zone-length},
 \eqref{eq:process-zone-opening}, and
-\eqref{eq:process-zone-energy-release-rate} then take the form
+\eqref{eq:process-zone-energy-parameter} then take the form
 \begin{equation*}
 \begin{aligned}
   \frac{d_i}{l}
@@ -366,9 +366,22 @@ The exponents $\lambda_1$ and $\lambda_2$, which describe the corner
 singularity in the presence of a zone, do not replace $\lambda$
 in the formulas for the zone parameters.
 
-Equating Eq.~\eqref{eq:process-zone-energy-release-rate} to an
-independently specified critical value $J_{i\mathrm{c}}$ for material~$i$
-provides a condition for the applied loading at which the process zone
-develops into a Mode~I crack branching from the original interfacial
-crack. This criterion concerns local branching initiation within the
-adopted model.
+Within the adopted local model, $J_i$ is used as a zone-related energy
+parameter rather than as an independently established global contour
+integral. In analogy with process-zone criteria used for interface-crack
+kinking~\cite{KaminskyEtAl2023}, secondary-crack initiation may be
+described by the energy condition
+\begin{equation*}
+  J_i=J_{i\mathrm{c}},
+\end{equation*}
+where $J_{i\mathrm{c}}$ is an independently specified critical material
+parameter for this criterion. Alternatively, a deformation criterion
+\begin{equation*}
+  \delta_i=\delta_{i\mathrm{c}}
+\end{equation*}
+may be used, with $\delta_{i\mathrm{c}}$ an independently specified
+critical opening. For fixed geometry and material properties, both
+$\delta_i$ and $J_i$ are proportional to the equilibrium zone length
+$d_i$. The two criteria therefore describe the same one-parameter family
+of local states and are equivalent only when their critical parameters
+are chosen consistently.
