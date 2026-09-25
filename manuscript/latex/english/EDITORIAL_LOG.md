@@ -354,16 +354,16 @@ or numerical results were introduced.
 - Kept the process zone as a small tensile zone along the material-sector
   bisector, represented by a normal displacement discontinuity under constant
   normal cohesive traction.
-- Kept (J_i) as a zone-related energy parameter rather than calling it a
+- Kept `J_i` as a zone-related energy parameter rather than calling it a
   global energy-release rate.
 - Preserved the alternative local initiation criteria
-  (J_i=J_{i\mathrm c}) and (delta_i=delta_{i\mathrm c}), including the
+  `J_i=J_{i\mathrm c}` and `\delta_i=\delta_{i\mathrm c}`, including the
   requirement that their independently specified critical material parameters
   be chosen consistently before the criteria can be treated as equivalent.
-- Preserved the physical-admissibility conditions (Cg_2<0) and (CQ_i>0),
+- Preserved the physical-admissibility conditions `Cg_2<0` and `CQ_i>0`,
   the baseline transition angles 12.9202 and 107.0897 degrees, the
-  singularity inequality (|\lambda_0|<|\lambda_i|<|\lambda|), and the
-  small-scale caveat at (d_i/l\approx0.18).
+  singularity inequality `|\lambda_0|<|\lambda_i|<|\lambda|`, and the
+  small-scale caveat at `d_i/l\approx0.18`.
 
 ### Editorial choices
 
@@ -378,7 +378,7 @@ or numerical results were introduced.
   prescribed-load curves.
 - Kept the limitations sentence compact but complete: plane strain, symmetric
   loading, frictionless contact, leading singular outer field, and
-  (d_i\ll l).
+  `d_i\ll l`.
 
 ### Verification
 
