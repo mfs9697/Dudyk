@@ -455,3 +455,62 @@ contacting V-shaped interfacial shear crack.
   duplicates.
 - The full English manuscript is assembled in `english/main.tex`.
 
+
+
+## Final English language/style sweep — September 25, 2026
+
+Scope: complete integrated English manuscript from title through Appendix A
+and References. This was a publication-level copy-edit only. No equations,
+labels, citation keys, numerical values, or scientific conclusions were
+changed.
+
+### Journal-style revisions
+
+- Polished the title to:
+  *Analytical Model for Branching Initiation from the Corner of a V-Shaped
+  Interfacial Shear Crack*.
+- Tightened the Abstract and removed awkward compound constructions while
+  preserving the source scope and criterion statements.
+- Reworked literal translation patterns in the Introduction, including
+  "The subject of this work..." and "The aim is...", while preserving the
+  original eight-paragraph argument and exact citation sequence.
+- Improved sentence balance in the objectives/methods paragraphs without
+  changing the stated novelty or scope.
+- Replaced internal shorthand such as "no-zone field" by publication-ready
+  terminology ("field for the configuration without a process zone").
+- Smoothed the Mellin/Wiener--Hopf prose while preserving the
+  correction-field interpretation and the resolved AQ-AN-01 analyticity
+  statement exactly.
+- Removed publication-facing audit language from the numerical section:
+  no "after the analytical corrections," no color-dependent "blue branch,"
+  and no "checked plus factors."
+- Retitled Section 4 from "Numerical analysis and discussion of results" to
+  "Numerical results and discussion."
+- Standardized "resistance to separation" across the Abstract, Introduction,
+  Results, and Conclusions.
+- Replaced awkward configuration compounds such as
+  "crack-plus-process-zone configuration" by explicit prose.
+- Polished equation-adjacent prose and terminology in Appendix A.
+- Retained US spelling and avoided unnecessary abbreviations.
+
+### Preservation checks
+
+After the language sweep:
+
+- structural labels: 34 Ukrainian / 34 English, exact set;
+- citation uses: 37 Ukrainian / 37 English, exact sequence;
+- displayed equations:
+  - Abstract: 0/0;
+  - Introduction: 0/0;
+  - Section 2: 15/15;
+  - Section 3: 32/32;
+  - Section 4: 8/8;
+  - Section 5: 2/2;
+  - Appendix A: 22/22;
+- no display-math differences after whitespace/text normalization;
+- no reintroduction of post-critical wording, audit language, unnecessary
+  SIF/PZ/CZM shorthand, or a global energy-release-rate interpretation of
+  `J_i`.
+
+The final build and visual inspection are recorded with the PR for this
+sweep.
