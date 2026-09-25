@@ -1,4 +1,4 @@
-\section{Determination of the process-zone parameters}
+\section{Determination of the equilibrium process-zone parameters}
 \label{sec:derivation}
 
 \subsection{Mellin transform and functional equation}
@@ -84,8 +84,9 @@ kernel $G_i(p)$ is
 \begin{equation*}
   G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
 \end{equation*}
-Here, $D(p)$ is the characteristic determinant for the corner with an
-interfacial shear crack, given in Appendix~\ref{app:asymptotics}.
+Here, $D(p)$ is the characteristic determinant for the corner with the
+prescribed stationary V-shaped interfacial shear crack, given in
+Appendix~\ref{app:asymptotics}.
 For plane strain, define the dimensionless elastic ratio $e$ and the
 material parameters $\kappa_i$ by
 \begin{equation*}
@@ -179,8 +180,9 @@ the functional equation is
   \qquad \operatorname{Re}p>0.
 \end{aligned}
 \end{equation}
-For the kernels considered here, $G_i(\ii t)$ is positive and even in the
-real variable $t$ and tends to unity as $|t|\to\infty$.
+For the kernels considered here, numerical checks show that
+$G_i(\ii t)$ is real, positive, and even in the real variable $t$ and
+tends to unity as $|t|\to\infty$.
 Thus, for real $p<0$, the plus factor can be evaluated numerically
 using the real integral
 \begin{equation*}
@@ -245,8 +247,8 @@ $d_i\to0$ as $|C|\to0$. A finite material threshold enters at the next
 stage, when branching initiation is identified from a critical
 characteristic of the equilibrium zone.
 
-At fixed geometry, interfacial crack length, elastic properties, and applied
-loading, the same equation gives the dependence on the normal cohesive
+At fixed geometry, V-shaped crack-branch length $l$, elastic properties,
+and applied loading, the same equation gives the dependence on the normal cohesive
 traction:
 \begin{equation*}
   d_i\propto \sigma_i^{1/\lambda}
@@ -370,8 +372,9 @@ Equations~\eqref{eq:normalized-process-zone-length},
       \frac{d_i}{l}.
 \end{aligned}
 \end{equation*}
-All three relations use the corner exponent $\lambda$ for the
-interfacial shear crack, i.e., the root of $D(-1-\lambda)=0$.
+All three relations use the corner exponent $\lambda$ for the prescribed
+stationary V-shaped interfacial shear crack, i.e., the root of
+$D(-1-\lambda)=0$.
 The exponents $\lambda_1$ and $\lambda_2$, which describe the corner
 singularity in the presence of a zone, do not replace $\lambda$
 in the formulas for the zone parameters.
@@ -394,13 +397,13 @@ the local geometry and elastic contrast.
 Within the adopted local model, $J_i$ is interpreted as a zone-related
 energy parameter rather than as an independently established global contour
 integral. In analogy with process-zone criteria used for interface-crack
-kinking~\cite{KaminskyEtAl2023}, secondary-crack initiation may be
-expressed through the energy criterion
+kinking~\cite{KaminskyEtAl2023}, branching initiation may be expressed
+through the energy criterion
 \begin{equation*}
   J_i=J_{i\mathrm{c}},
 \end{equation*}
-where $J_{i\mathrm{c}}$ is an independently specified critical material
-parameter. Alternatively, a deformation criterion
+where $J_{i\mathrm{c}}$ is an independently specified critical
+characteristic within this criterion. Alternatively, a deformation criterion
 \begin{equation*}
   \delta_i=\delta_{i\mathrm{c}}
 \end{equation*}
@@ -408,8 +411,8 @@ may be used, with $\delta_{i\mathrm{c}}$ specified independently as the
 critical opening. For fixed geometry and material properties,
 Eq.~\eqref{eq:energy-opening-relation} shows that the two criteria
 describe the same one-parameter family of local states and select the
-same critical state only when the independently specified material
-thresholds are calibrated consistently:
+same critical state only when the independently specified critical
+parameters are calibrated consistently:
 \begin{equation*}
   J_{i\mathrm{c}}
   =\chi_i\sigma_i\delta_{i\mathrm{c}}.
