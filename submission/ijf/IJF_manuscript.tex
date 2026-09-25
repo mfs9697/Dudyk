@@ -1,20 +1,17 @@
-% International Journal of Fracture submission wrapper
-% Springer Nature LaTeX layout: iicol; pdflatex; author-year references.
-\documentclass[pdflatex,sn-mathphys-ay,iicol]{sn-jnl}
+% International Journal of Fracture submission source
+% Springer Nature sn-jnl, iicol, Math/Physical Sciences author-year style.
+% Generated from the synchronized English scientific master.
+\documentclass[pdflatex,iicol,sn-mathphys-ay]{sn-jnl}
 
 \usepackage{graphicx}
-\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsmath,amssymb,mathtools,bm}
 \usepackage{booktabs,array}
-\usepackage{textcomp}
+\usepackage{xcolor}
 
 \newcommand{\dd}{\mathop{}\!\mathrm{d}}
 \newcommand{\ii}{\mathrm{i}}
-\newcommand{\ee}{\mathrm{e}}
-\newcommand{\sigmap}{\sigma^{\prime}}
-\newcommand{\deltap}{\delta^{\prime}}
-\newcommand{\Jp}{J^{\prime}}
 \newcommand{\jump}[1]{\left[\!\left[#1\right]\!\right]}
-\newcommand{\resultfigure}[4][0.98\linewidth]{%
+\newcommand{\resultfigure}[4][\linewidth]{%
   \begin{figure}[htbp]
     \centering
     \includegraphics[width=#1]{#2}
@@ -33,32 +30,16 @@
 \author[1,2]{\fnm{M. V.} \sur{Dudyk}}
 \author[2]{\fnm{T. V.} \sur{Polishchuk}}
 
-\affil*[1]{\orgname{S. P. Timoshenko Institute of Mechanics, National Academy of Sciences of Ukraine}, \orgaddress{\city{Kyiv}, \country{Ukraine}}}
+\affil[1]{\orgname{S. P. Timoshenko Institute of Mechanics, National Academy of Sciences of Ukraine}, \orgaddress{\city{Kyiv}, \country{Ukraine}}}
 \affil[2]{\orgname{Uman National University}, \orgaddress{\city{Uman}, \country{Ukraine}}}
 
-\abstract{\textbf{Purpose:} To develop an analytical model for branching initiation from
-the corner of a stationary V-shaped interfacial shear crack lying along a
-kinked interface between two isotropic elastic materials.
+\abstract{\textbf{Purpose:} To develop an analytical model for branching initiation from the corner of a stationary V-shaped interfacial shear crack at a kinked bimaterial interface and to determine physically admissible process-zone states.
 
-\textbf{Methods:} The crack is treated as a prescribed defect with two
-symmetric branches in frictionless contact. Its corner singular field is
-matched to a small tensile process zone along a material-sector bisector.
-Mellin transformation, Wiener--Hopf factorization, asymptotic matching, and
-stress regularity at the zone tip are used to determine the local equilibrium
-state.
+\textbf{Methods:} Under plane strain, the crack-corner singular field is used as the outer field for a small tensile process zone along a material-sector bisector. Mellin transformation, asymptotic matching, Wiener--Hopf factorization, and stress regularity at the zone tip are combined to obtain closed-form relations for the equilibrium process-zone characteristics.
 
-\textbf{Results:} Closed-form relations are obtained for the equilibrium zone
-length, opening, work of separation, and a zone-related energy parameter.
-Physical admissibility is established from simultaneous compressive crack-face
-contact and tensile normal stress in the material containing the zone. The
-effects of interface angle, elastic contrast, and loading are quantified. The
-process zone weakens, but does not eliminate, the corner singularity.
+\textbf{Results:} The analysis identifies the admissible material and loading branches and gives the equilibrium zone length, opening, work of separation, and zone-related energy parameter. The process zone weakens, but does not eliminate, the corner singularity. For fixed geometry, the deformation and energy characteristics are uniquely related. Corner branching and interfacial propagation from the crack-branch tips emerge as competing local mechanisms.
 
-\textbf{Conclusion:} For fixed geometry, consistently calibrated deformation
-and energy criteria identify the same branching-initiation state. The model
-also distinguishes corner branching from competing interfacial propagation at
-the crack-branch tips and determines the critical applied load once the
-relevant material threshold is specified.}
+\textbf{Conclusion:} The formulation links the singular field of a stationary V-shaped interfacial shear crack to a closed analytical branching-initiation criterion and determines the critical applied load once the relevant material threshold is specified.}
 
 \keywords{piecewise homogeneous body, kinked interface, V-shaped interfacial shear crack, process zone, branching initiation, Wiener--Hopf method}
 
@@ -88,14 +69,14 @@ but also on its interaction with a local nonlinear or process zone.
 For initially undamaged bimaterial corners, the transition from an elastic
 singularity to local fracture has been studied both through parameters of the
 asymptotic field and through models with a finite cohesive or process zone.
-\citet{MohammedLiechti2000} combined experimental measurements with cohesive-zone
+Mohammed and Liechti combined experimental measurements with cohesive-zone
 modeling of crack nucleation for different bimaterial-joint angles
-, whereas \citet{LabossiereDunn2001} examined fracture
+\citeyearpar{MohammedLiechti2000}, whereas Labossiere and Dunn examined fracture
 initiation at three-dimensional bimaterial corners
-. \citet{AkisanyaMeng2003} showed that the use of a
+\citeyearpar{LabossiereDunn2001}. Akisanya and Meng showed that the use of a
 critical parameter of the elastic corner field requires sufficient scale
 separation between the nonlinear zone and the region dominated by the
-asymptotic field~. In modern cohesive formulations,
+asymptotic field~\citeyearpar{AkisanyaMeng2003}. In modern cohesive formulations,
 the same requirement is expressed through the ratio of a characteristic
 fracture-zone length to the geometric scale of the problem
 \citep{GormanThouless2022,ThoulessGoutianos2023}. For local analytical models, this requirement motivates the small-scale
@@ -120,11 +101,11 @@ approach, although the geometry considered here is different.
 
 For corners of kinked interfaces, analytical models of process zones and
 cracks have been developed in several closely related settings.
-\citet{DudykDikhtyarenko2012} studied the initial stage of an interface crack
-kinking from a corner point~, whereas Kaminsky,
+Dudyk and Dikhtyarenko studied the initial stage of an interface crack
+kinking from a corner point~\citeyearpar{DudykDikhtyarenko2012}, whereas Kaminsky,
 Kipnis, and Polishchuk considered an initial fracture process zone arising
 directly at the corner of a V-shaped interface
-\citep{KaminskyKipnisPolishchuk2012}. For an interface crack with contacting
+\citeyearpar{KaminskyKipnisPolishchuk2012}. For an interface crack with contacting
 faces emanating from a corner point of a polygonal interface, parameters of a
 small fracture zone were determined in
 \citep{KaminskyDudykFenkiv2023}. A related model addresses crack initiation near a kinked interface in the
@@ -133,9 +114,9 @@ corners and interface cracks is well developed. The present study applies
 this framework to the specific singular field generated by a stationary
 contacting interfacial shear crack at the corner of a V-shaped interface.
 
-Such an outer field was obtained by \citet{NazarenkoKipnis2022Stress} for a symmetric
+Such an outer field was obtained by Nazarenko and Kipnis for a symmetric
 interfacial shear crack with faces in frictionless contact
-. In the present work, the two symmetric
+\citep{NazarenkoKipnis2022Stress}. In the present work, the two symmetric
 branches of this defect are treated as a single V-shaped interfacial shear
 crack. Each branch has length $l$, so the total length of the two branches is
 $2l$. In the cracked configuration, a power-law singular field remains near
@@ -143,11 +124,11 @@ the corner; its exponent and amplitude depend on the geometry, elastic
 contrast, and $l$. This field provides the immediate outer asymptotics for
 the local process-zone problem considered below.
 
-For this configuration, \citet{NazarenkoKipnis2022Equilibrium} also determined the stress
+For this configuration, Nazarenko and Kipnis also determined the stress
 intensity factor for in-plane shear (Mode~II) at the tips of the
 V-shaped crack branches, formulated the limiting-equilibrium condition, and showed
 that this equilibrium is unstable with respect to further interfacial
-propagation. That mechanism is localized
+propagation~\citeyearpar{NazarenkoKipnis2022Equilibrium}. That mechanism is localized
 at the crack-branch tips and is potentially competitive with the mechanism studied
 here at the corner. In the present work, the V-shaped interfacial crack is
 treated as a prescribed stationary configuration, and the applied loading is
@@ -301,7 +282,7 @@ are then used to formulate branching-initiation criteria.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.94\linewidth]{Fig1.pdf}
+  \includegraphics[width=\linewidth]{Fig1.pdf}
   \caption{Local configurations near the interface corner:
   (a) intact kinked interface; (b) prescribed stationary V-shaped
   interfacial shear crack with two branches of length $l$ each (total branch
@@ -975,7 +956,7 @@ $105^\circ$ ($i=2$, $C<0$), and
 $135^\circ$ ($i=1$, $C>0$). For each configuration, only the physically
 admissible half-axis of the loading parameter is shown.
 
-\resultfigure{figure2_recalculated.pdf}{%
+\resultfigure{Fig2.pdf}{%
 Dependence of the normalized process-zone parameters on the
 dimensionless loading parameter $\sigma'$ for four reference angles and
 the physically admissible materials.}{fig:load-dependence}
@@ -1025,7 +1006,7 @@ combinations satisfying the physical-admissibility conditions are
 retained. Transitions between admissible branches occur at
 $\alpha_1$, $90^\circ$, and $\alpha_2$.
 
-\resultfigure{figure3_recalculated.pdf}{%
+\resultfigure{Fig3.pdf}{%
 Dependence of the normalized process-zone parameters on the half-angle
 $\alpha$ at $\sigma'=\pm0.5$. Only physically admissible combinations
 of material and loading sign are shown; $\alpha=90^\circ$ is an
@@ -1085,7 +1066,7 @@ described by the exponents $\lambda_0$, $\lambda$, and $\lambda_i$.
 This comparison characterizes differences among the local field models
 and does not prescribe a chronological sequence of fracture development.
 
-\resultfigure{figure4_admissible_segments.pdf}{%
+\resultfigure{Fig4.pdf}{%
 Singularity exponents and physically admissible segments for the
 baseline material pair. Complete mathematical branches and physically
 admissible portions are distinguished according to the conditions
@@ -1163,7 +1144,8 @@ Two distinct local mechanisms are possible for the stationary V-shaped
 crack. The first is associated with its corner $O$: the singular corner
 field supports a tensile process zone in one of the materials, and
 attainment of a critical $\delta_i$ or $J_i$ marks branching initiation.
-The second mechanism is localized at the tips of the V-shaped crack branches. For those tips, \citet{NazarenkoKipnis2022Equilibrium} determined the Mode~II stress
+The second mechanism is localized at the tips of the V-shaped crack branches. For those tips, Nazarenko and Kipnis
+\citeyearpar{NazarenkoKipnis2022Equilibrium} determined the Mode~II stress
 intensity factor $K_{\mathrm{II}}$ and formulated the interfacial
 fracture condition
 \begin{equation*}
@@ -1243,7 +1225,7 @@ In this sense, the corner singularity in the configuration containing the
 process zone is weaker than the classical $r^{-1/2}$ crack singularity.
 
 This distinction also identifies the limit of the additive representation
-used by \citet{KaminskyDudyk2026Criteria}. For the
+used by Kaminsky and Dudyk~\citeyearpar{KaminskyDudyk2026Criteria}. For the
 existing crack considered there, the outer field has a singularity exponent
 with real part $-1/2$, and a finite elastic energy flux can enter the overall energy
 balance together with the process-zone contribution. For the present
@@ -1336,7 +1318,17 @@ application is splitting of a solid by a sharp wedge.
 \end{enumerate}
 
 
-\begin{appendices}
+\section*{Statements and Declarations}
+\subsection*{Data availability}
+All data supporting the findings of this study are contained within the article.
+The numerical curves and tabulated values are generated from the analytical
+relations reported in the manuscript.
+
+% IMPORTANT: Springer/IJF requires a Competing Interests statement.
+% Insert the author-approved statement before submission and also enter it
+% in the submission interface.
+
+\appendix
 \section{Stress and displacement fields near the corner}
 \label{app:asymptotics}
 \providecommand{\SingularityExponentFigure}{Figure~\ref{fig:singularity-exponents}}
@@ -1577,26 +1569,6 @@ presence of a process zone but are not used in the formulas for $d_i$,
 $\delta_i$, and $J_i$; those formulas use $\lambda$ from
 Eq.~\eqref{eq:app-D-root}.
 
-\end{appendices}
-
-\backmatter
-
-\section*{Statements and Declarations}
-
-% Funding statement must be inserted after confirmation by all authors.
-% Competing-interests statement must be inserted after confirmation by all authors.
-% Author-contribution statement must be inserted after confirmation by all authors.
-
-\paragraph{Data availability}
-All data supporting the findings of this study are contained within the
-article. The numerical curves and tabulated values are generated from the
-analytical relations reported in the manuscript.
-
-\paragraph{Ethics approval and consent to participate}
-Not applicable.
-
-\paragraph{Consent for publication}
-Not applicable.
 
 \bibliography{references}
 
