@@ -5,8 +5,8 @@
 \subsection{Geometry and local fracture configurations}
 \label{subsec:geometry}
 
-Consider a piecewise homogeneous body under plane strain, consisting of
-two dissimilar isotropic elastic materials joined along a V-shaped interface.
+Consider a piecewise homogeneous body under plane strain composed of two
+dissimilar isotropic elastic materials joined along a V-shaped interface.
 Material $i$ has Young's modulus $E_i$ and Poisson's ratio $\nu_i$, where
 $i=1,2$ identifies the material. The angle between the two interface rays,
 measured through material~2, is $2\alpha$, where $\alpha$ is the half-angle and
@@ -65,14 +65,12 @@ assumed insufficient to cause loss of local stability at the outer crack
 tips. Branching at the corner and further interfacial propagation from the
 outer tips are competing mechanisms; the latter is not modeled here.
 
-The corner of the cracked interface retains a power-law stress
-singularity~\cite{NazarenkoKipnis2022Stress}. This field can support a
-process zone in one of the materials, with subsequent formation of an
-opening-mode (Mode~I) crack. Under the assumed symmetry of the geometry
-and loading, the bisector of the sector occupied by that material is a
-natural direction for the zone. Along this direction, the local in-plane
-shear-mode (Mode~II) component at the zone tip vanishes by symmetry,
-consistent with the principle of local
+The interfacial crack retains a power-law stress singularity at the
+corner~\cite{NazarenkoKipnis2022Stress}. This field can support a process zone in one of the materials that may
+develop into an opening-mode (Mode~I) branch. Under the assumed geometric and loading symmetry, the bisector of the sector
+occupied by that material is a natural direction for the zone. Along this
+direction, the local Mode~II (in-plane shear) component at the zone tip
+vanishes by symmetry, consistent with the principle of local
 symmetry~\cite{BarenblattCherepanov1961,GoldsteinSalganik1974}. Zones with
 arbitrary orientations are not considered. The bisector direction is
 therefore part of the assumed symmetric model and is not obtained by
@@ -85,9 +83,9 @@ Let $\beta_i$ denote the polar angle of the bisector in material~$i$:
 The subscript $i$ on quantities associated with the process zone always
 identifies the material containing that zone.
 
-The process zone in material~$i$ is modeled as a line of normal displacement
-discontinuity of length $d_i$, subject to a constant normal cohesive
-traction $\sigma_i>0$, representing the material's resistance to
+The process zone in material~$i$ is modeled as a normal displacement
+discontinuity of length $d_i$ subjected to a constant normal cohesive
+traction $\sigma_i>0$, which represents the material's resistance to
 separation. Figure~\ref{fig:failure-stages} shows the zone in material~1
 as a solid line and the alternative zone in material~2 as a dashed line.
 These are alternative configurations, considered separately.
@@ -159,9 +157,9 @@ traction only over $0<r<d_i$ along the active direction
 $\theta=\beta_i$.
 
 At intermediate distances $d_i\ll r\ll l$, the solution must match the
-asymptotic field of the interfacial crack without a process
+asymptotic field of the interfacial crack in the absence of a process
 zone~\cite{NazarenkoKipnis2022Stress}. In the inner problem, this matching
-condition is written as
+condition takes the form
 \begin{equation}
 \label{eq:matched-far-field}
   \sigma_\theta(r,\beta_i)
@@ -183,10 +181,11 @@ in that limit.
 
 For the subsequent Wiener--Hopf construction, we use superposition as in
 the related problem~\cite{KaminskyDudykPolishchuk2024}. We subtract the
-known no-zone field and introduce the correction normal stress
+known field for the configuration without a process zone and introduce the
+correction normal stress
 \begin{equation*}
   \widehat{\sigma}_i(r)
-  =\sigma_\theta(r,\beta_i)-CQ_i r^\lambda .
+  =\sigma_\theta(r,\beta_i)-CQ_i r^\lambda.
 \end{equation*}
 The matching condition then gives
 \begin{equation*}
@@ -198,10 +197,10 @@ while on the process-zone segment $0<r<d_i$,
   \widehat{\sigma}_i(r)
   =\sigma_i-CQ_i r^\lambda.
 \end{equation*}
-The no-zone field satisfies the bisector symmetry condition $u_\theta=0$,
-so subtracting it does not alter the displacement-gradient transform used
-below. Thus, the functional problem is formulated for the correction field,
-with the known power-law term entering its prescribed part.
+The field without a process zone satisfies the bisector symmetry condition
+$u_\theta=0$, so subtracting it does not alter the displacement-gradient
+transform used below. The functional problem is therefore formulated for the correction field,
+with the known power-law term included in the prescribed part.
 
 A process zone can form in material~$i$ only if the normal stress on its
 bisector is tensile. Equation~\eqref{eq:matched-far-field} therefore gives
@@ -216,9 +215,9 @@ in material~$i$.
 \subsection{Asymptotic fields near the process-zone tip}
 \label{subsec:zone-tip-asymptotics}
 
-Near the outer tip of the displacement discontinuity, the stress and
-normal displacement gradient have the standard inverse-square-root
-asymptotic form for a homogeneous material:
+Near the outer tip of the displacement discontinuity, the stress and normal
+displacement gradient have the standard inverse-square-root asymptotics for a
+homogeneous material:
 \begin{equation}
 \label{eq:zone-tip-asymptotics}
 \begin{aligned}
@@ -233,8 +232,8 @@ asymptotic form for a homogeneous material:
 \end{equation}
 Here, $k_i$ is the local Mode~I stress intensity factor at the process-zone
 tip; $r\to d_i+0$ and $r\to d_i-0$ denote approach from ahead of the
-zone and from within it, respectively. The boundary-value problem is
-closed by imposing the stress-regularity condition standard for this
+zone and from within it, respectively. The boundary-value problem is closed by
+imposing the standard stress-regularity condition for this
 model~\cite{KaminskyDudykPolishchuk2024},
 \begin{equation*}
   k_i=0.
