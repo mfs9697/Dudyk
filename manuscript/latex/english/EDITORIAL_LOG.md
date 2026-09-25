@@ -336,3 +336,54 @@ This resolution changes no numerical formula or result. See
 `docs/AQ_AN_01_RESOLUTION_2026-09-25.md`.
 
 AQ-AN-01 is closed.
+
+
+## Batch 4 — September 25, 2026
+
+Scope: Section 5 (Conclusions), translated from the final-swept Ukrainian
+manuscript after merge of PR #7. US spelling; no new literature, equations,
+or numerical results were introduced.
+
+### Scientific framing preserved
+
+- Retained the prescribed stationary V-shaped interfacial shear crack as the
+  baseline defect; did not restore the former post-critical or sequential
+  fracture narrative.
+- Preserved the assumption that the applied loading is insufficient to cause
+  loss of local stability at the outer crack tips.
+- Kept the process zone as a small tensile zone along the material-sector
+  bisector, represented by a normal displacement discontinuity under constant
+  normal cohesive traction.
+- Kept (J_i) as a zone-related energy parameter rather than calling it a
+  global energy-release rate.
+- Preserved the alternative local initiation criteria
+  (J_i=J_{i\mathrm c}) and (delta_i=delta_{i\mathrm c}), including the
+  requirement that their independently specified critical material parameters
+  be chosen consistently before the criteria can be treated as equivalent.
+- Preserved the physical-admissibility conditions (Cg_2<0) and (CQ_i>0),
+  the baseline transition angles 12.9202 and 107.0897 degrees, the
+  singularity inequality (|\lambda_0|<|\lambda_i|<|\lambda|), and the
+  small-scale caveat at (d_i/l\approx0.18).
+
+### Editorial choices
+
+- Used "opening-mode (Mode I) branching" at the point where Mode I reappears
+  in the Conclusions, avoiding an unexplained shorthand in a stand-alone
+  conclusion section.
+- Used "elastic contrast," "physically admissible branches," "zone-related
+  energy parameter," "normal cohesive traction," and "stable propagation"
+  consistently with the translated body.
+- Translated the source's statement about nearby angular maxima literally as
+  nearby but distinct maxima; no critical-load ranking is inferred from the
+  prescribed-load curves.
+- Kept the limitations sentence compact but complete: plane strain, symmetric
+  loading, frictionless contact, leading singular outer field, and
+  (d_i\ll l).
+
+### Verification
+
+- Section label `sec:conclusions` is preserved.
+- The two displayed equation environments match the Ukrainian source exactly
+  after whitespace and punctuation normalization.
+- No citation keys occur in this section.
+- No new abbreviations are introduced.
