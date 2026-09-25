@@ -1,0 +1,154 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Quasi-static family of states and branching initiation}
+\label{subsec:discussion-quasistatic}
+
+In the present formulation, the V-shaped interfacial shear crack is a
+prescribed stationary configuration: the length $l$ of each crack branch
+remains fixed, whereas the equilibrium process-zone length $d_i$ changes
+with the outer-loading parameter $C$. The solution therefore defines the
+one-parameter quasi-static family
+\begin{equation*}
+  C\longrightarrow d_i(C)
+  \longrightarrow
+  \bigl\{\delta_i(C),W_i(C),J_i(C)\bigr\}.
+\end{equation*}
+Here, quasi-static refers to a family of equilibrium zone configurations
+in which inertia is neglected.
+
+This family can be used directly to determine the critical load for
+branching initiation. If a critical opening $\delta_{i\mathrm{c}}$ or a
+critical zone-related energy parameter $J_{i\mathrm{c}}$ is specified
+independently for the material, the critical state is defined by
+\begin{equation*}
+  \delta_i(C_c)=\delta_{i\mathrm{c}}
+  \qquad\text{or}\qquad
+  J_i(C_c)=J_{i\mathrm{c}}.
+\end{equation*}
+Once the corresponding critical material characteristic is known, these
+relations determine $C_c$. Subsequent propagation and the finite path of
+the branched crack require a separate formulation.
+
+\subsection{Competing fracture mechanisms}
+\label{subsec:discussion-competing}
+
+Two distinct local mechanisms are possible for the stationary V-shaped
+crack. The first is associated with its corner $O$: the singular corner
+field supports a tensile process zone in one of the materials, and
+attainment of a critical $\delta_i$ or $J_i$ marks branching initiation.
+The second mechanism is localized at the outer tips of the V-shaped
+crack. For those tips, Nazarenko and Kipnis
+\cite{NazarenkoKipnis2022Equilibrium} determined the Mode~II stress
+intensity factor $K_{\mathrm{II}}$ and formulated the interfacial
+fracture condition
+\begin{equation*}
+  K_{\mathrm{II}}=K_{\mathrm{IIc}}.
+\end{equation*}
+
+Branching from the corner and interfacial propagation from the outer tips
+should therefore be regarded as competing local mechanisms of the same
+stationary geometry, rather than as prescribed sequential stages. Their
+respective critical loads are governed by different material
+characteristics: Mode~II interfacial fracture resistance at the outer tips
+and the critical process-zone characteristic, $\delta_i$ or $J_i$, at
+the corner.
+
+The small-scale assumption $d_i\ll l$ permits the two local regions to be
+treated separately at leading order. The field of the stationary V-shaped
+crack serves as the outer field for the process-zone problem near $O$, and
+the feedback of the small zone on the fields at the outer crack tips is
+neglected. A coupled boundary-value problem would be required for a
+quantitative analysis of the competition when $d_i/l$ is no longer small.
+
+\subsection{Energy and deformation criteria}
+\label{subsec:discussion-criteria}
+
+According to Eq.~\eqref{eq:energy-opening-relation}, for fixed geometry
+and elastic properties,
+\begin{equation*}
+  J_i=\chi_i\sigma_i\delta_i.
+\end{equation*}
+Thus, $J_i$ and $\delta_i$ are not independent measures of the current
+zone state: both are uniquely determined by the same equilibrium length
+$d_i$. The deformation criterion
+$\delta_i=\delta_{i\mathrm{c}}$ and the energy criterion
+$J_i=J_{i\mathrm{c}}$ therefore select the same critical state when
+\begin{equation*}
+  J_{i\mathrm{c}}
+  =\chi_i\sigma_i\delta_{i\mathrm{c}}.
+\end{equation*}
+
+This equivalence is specific to the present one-parameter model and fixed
+geometry. It does not imply a universal identity between two independently
+determined critical characteristics for arbitrary fracture problems, because
+$\chi_i$ depends on the corner geometry and elastic contrast. In
+applications, either critical characteristic may be used, provided it is
+established independently and the two criteria are not treated as
+independent constraints on the same model state.
+
+\subsection{Residual corner field and local energy flux}
+\label{subsec:discussion-flux}
+
+In the configuration containing the process zone, the field at the corner
+$O$ remains singular. If $H_i$ is the amplitude of the leading corner
+eigenfield, then
+\begin{equation*}
+  \sigma\sim H_i r^{\lambda_i}.
+\end{equation*}
+The corresponding elastic strain-energy density is of order
+\begin{equation*}
+  w\sim\frac{H_i^2}{E_i}r^{2\lambda_i},
+\end{equation*}
+and the local configurational energy flux through a contour of
+characteristic radius $R$ scales as
+\begin{equation}
+\label{eq:local-elastic-flux-scaling}
+  J_i^{(\mathrm{el})}(R)
+  \sim\frac{H_i^2}{E_i}R^{2\lambda_i+1}.
+\end{equation}
+
+For the physically admissible regimes identified in the numerical
+analysis, $-1/2<\lambda_i<0$. Hence $2\lambda_i+1>0$ and
+\begin{equation*}
+  \lim_{R\to0}J_i^{(\mathrm{el})}(R)=0.
+\end{equation*}
+The residual stress singularity at $O$ therefore does not generate a
+finite nonzero local elastic contribution to the zone energy parameter.
+In this sense, the corner singularity in the configuration containing the
+process zone is weaker than the classical $r^{-1/2}$ crack singularity.
+
+This distinction also identifies the limit of the additive representation
+used by Kaminsky and Dudyk~\cite{KaminskyDudyk2026Criteria}. For the
+existing crack considered there, the outer field has a singularity exponent
+with real part $-1/2$, and a finite elastic energy flux can enter the overall energy
+balance together with the process-zone contribution. For the present
+corner problem, $\lambda_i>-1/2$ implies that
+$J_i^{(\mathrm{el})}(R)\to0$, so no separate finite elastic term
+$J_i^{(\mathrm{el})}$ is required in the branching-initiation criterion. The zone-related parameter
+$J_i=\dd W_i/\dd d_i$ can therefore be used without such an additive
+correction; this does not make $J_i$ an independently established global
+contour integral.
+
+\subsection{Range of applicability and generalization}
+\label{subsec:discussion-scope}
+
+The analysis is based on the scale separation $d_i\ll l\ll L$. We use
+$d_i/l<0.1$ as the principal range for quantitative application. Portions
+of the numerical curves for which $d_i/l$ exceeds $0.1$ and reaches
+approximately $0.18$ near the maxima remain useful for showing trends, but
+they represent extrapolations of the local approximation. In those
+regimes, higher-order terms of the outer asymptotic field and interaction
+between the local regions near the corner and the outer crack tips become
+increasingly important.
+
+The local character of the solution also facilitates extension to a
+broader class of problems. For a developed symmetric V-shaped interfacial
+crack with finite branches, the factor $CQ_i$ that supplies the outer-field
+amplitude in the local problem can be replaced by the amplitude, or
+generalized stress intensity factor, of the corresponding corner singular
+field. Such an extension remains consistent provided that the process zone
+is small and the same local eigenproblem applies. The model can therefore
+be used to analyze branching initiation at a kink in an interface. A
+related application is splitting of a solid by a sharp wedge when its
+local boundary-value problem reduces to an analogous corner configuration.

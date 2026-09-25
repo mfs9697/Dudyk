@@ -1,4 +1,4 @@
-\section{Numerical results and discussion}
+\section{Numerical results}
 \label{sec:numerical-results}
 
 The numerical analysis is performed for the normalized parameters
@@ -9,7 +9,7 @@ loading sign for which
   Cg_2<0,\qquad CQ_i>0
 \end{equation*}
 hold simultaneously are considered physically admissible. The first
-inequality ensures compressive contact between the faces of the
+inequality ensures compressive contact between the faces of the V-shaped
 interfacial shear crack, whereas the second ensures tensile normal stress
 along the bisector of the angular sector of the material in which the
 process zone forms.
@@ -52,7 +52,11 @@ interchanging the materials according to
   \qquad
   1\leftrightarrow2.
 \end{equation*}
-For $\nu_1=\nu_2$, this includes the replacement
+For the corresponding local quantities, this mapping also gives
+$d_1\leftrightarrow d_2$ and
+$\lambda_1\leftrightarrow\lambda_2$; for the transition half-angles,
+$\alpha_1\leftrightarrow\pi-\alpha_2$. For $\nu_1=\nu_2$, this
+includes the replacement
 $E_1/E_2\leftrightarrow E_2/E_1$, so Table~\ref{tab:g2-transition-angles}
 need only list $E_1/E_2<1$.
 
@@ -92,15 +96,24 @@ This trend also bears on the small-scale assumption: increasing the load
 raises the local deformation and energy parameters and moves the model
 closer to the limit of its asymptotic applicability.
 
-For a fixed configuration, the opening $\delta_i$ and the zone-related
-energy parameter $J_i$ are both uniquely linked to the equilibrium zone
-length $d_i$. Consequently, the deformation criterion
-$\delta_i=\delta_{i\mathrm{c}}$ and the energy criterion
-$J_i=J_{i\mathrm{c}}$ provide two representations of the same
-one-parameter family of local equilibrium states. They are equivalent only when the independently specified critical material
-parameters $\delta_{i\mathrm{c}}$ and $J_{i\mathrm{c}}$ are chosen
-consistently. Thus, the two sets of curves are alternative measures of the
-same equilibrium family rather than independent evolution laws.
+These loading curves also provide a direct procedure for determining
+the critical load for branching initiation once a critical material
+parameter is specified independently. If the material is characterized by
+a critical opening $\delta_{i\mathrm{c}}$ or a critical zone-related
+energy parameter $J_{i\mathrm{c}}$, the intersection with the
+corresponding curve determines the normalized critical load $\sigma'_c$
+and hence the amplitude of the outer field,
+\begin{equation*}
+  C_c=\sigma'_c\sigma_i l^{-\lambda_0}.
+\end{equation*}
+No numerical value of $\delta_{i\mathrm{c}}$ or $J_{i\mathrm{c}}$ is
+prescribed in the present examples, so the plots do not identify a
+particular initiation point. Equation~\eqref{eq:energy-opening-relation}
+shows that, for fixed geometry and material properties, $\delta_i$ and
+$J_i$ are linearly related measures of the same equilibrium zone length.
+Accordingly, when
+$J_{i\mathrm{c}}=\chi_i\sigma_i\delta_{i\mathrm{c}}$, the
+deformation and energy criteria identify the same critical state.
 
 \subsection{Dependence on the interface half-angle}
 \label{subsec:figure3}
@@ -144,9 +157,12 @@ The maximum of the material-1 branch with $C<0$ in
 Figure~\ref{fig:angle-dependence} corresponds to $d_i/l$ of order
 $0.18$. This value is no longer unambiguously small compared with unity,
 whereas the local formulation is based on the assumption
-$d_i/l\ll1$. The full curve is therefore useful for examining the structure of the
-solution, but quantitative interpretation near the largest maximum should
-account for this limitation of the small-scale approximation.
+$d_i/l\ll1$. We therefore use $d_i/l<0.1$ as the principal range for
+quantitative interpretation, where the small-scale approximation is best
+justified. Portions of the curves with $d_i/l>0.1$ are retained to show
+the structure and trends of the analytical solution, but they should be
+viewed as extrapolations of the local model rather than equally accurate
+quantitative predictions.
 
 Numerical evaluation of the plus factors for
 Figure~\ref{fig:angle-dependence} requires particular care as
@@ -160,11 +176,14 @@ values.
 \subsection{Singularity exponents and physical admissibility}
 \label{subsec:figure4}
 
-For comparison, consider three local configurations: the intact bimaterial
-corner, the corner containing the prescribed interfacial shear crack, and
-the configuration containing both the crack and the process zone. For the
-baseline material pair, their stress singularities are characterized by
-the exponents $\lambda_0$, $\lambda$, and $\lambda_i$, respectively.
+To compare the local stress-field structure, consider three mathematical
+configurations of the same corner region: the intact bimaterial corner,
+the corner containing the prescribed stationary interfacial shear crack,
+and the configuration containing both that crack and a local process zone.
+For the baseline material pair, the corresponding singularity orders are
+described by the exponents $\lambda_0$, $\lambda$, and $\lambda_i$.
+This comparison characterizes differences among the local field models
+and does not prescribe a chronological sequence of fracture development.
 
 \resultfigure{figure4_admissible_segments.pdf}{%
 Singularity exponents and physically admissible segments for the
@@ -183,17 +202,23 @@ corresponding material
 \end{equation*}
 Thus, the process zone has a local shielding effect: it reduces the
 order of the singularity associated with the interfacial shear crack but
-does not eliminate the stress concentration completely. This relation
-is established here for the material pair considered and its physically
-admissible branches; it should not be extended to arbitrary elastic
-contrasts without additional verification.
+does not eliminate the stress concentration completely. In addition, on
+all physically admissible open intervals of the baseline calculation,
+\begin{equation*}
+  -\frac12<\lambda_i<0,
+\end{equation*}
+so the residual singularity at $O$ is weaker than the classical
+$r^{-1/2}$ crack singularity. Both results are established here for
+the material pair considered and its physically admissible branches and
+should not be extended to arbitrary elastic contrasts without additional
+verification.
 
 The stronger singularity of the configuration containing the interfacial
 crack creates conditions favorable to local fracture in one of the
-materials, but the existence of a process zone is not governed by the
-singularity exponent alone. It also depends on the conditions $Cg_2<0$ and $CQ_i>0$, the
-resistance to separation $\sigma_i$, and the level of external loading.
-This interpretation relates the sequence
-$\lambda_0\to\lambda\to\lambda_i$ to the mechanical model for branching
-initiation without treating the singularity itself as a sufficient
-fracture criterion.
+materials, but the existence and size of a process zone also depend on
+the conditions $Cg_2<0$ and $CQ_i>0$, the resistance to separation
+$\sigma_i$, and the level of external loading. The exponents
+$\lambda_0$, $\lambda$, and $\lambda_i$ therefore characterize the
+strengthening and shielding of the local field, whereas branching
+initiation is associated with attainment of a critical $\delta_i$ or
+$J_i$ along the corresponding family of equilibrium states.
