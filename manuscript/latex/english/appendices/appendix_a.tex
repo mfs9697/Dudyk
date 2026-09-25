@@ -27,8 +27,8 @@ characteristic branch.
 
 \subsection{Intact corner}
 
-For the intact interface, the singular part of the interfacial stress
-field is~\cite{NazarenkoKipnis2022Stress}
+For the configuration without an interfacial shear crack, the singular
+part of the interfacial stress field is~\cite{NazarenkoKipnis2022Stress}
 \begin{equation}
 \label{eq:app-intact-field}
 \begin{aligned}
@@ -39,7 +39,7 @@ field is~\cite{NazarenkoKipnis2022Stress}
     \qquad r\to0,
 \end{aligned}
 \end{equation}
-where $C$ is the generalized stress intensity factor, $\lambda_0$ is
+where $C$ is the local singular-field amplitude, $\lambda_0$ is
 the intact-corner singularity exponent, and the dimensionless angular
 coefficients $g_1$ and $g_2$ are
 \begin{equation*}
@@ -82,10 +82,10 @@ with auxiliary functions $b_0(p)$, $b_1(p)$, and $b_2(p)$ given by
   [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)].
 \end{aligned}
 \end{equation*}
-\subsection{Corner with an interfacial shear crack}
+\subsection{Corner with a stationary V-shaped interfacial shear crack}
 
-For the prescribed symmetric interfacial shear crack, each branch has
-length $l$. At distances $r\ll l$, the normal stress along the bisector
+For the prescribed stationary V-shaped interfacial shear crack, the two
+symmetric branches have length $l$ each. At distances $r\ll l$, the normal stress along the bisector
 of the sector occupied by material~$i$ has the asymptotic
 form~\cite{NazarenkoKipnis2022Stress}
 \begin{equation}
@@ -113,9 +113,10 @@ of the cracked-corner determinant are
   D'(p)=\frac{\dd D(p)}{\dd p}.
 \end{equation*}
 The functions $S_i(p)$ are auxiliary numerator functions defined below.
-The factors $K^+(p)$ and $G^+(p)$ are specified later in this subsection;
-$G^+$ belongs to the base kernel $G$, distinct from the zone kernel
-$G_i$ in Section~\ref{sec:derivation}. Explicitly,
+The factors $K^+(p)$ and $G^+(p)$ are specified later in this subsection.
+The base plus factor $G^+(p)$ must not be confused with $G_i^+(p)$, which
+factorizes the process-zone kernel $G_i(p)$ in
+Section~\ref{sec:derivation}. Explicitly,
 \begin{equation*}
 \begin{aligned}
   S_1(p)={}&2e(1+\kappa_2)s_{11}(p)\sin[(p+1)\alpha]\\
@@ -145,7 +146,7 @@ $n=1,2,3$, are
 \end{aligned}
 \end{equation*}
 The corner singularity exponent $\lambda$ for the configuration
-containing the interfacial crack satisfies
+containing the prescribed stationary V-shaped interfacial crack satisfies
 \begin{equation}
 \label{eq:app-D-root}
   D(-1-\lambda)=0,
