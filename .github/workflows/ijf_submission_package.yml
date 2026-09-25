@@ -1,0 +1,71 @@
+name: Build IJF submission package
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - submission/ijf-preparation-2026-09-25
+    paths:
+      - 'submission/ijf/package/**'
+      - 'figures/figure1_schematic.pdf'
+      - 'figures/figure2_recalculated.pdf'
+      - 'figures/figure3_recalculated.pdf'
+      - 'figures/figure4_admissible_segments.pdf'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-bibtex-extra zip
+
+      - name: Stage flat package
+        run: |
+          mkdir -p _ijf
+          cp submission/ijf/package/main.tex _ijf/
+          cp submission/ijf/package/sn-jnl.cls _ijf/
+          cp submission/ijf/package/sn-mathphys-ay.bst _ijf/
+          cp submission/ijf/package/references.bib _ijf/
+          cp figures/figure1_schematic.pdf _ijf/Fig1.pdf
+          cp figures/figure2_recalculated.pdf _ijf/Fig2.pdf
+          cp figures/figure3_recalculated.pdf _ijf/Fig3.pdf
+          cp figures/figure4_admissible_segments.pdf _ijf/Fig4.pdf
+
+      - name: Compile IJF manuscript
+        working-directory: _ijf
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          bibtex main
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          ! grep -E 'LaTeX Warning: (Reference|Citation).*undefined|There were undefined references' main.log
+
+      - name: Compile cover letter
+        run: |
+          mkdir -p _cover
+          cp submission/ijf/package/cover_letter.tex _cover/
+          cd _cover
+          pdflatex -interaction=nonstopmode -halt-on-error cover_letter.tex
+
+      - name: Create upload ZIP
+        working-directory: _ijf
+        run: |
+          zip -9 ../IJF_Submission_Source.zip main.tex sn-jnl.cls sn-mathphys-ay.bst references.bib Fig1.pdf Fig2.pdf Fig3.pdf Fig4.pdf
+
+      - name: Collect deliverables
+        run: |
+          cp _ijf/main.pdf IJF_Manuscript.pdf
+          cp _cover/cover_letter.pdf IJF_Cover_Letter.pdf
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ijf-submission-package
+          path: |
+            IJF_Manuscript.pdf
+            IJF_Cover_Letter.pdf
+            IJF_Submission_Source.zip
+            submission/ijf/package/FINAL_CONFIRMATIONS.txt
