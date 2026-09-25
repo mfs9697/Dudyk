@@ -253,13 +253,11 @@ $f^*(p)=\int_0^{d_i}f(r)(r/d_i)^p\,\dd r$.
 The factor of two accounts for the symmetric displacement of the two
 zone faces. Substitution of Eq.~\eqref{eq:wiener-hopf-solution},
 together with Eq.~\eqref{eq:process-zone-length}, gives
-% AQ-AN-02: verify the factor argument in the opening formula;
-% see AUTHOR_QUERIES_BATCH02.md. The approved expression is retained.
 \begin{equation}
 \label{eq:process-zone-opening}
   \delta_i=
   -\frac{4(1-\nu_i^2)\sigma_i\lambda K^+(-1)}
-  {E_i\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-\lambda-1)}d_i.
+  {E_i\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1)}d_i.
 \end{equation}
 For fixed material properties and geometry, the coefficient multiplying
 $d_i$ in Eq.~\eqref{eq:process-zone-opening} is constant. The opening
@@ -284,8 +282,8 @@ by~\cite{Cherepanov1986}
 \end{equation*}
 Using Eq.~\eqref{eq:wiener-hopf-solution}, we obtain
 \begin{equation*}
-  W_i=-\frac{32\lambda(1-\nu_i^2)\sigma_i^2}
-  {9\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i^2.
+  W_i=-\frac{8\lambda(1-\nu_i^2)\sigma_i^2}
+  {\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i^2.
 \end{equation*}
 Differentiating with respect to the zone length along the family of
 equilibrium states, with the geometry and material properties fixed,
@@ -293,8 +291,8 @@ defines the zone-related energy parameter $J_i$:
 \begin{equation}
 \label{eq:process-zone-energy-release-rate}
   J_i=\frac{\dd W_i}{\dd d_i}
-  =-\frac{64\lambda(1-\nu_i^2)\sigma_i^2}
-  {9\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i.
+  =-\frac{16\lambda(1-\nu_i^2)\sigma_i^2}
+  {\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i.
 \end{equation}
 For the numerical analysis, introduce the dimensionless loading,
 opening, and energy parameters $\sigmap$, $\delta_i'$, and $J_i'$,
@@ -322,11 +320,11 @@ Equations~\eqref{eq:normalized-process-zone-length},
     \right]^{-1/\lambda},\\[2pt]
   \delta_i'
     &=-\frac{\lambda K^+(-1)}
-      {\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1-\lambda)}
+      {\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1)}
       \frac{d_i}{l},\\[2pt]
   J_i'
-    &=-\frac{16\lambda}
-      {9\pi(\lambda+2)[G_i^+(-1)]^2}
+    &=-\frac{4\lambda}
+      {\pi(\lambda+2)[G_i^+(-1)]^2}
       \frac{d_i}{l}.
 \end{aligned}
 \end{equation*}
