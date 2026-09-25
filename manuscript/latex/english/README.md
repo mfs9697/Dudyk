@@ -1,9 +1,11 @@
 # English translation
 
-Source baseline: `0522cdae9e86300b73b1c220f3fa41faeb9dcf8f` on `main`,
+Initial translation baseline: `0522cdae9e86300b73b1c220f3fa41faeb9dcf8f`,
 the September 12, 2026 merge of Dudyk's response. On September 22, 2026,
-Mikhailo Selivanov reported Dudyk's agreement with the latest manuscript
-and authorized translation and editorial checks.
+Mikhailo Selivanov reported Dudyk's agreement with that manuscript and
+authorized translation and editorial checks. The English body was then
+synchronized with the final-swept Ukrainian source merged in PR #7 on
+September 25, 2026 (merge commit `f9ee95ffccbdb3`).
 
 The Ukrainian source is preserved. This directory contains the English
 working version, assembled in batches. The complete English manuscript
@@ -130,10 +132,10 @@ Output: `Dudyk_English_Batch04.pdf`.
 
 The Conclusions preserve the distinction between the prescribed stationary
 V-shaped interfacial shear crack and the local branching-initiation model.
-They retain (J_i) as a zone-related energy parameter, present
-(J_i=J_{i\mathrm c}) and (delta_i=delta_{i\mathrm c}) as alternative
+They retain `J_i` as a zone-related energy parameter, present
+`J_i=J_{i\mathrm c}` and `\delta_i=\delta_{i\mathrm c}` as alternative
 local criteria with independently specified critical material parameters,
-and keep the (d_i/l\approx0.18) small-scale limitation explicit.
+and keep the `d_i/l\approx0.18` small-scale limitation explicit.
 
 Next translation batch: Abstract and Introduction. After those are translated,
 assemble the complete English manuscript and perform a final reading-order
