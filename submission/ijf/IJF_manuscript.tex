@@ -10,6 +10,10 @@
 
 \newcommand{\dd}{\mathop{}\!\mathrm{d}}
 \newcommand{\ii}{\mathrm{i}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\sigmap}{\sigma^{\prime}}
+\newcommand{\deltap}{\delta^{\prime}}
+\newcommand{\Jp}{J^{\prime}}
 \newcommand{\jump}[1]{\left[\!\left[#1\right]\!\right]}
 \newcommand{\resultfigure}[4][\linewidth]{%
   \begin{figure}[htbp]
@@ -325,6 +329,7 @@ $\theta=\alpha$, its jump across the interface is defined by
 where $\alpha+0$ and $\alpha-0$ denote the limiting values approached
 from materials~1 and~2, respectively. Symmetry, traction continuity, and
 frictionless contact give
+\begin{strip}
 \begin{equation}
 \label{eq:interface-boundary-conditions}
 \begin{aligned}
@@ -336,7 +341,8 @@ frictionless contact give
     \quad \jump{u_\theta}=0.
 \end{aligned}
 \end{equation}
-The condition $\jump{u_\theta}=0$ imposes normal contact between the crack
+The condition $\jump{u_\theta}=0$\end{strip}
+ imposes normal contact between the crack
 faces, whereas $\tau_{r\theta}=0$ expresses the absence of friction.
 
 On the bisector of the material sector containing the process zone, the
@@ -421,6 +427,7 @@ process zone.
 Near the outer tip of the displacement discontinuity, the stress and normal
 displacement gradient have the standard inverse-square-root asymptotics for a
 homogeneous material:
+\begin{strip}
 \begin{equation}
 \label{eq:zone-tip-asymptotics}
 \begin{aligned}
@@ -433,7 +440,8 @@ homogeneous material:
     \frac{k_i}{\sqrt{2\pi(d_i-r)}}.
 \end{aligned}
 \end{equation}
-Here, $k_i$ is the local Mode~I stress intensity factor at the process-zone
+Here, $k_i$ is the local Mode~I\end{strip}
+ stress intensity factor at the process-zone
 tip; $r\to d_i+0$ and $r\to d_i-0$ denote approach from ahead of the
 zone and from within it, respectively. The boundary-value problem is closed by
 imposing the standard stress-regularity condition for this
@@ -508,6 +516,7 @@ $\sigma_i-CQ_i d_i^\lambda\rho^\lambda$, and hence
 \end{equation*}
 Eliminating the transforms of the interior field yields the functional
 equation
+\begin{strip}
 \begin{equation}
 \label{eq:wiener-hopf-functional}
   \Phi_i^+(p)
@@ -515,7 +524,8 @@ equation
   -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
   =-\tan(\pi p)G_i(p)\Phi_i^-(p),
 \end{equation}
-which is initially valid in the common convergence strip
+which is initially valid in the common convergence strip\end{strip}
+
 \begin{equation*}
   \max\{-1-\lambda,-1-\lambda_i\}
   <\operatorname{Re}p<0.
@@ -542,6 +552,7 @@ material parameters $\kappa_i$ by
 \end{equation*}
 The characteristic determinants $D_1(p)$ and $D_2(p)$ for configurations
 with a process zone in materials~1 and~2, respectively, are
+\begin{strip}
 \begin{equation*}
 \begin{aligned}
   D_1(p)={}&2e(1+\kappa_2)
@@ -558,7 +569,8 @@ with a process zone in materials~1 and~2, respectively, are
     [\sin(2p\alpha)+p\sin(2\alpha)].
 \end{aligned}
 \end{equation*}
-In particular, the corner singularity exponent $\lambda_i$ in the
+In particular, the corner singularity exponent\end{strip}
+ $\lambda_i$ in the
 presence of a zone in material~$i$ is determined by
 \begin{equation*}
   D_i(-1-\lambda_i)=0,
@@ -574,6 +586,7 @@ We solve Eq.~\eqref{eq:wiener-hopf-functional} by the Wiener--Hopf
 method~\citep{noble1958wienerhopf}, following the approach used for a related
 boundary-value problem~\citep{KaminskyDudykPolishchuk2024}.
 The factors $G_i^\pm(p)$ are defined by the Cauchy integral
+\begin{strip}
 \begin{equation*}
   \exp\left\{
     \frac{1}{2\pi\ii}
@@ -586,7 +599,8 @@ The factors $G_i^\pm(p)$ are defined by the Cauchy integral
     G_i^-(p), & \operatorname{Re}p>0,
   \end{cases}
 \end{equation*}
-where $z$ is the complex integration variable and $\ii^2=-1$.
+where $z$ is the complex integration variable\end{strip}
+ and $\ii^2=-1$.
 The contour is directed upward along the imaginary axis. We also introduce
 the auxiliary gamma-function factors
 \begin{equation*}
@@ -767,13 +781,13 @@ to separation therefore increases both the zone length and its opening.
 Within the adopted model, the work $W_i$ done against the resistance
 to separation, per unit out-of-plane thickness, is defined
 by~\citep{Cherepanov1986}
-\begin{strip}
 \begin{equation*}
-  W_i=\sigma_i\int_0^{d_i}
-      \jump{u_\theta(r,\beta_i)}\,\dd r
-  =-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
+\begin{aligned}
+  W_i&=\sigma_i\int_0^{d_i}
+      \jump{u_\theta(r,\beta_i)}\,\dd r\\
+     &=-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
+\end{aligned}
 \end{equation*}
-\end{strip}
 Using Eq.~\eqref{eq:wiener-hopf-solution}, we obtain
 \begin{equation*}
   W_i=-\frac{8\lambda(1-\nu_i^2)\sigma_i^2}
