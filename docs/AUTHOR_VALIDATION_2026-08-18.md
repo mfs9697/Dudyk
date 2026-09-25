@@ -1,5 +1,17 @@
 # Author validation record — 18 August 2026
 
+> **Update — 25 September 2026.** M. V. Dudyk subsequently rechecked the
+> analytical reduction and confirmed two further corrections: the opening
+> formula must contain (G_i^+(-1)), not (G_i^+(-1-lambda)), and the
+> coefficients in (W_i) and (J_i) must be (8/pi) and (16/pi),
+> respectively, rather than (32/(9pi)) and (64/(9pi)). Consequently,
+> all (delta_i') and (J_i') values recorded below are historical
+> pre-25-September regression values, not current publication results.
+> The process-zone length (d_i/l) is unaffected. Current regenerated
+> values are documented in `docs/AUTHOR_CONFIRMED_FORMULA_CORRECTIONS_2026-09-25.md`
+> and `docs/REPRODUCIBILITY.md`.
+
+
 ## Purpose
 
 This note records the non-confidential technical conclusions obtained after
