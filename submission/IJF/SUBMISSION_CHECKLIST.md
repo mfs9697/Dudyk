@@ -76,5 +76,6 @@ Changes needed for the IJF upload package:
 - **Competing interests:** confirm the no-conflict statement or provide any declaration.
 - **Author contributions:** confirm a CRediT/free-text contribution statement for A. O. Kaminsky, M. F. Selivanov, M. V. Dudyk, and T. V. Polishchuk.
 - **Data availability:** approve the proposed wording in `SUBMISSION_METADATA.md`.
+- **AI-tool disclosure:** Springer Nature states that AI-assisted copy editing does not require disclosure, whereas broader LLM use should be documented. Confirm the final characterization/disclosure of the ChatGPT-assisted translation, restructuring, consistency checking, and submission preparation before submission.
 
 No scientific reworking is required for journal fit. The remaining work is submission-format normalization and declarations.
