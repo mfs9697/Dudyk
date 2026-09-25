@@ -57,6 +57,11 @@ The stated purpose of the paper is essentially unchanged; the final purpose/cont
 - Material meaning of the index \(i\) in \(D_i,G_i,Q_i,\beta_i\).
 - Corrected two signs in \(D_1(p)\).
 - Restored factors \(\sigma_i^2\) in \(W_i\) and \(J_i\).
+- Corrected opening factor: \(G_i^+(-1)\) replaces
+  \(G_i^+(-1-\lambda)\), confirmed by M. V. Dudyk on 25 September 2026.
+- Corrected energy coefficients: \(8/\pi\) in \(W_i\) and
+  \(16/\pi\) in \(J_i\), replacing \(32/(9\pi)\) and
+  \(64/(9\pi)\).
 - Simultaneous admissibility conditions \(Cg_2<0\) and \(CQ_i>0\).
 - Matched-asymptotic scale separation and use of \(d_i/l\ll1\) as a self-consistency check.
 - Distinction between \(\lambda\) (shear-cracked corner, used in \(d_i,\delta_i,J_i\)) and \(\lambda_1,\lambda_2\) (singularity after process-zone formation).
