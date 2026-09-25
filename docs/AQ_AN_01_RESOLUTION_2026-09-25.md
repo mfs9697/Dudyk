@@ -77,7 +77,32 @@ widehat{sigma}_i(ho d_i)ho^p,dho
 }
 ]
 
-rather than the transform of the total stress.
+rather than the transform of the total stress. The no-zone eigenfield
+satisfies the bisector symmetry condition (u_	heta=0), so the
+displacement-gradient transform used for (Phi_i^-) is unchanged by this
+subtraction.
+
+In the narrower domain (operatorname{Re}p<-1-lambda), where the raw
+total-stress transform
+
+[
+widetilde{Phi}_i^+(p)=
+int_1^infty
+sigma_	heta(ho d_i,eta_i)ho^p,dho
+]
+
+also converges,
+
+[
+oxed{
+Phi_i^+(p)
+=
+widetilde{Phi}_i^+(p)
++rac{CQ_i d_i^lambda}{p+lambda+1}.
+}
+]
+
+This identity makes the pole removal and its sign explicit.
 
 ## Recovery of the functional equation
 
