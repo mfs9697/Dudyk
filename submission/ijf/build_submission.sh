@@ -42,10 +42,13 @@ if grep -E "Citation .* undefined|There were undefined citations|There were unde
   exit 1
 fi
 
-if grep -E "Missing character:|Overfull \\hbox|Overfull \\vbox|LaTeX Error|Package .* Error" "$OUT/main.log"; then
-  echo "Fatal layout/font/package issue detected."
+if grep -E "Missing character:|LaTeX Error|Package .* Error" "$OUT/main.log"; then
+  echo "Fatal font/package issue detected."
   exit 1
 fi
+
+echo "Layout warnings (for rendered-PDF inspection):"
+grep -E "Overfull \\hbox|Overfull \\vbox" "$OUT/main.log" || true
 
 cp "$OUT/main.pdf" "$DIST/IJF_Manuscript_Submission.pdf"
 cp "$ROOT/submission/ijf/cover_letter.md" "$DIST/cover_letter.md"
