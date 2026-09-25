@@ -1,0 +1,120 @@
+name: IJF submission package
+
+on:
+  push:
+    branches:
+      - 'submission/ijf-*'
+    paths:
+      - 'submission/IJF/**'
+      - 'manuscript/latex/figures/figure1_original_tikz.tex'
+      - 'figures/figure2_recalculated.pdf'
+      - 'figures/figure3_recalculated.pdf'
+      - 'figures/figure4_admissible_segments.pdf'
+      - '.github/workflows/ijf-submission-build.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TeX and packaging tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-extra texlive-bibtex-extra texlive-fonts-recommended \
+            latexmk curl unzip zip poppler-utils
+
+      - name: Download official Springer Nature template
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 \
+            'https://cms-resources.apps.public.k8s.springernature.io/springer-cms/rest/v1/content/18782940/data/v12' \
+            -o /tmp/springer-nature-template.zip
+          rm -rf /tmp/sn-template
+          mkdir -p /tmp/sn-template
+          unzip -q /tmp/springer-nature-template.zip -d /tmp/sn-template
+          SNCLS="$(find /tmp/sn-template -type f -name 'sn-jnl.cls' -print -quit)"
+          SNBST="$(find /tmp/sn-template -type f -name 'sn-mathphys-ay.bst' -print -quit)"
+          test -n "$SNCLS" && test -n "$SNBST"
+          echo "SNCLS=$SNCLS" >> "$GITHUB_ENV"
+          echo "SNBST=$SNBST" >> "$GITHUB_ENV"
+
+      - name: Generate Figure 1 from the frozen TikZ source
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/fig1
+          cat > /tmp/fig1/Fig1_source.tex <<EOF
+          \\documentclass[tikz,border=2pt]{standalone}
+          \\usepackage{amsmath}
+          \\usetikzlibrary{arrows.meta,calc}
+          \\begin{document}
+          \\input{$GITHUB_WORKSPACE/manuscript/latex/figures/figure1_original_tikz.tex}
+          \\end{document}
+          EOF
+          cd /tmp/fig1
+          pdflatex -interaction=nonstopmode -halt-on-error Fig1_source.tex
+          mv Fig1_source.pdf Fig1.pdf
+
+      - name: Assemble flat IJF upload directory
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/ijf-package
+          mkdir -p /tmp/ijf-package
+          cp submission/IJF/manuscript.tex /tmp/ijf-package/
+          cp submission/IJF/references.bib /tmp/ijf-package/
+          cp /tmp/fig1/Fig1.pdf /tmp/ijf-package/Fig1.pdf
+          cp figures/figure2_recalculated.pdf /tmp/ijf-package/Fig2.pdf
+          cp figures/figure3_recalculated.pdf /tmp/ijf-package/Fig3.pdf
+          cp figures/figure4_admissible_segments.pdf /tmp/ijf-package/Fig4.pdf
+          cp "$SNCLS" /tmp/ijf-package/sn-jnl.cls
+          cp "$SNBST" /tmp/ijf-package/sn-mathphys-ay.bst
+          test -z "$(grep -n '\\\\input{' /tmp/ijf-package/manuscript.tex || true)"
+
+      - name: Compile IJF manuscript with pdflatex
+        working-directory: /tmp/ijf-package
+        run: |
+          set -o pipefail
+          pdflatex -interaction=nonstopmode -halt-on-error manuscript.tex | tee pdflatex-1.log
+          bibtex manuscript | tee bibtex.log
+          pdflatex -interaction=nonstopmode -halt-on-error manuscript.tex | tee pdflatex-2.log
+          pdflatex -interaction=nonstopmode -halt-on-error manuscript.tex | tee pdflatex-3.log
+
+      - name: Preflight IJF output
+        working-directory: /tmp/ijf-package
+        run: |
+          set -euo pipefail
+          if grep -E "Citation .* undefined|There were undefined citations|There were undefined references|I didn't find a database entry|Warning--I didn't find a database entry|Missing character:" manuscript.log bibtex.log; then
+            echo 'Fatal citation/reference/glyph warning detected.'
+            exit 1
+          fi
+          if grep -E 'Overfull \\hbox|Overfull \\vbox' manuscript.log; then
+            echo 'Overfull box detected in IJF two-column output.'
+            exit 1
+          fi
+          pdfinfo manuscript.pdf
+          pdffonts manuscript.pdf
+          echo 'Underfull-box report (non-fatal):'
+          grep -E 'Underfull \\hbox|Underfull \\vbox' manuscript.log || true
+
+      - name: Package submission files
+        working-directory: /tmp/ijf-package
+        run: |
+          rm -f pdflatex-1.log pdflatex-2.log pdflatex-3.log bibtex.log manuscript.aux manuscript.bbl manuscript.blg manuscript.log manuscript.out
+          zip -9 -r IJF_submission_source.zip manuscript.tex references.bib Fig1.pdf Fig2.pdf Fig3.pdf Fig4.pdf sn-jnl.cls sn-mathphys-ay.bst
+
+      - name: Upload IJF package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ijf-submission-package
+          path: |
+            /tmp/ijf-package/IJF_submission_source.zip
+            /tmp/ijf-package/manuscript.pdf
+            submission/IJF/COVER_LETTER.md
+            submission/IJF/SUBMISSION_METADATA.md
+            submission/IJF/SUBMISSION_CHECKLIST.md
+            submission/IJF/NOVELTY_POSITIONING.md
+          if-no-files-found: error
