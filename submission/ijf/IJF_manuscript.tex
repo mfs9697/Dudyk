@@ -20,6 +20,8 @@
   \end{figure}}
 
 \raggedbottom
+\setlength{\stripsep}{8pt plus 2pt minus 2pt}
+\setlength{\emergencystretch}{2em}
 
 \begin{document}
 
@@ -594,6 +596,7 @@ the auxiliary gamma-function factors
 Here, $\Gamma$ is the Euler gamma function.
 With the normalization $G_i^\pm(p)\to1$ at infinity, the solution of
 the functional equation is
+\begin{strip}
 \begin{equation}
 \label{eq:wiener-hopf-solution}
 \begin{aligned}
@@ -624,6 +627,7 @@ the functional equation is
   \qquad \operatorname{Re}p>0.
 \end{aligned}
 \end{equation}
+\end{strip}
 For the kernels considered here, numerical checks show that
 $G_i(\ii t)$ is real, positive, and even in the real variable $t$ and
 tends to unity as $|t|\to\infty$.
@@ -763,11 +767,13 @@ to separation therefore increases both the zone length and its opening.
 Within the adopted model, the work $W_i$ done against the resistance
 to separation, per unit out-of-plane thickness, is defined
 by~\citep{Cherepanov1986}
+\begin{strip}
 \begin{equation*}
   W_i=\sigma_i\int_0^{d_i}
       \jump{u_\theta(r,\beta_i)}\,\dd r
   =-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
 \end{equation*}
+\end{strip}
 Using Eq.~\eqref{eq:wiener-hopf-solution}, we obtain
 \begin{equation*}
   W_i=-\frac{8\lambda(1-\nu_i^2)\sigma_i^2}
@@ -798,6 +804,7 @@ The primes here denote normalization, not differentiation.
 Equations~\eqref{eq:normalized-process-zone-length},
 \eqref{eq:process-zone-opening}, and
 \eqref{eq:process-zone-energy-parameter} then take the form
+\begin{strip}
 \begin{equation*}
 \begin{aligned}
   \frac{d_i}{l}
@@ -816,6 +823,7 @@ Equations~\eqref{eq:normalized-process-zone-length},
       \frac{d_i}{l}.
 \end{aligned}
 \end{equation*}
+\end{strip}
 All three relations use the corner exponent $\lambda$ for the prescribed
 stationary V-shaped interfacial shear crack, i.e., the root of
 $D(-1-\lambda)=0$.
@@ -906,7 +914,7 @@ transition angle $\alpha_1$ increases monotonically, whereas $\alpha_2$
 decreases monotonically. Thus, elastic contrast systematically shifts
 the boundaries of the angular intervals of physical admissibility.
 
-\begin{table}[htbp]
+\begin{table*}[htbp]
   \centering
   \caption{Angles at which the coefficient $g_2$ changes sign for
   $\nu_1=\nu_2=0.3$.}
@@ -921,7 +929,7 @@ the boundaries of the angular intervals of physical admissibility.
     $\alpha_2$, $^\circ$ & 108.02 & 107.90 & 107.72 & 107.52 & 107.30 & 107.09 & 106.88 & 106.69 & 106.50 & 106.32 & 106.17 \\
     \bottomrule
   \end{tabular}
-\end{table}
+\end{table*}
 
 
 Cases with $E_1/E_2>1$ are not independent. They are obtained by
@@ -1536,6 +1544,7 @@ in Section~\ref{sec:derivation} is
   G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
 \end{equation*}
 The corresponding characteristic determinants are
+\begin{strip}
 \begin{equation}
 \label{eq:app-post-zone-determinants}
 \begin{aligned}
@@ -1553,6 +1562,7 @@ The corresponding characteristic determinants are
   [\sin(2p\alpha)+p\sin2\alpha].
 \end{aligned}
 \end{equation}
+\end{strip}
 % The author-confirmed signs in D_1 are preserved. Their provenance is
 % recorded in EDITORIAL_LOG.md rather than in the clean manuscript.
 The exponent $\lambda_i$ for a configuration with a zone in
