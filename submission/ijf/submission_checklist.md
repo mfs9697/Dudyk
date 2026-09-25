@@ -18,7 +18,7 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 - [x] Title is concise and informative.
 - [x] Six keywords are supplied.
 - [x] Corresponding-author email added to the English title page.
-- [x] Abstract revised to the journal-specific preferred range of **150–200 words** and contains no mathematical symbols.
+- [x] Abstract revised to the journal-specific preferred range of **150–200 words**, contains no mathematical symbols, and is structured as **Purpose / Methods / Results / Conclusion**.
 - [x] Headings use a decimal hierarchy with no more than three levels.
 - [x] Figures and tables are placed near first discussion in the manuscript.
 - [x] Figures are available as editable/vector PDF or source artwork in the repository.
@@ -36,7 +36,7 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 - [ ] Confirm the **Funding** statement.
 - [ ] Confirm the **Competing Interests** statement for all authors.
 - [ ] Confirm the **Author Contributions** statement to be entered in the submission interface.
-- [ ] Add the final **Data Availability Statement** to the manuscript.
+- [x] Add the final **Data Availability Statement** to the manuscript.
 - [ ] Decide whether to submit reviewer suggestions; if yes, use institutional emails or verifiable researcher profiles.
 - [ ] Decide whether the standard subscription route or Open Choice is intended after acceptance.
 
@@ -66,11 +66,11 @@ No human participants, animals, or identifiable personal data are involved in th
 
 ## Formatting note
 
-The journal currently recommends the Springer Nature LaTeX template with the **[iicol]** option and requires the complete editable source set plus compiled PDF. The present source is clean LaTeX but uses the project's house layout. Before portal upload, make a dedicated IJF submission wrapper/template conversion rather than altering the scientific master.
+The journal currently recommends the Springer Nature LaTeX template with the **[iicol]** option and requires the complete editable source set plus compiled PDF. A dedicated monolithic IJF wrapper using **sn-mathphys-ay** has now been prepared, while the scientific master remains separate.
 
 ## References style note
 
-The journal's current instructions request **author–year citations** and an alphabetized reference list. The scientific master presently uses numeric natbib formatting. This should be handled in the IJF submission wrapper/template so the scientific text itself remains unchanged.
+The journal's current instructions request **author–year citations** and an alphabetized reference list. The IJF wrapper now uses the Springer Nature **sn-mathphys-ay** style; the scientific master remains unchanged.
 
 ## Submission portal
 
