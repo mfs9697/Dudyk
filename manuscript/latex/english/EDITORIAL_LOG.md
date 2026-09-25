@@ -1,5 +1,12 @@
 # Translation and editorial log
 
+> **Reading note.** This is a chronological audit log. Statements in the
+> September 22 batch entries describe the state at that time and are
+> superseded by the September 25 correction/resolution entries where the two
+> differ. Current manuscript status is summarized in `english/README.md` and
+> `docs/AUTHOR_QUERIES.md`.
+
+
 ## Batch 1 — September 22, 2026
 
 Scope: Section 2 (problem formulation), all three subsections, and the
@@ -283,43 +290,42 @@ known no-process-zone field and a correction problem whose stresses decay as
 2006 Wiener--Hopf process-zone formulation. Restoring that step in the current
 manuscript gives
 
-[
+\[
 \widehat{\sigma}_i(r)
 =\sigma_\theta(r,\beta_i)-CQ_i r^\lambda,
-]
+\]
 
 with
 
-[
+\[
 \widehat{\sigma}_i(r)=o(r^{-1})
-quad (r\to\infty),
-]
+\qquad (r\to\infty),
+\]
 
 and, on the active zone,
 
-[
+\[
 \widehat{\sigma}_i(r)
 =\sigma_i-CQ_i r^\lambda.
-]
+\]
 
-Accordingly, `Phi_i^+` is now defined as the Mellin transform of the
-correction stress rather than the total stress. The transform of the active
-segment is exactly
+Accordingly, `Phi_i^+` is defined as the Mellin transform of the correction
+stress rather than the total stress. The transform of the active segment is
 
-[
+\[
 \frac{\sigma_i}{p+1}
 -\frac{CQ_i d_i^\lambda}{p+\lambda+1},
-]
+\]
 
 so the existing functional equation and its Wiener--Hopf solution are
 unchanged.
 
-The initial convergence domain is now stated as
+The initial convergence domain is
 
-[
+\[
 \max\{-1-\lambda,-1-\lambda_i\}
 <\operatorname{Re}p<0.
-]
+\]
 
 The manuscript no longer claims that the defining integral for `Phi_i^+`
 converges in a strip crossing the imaginary axis. Instead, the functional
