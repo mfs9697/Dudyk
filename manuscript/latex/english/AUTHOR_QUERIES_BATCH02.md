@@ -1,8 +1,9 @@
 # Analytical queries identified during translation
 
-These checks compare the approved equations with one another. The translation
-retains the source formulas. Resolve these points before treating the
-English derivation as publication-ready.
+These checks record analytical issues identified during translation.
+Both queries were resolved on September 25, 2026. The current English
+derivation contains the corrected formulas and the restored superposition
+step; this file is retained as an audit record.
 
 ## AQ-AN-01: stress transform and its analyticity strip — RESOLVED September 25, 2026
 
@@ -109,9 +110,9 @@ normalized form. He also confirmed a second coefficient correction found
 during the same audit: W_i and J_i must contain 8/pi and 16/pi,
 respectively, instead of 32/(9 pi) and 64/(9 pi).
 
-The manuscript formulas and MATLAB implementation are therefore to be
-corrected, followed by regeneration of Figures 2 and 3 and their numerical
-discussion. The process-zone length formula is unaffected.
+The manuscript formulas and MATLAB implementation were corrected, and
+Figures 2 and 3 and their numerical discussion were regenerated. The
+process-zone length formula is unaffected.
 
 The derivative J_i = dW_i/dd_i was also checked directly against the
 printed W_i proportional to d_i^2: the factor of two is consistent.
@@ -130,8 +131,8 @@ opening multiplier is implemented as
 so the numerical Figure-2 and Figure-3 opening curves follow the printed
 opening formula. The independently compared corrected author Mathcad values
 documented in \`docs/AUTHOR_VALIDATION_2026-08-18.md\` use the same factor
-convention. Therefore the excellent numerical reproduction establishes
-implementation agreement, but it does not choose between the printed formula
-and the direct algebraic reduction recorded above. This implementation check is now historical: the author has confirmed the
-analytical correction, so the numerical implementation and plots must be
-updated accordingly. AQ-AN-02 is closed.
+convention. Therefore the excellent numerical reproduction established implementation
+agreement with the superseded formula, but it did not choose between that
+formula and the direct algebraic reduction recorded above. This check is now
+historical: after the author confirmed the analytical correction, the
+numerical implementation and plots were updated. AQ-AN-02 is closed.
