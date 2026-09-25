@@ -242,7 +242,7 @@ $\delta_i=\jump{u_\theta(0,\beta_i)}$. Із означення $\Phi_i^-(p)$
 \label{eq:process-zone-opening}
   \delta_i=
   -\frac{4(1-\nu_i^2)\sigma_i\lambda K^+(-1)}
-  {E_i\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-\lambda-1)}d_i.
+  {E_i\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1)}d_i.
 \end{equation}
 За фіксованих властивостей матеріалу та геометрії коефіцієнт перед $d_i$
 у формулі~\eqref{eq:process-zone-opening} є сталим. Тому при зміні
@@ -266,16 +266,16 @@ $\sigma_i$, то з урахуванням попередньої степене
 \end{equation*}
 З урахуванням~\eqref{eq:wiener-hopf-solution} маємо
 \begin{equation*}
-  W_i=-\frac{32\lambda(1-\nu_i^2)\sigma_i^2}
-  {9\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i^2.
+  W_i=-\frac{8\lambda(1-\nu_i^2)\sigma_i^2}
+  {\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i^2.
 \end{equation*}
 Диференціювання за довжиною зони приводить до швидкості вивільнення
 енергії
 \begin{equation}
 \label{eq:process-zone-energy-release-rate}
   J_i=\frac{\dd W_i}{\dd d_i}
-  =-\frac{64\lambda(1-\nu_i^2)\sigma_i^2}
-  {9\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i.
+  =-\frac{16\lambda(1-\nu_i^2)\sigma_i^2}
+  {\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i.
 \end{equation}
 
 Для числового аналізу вводимо безрозмірні параметри
@@ -302,11 +302,11 @@ $\sigma_i$, то з урахуванням попередньої степене
     \right]^{-1/\lambda},\\[2pt]
   \delta_i'
     &=-\frac{\lambda K^+(-1)}
-      {\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1-\lambda)}
+      {\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1)}
       \frac{d_i}{l},\\[2pt]
   J_i'
-    &=-\frac{16\lambda}
-      {9\pi(\lambda+2)[G_i^+(-1)]^2}
+    &=-\frac{4\lambda}
+      {\pi(\lambda+2)[G_i^+(-1)]^2}
       \frac{d_i}{l}.
 \end{aligned}
 \end{equation*}
