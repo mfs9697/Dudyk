@@ -58,7 +58,8 @@ The combined extract provides live cross-references to Appendix A.
 The reference to Figure 2 explicitly points to the source manuscript,
 since the numerical-results section is outside this extract. In the full
 manuscript the appendix defaults to the existing live figure reference.
-The wrapper explicitly identifies the unresolved analytical queries.
+The analytical-query file is retained as an audit record; both analytical
+queries are resolved in the current source.
 
 ## Batch 3 (combined with Batches 1 and 2)
 
