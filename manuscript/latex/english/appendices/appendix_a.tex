@@ -182,20 +182,19 @@ and its plus factor
   \right\},
   \qquad \operatorname{Re}p<0.
 \end{equation*}
-Here, $z$ is the complex integration variable, $\ii^2=-1$, and the
-contour runs upward along the imaginary axis. The gamma-function factor is
+Here, $z$ is the complex integration variable, $\ii^2=-1$, and the contour
+is directed upward along the imaginary axis. The gamma-function factor is
 \begin{equation*}
   K^+(p)=\frac{\Gamma(1-p)}{\Gamma(\tfrac12-p)}.
 \end{equation*}
-where $\Gamma$ is the Euler gamma function. For real $p<0$, the
-verified numerical algorithm evaluates $G^+(p)$ equivalently using
-the real integral
+Here, $\Gamma$ is the Euler gamma function. For real $p<0$, $G^+(p)$
+can equivalently be evaluated using the real integral
 \begin{equation*}
   \log G^+(p)
   =-\frac{p}{\pi}\int_0^\infty
     \frac{\log G(\ii t)}{t^2+p^2}\,\dd t.
 \end{equation*}
-where $t$ is a real integration variable.
+Here, $t$ is a real integration variable.
 
 \subsection{Corner with a process zone}
 
@@ -232,8 +231,8 @@ material~$i$ is determined by
   \qquad -1<\lambda_i<0,
   \qquad i=1,2.
 \end{equation}
-These two roots are used for the $\lambda_1$ and $\lambda_2$ curves in
-\SingularityExponentFigure. They characterize the corner singularity
-in the presence of a process zone and must not replace $\lambda$ in
-the formulas for $d_i$, $\delta_i$, and $J_i$, where $\lambda$ is
-defined by Eq.~\eqref{eq:app-D-root}.
+These roots define the $\lambda_1$ and $\lambda_2$ curves in
+\SingularityExponentFigure. They characterize the corner singularity in the
+presence of a process zone but are not used in the formulas for $d_i$,
+$\delta_i$, and $J_i$; those formulas use $\lambda$ from
+Eq.~\eqref{eq:app-D-root}.
