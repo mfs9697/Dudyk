@@ -503,6 +503,7 @@ $\sigma_i-CQ_i d_i^\lambda\rho^\lambda$, and hence
 \end{equation*}
 Eliminating the transforms of the interior field yields the functional
 equation
+{\small
 \begin{equation}
 \label{eq:wiener-hopf-functional}
 \begin{aligned}
@@ -513,6 +514,7 @@ equation
   &-\tan(\pi p)G_i(p)\Phi_i^-(p).
 \end{aligned}
 \end{equation}
+}
 which is initially valid in the common convergence strip
 \begin{equation*}
   \max\{-1-\lambda,-1-\lambda_i\}
@@ -572,7 +574,7 @@ We solve Eq.~\eqref{eq:wiener-hopf-functional} by the Wiener--Hopf
 method~\citep{noble1958wienerhopf}, following the approach used for a related
 boundary-value problem~\citep{KaminskyDudykPolishchuk2024}.
 The factors $G_i^\pm(p)$ are defined by the Cauchy integral
-{\small
+{\footnotesize
 \begin{equation*}
   \exp\left\{
     \frac{1}{2\pi\ii}
@@ -596,6 +598,7 @@ the auxiliary gamma-function factors
 Here, $\Gamma$ is the Euler gamma function.
 With the normalization $G_i^\pm(p)\to1$ at infinity, the solution of
 the functional equation is
+{\small
 \begin{equation}
 \label{eq:wiener-hopf-solution}
 \begin{aligned}
@@ -606,27 +609,29 @@ the functional equation is
 \frac{K^+(p)}{pG_i^+(p)}
 +\frac{K^+(-1)}{G_i^+(-1)}
 \Bigg]\\
-&-\frac{pG_i^+(p)}{K^+(p)}
-\Bigg\{
-\frac{CQ_i d_i^\lambda}{p+\lambda+1}
+&\quad
+-\frac{CQ_i d_i^\lambda}{p+\lambda+1}
 \Bigg[
-\frac{K^+(p)}{pG_i^+(p)}
+\frac{K^+(p)}{pG_i^+(p)}\\
+&\hspace{23mm}
 +\frac{K^+(-\lambda-1)}
 {(\lambda+1)G_i^+(-\lambda-1)}
 \Bigg]
 \Bigg\},\\[-1pt]
-&\hspace{16mm}\operatorname{Re}p<0,\\[4pt]
+&\hspace{13mm}\operatorname{Re}p<0,\\[4pt]
 \Phi_i^-(p)={}&K^-(p)G_i^-(p)
 \Bigg[
 \frac{\sigma_iK^+(-1)}
 {(p+1)G_i^+(-1)}\\
-&\hspace{8mm}
--\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
-{(\lambda+1)(p+\lambda+1)G_i^+(-\lambda-1)}
+&\quad
+-\frac{CQ_i d_i^\lambda}{p+\lambda+1}
+\frac{K^+(-\lambda-1)}
+{(\lambda+1)G_i^+(-\lambda-1)}
 \Bigg],\\[-1pt]
-&\hspace{16mm}\operatorname{Re}p>0.
+&\hspace{13mm}\operatorname{Re}p>0.
 \end{aligned}
 \end{equation}
+}
 For the kernels considered here, numerical checks show that
 $G_i(\ii t)$ is real, positive, and even in the real variable $t$ and
 tends to unity as $|t|\to\infty$.
@@ -1376,20 +1381,22 @@ part of the interfacial stress field is~\citep{NazarenkoKipnis2022Stress}
 where $C$ is the local singular-field amplitude, $\lambda_0$ is
 the intact-corner singularity exponent, and the dimensionless angular
 coefficients $g_1$ and $g_2$ are
+{\small
 \begin{equation*}
 \begin{aligned}
-  g_1={}&(1-e)\sin[\lambda_0(\pi-\alpha)]
-  \bigl[(\lambda_0+1)\sin2\alpha
+  g_1={}&(1-e)\sin[\lambda_0(\pi-\alpha)]\\
+  &\times\bigl[(\lambda_0+1)\sin2\alpha
        +\sin\{2(\lambda_0+1)\alpha\}\bigr]\\
   &+e(1+\kappa_2)\sin(\lambda_0\pi)
       \sin[(\lambda_0+2)\alpha],\\[2pt]
-  g_2={}&(1-e)\cos[\lambda_0(\pi-\alpha)]
-  \bigl[(\lambda_0+1)\sin2\alpha
+  g_2={}&(1-e)\cos[\lambda_0(\pi-\alpha)]\\
+  &\times\bigl[(\lambda_0+1)\sin2\alpha
        +\sin\{2(\lambda_0+1)\alpha\}\bigr]\\
   &+e(1+\kappa_2)\sin(\lambda_0\pi)
       \cos[(\lambda_0+2)\alpha].
 \end{aligned}
 \end{equation*}
+}
 The exponent $\lambda_0$ is determined by the characteristic equation
 \begin{equation}
 \label{eq:app-D0-root}
@@ -1401,21 +1408,23 @@ where the intact-corner determinant $D_0(p)$ is
   D_0(p)=b_0(p)+e\,b_1(p)+e^2b_2(p),
 \end{equation*}
 with auxiliary functions $b_0(p)$, $b_1(p)$, and $b_2(p)$ given by
+{\small
 \begin{equation*}
 \begin{aligned}
   b_0(p)={}&
-  [\sin(2p\alpha)+p\sin(2\alpha)]
-  [\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)],\\[2pt]
+  [\sin(2p\alpha)+p\sin(2\alpha)]\\
+  &\times[\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)],\\[2pt]
   b_1(p)={}&(1+\kappa_1)(1+\kappa_2)\sin^2(p\pi)\\
-  &-[\sin(2p\alpha)+p\sin(2\alpha)]
-    [\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)]\\
-  &-[\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]
-    [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)],\\[2pt]
+  &-[\sin(2p\alpha)+p\sin(2\alpha)]\\
+  &\quad\times[\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)]\\
+  &-[\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]\\
+  &\quad\times[\kappa_2\sin(2p\alpha)-p\sin(2\alpha)],\\[2pt]
   b_2(p)={}&
-  [\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]
-  [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)].
+  [\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]\\
+  &\times[\kappa_2\sin(2p\alpha)-p\sin(2\alpha)].
 \end{aligned}
 \end{equation*}
+}
 \subsection{Corner with a stationary V-shaped interfacial shear crack}
 
 For the prescribed stationary V-shaped interfacial shear crack, the two
@@ -1424,11 +1433,12 @@ of the sector occupied by material~$i$ has the asymptotic
 form~\citep{NazarenkoKipnis2022Stress}
 \begin{equation}
 \label{eq:app-cracked-field}
+\begin{aligned}
   \sigma_\theta(r,\beta_i)
-  =CQ_i r^\lambda+o\!\left(r^\lambda\right),
-  \qquad r\to0,
-  \qquad
-  \beta_1=\pi,\quad \beta_2=0.
+  &=CQ_i r^\lambda+o\!\left(r^\lambda\right),
+  \qquad r\to0,\\
+  \beta_1&=\pi,\qquad \beta_2=0.
+\end{aligned}
 \end{equation}
 Here, $\lambda$ is the corner singularity exponent for the cracked
 configuration and $\beta_i$ is the corresponding bisector direction.
@@ -1438,47 +1448,60 @@ The amplitude coefficient $Q_i$ is expressed as
 \end{equation*}
 where the dimensionless coefficient $q_i$ and the derivative $D'(p)$
 of the cracked-corner determinant are
+{\small
 \begin{equation*}
-  q_i=
-  \frac{2S_i(-1-\lambda)K^+(-1-\lambda)G^+(-1-\lambda)}
-  {(\lambda-\lambda_0)D'(-1-\lambda)
-   K^+(-1-\lambda_0)G^+(-1-\lambda_0)},
-  \qquad
-  D'(p)=\frac{\dd D(p)}{\dd p}.
+\begin{aligned}
+  q_i={}&
+  \frac{2S_i(-1-\lambda)}
+  {(\lambda-\lambda_0)D'(-1-\lambda)}
+  \frac{K^+(-1-\lambda)}
+  {K^+(-1-\lambda_0)}\\
+  &\times
+  \frac{G^+(-1-\lambda)}
+  {G^+(-1-\lambda_0)},\\[2pt]
+  D'(p)={}&\frac{\dd D(p)}{\dd p}.
+\end{aligned}
 \end{equation*}
+}
 The functions $S_i(p)$ are auxiliary numerator functions defined below.
 The factors $K^+(p)$ and $G^+(p)$ are specified later in this subsection.
 The base plus factor $G^+(p)$ must not be confused with $G_i^+(p)$, which
 factorizes the process-zone kernel $G_i(p)$ in
 Section~\ref{sec:derivation}. Explicitly,
+{\small
 \begin{equation*}
 \begin{aligned}
-  S_1(p)={}&2e(1+\kappa_2)s_{11}(p)\sin[(p+1)\alpha]\\
-  &+s_{12}(p)
-  \Bigl[(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}
-        +2(1-e)s_{13}(p)\Bigr],\\[2pt]
-  S_2(p)={}&s_{21}(p)
-  \Bigl[e(1+\kappa_2)\sin[(p+1)\alpha]
-        +2(1-e)s_{22}(p)\Bigr]\\
-  &-2(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}\,s_{23}(p),
+  S_1(p)={}&2e(1+\kappa_2)s_{11}(p)
+  \sin[(p+1)\alpha]\\
+  &+s_{12}(p)(1+\kappa_1)
+  \sin\{p(\pi-\alpha)-\alpha\}\\
+  &+2(1-e)s_{12}(p)s_{13}(p),\\[2pt]
+  S_2(p)={}&e(1+\kappa_2)s_{21}(p)
+  \sin[(p+1)\alpha]\\
+  &+2(1-e)s_{21}(p)s_{22}(p)\\
+  &-2(1+\kappa_1)
+  \sin\{p(\pi-\alpha)-\alpha\}\,s_{23}(p).
 \end{aligned}
 \end{equation*}
+}
 where the auxiliary functions $s_{mn}(p)$, with $m=1,2$ and
 $n=1,2,3$, are
+{\small
 \begin{equation*}
 \begin{aligned}
-  s_{11}(p)&=p\cos(p\pi-\alpha)\sin\alpha
-             -\sin[p(\pi-\alpha)]\cos(p\alpha),\\
-  s_{12}(p)&=p\sin2\alpha+\sin(2p\alpha),\\
-  s_{13}(p)&=p\cos[p(\pi-\alpha)]\sin\alpha
-             -\sin[p(\pi-\alpha)]\cos\alpha,\\
-  s_{21}(p)&=\sin[2p(\pi-\alpha)]-p\sin2\alpha,\\
-  s_{22}(p)&=p\cos(p\alpha)\sin\alpha
+  s_{11}(p)={}&p\cos(p\pi-\alpha)\sin\alpha\\
+             &-\sin[p(\pi-\alpha)]\cos(p\alpha),\\
+  s_{12}(p)={}&p\sin2\alpha+\sin(2p\alpha),\\
+  s_{13}(p)={}&p\cos[p(\pi-\alpha)]\sin\alpha\\
+             &-\sin[p(\pi-\alpha)]\cos\alpha,\\
+  s_{21}(p)={}&\sin[2p(\pi-\alpha)]-p\sin2\alpha,\\
+  s_{22}(p)={}&p\cos(p\alpha)\sin\alpha
              +\sin(p\alpha)\cos\alpha,\\
-  s_{23}(p)&=p\cos(p\pi+\alpha)\sin\alpha
-             +\cos[p(\pi-\alpha)]\sin(p\alpha).
+  s_{23}(p)={}&p\cos(p\pi+\alpha)\sin\alpha\\
+             &+\cos[p(\pi-\alpha)]\sin(p\alpha).
 \end{aligned}
 \end{equation*}
+}
 The corner singularity exponent $\lambda$ for the configuration
 containing the prescribed stationary V-shaped interfacial crack satisfies
 \begin{equation}
@@ -1491,32 +1514,40 @@ where the characteristic determinant $D(p)$ is
   D(p)=a_0(p)+e\,a_1(p),
 \end{equation*}
 with auxiliary functions $a_0(p)$ and $a_1(p)$ given by
+{\small
 \begin{equation*}
 \begin{aligned}
   a_0(p)={}&(1+\kappa_1)
-  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]
-  [\sin(2p\alpha)+p\sin2\alpha],\\
+  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]\\
+  &\times[\sin(2p\alpha)+p\sin2\alpha],\\
   a_1(p)={}&(1+\kappa_2)
-  [\cos(2p\alpha)-\cos2\alpha]
-  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha].
+  [\cos(2p\alpha)-\cos2\alpha]\\
+  &\times[\sin\{2p(\pi-\alpha)\}-p\sin2\alpha].
 \end{aligned}
 \end{equation*}
+}
 The coefficients $q_i$ use the base kernel
 \begin{equation*}
   G(p)=
-  \frac{(e+\kappa_1)(1+e\kappa_2)\sin(\pi p)D(p)}
-  {(e+\kappa_1+1+e\kappa_2)\cos(\pi p)D_0(p)}
+  \frac{(e+\kappa_1)(1+e\kappa_2)}
+  {e+\kappa_1+1+e\kappa_2}
+  \frac{\sin(\pi p)D(p)}
+  {\cos(\pi p)D_0(p)}.
 \end{equation*}
 and its plus factor
+{\small
 \begin{equation*}
-  G^+(p)=
+\begin{aligned}
+  G^+(p)&=
   \exp\!\left\{
     \frac{1}{2\pi\ii}
     \int_{-\ii\infty}^{\ii\infty}
     \frac{\log G(z)}{z-p}\,\dd z
-  \right\},
-  \qquad \operatorname{Re}p<0.
+  \right\},\\[-1pt]
+  &\hspace{17mm}\operatorname{Re}p<0.
+\end{aligned}
 \end{equation*}
+}
 Here, $z$ is the complex integration variable, $\ii^2=-1$, and the contour
 is directed upward along the imaginary axis. The gamma-function factor is
 \begin{equation*}
@@ -1539,23 +1570,25 @@ in Section~\ref{sec:derivation} is
   G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
 \end{equation*}
 The corresponding characteristic determinants are
+{\small
 \begin{equation}
 \label{eq:app-post-zone-determinants}
 \begin{aligned}
   D_1(p)={}&2e(1+\kappa_2)
-  [\cos(2p\alpha)-\cos2\alpha]
-  \{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
+  [\cos(2p\alpha)-\cos2\alpha]\\
+  &\times\{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
   &+(1+\kappa_1)
-  [\sin(2p\alpha)+p\sin2\alpha]
-  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha],\\[3pt]
+  [\sin(2p\alpha)+p\sin2\alpha]\\
+  &\times[\sin\{2p(\pi-\alpha)\}-p\sin2\alpha],\\[3pt]
   D_2(p)={}&2(1+\kappa_1)
-  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]
-  [\sin^2(p\alpha)-p^2\sin^2\alpha]\\
+  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]\\
+  &\times[\sin^2(p\alpha)-p^2\sin^2\alpha]\\
   &+e(1+\kappa_2)
-  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha]
-  [\sin(2p\alpha)+p\sin2\alpha].
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha]\\
+  &\times[\sin(2p\alpha)+p\sin2\alpha].
 \end{aligned}
 \end{equation}
+}
 % The author-confirmed signs in D_1 are preserved. Their provenance is
 % recorded in EDITORIAL_LOG.md rather than in the clean manuscript.
 The exponent $\lambda_i$ for a configuration with a zone in
