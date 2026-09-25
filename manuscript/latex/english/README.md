@@ -8,8 +8,8 @@ synchronized with the final-swept Ukrainian source merged in PR #7 on
 September 25, 2026 (merge commit `f9ee95ffccbdb3`).
 
 The Ukrainian source is preserved. This directory contains the English
-working version, assembled in batches. The complete English manuscript
-has not yet been assembled.
+manuscript assembled from the completed translation batches. The integrated
+publication-order source is `english/main.tex`.
 
 ## Batch 1
 
@@ -168,6 +168,38 @@ Static reading-order checks completed before the build:
 - stationary-crack and competing-mechanism framing is preserved from the
   final-swept Ukrainian source.
 
-The full English manuscript is now assembled. The remaining work after this
-batch is a final publication-level language/style sweep of the complete
-English PDF, followed by any journal-specific formatting.
+The full English manuscript is assembled in `english/main.tex`.
+
+## Final English language/style sweep — September 25, 2026
+
+A publication-level copy-edit was completed on the integrated English
+manuscript after Batch 5. The sweep was prose-only: equations, labels,
+citation keys, numerical values, and scientific claims were preserved.
+
+Main editorial outcomes:
+
+- title polished to
+  `Analytical Model for Branching Initiation from the Corner of a V-Shaped Interfacial Shear Crack`;
+- Abstract tightened for journal readability without introducing
+  abbreviations or new claims;
+- Introduction recast to remove literal translation patterns while
+  preserving its eight-paragraph logic and citation order;
+- Section 2 terminology streamlined for the stationary-crack,
+  process-zone, and superposition descriptions;
+- Section 3 wording polished around the Mellin transform,
+  Wiener--Hopf continuation, zone-length scaling, and local criteria;
+- Section 4 retitled `Numerical results and discussion` and stripped of
+  internal audit language and color-dependent curve references;
+- Conclusions and Appendix A polished for concision, compound terminology,
+  and equation-adjacent prose;
+- `resistance to separation`, `zone-related energy parameter`,
+  `physical admissibility`, and the Mode-I/Mode-II terminology were
+  standardized throughout;
+- US spelling retained throughout.
+
+Post-sweep structural checks confirm 34/34 structural labels and 37/37
+citation uses in exact source order, with exact displayed-math parity in
+all translated sections and Appendix A.
+
+Remaining work is limited to journal-specific formatting or any
+author-requested stylistic preference changes.
