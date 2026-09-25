@@ -130,3 +130,17 @@ style already established in the English sweep.
 
 No governing equation or numerical checkpoint was changed during this
 synchronization.
+
+
+## Build verification
+
+GitHub Actions **Manuscript build #114** completed successfully on English
+synchronization head `ee3dc703c8e94e071e7cef21261641c86407b021`.
+
+The workflow passed:
+- Ukrainian manuscript compilation;
+- Ukrainian bibliography and cross-reference checks;
+- complete English manuscript compilation;
+- English bibliography and cross-reference checks;
+- LaTeX warning checks;
+- compiled-manuscript artifact upload.
