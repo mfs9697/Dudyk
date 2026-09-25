@@ -1,0 +1,31 @@
+% Compile from manuscript/latex with XeLaTeX, then BibTeX and XeLaTeX twice.
+\documentclass[11pt,a4paper]{article}
+\input{english/preamble}
+\hypersetup{pdftitle={Dudyk manuscript: English translation, batches 1--4},pdfauthor={}}
+\begin{document}
+\noindent{\large\bfseries English translation: Batches 1--4}\par
+\smallskip
+\noindent Problem formulation, analytical derivation, numerical analysis and discussion,
+Conclusions, and Appendix A\par
+\smallskip
+\noindent{\small Source: final-swept Ukrainian manuscript on \texttt{main},
+commit \texttt{f9ee95ffccbdb3}. September 25, 2026.\\
+The analytical queries AQ-AN-01 and AQ-AN-02 and the former working author
+queries are closed in the source manuscript. Figures 2--4 use the regenerated
+publication assets and corrected September-25 formulas.}
+\medskip
+\setcounter{section}{1}
+\input{english/sections/02_problem_statement}
+\clearpage
+\input{english/sections/03_process_zone_parameters}
+\clearpage
+\input{english/sections/04_numerical_results}
+\clearpage
+\input{english/sections/05_conclusions}
+\clearpage
+\appendix
+\input{english/appendices/appendix_a}
+\clearpage
+\bibliographystyle{unsrtnat}
+\bibliography{bibliography/references}
+\end{document}
