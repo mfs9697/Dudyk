@@ -36,11 +36,10 @@ family. Corrected plots are loaded directly from the repository-level
 
 ## Working mode
 
-Ordinary work notes are currently suppressed by the `\worknote` macro in
-`preamble.tex`. Author-query boxes are controlled separately by
-`\showauthorqueriestrue` / `\showauthorqueriesfalse`. Keep them visible
-while questions remain unresolved; switch to `\showauthorqueriesfalse`
-for a clean publication build only after the author-query ledger is closed.
+Ordinary work notes are suppressed by the `\worknote` macro in
+`preamble.tex`. The author-query ledger is now closed, and the integrated
+manuscript defaults to `\showauthorqueriesfalse` for a clean publication
+build. Historical query dispositions are retained under `docs/`.
 
 The integrated Introduction uses stable BibTeX keys from
 `bibliography/references.bib`. New references should be added only after
