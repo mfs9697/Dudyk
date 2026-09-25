@@ -50,34 +50,34 @@ jobs:
           fi
           echo 'No unresolved citation/reference warnings in Ukrainian manuscript.'
 
-      - name: Compile English Batch 3
+      - name: Compile English Batch 4
         working-directory: manuscript/latex
         run: |
           set -o pipefail
-          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch03 english/batch03.tex | tee english-batch03-xelatex-1.log
-          bibtex Dudyk_English_Batch03 | tee english-batch03-bibtex.log
-          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch03 english/batch03.tex | tee english-batch03-xelatex-2.log
-          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch03 english/batch03.tex | tee english-batch03-xelatex-3.log
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch04 english/batch04.tex | tee english-batch04-xelatex-1.log
+          bibtex Dudyk_English_Batch04 | tee english-batch04-bibtex.log
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch04 english/batch04.tex | tee english-batch04-xelatex-2.log
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch04 english/batch04.tex | tee english-batch04-xelatex-3.log
 
       - name: Check English bibliography and cross-references
         working-directory: manuscript/latex
         run: |
-          if grep -E "Citation .* undefined|There were undefined citations|There were undefined references|I didn't find a database entry|Warning--I didn't find a database entry" Dudyk_English_Batch03.log english-batch03-bibtex.log; then
-            echo 'Unresolved citation/reference warning detected in English Batch 3.'
+          if grep -E "Citation .* undefined|There were undefined citations|There were undefined references|I didn't find a database entry|Warning--I didn't find a database entry" Dudyk_English_Batch04.log english-batch04-bibtex.log; then
+            echo 'Unresolved citation/reference warning detected in English Batch 4.'
             exit 1
           fi
-          echo 'No unresolved citation/reference warnings in English Batch 3.'
+          echo 'No unresolved citation/reference warnings in English Batch 4.'
 
       - name: Check LaTeX warnings
         working-directory: manuscript/latex
         run: |
-          if grep -E 'Missing character:|Overfull \\hbox|Overfull \\vbox|Font Warning|Package .* Warning' main.log Dudyk_English_Batch03.log; then
+          if grep -E 'Missing character:|Overfull \\hbox|Overfull \\vbox|Font Warning|Package .* Warning' main.log Dudyk_English_Batch04.log; then
             echo 'Fatal LaTeX layout/font/package warning(s) detected.'
             exit 1
           fi
           echo 'No fatal LaTeX layout/font/package warnings detected.'
           echo 'Non-fatal underfull-box report:'
-          grep -E 'Underfull \\hbox|Underfull \\vbox' main.log Dudyk_English_Batch03.log || true
+          grep -E 'Underfull \\hbox|Underfull \\vbox' main.log Dudyk_English_Batch04.log || true
 
       - name: Upload compiled manuscripts
         if: always()
@@ -88,7 +88,7 @@ jobs:
             manuscript/latex/main.pdf
             manuscript/latex/main.log
             manuscript/latex/main-bibtex.log
-            manuscript/latex/Dudyk_English_Batch03.pdf
-            manuscript/latex/Dudyk_English_Batch03.log
-            manuscript/latex/english-batch03-bibtex.log
+            manuscript/latex/Dudyk_English_Batch04.pdf
+            manuscript/latex/Dudyk_English_Batch04.log
+            manuscript/latex/english-batch04-bibtex.log
           if-no-files-found: warn
