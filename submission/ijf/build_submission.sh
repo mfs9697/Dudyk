@@ -51,6 +51,18 @@ cp "$OUT/main.pdf" "$DIST/IJF_Manuscript_Submission.pdf"
 cp "$ROOT/submission/ijf/cover_letter.md" "$DIST/cover_letter.md"
 cp "$ROOT/submission/ijf/submission_checklist.md" "$DIST/submission_checklist.md"
 
+mkdir -p "$ROOT/submission/ijf/cover-build"
+cp "$ROOT/submission/ijf/cover_letter.tex" "$ROOT/submission/ijf/cover-build/cover_letter.tex"
+(
+  cd "$ROOT/submission/ijf/cover-build"
+  pdflatex -interaction=nonstopmode -halt-on-error cover_letter.tex
+)
+cp "$ROOT/submission/ijf/cover-build/cover_letter.pdf" "$DIST/IJF_Cover_Letter.pdf"
+
+if [ -f "$ROOT/submission/ijf/package/FINAL_CONFIRMATIONS.txt" ]; then
+  cp "$ROOT/submission/ijf/package/FINAL_CONFIRMATIONS.txt" "$DIST/FINAL_CONFIRMATIONS.txt"
+fi
+
 (
   cd "$OUT"
   zip -9 "$DIST/IJF_Submission_Source.zip" \
