@@ -74,11 +74,30 @@ Completed in the first correction batch:
 - Figure-2 and Figure-3 energy-axis limits prepared for corrected values;
 - AQ-AN-02 marked resolved.
 
-Pending:
+Completed after regeneration:
 
-- run MATLAB regression suite;
-- regenerate Figure-2 and Figure-3 CSV/PDF/PNG files;
-- recompute extrema and all manuscript checkpoint values;
-- revise Ukrainian and English numerical discussion;
-- update reproducibility/equation-inventory documentation;
-- perform final scientific and editorial sweep.
+- regenerated Figure-2 and Figure-3 CSV/PDF/PNG files;
+- recomputed the Figure-2 endpoint checkpoints;
+- recomputed the Figure-3 extrema;
+- revised the Ukrainian and English numerical discussion;
+- synchronized the reproducibility and equation-inventory documentation.
+
+Updated Figure-2 endpoints at `|sigma'|=0.5`:
+
+| alpha | material | d_i/l | delta_i' | J_i' |
+| ---: | ---: | ---: | ---: | ---: |
+| 10 deg | 2 | 0.0313248064 | 0.0997342375 | 0.0488830979 |
+| 45 deg | 1 | 0.1474343617 | 0.1457870324 | 0.0836203872 |
+| 105 deg | 2 | 0.0370357093 | 0.0131058131 | 0.0088257892 |
+| 135 deg | 1 | 0.0510105194 | 0.0552827687 | 0.0299416810 |
+
+On the principal negative-load material-1 branch of Figure 3:
+
+- `max(d_1/l)=0.1779333242` at 35 deg;
+- `max(delta_1')=0.2077052861` at 32 deg;
+- `max(J_1')=0.1139143967` at 33 deg.
+
+Remaining before merge:
+
+- final scientific/editorial sweep;
+- confirm the manuscript builds cleanly with the regenerated figures.
