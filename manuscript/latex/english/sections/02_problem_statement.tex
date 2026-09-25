@@ -66,7 +66,7 @@ tips. Branching at the corner and further interfacial propagation from the
 outer tips are competing mechanisms; the latter is not modeled here.
 
 The interfacial crack retains a power-law stress singularity at the
-corner~\cite{NazarenkoKipnis2022Stress}. This field can support a process zone in one of the materials that can
+corner~\cite{NazarenkoKipnis2022Stress}. This field can support a process zone in one of the materials that may
 develop into an opening-mode (Mode~I) branch. Under the assumed geometric and loading symmetry, the bisector of the sector
 occupied by that material is a natural direction for the zone. Along this
 direction, the local Mode~II (in-plane shear) component at the zone tip
@@ -157,8 +157,9 @@ traction only over $0<r<d_i$ along the active direction
 $\theta=\beta_i$.
 
 At intermediate distances $d_i\ll r\ll l$, the solution must match the
-asymptotic field of the interfacial crack without a process
-zone~\cite{NazarenkoKipnis2022Stress}. In the inner problem, this matching condition takes the form
+asymptotic field of the interfacial crack in the absence of a process
+zone~\cite{NazarenkoKipnis2022Stress}. In the inner problem, this matching
+condition takes the form
 \begin{equation}
 \label{eq:matched-far-field}
   \sigma_\theta(r,\beta_i)
@@ -199,7 +200,7 @@ while on the process-zone segment $0<r<d_i$,
 The field without a process zone satisfies the bisector symmetry condition
 $u_\theta=0$, so subtracting it does not alter the displacement-gradient
 transform used below. The functional problem is therefore formulated for the correction field,
-with the known power-law term included in its prescribed part.
+with the known power-law term included in the prescribed part.
 
 A process zone can form in material~$i$ only if the normal stress on its
 bisector is tensile. Equation~\eqref{eq:matched-far-field} therefore gives
@@ -231,8 +232,8 @@ homogeneous material:
 \end{equation}
 Here, $k_i$ is the local Mode~I stress intensity factor at the process-zone
 tip; $r\to d_i+0$ and $r\to d_i-0$ denote approach from outside and
-inside the zone, respectively. The boundary-value problem is
-closed by imposing the stress-regularity condition standard for this
+inside the zone, respectively. The boundary-value problem is closed by
+imposing the standard stress-regularity condition for this
 model~\cite{KaminskyDudykPolishchuk2024},
 \begin{equation*}
   k_i=0.
