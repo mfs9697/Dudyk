@@ -142,13 +142,15 @@ and keep the `d_i/l\approx0.18` small-scale limitation explicit.
 The Abstract and Introduction are translated in
 `sections/00_abstract.tex` and `sections/01_introduction.tex`.
 English title/authors/affiliations are stored in `metadata.tex`, and
-`english/main.tex` now assembles the complete English manuscript in
-publication reading order.
+`english/main.tex` contains the complete English manuscript in publication
+reading order. For local IDE compilation, use the root-level master
+`manuscript/latex/english_main.tex`; `english/main.tex` also points to that
+master through a TeXstudio root directive.
 
 Compile from `manuscript/latex`:
 
 ```sh
-xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex
+xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english_main.tex
 bibtex Dudyk_English_Manuscript
 xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex
 xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex
@@ -168,7 +170,9 @@ Static reading-order checks completed before the build:
 - stationary-crack and competing-mechanism framing is preserved from the
   final-swept Ukrainian source.
 
-The full English manuscript is assembled in `english/main.tex`.
+The full English manuscript is assembled in `english/main.tex`; compile
+`english_main.tex` from `manuscript/latex` for the same path resolution used
+by CI.
 
 ## Final English language/style sweep — September 25, 2026
 
