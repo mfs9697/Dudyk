@@ -32,3 +32,9 @@ audit.
     as coincident. In the regenerated one-degree sweep of the principal
     negative-load material-1 branch they occur at 35, 32, and 33 degrees,
     respectively.
+11. Preserve the superposition step in the Wiener--Hopf derivation:
+    `Phi_i^+` is the Mellin transform of the correction stress
+    `sigma_hat_i = sigma_theta - C Q_i r^lambda`, not of the total stress.
+    The initial common Mellin strip is
+    `max(-1-lambda,-1-lambda_i) < Re p < 0`; the factorization contour is
+    reached by analytic/meromorphic continuation of the functional relation.
