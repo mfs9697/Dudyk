@@ -101,7 +101,7 @@ E1/E2 = 0.5, nu1 = nu2 = 0.3.
 It evaluates the Appendix-A coefficients, the base and material-1
 Wiener-Hopf plus factors, and normalized Eqs. (8)-(10). At
 `sigma'=-0.5`, the regression checkpoints are approximately
-`d1/l=0.14743436`, `delta1'=0.14544227`, and `J1'=0.03716462`.
+`d1/l=0.14743436`, `delta1'=0.14578703`, and `J1'=0.08362039`.
 The exponent controlling the load power law in Eqs. (8)-(10) is the common
 shear-cracked-corner exponent `lambda=-0.61319723`; it is not the Figure-4
 root `lambda1`.
@@ -123,12 +123,16 @@ for direct comparison; both plots are exported as PDF and PNG. All four
 calculations have been executed independently in MATLAB R2023a.
 The authors subsequently traced the original 10-degree mismatch to an
 incorrect material index in a Wiener-Hopf plus factor and confirmed the
-material-direction convention and the two-sign correction of `D1`. Their
-corrected Mathcad calculation gives `d2/l=0.0313248086`,
-`delta2'=0.0677727100`, and `J2'=0.0217258199`, agreeing with the MATLAB
-values to better than `7.3e-8` relatively. Corrected replacement plots for
-Figures 2 and 3 have now been regenerated; the revised manuscript must replace
-the historical graphics. See `docs/AUTHOR_VALIDATION_2026-08-18.md`.
+material-direction convention and the two-sign correction of `D1`. On
+25 September 2026, M. V. Dudyk also confirmed the later analytical audit:
+the opening formula must use `G_i^+(-1)`, and the coefficients in `W_i`
+and `J_i` must be `8/pi` and `16/pi`. The earlier Mathcad values
+`delta2'=0.0677727100` and `J2'=0.0217258199` are therefore historical
+pre-correction values; only its `d2/l=0.0313248086` remains directly
+comparable. The regenerated 10-degree publication endpoint is
+`d2/l=0.0313248064`, `delta2'=0.0997342375`, and
+`J2'=0.0488830979`. See
+`docs/AUTHOR_CONFIRMED_FORMULA_CORRECTIONS_2026-09-25.md`.
 
 `generate_figure3` evaluates the 178 physically admissible integer-angle
 rows from 1 through 179 degrees, excluding the degenerate 90-degree geometry.
@@ -147,12 +151,15 @@ T(alpha) = 10*ceil(max(60, 12/min(alpha,pi-alpha))/10),
 ```
 
 with `alpha` in radians. This gives `T=690` at 1 and 179 degrees.
-The Figure-3 regression suite reproduces the author's 12-row Mathcad table
-separately with its original `T=40`, then verifies the converged sweep by
-extending the adaptive contour. The maximum plus-factor change was
+The Figure-3 regression suite retains the author's 12-row Mathcad table as
+historical regression for the pre-25-September opening/energy formulas:
+corrected outputs are reverse-mapped before comparison at the original
+`T=40`. The converged current sweep is then verified by extending the
+adaptive contour. The maximum plus-factor change was
 `8.69e-13`, and the maximum terminal kernel log-deviation was `1.40e-8`.
-At one degree the converged values are `d2/l=0.000334567324703`,
-`delta2'=0.000276833276375`, and `J2'=0.000235061074026`.
+At one degree the corrected converged values are
+`d2/l=0.000334567324703`, `delta2'=0.00105677018604`, and
+`J2'=0.000528887416559`.
 
 `figure4_recalculated` is the complete mathematical root map.
 `figure4_admissible_segments` overlays the original physical segments selected
