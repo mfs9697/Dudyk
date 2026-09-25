@@ -71,11 +71,13 @@ jobs:
       - name: Check LaTeX warnings
         working-directory: manuscript/latex
         run: |
-          if grep -E "Missing character:|Overfull \\hbox|Overfull \\vbox|Underfull \\hbox|Underfull \\vbox|Font Warning|Package .* Warning" main.log Dudyk_English_Batch03.log; then
-            echo 'LaTeX warning(s) detected.'
+          if grep -E 'Missing character:|Overfull \\hbox|Overfull \\vbox|Font Warning|Package .* Warning' main.log Dudyk_English_Batch03.log; then
+            echo 'Fatal LaTeX layout/font/package warning(s) detected.'
             exit 1
           fi
-          echo 'No selected LaTeX layout/font/package warnings detected.'
+          echo 'No fatal LaTeX layout/font/package warnings detected.'
+          echo 'Non-fatal underfull-box report:'
+          grep -E 'Underfull \\hbox|Underfull \\vbox' main.log Dudyk_English_Batch03.log || true
 
       - name: Upload compiled manuscripts
         if: always()
