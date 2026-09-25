@@ -270,3 +270,63 @@ critical-load ranking from a single prescribed-load sweep.
 AQ-AN-02 is closed. The August Mathcad opening and energy values are retained
 only as historical regression data for the superseded formulas; the
 zone-length values remain valid.
+
+
+## AQ-AN-01 resolution — September 25, 2026
+
+The apparent Mellin-transform inconsistency was traced to an omitted
+superposition step rather than to the Wiener--Hopf equation itself.
+
+The 2024 predecessor paper explicitly decomposes the full solution into the
+known no-process-zone field and a correction problem whose stresses decay as
+`o(r^-1)` at infinity. The same construction is present in the earlier
+2006 Wiener--Hopf process-zone formulation. Restoring that step in the current
+manuscript gives
+
+[
+\widehat{\sigma}_i(r)
+=\sigma_\theta(r,\beta_i)-CQ_i r^\lambda,
+]
+
+with
+
+[
+\widehat{\sigma}_i(r)=o(r^{-1})
+quad (r\to\infty),
+]
+
+and, on the active zone,
+
+[
+\widehat{\sigma}_i(r)
+=\sigma_i-CQ_i r^\lambda.
+]
+
+Accordingly, `Phi_i^+` is now defined as the Mellin transform of the
+correction stress rather than the total stress. The transform of the active
+segment is exactly
+
+[
+\frac{\sigma_i}{p+1}
+-\frac{CQ_i d_i^\lambda}{p+\lambda+1},
+]
+
+so the existing functional equation and its Wiener--Hopf solution are
+unchanged.
+
+The initial convergence domain is now stated as
+
+[
+\max\{-1-\lambda,-1-\lambda_i\}
+<\operatorname{Re}p<0.
+]
+
+The manuscript no longer claims that the defining integral for `Phi_i^+`
+converges in a strip crossing the imaginary axis. Instead, the functional
+relation established in the overlap strip is continued analytically or
+meromorphically to the factorization contour `Re p=0`.
+
+This resolution changes no numerical formula or result. See
+`docs/AQ_AN_01_RESOLUTION_2026-09-25.md`.
+
+AQ-AN-01 is closed.
