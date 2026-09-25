@@ -137,7 +137,37 @@ They retain `J_i` as a zone-related energy parameter, present
 local criteria with independently specified critical material parameters,
 and keep the `d_i/l\approx0.18` small-scale limitation explicit.
 
-Next translation batch: Abstract and Introduction. After those are translated,
-assemble the complete English manuscript and perform a final reading-order
-audit of first use, terminology, abbreviations, citations, cross-references,
-and notation.
+## Batch 5 — Abstract, Introduction, and complete English assembly
+
+The Abstract and Introduction are translated in
+`sections/00_abstract.tex` and `sections/01_introduction.tex`.
+English title/authors/affiliations are stored in `metadata.tex`, and
+`english/main.tex` now assembles the complete English manuscript in
+publication reading order.
+
+Compile from `manuscript/latex`:
+
+```sh
+xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex
+bibtex Dudyk_English_Manuscript
+xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex
+xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex
+```
+
+Static reading-order checks completed before the build:
+
+- Introduction citation sequence: 23/23 source citation keys, exact order;
+- complete manuscript citation sequence: 37/37, exact order;
+- structural labels: 34/34, exact set, no duplicates;
+- Abstract introduces no abbreviations or undefined symbols;
+- Mode II is identified as in-plane shear at first use in the main text;
+- branch length `l` is defined before the small-scale zone length `d_i`;
+- `d_i`, `delta_i`, `W_i`, and `J_i=dW_i/dd_i` are introduced
+  together before their detailed derivation;
+- no SIF, PZ, CZM, or other unnecessary shorthand is introduced;
+- stationary-crack and competing-mechanism framing is preserved from the
+  final-swept Ukrainian source.
+
+The full English manuscript is now assembled. The remaining work after this
+batch is a final publication-level language/style sweep of the complete
+English PDF, followed by any journal-specific formatting.
