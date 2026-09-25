@@ -115,15 +115,17 @@ segments with the representative normalized loads `sigma'=+0.5` and
 \]
 
 its sign is the sign of `C` and therefore selects the admissible branch. Its
-magnitude controls the process-zone length, opening, and energy-release rate
-in the later calculations, but it does not change any of the four
+magnitude controls the process-zone length, opening, and zone-related energy
+parameter in the later calculations, but it does not change any of the four
 characteristic exponents in Figure 4. The remaining portions of `lambda1` and
 `lambda2` are shown as gray dotted complete mathematical branches and are
 identified as such in the legend.
 
-Linear interpolation of the one-degree `g2` sweep gives
-`alpha1=12.9141 degrees` and `alpha2=107.0842 degrees`, matching the rounded
-Table-1 values 12.9 and 107.1 degrees. Because the `Q1/Q2` sign calculation
+Direct solution of the continuous admissibility-transition conditions gives
+`alpha1=12.9202 degrees` and `alpha2=107.0897 degrees` for the baseline,
+matching the current Table-1 calculation. The earlier one-degree interpolation
+values `12.9141` and `107.0842` are retained only as historical
+grid-interpolation checks. Because the `Q1/Q2` sign calculation
 has not yet been independently implemented for arbitrary materials, the
 MATLAB helper rejects material pairs other than this verified baseline.
 
@@ -162,8 +164,10 @@ For the Figure-2 process-zone calculations:
 
 For the complete Figure-3 sweep:
 
-- the author's 12 small-angle Mathcad rows are reproduced separately with
-  their original contour truncation `T=40`;
+- the author's 12 small-angle Mathcad rows, which use the pre-September-25
+  opening and energy formulas, are retained as historical regression data and
+  are reproduced by reverse-mapping the corrected outputs at their original
+  contour truncation `T=40`;
 - the publication sweep uses the angle-adaptive contour defined below;
 - all four plus factors on the eight boundary-check angles change by at most
   `8.69e-13` when the adaptive tail exponent is increased from 24 to 30;
@@ -180,18 +184,19 @@ endpoint checkpoints are:
 
 | `alpha` | Material | `sigma'` | `lambda` | `d_i/l` | `delta_i'` | `J_i'` |
 | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| 10 deg | 2 | +0.5 | -0.8716344816 | 0.0313248064 | 0.0677727059 | 0.0217258213 |
-| 45 deg | 1 | -0.5 | -0.6131972266 | 0.1474343617 | 0.1454422653 | 0.0371646165 |
-| 105 deg | 2 | -0.5 | -0.2615246972 | 0.0370357093 | 0.0134427769 | 0.0039225730 |
-| 135 deg | 1 | +0.5 | -0.5467577000 | 0.0510105194 | 0.0578658843 | 0.0133074138 |
+| 10 deg | 2 | +0.5 | -0.8716344816 | 0.0313248064 | 0.0997342375 | 0.0488830979 |
+| 45 deg | 1 | -0.5 | -0.6131972266 | 0.1474343617 | 0.1457870324 | 0.0836203872 |
+| 105 deg | 2 | -0.5 | -0.2615246972 | 0.0370357093 | 0.0131058131 | 0.0088257892 |
+| 135 deg | 1 | +0.5 | -0.5467577000 | 0.0510105194 | 0.0552827687 | 0.0299416810 |
 
-All four rows were generated independently in MATLAB R2023a and the complete
-process-zone regression suite passed. The 105- and 135-degree endpoints fall
-on the corresponding original curves to the precision readable from the
-published plot. The corrected author Mathcad worksheet supplies a second,
-independent implementation of the 10-degree endpoint.
+All four rows are regenerated from the author-confirmed September 25
+analytical formulas. The process-zone length values are unchanged, whereas
+the opening and energy columns replace the superseded values used before that
+confirmation. The August Mathcad worksheet remains an independent check of
+the zone length and of the older implementation path, but its opening and
+energy values are no longer current publication benchmarks.
 
-### 10-degree discrepancy: author-confirmed resolution
+### 10-degree history and September-25 formula correction
 
 The original green dashed curve at `sigma'=+0.5` is visually approximately
 `d_2/l=0.030`, `delta_2'=0.045`, and `J_2'=0.010`. Direct, internally
@@ -201,25 +206,33 @@ discrepancy rather than reproducing it by curve fitting.
 
 On 18 August 2026 the authors confirmed that the original calculation
 contained an incorrect material index in a Wiener-Hopf plus factor in the
-material-2 opening calculation. They also confirmed
-`beta_1=pi, beta_2=0` and supplied a corrected Mathcad worksheet in which
-the material-2 kernel and its plus factors are used consistently. At
-`alpha=10 degrees`, material 2, and `sigma'=+0.5`, the worksheet gives:
+material-2 opening calculation and supplied a corrected Mathcad worksheet.
+That worksheet still used the analytical opening and energy formulas then
+present in the manuscript. On September 25, M. V. Dudyk independently
+rechecked those formulas and confirmed the later audit corrections:
+`G_i^+(-1)` must be used in the opening, and the work/energy coefficients
+must be `8/pi` and `16/pi` rather than `32/(9 pi)` and `64/(9 pi)`.
 
-| Quantity | Author Mathcad | MATLAB (truncation 60) | Relative difference |
-| --- | ---: | ---: | ---: |
-| `d_2/l` | 0.031324808641 | 0.031324806384 | 7.22e-8 |
-| `delta_2'` | 0.067772709985 | 0.067772705874 | 6.07e-8 |
-| `J_2'` | 0.021725819934 | 0.021725821310 | 6.34e-8 |
+Thus the August Mathcad values
 
-The small differences are consistent with the Mathcad contour truncation
-`[-40,40]` and its evaluation of `G_2(0)` as `G_2(1e-5)`. The corrected
-calculation therefore independently validates the repository implementation.
-The old Figure-2 and small-angle Figure-3 curves are therefore historical
-outputs. Corrected replacement curves have now been regenerated in this
-repository. Because the old Figure-2 energy curve also differs from the
-corrected `J_2'` value, all three panels must be replaced in the revised
-manuscript.
+| Quantity | August Mathcad / superseded formula |
+| --- | ---: |
+| `d_2/l` | 0.031324808641 |
+| `delta_2'` | 0.067772709985 |
+| `J_2'` | 0.021725819934 |
+
+are retained only as historical regression data. The corrected publication
+calculation at the same 10-degree endpoint is
+
+| Quantity | Corrected MATLAB |
+| --- | ---: |
+| `d_2/l` | 0.031324806384 |
+| `delta_2'` | 0.099734237450 |
+| `J_2'` | 0.048883097948 |
+
+The zone length is unaffected by the September correction. The opening must
+be recomputed because the plus-factor argument changes, and the normalized
+energy parameter is increased by the exact factor `9/4`.
 
 ## Complete Figure-3 angle sweep
 
@@ -234,8 +247,8 @@ stored segments are:
 | 91-107 degrees | 2 | -0.5 | blue dashed |
 | 108-179 degrees | 1 | +0.5 | green solid |
 
-The continuous admissibility transitions remain
-`alpha1=12.9141 degrees` and `alpha2=107.0842 degrees`. Gaps between
+The continuous admissibility transitions are
+`alpha1=12.9202 degrees` and `alpha2=107.0897 degrees`. Gaps between
 segments at these transitions are physical case changes: both the material
 index and the representative load sign change. At 90 degrees the two adjacent
 negative-load branches are plotted to their analytic zero limit, not evaluated
@@ -257,15 +270,21 @@ This makes the slowest elementary hyperbolic correction reach at least the
 exponent 24. Thus `T=690` at 1 and 179 degrees, `T=70` at 10 and
 170 degrees, and `T=60` over the central angle range.
 
-The author Mathcad table is retained as an independent reproduction test with
-its original `T=40`; it is not used as the converged small-angle reference.
-At one degree:
+The author Mathcad table is retained with its original `T=40` only as a
+historical regression test for the superseded opening and energy formulas.
+The current test suite reverse-maps corrected MATLAB outputs before comparing
+them with that table. The converged publication row at one degree is now
 
-| Quantity | Author procedure, `T=40` | Converged MATLAB, `T=690` | Signed relative change |
-| --- | ---: | ---: | ---: |
-| `d_2/l` | 0.000335848036383 | 0.000334567324703 | -0.3813% |
-| `delta_2'` | 0.000277858135311 | 0.000276833276375 | -0.3688% |
-| `J_2'` | 0.000234391474616 | 0.000235061074026 | +0.2857% |
+| Quantity | Corrected converged MATLAB, `T=690` |
+| --- | ---: |
+| `d_2/l` | 0.000334567324703 |
+| `delta_2'` | 0.00105677018604 |
+| `J_2'` | 0.000528887416559 |
+
+For the zone length alone, the former fixed-`T=40` value
+`0.000335848036383` differs from the converged value by `-0.3813%`.
+The old opening and energy numbers are not compared directly with the current
+ones because they use analytically superseded formulas.
 
 Increasing the adaptive tail exponent from 24 to 30 changes all four plus
 factors by at most `8.69e-13` over the eight boundary-check angles. The
@@ -292,7 +311,9 @@ The author has confirmed that the printed `D1` contained the two sign errors
 identified by the material-swap audit and that the original calculation
 program used the corrected expression. The author has also confirmed the
 direction convention `beta_1=pi, beta_2=0` and supplied a corrected Mathcad
-worksheet for the process-zone parameters. The private correspondence,
+worksheet for the process-zone parameters. On September 25, 2026, M. V. Dudyk
+additionally confirmed the corrected opening factor `G_i^+(-1)` and the
+work/energy coefficients `8/pi` and `16/pi`. The private correspondence,
 edited manuscript, and Mathcad source are not committed to this public
 repository; only the non-confidential technical conclusions and numerical
 checkpoints are recorded here.

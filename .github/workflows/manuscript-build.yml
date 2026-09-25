@@ -6,6 +6,13 @@ on:
     branches: [main]
     paths:
       - 'manuscript/latex/**'
+      - 'figures/**'
+      - '.github/workflows/manuscript-build.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'manuscript/latex/**'
+      - 'figures/**'
       - '.github/workflows/manuscript-build.yml'
   workflow_dispatch:
 
@@ -25,25 +32,54 @@ jobs:
             texlive-bibtex-extra texlive-fonts-recommended \
             latexmk fonts-dejavu-core
 
-      - name: Compile manuscript
+      - name: Compile Ukrainian manuscript
         working-directory: manuscript/latex
         run: |
           set -o pipefail
-          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee xelatex-1.log
-          bibtex main | tee bibtex.log
-          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee xelatex-2.log
-          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee xelatex-3.log
+          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee main-xelatex-1.log
+          bibtex main | tee main-bibtex.log
+          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee main-xelatex-2.log
+          xelatex -interaction=nonstopmode -halt-on-error main.tex | tee main-xelatex-3.log
 
-      - name: Check bibliography and cross-references
+      - name: Check Ukrainian bibliography and cross-references
         working-directory: manuscript/latex
         run: |
-          if grep -E "Citation .* undefined|There were undefined citations|There were undefined references|I didn't find a database entry|Warning--I didn't find a database entry" main.log bibtex.log; then
-            echo 'Unresolved citation/reference warning detected.'
+          if grep -E "Citation .* undefined|There were undefined citations|There were undefined references|I didn't find a database entry|Warning--I didn't find a database entry" main.log main-bibtex.log; then
+            echo 'Unresolved citation/reference warning detected in Ukrainian manuscript.'
             exit 1
           fi
-          echo 'No unresolved citation/reference warnings detected.'
+          echo 'No unresolved citation/reference warnings in Ukrainian manuscript.'
 
-      - name: Upload compiled manuscript
+      - name: Compile English Batch 3
+        working-directory: manuscript/latex
+        run: |
+          set -o pipefail
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch03 english/batch03.tex | tee english-batch03-xelatex-1.log
+          bibtex Dudyk_English_Batch03 | tee english-batch03-bibtex.log
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch03 english/batch03.tex | tee english-batch03-xelatex-2.log
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch03 english/batch03.tex | tee english-batch03-xelatex-3.log
+
+      - name: Check English bibliography and cross-references
+        working-directory: manuscript/latex
+        run: |
+          if grep -E "Citation .* undefined|There were undefined citations|There were undefined references|I didn't find a database entry|Warning--I didn't find a database entry" Dudyk_English_Batch03.log english-batch03-bibtex.log; then
+            echo 'Unresolved citation/reference warning detected in English Batch 3.'
+            exit 1
+          fi
+          echo 'No unresolved citation/reference warnings in English Batch 3.'
+
+      - name: Check LaTeX warnings
+        working-directory: manuscript/latex
+        run: |
+          if grep -E 'Missing character:|Overfull \\hbox|Overfull \\vbox|Font Warning|Package .* Warning' main.log Dudyk_English_Batch03.log; then
+            echo 'Fatal LaTeX layout/font/package warning(s) detected.'
+            exit 1
+          fi
+          echo 'No fatal LaTeX layout/font/package warnings detected.'
+          echo 'Non-fatal underfull-box report:'
+          grep -E 'Underfull \\hbox|Underfull \\vbox' main.log Dudyk_English_Batch03.log || true
+
+      - name: Upload compiled manuscripts
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -51,5 +87,8 @@ jobs:
           path: |
             manuscript/latex/main.pdf
             manuscript/latex/main.log
-            manuscript/latex/bibtex.log
+            manuscript/latex/main-bibtex.log
+            manuscript/latex/Dudyk_English_Batch03.pdf
+            manuscript/latex/Dudyk_English_Batch03.log
+            manuscript/latex/english-batch03-bibtex.log
           if-no-files-found: warn

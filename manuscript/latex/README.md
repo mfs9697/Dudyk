@@ -36,10 +36,10 @@ family. Corrected plots are loaded directly from the repository-level
 
 ## Working mode
 
-Visible gray boxes are working notes controlled by `\workingdrafttrue` in
-`preamble.tex`. Change it to `\workingdraftfalse` only after every section is
-scientifically complete. Author-query boxes are controlled by the same working
-mode and disappear automatically in the clean version.
+Ordinary work notes are suppressed by the `\worknote` macro in
+`preamble.tex`. The author-query ledger is now closed, and the integrated
+manuscript defaults to `\showauthorqueriesfalse` for a clean publication
+build. Historical query dispositions are retained under `docs/`.
 
 The integrated Introduction uses stable BibTeX keys from
 `bibliography/references.bib`. New references should be added only after

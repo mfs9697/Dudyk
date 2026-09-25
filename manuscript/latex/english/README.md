@@ -35,8 +35,10 @@ when the complete English manuscript is assembled.
 
 The analytical derivation and Appendix A are translated in
 `sections/03_process_zone_parameters.tex` and `appendices/appendix_a.tex`.
-All 48 displayed source equations are preserved. Two analytical queries
-are documented in `AUTHOR_QUERIES_BATCH02.md`; these remain open.
+All 48 displayed source equations are preserved. The analytical queries are
+documented in `AUTHOR_QUERIES_BATCH02.md`. AQ-AN-01 was resolved on
+September 25, 2026 by restoring the superposition step used in the source
+methodology; AQ-AN-02 was independently confirmed by the author the same day.
 
 Compile from `manuscript/latex` using XeLaTeX:
 
@@ -56,7 +58,8 @@ The combined extract provides live cross-references to Appendix A.
 The reference to Figure 2 explicitly points to the source manuscript,
 since the numerical-results section is outside this extract. In the full
 manuscript the appendix defaults to the existing live figure reference.
-The wrapper explicitly identifies the unresolved analytical queries.
+The analytical-query file is retained as an audit record; both analytical
+queries are resolved in the current source.
 
 ## Batch 3 (combined with Batches 1 and 2)
 
@@ -78,11 +81,15 @@ Output: `Dudyk_English_Batch03.pdf`.
 
 The approved baseline transition values are
 \(\alpha_1=12.9202^\circ\) and \(\alpha_2=107.0897^\circ\), consistent
-with the current verification CSV. The four Figure-2 endpoint values quoted
-in the text were rechecked against `results/figure2_recalculated.csv`, and
-the Figure-3 maximum is \(d_i/l=0.1779333\) at the sampled
-\(\alpha=35^\circ\), consistent with the text's order-\(0.18\) validity
-warning.
+with the current verification CSV. Figures 2 and 3 were regenerated after
+the September-25 analytical corrections. At
+\(\alpha=45^\circ\), \(i=1\), \(\sigma'=-0.5\), the updated checkpoint is
+\(d_1/l=0.14743436\), \(\delta_1'=0.14578703\), and
+\(J_1'=0.08362039\). On the principal negative-load material-1 branch,
+the sampled maxima occur at different but nearby angles:
+\(d_1/l=0.1779333\) at \(35^\circ\),
+\(\delta_1'=0.2077053\) at \(32^\circ\), and
+\(J_1'=0.1139144\) at \(33^\circ\).
 
 The old numerical Author Query boxes are omitted from the clean English
 translation because their agreed substance is already incorporated in the
@@ -91,17 +98,16 @@ the deformation and energy characteristics are uniquely related for fixed
 geometry; Batch 3 expresses the corresponding criteria as equivalent when
 their critical material parameters are chosen consistently.
 
-The numerical implementation uses \(G_i^+(-1-\lambda)\) in the opening
-formula, matching the printed source and the approved numerical curves.
-This reproduction does not independently resolve AQ-AN-02; the analytical
-query remains open in `AUTHOR_QUERIES_BATCH02.md`.
-
-Repository packaging note: the source and `figures/README.md` refer to
-`figure4_admissible_segments.pdf`, and `matlab/generate_figure4.m` is
-configured to generate it, but the file is not currently committed under
-`figures/`. The English figure macro therefore shows a clear placeholder
-for Figure 4 until that generated asset is restored. Figures 2 and 3 are
-present.
+On September 25, 2026, M. V. Dudyk independently confirmed the analytical
+audit: the opening formula uses \(G_i^+(-1)\), and the coefficients in
+\(W_i\) and \(J_i\) are \(8/\pi\) and \(16/\pi\), respectively.
+The MATLAB implementation, regenerated Figures 2--3, and the English
+analytical and numerical sections now use these corrected relations.
+AQ-AN-01 and AQ-AN-02 are both closed. The Section-3 plus transform is now
+explicitly the Mellin transform of the correction stress obtained after
+subtracting the matched no-zone eigenfield; the functional equation itself is
+unchanged. Figure 4 has also been regenerated and committed, so all three
+publication figures used in Batch 3 are present.
 
 Next translation batch: Conclusions. The Abstract and Introduction should be
 translated after the body is stable, followed by a final first-use,

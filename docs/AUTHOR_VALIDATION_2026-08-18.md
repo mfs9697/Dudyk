@@ -1,5 +1,17 @@
 # Author validation record — 18 August 2026
 
+> **Update — 25 September 2026.** M. V. Dudyk subsequently rechecked the
+> analytical reduction and confirmed two further corrections: the opening
+> formula must contain \(G_i^+(-1)\), not \(G_i^+(-1-\lambda)\), and the
+> coefficients in \(W_i\) and \(J_i\) must be \(8/\pi\) and \(16/\pi\),
+> respectively, rather than \(32/(9\pi)\) and \(64/(9\pi)\). Consequently,
+> all \(\delta_i'\) and \(J_i'\) values recorded below are historical
+> pre-25-September regression values, not current publication results.
+> The process-zone length \(d_i/l\) is unaffected. Current regenerated
+> values are documented in `docs/AUTHOR_CONFIRMED_FORMULA_CORRECTIONS_2026-09-25.md`
+> and `docs/REPRODUCIBILITY.md`.
+
+
 ## Purpose
 
 This note records the non-confidential technical conclusions obtained after
@@ -53,7 +65,7 @@ implementation details account for the observed differences.
 
 ## Subsequent small-angle convergence audit
 
-The 10-degree comparison validates the corrected equations and material index,
+The 10-degree comparison validated the then-current implementation and corrected material index,
 but the full Figure-3 sweep revealed that the fixed Mathcad truncation
 \(T=40\) is not converged at the smallest angles. Direct evaluation could not
 initially extend beyond approximately \(T=80\) because numerator and
@@ -79,8 +91,9 @@ adaptive values.
 
 ## Consequences
 
-- The repository's consistent 10-degree calculation is independently
-  validated.
+- The August comparison independently validates the corrected material index
+  and the then-current numerical pathway; its opening and energy values are
+  historical after the September-25 analytical correction.
 - The previously plotted 10-degree Figure-2 curve is obsolete.
 - The small-angle material-2 branch and the complete admissible Figure 3
   have now been regenerated with contour-convergence checks.

@@ -43,6 +43,19 @@ the boundaries of the angular intervals of physical admissibility.
 
 \input{english/tables/table1_transition_angles.tex}
 
+Cases with $E_1/E_2>1$ are not independent. They are recovered by
+interchanging the materials together with
+\begin{equation*}
+  (E_1,\nu_1)\leftrightarrow(E_2,\nu_2),
+  \qquad
+  \alpha\leftrightarrow\pi-\alpha,
+  \qquad
+  1\leftrightarrow2.
+\end{equation*}
+For $\nu_1=\nu_2$, this includes the replacement
+$E_1/E_2\leftrightarrow E_2/E_1$, so Table~\ref{tab:g2-transition-angles}
+need only list $E_1/E_2<1$.
+
 \subsection{Dependence on normalized loading}
 \label{subsec:figure2}
 
@@ -72,21 +85,23 @@ three parameters at $|\sigma'|=0.5$ occur for
 $\alpha=45^\circ$, $C<0$; specifically,
 \begin{equation*}
   \frac{d_1}{l}=0.14743436,\qquad
-  \delta_1'=0.14544227,\qquad
-  J_1'=0.03716462.
+  \delta_1'=0.14578703,\qquad
+  J_1'=0.08362039.
 \end{equation*}
 This result is also relevant to the small-scale assumption: increasing
-the load simultaneously increases the branching-driving measures and
-moves the model closer to the limit of its asymptotic applicability.
+the load simultaneously increases the local deformation and energy
+parameters and moves the model closer to the limit of its asymptotic
+applicability.
 
 For a fixed configuration, the opening $\delta_i$ and the zone-related
 energy parameter $J_i$ are both uniquely linked to the equilibrium zone
-length $d_i$. Consequently, either quantity may be used as the basis of
-a deformation or energy criterion for branching initiation, provided
-that the corresponding critical material parameters are specified
-consistently. The present curves therefore describe two equivalent
-representations of the same one-parameter family of local equilibrium
-states rather than two independent evolution laws.
+length $d_i$. Consequently, the deformation criterion
+$\delta_i=\delta_{i\mathrm{c}}$ and the energy criterion
+$J_i=J_{i\mathrm{c}}$ provide two representations of the same
+one-parameter family of local equilibrium states. They are equivalent
+only when the independently specified critical material parameters
+$\delta_{i\mathrm{c}}$ and $J_{i\mathrm{c}}$ are chosen consistently;
+the present curves are not two independent evolution laws.
 
 \subsection{Dependence on the interface half-angle}
 \label{subsec:figure3}
@@ -105,15 +120,27 @@ of material and loading sign are shown; $\alpha=90^\circ$ is an
 analytical limit.}%
 {fig:angle-dependence}
 
-Within each principal admissible interval, the angular dependence has a
-pronounced maximum. Because $\delta_i'$ and $J_i'$ are proportional to
-$d_i/l$ at fixed $\alpha$, the maxima of all three parameters are
-coincident. Physically, the broken-interface geometry affects not the
-material resistance threshold $J_{i\mathrm{c}}$ itself, but the value of
-the zone-related energetic driving measure attained at a prescribed
-external load. Hence, for a fixed $J_{i\mathrm{c}}$, angles near a
-maximum correspond to less favorable geometrical configurations and a
-lower critical applied load.
+On the two broad admissible material-1 branches, the angular dependencies
+have pronounced interior maxima, whereas on the short material-2 branches
+the largest values occur near the admissibility boundaries. After the
+analytical corrections, the maxima of $d_i/l$, $\delta_i'$, and $J_i'$
+remain close but do not occur at exactly the same angle. For the blue
+material-1 branch with $C<0$, the one-degree sweep gives
+\begin{equation*}
+\begin{aligned}
+  \max(d_1/l)&=0.17793332 &&\text{at }\alpha=35^\circ,\\
+  \max\delta_1'&=0.20770529 &&\text{at }\alpha=32^\circ,\\
+  \max J_1'&=0.11391440 &&\text{at }\alpha=33^\circ.
+\end{aligned}
+\end{equation*}
+Their proximity is consistent with the fact that, at each fixed $\alpha$,
+$\delta_i'$ and $J_i'$ are proportional to $d_i/l$, while the
+proportionality coefficients themselves depend on angle. Thus,
+Figure~\ref{fig:angle-dependence} quantifies how geometry changes the
+deformation and energetic measures attained at a prescribed load. Converting
+these curves into an angular dependence of the critical applied load requires
+specifying the corresponding critical material parameter and solving the
+criterion separately for each $\alpha$.
 
 The maximum of the blue branch in
 Figure~\ref{fig:angle-dependence} corresponds to $d_i/l$ of order

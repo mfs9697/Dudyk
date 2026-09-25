@@ -1,41 +1,79 @@
 # Analytical queries identified during translation
 
-These checks compare the approved equations with one another. The translation
-retains the source formulas. Resolve these points before treating the
-English derivation as publication-ready.
+These checks record analytical issues identified during translation.
+Both queries were resolved on September 25, 2026. The current English
+derivation contains the corrected formulas and the restored superposition
+step; this file is retained as an audit record.
 
-## AQ-AN-01: stress transform and its analyticity strip
+## AQ-AN-01: stress transform and its analyticity strip — RESOLVED September 25, 2026
 
-Location: Section 3.1, definition of Phi_i^+ and eq:wiener-hopf-functional;
-Section 2, eq:matched-far-field.
+Location: Section 2, eq:matched-far-field; Section 3.1, definition of
+`Phi_i^+` and eq:wiener-hopf-functional.
 
-Write A = C Q_i d_i^lambda. The matching condition gives
-sigma_theta(rho d_i,beta_i) = A rho^lambda + o(rho^-1).
-The displayed raw integral from 1 to infinity therefore converges at
-infinity only for Re p < -1-lambda, since
+The apparent inconsistency came from omitting the superposition step used in
+the source methodology. The 2024 predecessor paper explicitly decomposes the
+full solution into (i) the known no-process-zone field and (ii) a correction
+problem whose stresses decay as `o(r^-1)` at infinity. The same construction
+appears in the earlier 2006 Wiener--Hopf treatment.
 
-    integral_1^infinity A rho^(p+lambda) d rho
-      = -A/(p+lambda+1).
+For the present scalar problem, write
 
-Because -1 < lambda < 0, this convergence region does not include p = 0.
-The integral as printed cannot itself define a function analytic
-throughout the left half-plane or in a strip straddling the imaginary
-axis. Its continuation contains the matching-field pole unless that
-term is explicitly subtracted.
+    A_i = C Q_i d_i^lambda
 
-Subtracting A rho^lambda inside the integral is a possible regularization,
-but it changes the meaning of Phi_i^+ and requires checking the rational
-forcing term and the signs in the functional equation and its solution.
-Moreover, the stated remainder o(rho^-1) alone does not establish
-convergence at p = 0 or any positive-width strip to its right. A stronger
-decay estimate or an explicit continuation prescription is needed.
+and define the correction stress on the active bisector by
 
-Requested author decision: specify whether Phi_i^+ is a raw transform,
-a regularized transform, or an analytically continued quantity; state
-its actual domain and reconcile the definition with the functional
-equation. Do not silently change the far-field remainder.
+    sigma_hat_i(r) = sigma_theta(r,beta_i) - C Q_i r^lambda.
 
-## AQ-AN-02: factor argument in the opening formula
+The matching condition gives
+
+    sigma_hat_i(r) = o(r^-1),  r -> infinity,
+
+whereas on the active process-zone segment `0<r<d_i`,
+
+    sigma_hat_i(r) = sigma_i - C Q_i r^lambda.
+
+Thus the plus transform is the Mellin transform of the correction stress,
+
+    Phi_i^+(p)
+      = integral_1^infinity sigma_hat_i(rho d_i) rho^p d rho,
+
+not the raw transform of the total stress. Consequently, on `0<rho<1`,
+
+    integral_0^1
+      [sigma_i - C Q_i d_i^lambda rho^lambda] rho^p d rho
+    = sigma_i/(p+1)
+      - C Q_i d_i^lambda/(p+lambda+1),
+
+which reproduces the printed functional equation without changing any sign
+or forcing term.
+
+The decay `sigma_hat_i=o(r^-1)` makes `Phi_i^+` analytic for
+`Re p<0`. Near the corner, the post-zone eigenfield gives the displacement
+gradient order `r^lambda_i`, so `Phi_i^-` is analytic for
+`Re p>-1-lambda_i`. The transformed boundary traction on the active segment
+also requires `Re p>-1-lambda`. Therefore the functional equation is
+initially valid in the common Mellin strip
+
+    max{-1-lambda, -1-lambda_i} < Re p < 0.
+
+This is the correct initial convergence strip. The earlier statement of a
+strip `-epsilon_2 < Re p < epsilon_1` straddling the imaginary axis was
+stronger than the stated asymptotics justify.
+
+The Wiener--Hopf construction does not require the raw integral defining
+`Phi_i^+` to converge on `Re p=0`. The functional relation, established
+in the nonempty overlap strip, supplies the analytic/meromorphic continuation
+of the separated combinations to the factorization contour. The manuscript
+now states this explicitly and no longer claims integral convergence on the
+imaginary axis.
+
+Resolution: restore the superposition step in Section 2, define `Phi_i^+`
+as the correction-stress transform in Section 3, replace the overstated
+common strip by the actual Mellin overlap, and retain the existing functional
+equation and Wiener--Hopf solution unchanged. No numerical recalculation is
+required.
+
+## AQ-AN-02: factor argument in the opening formula — RESOLVED September 25, 2026
 
 Location: eq:process-zone-opening and the normalized delta_i' formula.
 
@@ -65,11 +103,16 @@ delta_i = -4(1-nu_i^2)d_i Phi_i^-(0)/E_i yields
       -4(1-nu_i^2) sigma_i lambda K^+(-1) d_i
       / [E_i sqrt(pi G_i(0)) (1+lambda) G_i^+(-1)].
 
-Requested author decision: confirm whether G_i^+(-1-lambda) is a
-typographical error in both opening formulas, or identify the preceding
-relation or convention that changes this reduction. Then compare the
-confirmed expression against the numerical implementation and opening
-plots before modifying any results.
+Author decision (September 25, 2026): M. V. Dudyk independently rechecked
+the derivation and confirmed that the direct reduction is correct:
+G_i^+(-1) must replace G_i^+(-1-lambda) in the opening formula and its
+normalized form. He also confirmed a second coefficient correction found
+during the same audit: W_i and J_i must contain 8/pi and 16/pi,
+respectively, instead of 32/(9 pi) and 64/(9 pi).
+
+The manuscript formulas and MATLAB implementation were corrected, and
+Figures 2 and 3 and their numerical discussion were regenerated. The
+process-zone length formula is unaffected.
 
 The derivative J_i = dW_i/dd_i was also checked directly against the
 printed W_i proportional to d_i^2: the factor of two is consistent.
@@ -88,6 +131,8 @@ opening multiplier is implemented as
 so the numerical Figure-2 and Figure-3 opening curves follow the printed
 opening formula. The independently compared corrected author Mathcad values
 documented in \`docs/AUTHOR_VALIDATION_2026-08-18.md\` use the same factor
-convention. Therefore the excellent numerical reproduction establishes
-implementation agreement, but it does not choose between the printed formula
-and the direct algebraic reduction recorded above. AQ-AN-02 remains open.
+convention. Therefore the excellent numerical reproduction established implementation
+agreement with the superseded formula, but it did not choose between that
+formula and the direct algebraic reduction recorded above. This check is now
+historical: after the author confirmed the analytical correction, the
+numerical implementation and plots were updated. AQ-AN-02 is closed.

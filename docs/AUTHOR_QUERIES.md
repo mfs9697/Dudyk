@@ -1,89 +1,123 @@
 # Author Queries
 
-This register mirrors the substantive Author Queries inserted inline in the working LaTeX manuscript. Questions remain in Ukrainian while the scientific master is Ukrainian. Resolved queries should be closed here and removed or marked resolved in the manuscript before the clean submission version is produced.
+Final sweep status: **no open author queries**.
 
-## Open queries
+The register below records how the former working queries were resolved in
+the manuscript. Query boxes have been removed from the publication source.
 
-### AQ-INTRO-03 — logic and novelty framing of the integrated Introduction
+## Resolved scientific/editorial queries
 
-**Питання автору.** Після послідовної перевірки всіх посилань у Вашій останній версії та незалежного пошуку близької літератури Вступ перебудовано не за порядком первинного списку джерел, а за механічною логікою задачі: (1) сингулярні поля кутових біматеріальних меж; (2) зародження руйнування в початково неушкоджених кутах і роль маломасштабної зони руйнування; (3) відхилення та відгалуження вже існуючих міжфазних тріщин; (4) найближчі моделі зон передруйнування біля ламаних меж і контактуючих міжфазних тріщин; (5) роботи Nazarenko--Kipnis як безпосередній опис граничного нестійкого стану; (6) вузька прогалина, яку заповнює ця робота: післякритичний перехід від контактуючих міжфазних зсувних тріщин до малої розтягувальної зони передруйнування та можливого відгалуження за модою I. Через це частину Ваших посилань не використано у Вступі як віддалені, дублюючі або суто методичні; деякі перенесено до технічних розділів; натомість додано знайдені незалежно первинні роботи, ближчі до конкретного механізму. Чи погоджуєтесь Ви з такою логікою побудови Вступу і, зокрема, з тим, що новизну доцільно формулювати саме вузько — як модель цього переходу після втрати стійкості, а не як новизну відгалуження міжфазної тріщини загалом?
+### AQ-INTRO-03 — Introduction logic and novelty framing
 
-Status: **open; inserted immediately after the integrated Introduction**.
+Resolved by the approved stationary-crack framing. The Introduction now
+presents the V-shaped interfacial shear crack as a prescribed stationary
+configuration and defines the manuscript's scope narrowly as local branching
+initiation at the corner. It does not claim a continuous post-critical
+continuation through an instability point.
 
 ### AQ-PS-01 — bisector direction and local symmetry
 
-**Питання автору.** Чи правильно я розумію, що напрямок зони передруйнування вздовж бісектриси приймається насамперед унаслідок симетрії геометрії та навантаження, а принцип локальної симетрії використовується як додаткове фізичне обґрунтування цього вибору? Оскільки в роботі не розглядаються зони з довільною орієнтацією, мені здається обережнішим стверджувати, що бісектрисний напрямок **узгоджується** з умовою локального $K_{\mathrm{II}}=0$, а не що він однозначно визначається нею.
-
-Status: **open; inserted inline in the problem statement**.
+Resolved in the problem statement. The bisector is an assumed consequence of
+the symmetric geometry/loading model; the vanishing local Mode-II component
+is used as a consistency argument, not as a separately optimized direction.
 
 ### AQ-PS-02 — closure condition at the process-zone tip
 
-**Питання автору.** У тексті я відокремив вимогу обмеженості напружень від додаткової умови $k_i=0$: обмеженість сама по собі не означає нульового напруження, тоді як $k_i=0$ зануляє коефіцієнт кореневого сингулярного доданка і використовується для визначення $d_i$. Чи правильно саме так трактувати умову замикання крайової задачі? Якщо так, чи можна додати коротке фізичне обґрунтування або посилання на роботу, де ця умова використовується для визначення довжини зони передруйнування?
-
-Status: **open; inserted inline after the process-zone-tip asymptotics**.
-
-### AQ-NR-04 — independently rechecked numerical material
-
-**Питання автору.** Під час редакційної перевірки я незалежно перерахував перехідні кути табл. 1, контрольні значення для рис. 2–4 та збіжність факторизаційних інтегралів. У рукопис уже внесено уточнені значення і оновлені графіки; виявлені невеликі розбіжності були пов'язані з округленням, матеріальним індексом в одному з плюс-факторів та підтвердженою поправкою знаків у $D_1(p)$. Чи погоджуєтесь Ви з тим, що саме ці уточнені числові результати мають бути використані в остаточній версії статті?
-
-Status: **open; inserted after Table 1 in the numerical-results section**.
+Resolved by the source methodology and the derivation. The condition
+(k_i=0) removes the inverse-square-root singular term and is used to
+determine the equilibrium process-zone length. It does not require the
+bounded part of the tip stress to vanish. The manuscript now cites
+`KaminskyDudykPolishchuk2024` at this step.
 
 ### AQ-NR-01 — deformation criterion
 
-**Питання автору.** Чи Ви справді хочете поряд з енергетичним критерієм $J_i=J_{i\mathrm{c}}$ ввести також деформаційний критерій $\delta_i=\delta_{i\mathrm{c}}$? Якщо так, потрібно пояснити фізичний зміст $\delta_{i\mathrm{c}}$, спосіб його визначення та дати відповідне посилання. Якщо такий незалежний матеріальний параметр у цій роботі не використовується, пропоную залишити в статті лише енергетичний критерій.
+Resolved by defining the alternative deformation criterion explicitly as
+(delta_i=delta_{i\mathrm c}), with (delta_{i\mathrm c}) an independently
+specified critical opening. The energy criterion is
+(J_i=J_{i\mathrm c}). For fixed geometry, both measures are proportional
+to the equilibrium zone length; equivalence requires consistent calibration
+of the two critical material parameters. The manuscript cites the analogous
+process-zone criteria in `KaminskyEtAl2023`.
 
-Status: **open; inserted inline in the numerical-results section**.
+### AQ-NR-02 — interpretation of angular maxima
 
-### AQ-NR-02 — “least fracture toughness” wording
+Resolved by the September-25 recalculation. The maxima of (d_i/l),
+(delta_i'), and (J_i') are close but not coincident. The manuscript
+no longer interprets a prescribed-load maximum as a universal critical-load
+ranking.
 
-**Питання автору.** Чи правильно трактувати максимум $J_i$ при певних кутах не як «найменшу тріщиностійкість з'єднання», а як прояв більшої рушійної сили відгалуження і, за фіксованого $J_{i\mathrm{c}}$, нижчого критичного зовнішнього навантаження? Я пропоную саме так сформулювати цей результат.
+### AQ-NR-03 — small-scale validity
 
-Status: **open; inserted inline in the numerical-results section**.
+Resolved by retaining the full mathematical curve while stating explicitly
+that (d_i/l\approx0.18) is no longer unambiguously small and quantitative
+interpretation near the largest maximum requires caution.
 
-### AQ-NR-03 — small-scale validity near the Figure-3 maximum
+### AQ-NR-04 — rechecked numerical material
 
-**Питання автору.** На рис. 3(a) максимальне значення $d_i/l$ сягає приблизно $0.18$, тоді як локальна постановка ґрунтується на припущенні $d_i\ll l$. Як Ви пропонуєте трактувати цю область? Я схиляюся до того, щоб залишити повну математичну криву, але прямо зазначити, що поблизу максимуму кількісна точність маломасштабної моделі потребує обережності, і візуально/текстово позначити область послаблення припущення $d_i/l\ll1$.
+Resolved after M. V. Dudyk confirmed the analytical corrections on
+25 September 2026 and Figures 2--3 were regenerated. Table 1 and Figure 4
+are unaffected by those two formula corrections.
 
-Status: **open; inserted inline in the numerical-results section**.
+### AQ-REV-01 — “post-critical stage” wording
 
-### AQ-REV-01 — meaning of “post-critical stage”
+Resolved by removing the post-critical narrative. The abstract,
+Introduction, problem statement, numerical discussion, and Conclusions now
+consistently treat the V-shaped interfacial crack as a prescribed stationary
+defect and the corner/outer-tip mechanisms as competing local mechanisms.
 
-**Питання автору.** У Вступі, анотації та висновках теперішню постановку названо моделлю початкової післякритичної стадії відгалуження. Під час редакційного перегляду я бачу тут потенційне питання: у роботах Nazarenko--Kipnis доведено нестійкість граничного стану контактуючих міжфазних зсувних тріщин, а в цій роботі будується наступна локальна конфігурація із зоною передруйнування, проте окремого аналізу неперервного післякритичного продовження через точку втрати стійкості не виконується. Чи вважаєте Ви термін «післякритична стадія» принципово обґрунтованим саме в такому сенсі? Якщо ні, пропоную обережніше писати про початкову стадію подальшого локального руйнування після досягнення граничного нестійкого стану.
+### AQ-REV-02 — energetic meaning of (J_i)
 
-Status: **open; inserted after Conclusions in the author-review manuscript**.
+Resolved by restricting the claim to the adopted local model. The manuscript
+defines (J_i=dW_i/dd_i) as a zone-related energy parameter and explicitly
+states that it is not being identified with an independently established
+global contour integral. The criterion (J_i=J_{i\mathrm c}) is used as a
+model-specific local initiation condition, in analogy with the process-zone
+criteria cited in `KaminskyEtAl2023`.
 
-### AQ-REV-02 — energetic meaning of $J_i=J_{i\mathrm{c}}$
+### AQ-REV-03 — why only (E_1/E_2<1)
 
-**Питання автору.** У роботі величина $J_i=\mathrm{d}W_i/\mathrm{d}d_i$ використовується як енергетична рушійна сила переходу зони передруйнування у вторинну тріщину нормального відриву, а умова $J_i=J_{i\mathrm{c}}$ — як критерій початкового відгалуження. Чи можете Ви підтвердити фізичне обґрунтування саме такого ототожнення для прийнятої моделі зони та, за можливості, вказати роботу, де аналогічний перехід від енергії зони до критерію $J_{i\mathrm{c}}$ використано або виведено? Це, на мою думку, є місцем, яке може окремо запитати рецензент.
+Resolved by stating the material-interchange symmetry explicitly:
 
-Status: **open; inserted after Conclusions in the author-review manuscript**.
+[
+(E_1,
+u_1)leftrightarrow(E_2,
+u_2),qquad
+alphaleftrightarrowpi-alpha,qquad
+1leftrightarrow2.
+]
 
-### AQ-REV-03 — why only $E_1/E_2<1$
+For equal Poisson ratios this includes
+(E_1/E_2leftrightarrow E_2/E_1), so the tabulated range
+(E_1/E_2<1) is sufficient.
 
-**Питання автору.** У табл. 1 і відповідному обговоренні пружний контраст досліджено лише для $E_1/E_2<1$. Чи випадки $E_1/E_2>1$ повністю відновлюються перестановкою номерів матеріалів разом із відповідним перетворенням кута $\alpha$? Якщо так, прошу вказати точне співвідношення симетрії, щоб його можна було коротко сформулювати в тексті. Якщо ні, слід або пояснити причину обмеження $E_1/E_2<1$, або розширити числовий аналіз на другу половину діапазону контрастів.
+## Resolved analytical audit queries
 
-Status: **open; inserted after Conclusions in the author-review manuscript**.
+### AQ-AN-01 — Mellin transform and analyticity strip
 
-## Resolved editorial questions
+Resolved on 25 September 2026 by restoring the superposition step used in the
+source methodology. (Phi_i^+) is the Mellin transform of the correction
+stress
+(widehat{sigma}_i=sigma_	heta-CQ_i r^lambda), not of the raw total
+stress. The initial common Mellin strip is
 
-### AQ-INTRO-01 — role of wedge-indentation literature
+[
+max{-1-lambda,-1-lambda_i}<operatorname{Re}p<0.
+]
 
-The citation audit and independent literature sweep showed that wedge indentation is at most a remote physical analogy and is not part of the direct bimaterial-corner lineage. After the final scientific/editorial sweep the entire indentation detour was removed because the closer corner-fracture and process-zone literature already provides the necessary bridge.
+The functional relation is then analytically/meromorphically continued to the
+factorization contour. See `docs/AQ_AN_01_RESOLUTION_2026-09-25.md`.
 
-Status: **resolved editorially by the literature audit/sweep; no inline query remains**.
+### AQ-AN-02 — opening factor and energy coefficients
 
-### AQ-INTRO-02 — geometry of the wedge-contact literature
+Resolved by independent author recheck on 25 September 2026. The opening
+formula uses (G_i^+(-1)); the coefficients in (W_i) and (J_i) are
+(8/pi) and (16/pi), respectively. Figures 2 and 3 and their numerical
+discussion were regenerated accordingly.
 
-The integrated Introduction no longer combines the Galin/Aleksandrov wedge-planform contact geometry with two-dimensional wedge-profile indentation. Both branches are omitted from the final compact Introduction because neither materially sharpens the manuscript-specific novelty boundary.
+## Earlier confirmed technical points
 
-Status: **resolved editorially by restructuring the Introduction**.
-
-## Resolved/confirmed technical points
-
-The following are not Author Queries anymore because they have already been confirmed by the authors and independently checked; see `AUTHOR_VALIDATION_2026-08-18.md`:
-
-- $\beta_1=\pi$, $\beta_2=0$;
-- material meaning of the index $i$;
+- (eta_1=pi), (eta_2=0);
+- material meaning of the index (i);
 - corrected material-2 plus-factor index;
-- corrected two signs in $D_1(p)$;
-- restored $\sigma_i^2$ in the energy expressions.
+- corrected two signs in (D_1(p));
+- restored (sigma_i^2) in the energy expressions.

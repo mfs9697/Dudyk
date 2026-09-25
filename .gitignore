@@ -3,3 +3,7 @@ __pycache__/
 *.asv
 *.m~
 .DS_Store
+# LaTeX auxiliary files generated outside manuscript/latex as well
+*.aux
+*.log
+*.synctex.gz
