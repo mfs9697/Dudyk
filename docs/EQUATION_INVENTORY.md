@@ -256,17 +256,22 @@ sign-changing interior root at only 59 of the 179 sampled angles.
    The corrected Mathcad worksheet uses the material-2 kernel consistently and
    agrees with the MATLAB implementation.
 5. **Missing powers.** The draft lost the factor \(\sigma_i^2\) in the
-   potential-energy and energy-release-rate expressions. The authors marked
-   the corresponding powers for restoration; the normalized formula for
-   \(J_i'\) used by this repository is unchanged.
-6. **Degenerate flat-interface case.** At \(\alpha=90^\circ\), the model is
+   work and zone-related energy expressions. The authors marked the
+   corresponding powers for restoration.
+6. **Opening-factor correction.** On 25 September 2026 M. V. Dudyk confirmed
+   that the opening formula must contain \(G_i^+(-1)\), not
+   \(G_i^+(-1-\lambda)\).
+7. **Energy-coefficient correction.** The same check confirmed the
+   coefficients \(8/\pi\) in \(W_i\) and \(16/\pi\) in \(J_i\),
+   replacing \(32/(9\pi)\) and \(64/(9\pi)\), respectively.
+8. **Degenerate flat-interface case.** At \(\alpha=90^\circ\), the model is
    excluded and the determinants possess endpoint/degenerate behavior. Values
    shown as zero in a plot should be described as limits, not as ordinary
    interior roots.
-7. **Root terminology.** “Smallest root” should be replaced by an unambiguous
+9. **Root terminology.** “Smallest root” should be replaced by an unambiguous
    definition such as “the most negative real root in \((-1,0)\), continuously
    connected to the reported branch.”
-8. **Small-angle contour convergence.** The author's fixed contour
+10. **Small-angle contour convergence.** The author's fixed contour
    \([-40,40]\) reproduces the corrected Mathcad table but is not converged
    at the smallest angles. The publication calculation must use stable
    imaginary-axis kernel ratios and an angle-adaptive contour; at one degree
@@ -355,13 +360,13 @@ the normalized Eqs. (8)-(10) are
 
 \[
 \delta_i'=-\frac{\lambda K^+(-1)}
-{\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1-\lambda)}
+{\sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1)}
 \frac{d_i}{l},
 \]
 
 \[
-J_i'=-\frac{16\lambda}
-{9\pi(\lambda+2)[G_i^+(-1)]^2}\frac{d_i}{l}.
+J_i'=-\frac{4\lambda}
+{\pi(\lambda+2)[G_i^+(-1)]^2}\frac{d_i}{l}.
 \]
 
 The radical in Eq. (9) covers `pi*G_i(0)`. The exponent in all three
@@ -384,8 +389,8 @@ For `E1/E2=0.5`, `nu1=nu2=0.3`, material 1:
 | `G1+(-1)` | `0.996302154171` |
 | `g1*q1` | `-0.328831437124` |
 | `d1/l` at `sigma'=-0.5` | `0.147434361718` |
-| `delta1'` at `sigma'=-0.5` | `0.145442265271` |
-| `J1'` at `sigma'=-0.5` | `0.0371646165433` |
+| `delta1'` at `sigma'=-0.5` | `0.145787032378` |
+| `J1'` at `sigma'=-0.5` | `0.0836203872141` |
 
 The negative `g1*q1` confirms `Q1<0`; therefore the material-1 process zone
 at 45 degrees is admissible only for `C<0`, as stated in Section 3.
@@ -396,17 +401,16 @@ The three added endpoint calculations use contour truncation 60:
 
 | `alpha` | Material | `sigma'` | `d_i/l` | `delta_i'` | `J_i'` |
 | ---: | ---: | ---: | ---: | ---: | ---: |
-| 10 deg | 2 | +0.5 | 0.0313248064 | 0.0677727059 | 0.0217258213 |
-| 105 deg | 2 | -0.5 | 0.0370357093 | 0.0134427769 | 0.0039225730 |
-| 135 deg | 1 | +0.5 | 0.0510105194 | 0.0578658843 | 0.0133074138 |
+| 10 deg | 2 | +0.5 | 0.0313248064 | 0.0997342375 | 0.0488830979 |
+| 105 deg | 2 | -0.5 | 0.0370357093 | 0.0131058131 | 0.0088257892 |
+| 135 deg | 1 | +0.5 | 0.0510105194 | 0.0552827687 | 0.0299416810 |
 
-The 105- and 135-degree rows agree with the original curves at plot-reading
-precision. The authors confirmed that the original 10-degree material-2
-calculation contained an incorrect index in a Wiener-Hopf plus factor. Their
-corrected Mathcad endpoint (`0.0313248086`, `0.0677727100`, `0.0217258199`)
-agrees with the MATLAB row to better than `7.3e-8` relatively. The original
-Figure-2 and small-angle Figure-3 curves must therefore be replaced rather
-than fitted or retained.
+The process-zone lengths are unchanged by the September-25 analytical
+correction. The opening and energy values above are the regenerated
+publication values. The August Mathcad endpoint
+(`0.0313248086`, `0.0677727100`, `0.0217258199`) used the earlier
+opening and energy formulas and is retained only as historical regression
+data; its zone-length value remains an independent numerical check.
 
 ### Complete Figure-3 contour rule
 
@@ -443,13 +447,14 @@ publication values are
 
 \[
 \frac{d_2}{l}=0.000334567324703,\qquad
-\delta_2'=0.000276833276375,\qquad
-J_2'=0.000235061074026.
+\delta_2'=0.00105677018604,\qquad
+J_2'=0.000528887416559.
 \]
 
-Thus, agreement with the fixed-\(T=40\) Mathcad table establishes independent
-formula reproduction, while the adaptive calculation supplies the converged
-Figure-3 values.
+The fixed-\(T=40\) Mathcad table predates the September-25 analytical
+corrections. It is therefore retained only through reverse-mapped historical
+regression, while the adaptive calculation above supplies the current
+publication values.
 
 ### Added MATLAB equation map
 
