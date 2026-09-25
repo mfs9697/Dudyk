@@ -36,8 +36,9 @@ when the complete English manuscript is assembled.
 The analytical derivation and Appendix A are translated in
 `sections/03_process_zone_parameters.tex` and `appendices/appendix_a.tex`.
 All 48 displayed source equations are preserved. The analytical queries are
-documented in `AUTHOR_QUERIES_BATCH02.md`; AQ-AN-02 was resolved by the
-author on September 25, 2026, while AQ-AN-01 remains open.
+documented in `AUTHOR_QUERIES_BATCH02.md`. AQ-AN-01 was resolved on
+September 25, 2026 by restoring the superposition step used in the source
+methodology; AQ-AN-02 was independently confirmed by the author the same day.
 
 Compile from `manuscript/latex` using XeLaTeX:
 
@@ -101,14 +102,11 @@ audit: the opening formula uses \(G_i^+(-1)\), and the coefficients in
 \(W_i\) and \(J_i\) are \(8/\pi\) and \(16/\pi\), respectively.
 The MATLAB implementation, regenerated Figures 2--3, and the English
 analytical and numerical sections now use these corrected relations.
-AQ-AN-02 is closed; AQ-AN-01 remains separate and unresolved.
-
-Repository packaging note: the source and `figures/README.md` refer to
-`figure4_admissible_segments.pdf`, and `matlab/generate_figure4.m` is
-configured to generate it, but the file is not currently committed under
-`figures/`. The English figure macro therefore shows a clear placeholder
-for Figure 4 until that generated asset is restored. Figures 2 and 3 are
-present.
+AQ-AN-01 and AQ-AN-02 are both closed. The Section-3 plus transform is now
+explicitly the Mellin transform of the correction stress obtained after
+subtracting the matched no-zone eigenfield; the functional equation itself is
+unchanged. Figure 4 has also been regenerated and committed, so all three
+publication figures used in Batch 3 are present.
 
 Next translation batch: Conclusions. The Abstract and Introduction should be
 translated after the body is stable, followed by a final first-use,
