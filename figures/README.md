@@ -16,9 +16,11 @@ solid/dashed style identifies material 1/material 2, while green/blue
 identifies `C>0`/`C<0`. Following the original manuscript, the legend retains
 the representative values `sigma'=+0.5` and `sigma'=-0.5`. Their magnitude
 does not affect the characteristic exponents; their sign identifies the
-corresponding admissible branch. The transition angles calculated from the
-printed `g2` equation are approximately 12.9 and 107.1 degrees, in agreement
-with Table 1.
+corresponding admissible branch. The colored masks are selected on the one-degree sweep; their linearly
+interpolated sign-change locations are about 12.914 and 107.084 degrees.
+The publication transition angles are obtained independently from the
+continuous `g2=0` solve and are 12.9202 and 107.0897 degrees for the
+baseline, consistent with Table 1.
 
 Suggested manuscript caption: "Dependence of the stress-singularity
 exponents on the interface half-angle. Thin gray dotted curves show the
@@ -51,8 +53,11 @@ material. `figure2_original_window` contains the same curves but uses the
 published panel ranges for direct visual comparison. Keeping both prevents
 clipping from being mistaken for agreement.
 
-The 45-, 105-, and 135-degree cases align with the original curves. The
-10-degree material-2 calculation reproduces `d_2/l` but not both
-`delta_2'` and `J_2'`; see `docs/REPRODUCIBILITY.md`. It is intentionally
-shown from the consistent printed equations and has not been fitted to the
-original pixels.
+After the author-confirmed analytical correction of 25 September 2026,
+`d_i/l` is unchanged, whereas every `J_i'` value is multiplied by
+`9/4` relative to the superseded formula and the `delta_i'` curves are
+recomputed with `G_i^+(-1)`. Consequently, the current Figure-2 outputs
+are publication replacements rather than attempts to reproduce the old
+opening/energy curves. The August Mathcad opening and energy values are kept
+only as historical regression data; see `docs/REPRODUCIBILITY.md` and
+`docs/AUTHOR_CONFIRMED_FORMULA_CORRECTIONS_2026-09-25.md`.
