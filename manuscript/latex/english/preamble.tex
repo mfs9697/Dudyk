@@ -42,4 +42,10 @@
 \setlength{\parindent}{1.25em}
 \setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{4em}
+% Final-manuscript pagination safeguards: avoid single-line widows/orphans
+% and page breaks immediately after a hyphenated line.
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\brokenpenalty=10000
 \captionsetup{font=small,labelfont=bf}
