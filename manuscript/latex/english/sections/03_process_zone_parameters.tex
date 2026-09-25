@@ -232,9 +232,18 @@ from the assumed tip asymptotics, gives the zone length:
 \end{equation}
 Since $-1<\lambda<0$, a real positive $d_i$ requires $CQ_i>0$,
 consistent with the physical admissibility condition in
-Section~\ref{subsec:boundary-conditions}. With geometry and material
-properties fixed, Eq.~\eqref{eq:process-zone-length} also gives the
-power law $d_i\propto C^{-1/\lambda}$ on the admissible loading branch.
+Section~\ref{subsec:boundary-conditions}. For fixed geometry and fixed
+V-shaped crack-branch length $l$, Eq.~\eqref{eq:process-zone-length}
+gives the power law
+$d_i\propto |C|^{-1/\lambda}$. Thus, varying the magnitude of the
+external loading $|C|$ generates a quasi-static family of equilibrium
+process-zone states $d_i(C)$ while the length of each V-shaped crack
+branch remains unchanged. In the idealized singular formulation, this
+relation does not itself define a finite threshold for formation of the
+zone: every nonzero physically admissible $C$ gives $d_i>0$, with
+$d_i\to0$ as $|C|\to0$. A finite material threshold enters at the next
+stage, when branching initiation is identified from a critical
+characteristic of the equilibrium zone.
 
 At fixed geometry, interfacial crack length, elastic properties, and applied
 loading, the same equation gives the dependence on the normal cohesive
@@ -367,6 +376,21 @@ The exponents $\lambda_1$ and $\lambda_2$, which describe the corner
 singularity in the presence of a zone, do not replace $\lambda$
 in the formulas for the zone parameters.
 
+For fixed geometry and material properties, both $\delta_i$ and $J_i$
+depend linearly on the same equilibrium zone length $d_i$. Eliminating
+$d_i$ between Eqs.~\eqref{eq:process-zone-opening} and
+\eqref{eq:process-zone-energy-parameter} gives
+\begin{equation}
+\label{eq:energy-opening-relation}
+  J_i=\chi_i\sigma_i\delta_i,
+  \qquad
+  \chi_i=
+  \frac{4(1+\lambda)\sqrt{\pi G_i(0)}}
+  {\pi(\lambda+2)G_i^+(-1)K^+(-1)}.
+\end{equation}
+Here, $\chi_i$ is a dimensionless proportionality factor determined by
+the local geometry and elastic contrast.
+
 Within the adopted local model, $J_i$ is interpreted as a zone-related
 energy parameter rather than as an independently established global contour
 integral. In analogy with process-zone criteria used for interface-crack
@@ -381,8 +405,12 @@ parameter. Alternatively, a deformation criterion
   \delta_i=\delta_{i\mathrm{c}}
 \end{equation*}
 may be used, with $\delta_{i\mathrm{c}}$ specified independently as the
-critical opening. For fixed geometry and material properties, both
-$\delta_i$ and $J_i$ are proportional to the equilibrium zone length
-$d_i$. The two criteria therefore describe the same one-parameter family
-of local states and are equivalent only when their critical parameters
-are chosen consistently.
+critical opening. For fixed geometry and material properties,
+Eq.~\eqref{eq:energy-opening-relation} shows that the two criteria
+describe the same one-parameter family of local states and select the
+same critical state only when the independently specified material
+thresholds are calibrated consistently:
+\begin{equation*}
+  J_{i\mathrm{c}}
+  =\chi_i\sigma_i\delta_{i\mathrm{c}}.
+\end{equation*}
