@@ -175,7 +175,7 @@ are outside the scope of this local formulation.
 The remainder of the paper is organized as follows. Section~\ref{sec:problem}
 formulates the local boundary-value problem and specifies the geometry,
 boundary conditions, and asymptotic fields for the V-shaped interfacial crack
-and the process zone. Section~\ref{sec:derivation} uses the Mellin transform,
+and the process zone. Section~3 uses the Mellin transform,
 asymptotic matching, and the Wiener--Hopf method to determine the equilibrium
 zone length, opening, and energy characteristics. Section~\ref{sec:numerical-results}
 examines the physically admissible regimes, the dependence of the zone
@@ -663,6 +663,7 @@ $|t|$.
 
 As $p\to+\infty$, the second relation in
 Eq.~\eqref{eq:wiener-hopf-solution} gives
+\begin{strip}
 \begin{equation*}
   \Phi_i^-(p)\sim\frac{1}{\sqrt{p}}
   \left[
@@ -671,6 +672,7 @@ Eq.~\eqref{eq:wiener-hopf-solution} gives
     {(\lambda+1)G_i^+(-\lambda-1)}
   \right].
 \end{equation*}
+\end{strip}
 Applying an Abelian-type theorem~\citep{noble1958wienerhopf} to the
 tip asymptotics~\eqref{eq:zone-tip-asymptotics} also gives
 \begin{equation*}
@@ -893,7 +895,7 @@ parameters are calibrated consistently:
 
 The numerical analysis is performed for the normalized parameters
 $\,d_i/l$, $\delta_i'$, and $J_i'$ defined in
-Section~\ref{sec:derivation}. Only combinations of material, angle, and
+Section~3. Only combinations of material, angle, and
 loading sign for which
 \begin{equation*}
   Cg_2<0,\qquad CQ_i>0
@@ -1482,7 +1484,7 @@ The functions $S_i(p)$ are auxiliary numerator functions defined below.
 The factors $K^+(p)$ and $G^+(p)$ are specified later in this subsection.
 The base plus factor $G^+(p)$ must not be confused with $G_i^+(p)$, which
 factorizes the process-zone kernel $G_i(p)$ in
-Section~\ref{sec:derivation}. Explicitly,
+Section~3. Explicitly,
 \begin{strip}
 \begin{equation*}
 \begin{aligned}
@@ -1576,7 +1578,7 @@ Here, $t$ is a real integration variable.
 \subsection{Corner with a process zone}
 
 For a process zone in material~$i$, the kernel of the functional equation
-in Section~\ref{sec:derivation} is
+in Section~3 is
 \begin{equation*}
   G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
 \end{equation*}
