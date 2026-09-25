@@ -11,13 +11,13 @@
 \end{equation*}
 і застосовуємо інтегральне перетворення Мелліна до крайової задачі
 \eqref{eq:interface-boundary-conditions}--\eqref{eq:matched-far-field}.
-Трансформанти нормального напруження поза зоною та градієнта нормального
-переміщення в зоні визначаємо відповідно як
+Трансформанти коригувального нормального напруження поза зоною та
+градієнта нормального переміщення в зоні визначаємо відповідно як
 \begin{equation*}
 \begin{aligned}
   \Phi_i^+(p)
     &=\int_1^\infty
-      \sigma_\theta(\rho d_i,\beta_i)\rho^p\,\dd\rho,\\
+      \widehat{\sigma}_i(\rho d_i)\rho^p\,\dd\rho,\\
   \Phi_i^-(p)
     &=\frac{E_i}{2(1-\nu_i^2)}
       \int_0^1
@@ -27,9 +27,24 @@
       \rho^p\,\dd\rho.
 \end{aligned}
 \end{equation*}
-Верхні індекси в $\Phi_i^+$ і $\Phi_i^-$ позначають функції, аналітичні
-у лівій та правій півплощинах відповідно, а не знак фізичної величини.
+Оскільки $\widehat{\sigma}_i(r)=o(r^{-1})$ при $r\to\infty$,
+інтеграл для $\Phi_i^+$ визначає аналітичну функцію при
+$\operatorname{Re}p<0$. Поблизу кутової точки градієнт переміщення
+має порядок $r^{\lambda_i}$, тому $\Phi_i^-$ є аналітичною при
+$\operatorname{Re}p>-1-\lambda_i$. Верхні індекси в $\Phi_i^+$ і
+$\Phi_i^-$ позначають функції, віднесені відповідно до лівої та правої
+півплощин, а не знак фізичної величини.
 
+На активній ділянці $0<\rho<1$ коригувальне напруження дорівнює
+$\sigma_i-CQ_i d_i^\lambda\rho^\lambda$, звідки
+\begin{equation*}
+  \int_0^1
+  \left(\sigma_i-CQ_i d_i^\lambda\rho^\lambda\right)
+  \rho^p\,\dd\rho
+  =
+  \frac{\sigma_i}{p+1}
+  -\frac{CQ_i d_i^\lambda}{p+\lambda+1}.
+\end{equation*}
 Після виключення трансформант внутрішнього поля отримуємо функціональне
 рівняння
 \begin{equation}
@@ -39,9 +54,14 @@
   -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
   =-\tan(\pi p)G_i(p)\Phi_i^-(p),
 \end{equation}
-справедливе у спільній смузі аналітичності
-$-\varepsilon_2<\operatorname{Re}p<\varepsilon_1$, де
-$\varepsilon_1,\varepsilon_2>0$ є достатньо малими. Ядро рівняння має
+яке спочатку справедливе у спільній смузі збіжності
+\begin{equation*}
+  \max\{-1-\lambda,-1-\lambda_i\}
+  <\operatorname{Re}p<0.
+\end{equation*}
+Подальше розділення Вінера--Гопфа використовує аналітичне продовження
+до межі $\operatorname{Re}p=0$: $\Phi_i^+$ продовжується зліва, а
+$\Phi_i^-$ --- справа. Ядро рівняння має
 вигляд
 \begin{equation*}
   G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
