@@ -322,12 +322,13 @@ frictionless contact give
 \begin{equation}
 \label{eq:interface-boundary-conditions}
 \begin{aligned}
-  &\theta\in\{0,\pi\}: &&\tau_{r\theta}=0,\\
-  &\theta=\alpha: &&
-    \jump{\sigma_\theta}=0,
-    \quad \jump{\tau_{r\theta}}=0,
-    \quad \tau_{r\theta}=0,
-    \quad \jump{u_\theta}=0.
+  \theta\in\{0,\pi\}:\quad
+    &\tau_{r\theta}=0,\\
+  \theta=\alpha:\quad
+    &\jump{\sigma_\theta}=0,\qquad
+     \jump{\tau_{r\theta}}=0,\\
+    &\tau_{r\theta}=0,\qquad
+     \jump{u_\theta}=0.
 \end{aligned}
 \end{equation}
 The condition $\jump{u_\theta}=0$ imposes normal contact between the crack
@@ -418,11 +419,11 @@ homogeneous material:
 \begin{equation}
 \label{eq:zone-tip-asymptotics}
 \begin{aligned}
-  &\theta=\beta_i,\quad r\to d_i+0:
-  &&\sigma_\theta(r,\beta_i)
+  &\theta=\beta_i,\quad r\to d_i+0:\\[-2pt]
+  &\qquad \sigma_\theta(r,\beta_i)
     \sim \frac{k_i}{\sqrt{2\pi(r-d_i)}},\\[3pt]
-  &\theta=\beta_i,\quad r\to d_i-0:
-  &&\frac{\partial u_\theta}{\partial r}(r,\beta_i)
+  &\theta=\beta_i,\quad r\to d_i-0:\\[-2pt]
+  &\qquad \frac{\partial u_\theta}{\partial r}(r,\beta_i)
     \sim -\frac{2(1-\nu_i^2)}{E_i}
     \frac{k_i}{\sqrt{2\pi(d_i-r)}}.
 \end{aligned}
@@ -504,10 +505,13 @@ Eliminating the transforms of the interior field yields the functional
 equation
 \begin{equation}
 \label{eq:wiener-hopf-functional}
+\begin{aligned}
   \Phi_i^+(p)
   +\frac{\sigma_i}{p+1}
   -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
-  =-\tan(\pi p)G_i(p)\Phi_i^-(p),
+  &={}\\[-2pt]
+  &-\tan(\pi p)G_i(p)\Phi_i^-(p).
+\end{aligned}
 \end{equation}
 which is initially valid in the common convergence strip
 \begin{equation*}
@@ -539,17 +543,17 @@ with a process zone in materials~1 and~2, respectively, are
 \begin{equation*}
 \begin{aligned}
   D_1(p)={}&2e(1+\kappa_2)
-    [\cos(2p\alpha)-\cos(2\alpha)]
-    \{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
+    [\cos(2p\alpha)-\cos(2\alpha)]\\
+  &\times\{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
   &+(1+\kappa_1)
-    [\sin(2p\alpha)+p\sin(2\alpha)]
-    [\sin(2p(\pi-\alpha))-p\sin(2\alpha)],\\[2pt]
+    [\sin(2p\alpha)+p\sin(2\alpha)]\\
+  &\times[\sin(2p(\pi-\alpha))-p\sin(2\alpha)],\\[2pt]
   D_2(p)={}&2(1+\kappa_1)
-    [\cos(2p(\pi-\alpha))-\cos(2\alpha)]
-    [\sin^2(p\alpha)-p^2\sin^2\alpha]\\
+    [\cos(2p(\pi-\alpha))-\cos(2\alpha)]\\
+  &\times[\sin^2(p\alpha)-p^2\sin^2\alpha]\\
   &+e(1+\kappa_2)
-    [\sin(2p(\pi-\alpha))-p\sin(2\alpha)]
-    [\sin(2p\alpha)+p\sin(2\alpha)].
+    [\sin(2p(\pi-\alpha))-p\sin(2\alpha)]\\
+  &\times[\sin(2p\alpha)+p\sin(2\alpha)].
 \end{aligned}
 \end{equation*}
 In particular, the corner singularity exponent $\lambda_i$ in the
@@ -568,6 +572,7 @@ We solve Eq.~\eqref{eq:wiener-hopf-functional} by the Wiener--Hopf
 method~\citep{noble1958wienerhopf}, following the approach used for a related
 boundary-value problem~\citep{KaminskyDudykPolishchuk2024}.
 The factors $G_i^\pm(p)$ are defined by the Cauchy integral
+{\small
 \begin{equation*}
   \exp\left\{
     \frac{1}{2\pi\ii}
@@ -577,9 +582,10 @@ The factors $G_i^\pm(p)$ are defined by the Cauchy integral
   =
   \begin{cases}
     G_i^+(p), & \operatorname{Re}p<0,\\
-    G_i^-(p), & \operatorname{Re}p>0,
+    G_i^-(p), & \operatorname{Re}p>0.
   \end{cases}
 \end{equation*}
+}
 where $z$ is the complex integration variable and $\ii^2=-1$.
 The contour is directed upward along the imaginary axis. We also introduce
 the auxiliary gamma-function factors
@@ -593,31 +599,32 @@ the functional equation is
 \begin{equation}
 \label{eq:wiener-hopf-solution}
 \begin{aligned}
-  \Phi_i^+(p)={}&
-  -\frac{pG_i^+(p)}{K^+(p)}
-  \Bigg\{
-    \frac{\sigma_i}{p+1}
-    \left[
-      \frac{K^+(p)}{pG_i^+(p)}
-      +\frac{K^+(-1)}{G_i^+(-1)}
-    \right]\\
-  &\hspace{37mm}
-    -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
-    \left[
-      \frac{K^+(p)}{pG_i^+(p)}
-      +\frac{K^+(-\lambda-1)}
-      {(\lambda+1)G_i^+(-\lambda-1)}
-    \right]
-  \Bigg\},
-  \qquad \operatorname{Re}p<0,\\[3pt]
-  \Phi_i^-(p)={}&
-  K^-(p)G_i^-(p)
-  \Bigg\{
-    \frac{\sigma_iK^+(-1)}{(p+1)G_i^+(-1)}
-    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
-    {(\lambda+1)(p+\lambda+1)G_i^+(-\lambda-1)}
-  \Bigg\},
-  \qquad \operatorname{Re}p>0.
+\Phi_i^+(p)={}&-\frac{pG_i^+(p)}{K^+(p)}
+\Bigg\{
+\frac{\sigma_i}{p+1}
+\Bigg[
+\frac{K^+(p)}{pG_i^+(p)}
++\frac{K^+(-1)}{G_i^+(-1)}
+\Bigg]\\
+&-\frac{pG_i^+(p)}{K^+(p)}
+\Bigg\{
+\frac{CQ_i d_i^\lambda}{p+\lambda+1}
+\Bigg[
+\frac{K^+(p)}{pG_i^+(p)}
++\frac{K^+(-\lambda-1)}
+{(\lambda+1)G_i^+(-\lambda-1)}
+\Bigg]
+\Bigg\},\\[-1pt]
+&\hspace{16mm}\operatorname{Re}p<0,\\[4pt]
+\Phi_i^-(p)={}&K^-(p)G_i^-(p)
+\Bigg[
+\frac{\sigma_iK^+(-1)}
+{(p+1)G_i^+(-1)}\\
+&\hspace{8mm}
+-\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+{(\lambda+1)(p+\lambda+1)G_i^+(-\lambda-1)}
+\Bigg],\\[-1pt]
+&\hspace{16mm}\operatorname{Re}p>0.
 \end{aligned}
 \end{equation}
 For the kernels considered here, numerical checks show that
@@ -640,28 +647,35 @@ $|t|$.
 
 As $p\to+\infty$, the second relation in
 Eq.~\eqref{eq:wiener-hopf-solution} gives
+{\small
 \begin{equation*}
+\begin{aligned}
   \Phi_i^-(p)\sim\frac{1}{\sqrt{p}}
-  \left[
-    \frac{\sigma_iK^+(-1)}{G_i^+(-1)}
-    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+  \Bigg[
+    &\frac{\sigma_iK^+(-1)}{G_i^+(-1)}\\[-1pt]
+    &-\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
     {(\lambda+1)G_i^+(-\lambda-1)}
-  \right].
+  \Bigg].
+\end{aligned}
 \end{equation*}
+}
 Applying an Abelian-type theorem~\citep{noble1958wienerhopf} to the
 tip asymptotics~\eqref{eq:zone-tip-asymptotics} also gives
 \begin{equation*}
   \Phi_i^-(p)\sim-\frac{k_i}{\sqrt{2pd_i}}.
 \end{equation*}
 Comparing these expressions yields the local stress intensity factor
+{\small
 \begin{equation*}
-  k_i=-\sqrt{2d_i}
-  \left[
-    \frac{\sigma_iK^+(-1)}{G_i^+(-1)}
-    -\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
+\begin{aligned}
+  k_i=-\sqrt{2d_i}\Bigg[
+    &\frac{\sigma_iK^+(-1)}{G_i^+(-1)}\\[-1pt]
+    &-\frac{CQ_i d_i^\lambda K^+(-\lambda-1)}
     {(\lambda+1)G_i^+(-\lambda-1)}
-  \right].
+  \Bigg].
+\end{aligned}
 \end{equation*}
+}
 Imposing $k_i=0$, which removes the inverse-square-root singular term
 from the assumed tip asymptotics, gives the zone length:
 \begin{equation}
@@ -760,9 +774,12 @@ Within the adopted model, the work $W_i$ done against the resistance
 to separation, per unit out-of-plane thickness, is defined
 by~\citep{Cherepanov1986}
 \begin{equation*}
-  W_i=\sigma_i\int_0^{d_i}
-      \jump{u_\theta(r,\beta_i)}\,\dd r
-  =-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
+\begin{aligned}
+  W_i&=\sigma_i\int_0^{d_i}
+      \jump{u_\theta(r,\beta_i)}\,\dd r,\\
+  W_i&=-\frac{4(1-\nu_i^2)\sigma_i}{E_i}
+       d_i^2\Phi_i^-(1).
+\end{aligned}
 \end{equation*}
 Using Eq.~\eqref{eq:wiener-hopf-solution}, we obtain
 \begin{equation*}
@@ -782,13 +799,13 @@ For the numerical analysis, introduce the dimensionless loading,
 opening, and energy parameters $\sigmap$, $\delta_i'$, and $J_i'$,
 respectively:
 \begin{equation*}
-  \sigmap=\frac{Cl^{\lambda_0}}{\sigma_i},
-  \qquad
-  \delta_i'=\frac{E_i\delta_i}
-  {4(1-\nu_i^2)\sigma_i l},
-  \qquad
-  J_i'=\frac{E_iJ_i}
+\begin{aligned}
+  \sigmap&=\frac{Cl^{\lambda_0}}{\sigma_i},\\
+  \delta_i'&=\frac{E_i\delta_i}
+  {4(1-\nu_i^2)\sigma_i l},\\
+  J_i'&=\frac{E_iJ_i}
   {4(1-\nu_i^2)\sigma_i^2l}.
+\end{aligned}
 \end{equation*}
 The primes here denote normalization, not differentiation.
 Equations~\eqref{eq:normalized-process-zone-length},
@@ -902,13 +919,13 @@ transition angle $\alpha_1$ increases monotonically, whereas $\alpha_2$
 decreases monotonically. Thus, elastic contrast systematically shifts
 the boundaries of the angular intervals of physical admissibility.
 
-\begin{table}[htbp]
+\begin{table*}[htbp]
   \centering
   \caption{Angles at which the coefficient $g_2$ changes sign for
   $\nu_1=\nu_2=0.3$.}
   \label{tab:g2-transition-angles}
-  \scriptsize
-  \setlength{\tabcolsep}{2.6pt}
+  \small
+  \setlength{\tabcolsep}{4.0pt}
   \begin{tabular}{@{}lrrrrrrrrrrr@{}}
     \toprule
     $E_1/E_2$ & 0.01 & 0.10 & 0.20 & 0.30 & 0.40 & 0.50 & 0.60 & 0.70 & 0.80 & 0.90 & 0.99 \\
@@ -917,7 +934,7 @@ the boundaries of the angular intervals of physical admissibility.
     $\alpha_2$, $^\circ$ & 108.02 & 107.90 & 107.72 & 107.52 & 107.30 & 107.09 & 106.88 & 106.69 & 106.50 & 106.32 & 106.17 \\
     \bottomrule
   \end{tabular}
-\end{table}
+\end{table*}
 
 
 Cases with $E_1/E_2>1$ are not independent. They are obtained by
