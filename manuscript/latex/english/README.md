@@ -79,11 +79,15 @@ Output: `Dudyk_English_Batch03.pdf`.
 
 The approved baseline transition values are
 \(\alpha_1=12.9202^\circ\) and \(\alpha_2=107.0897^\circ\), consistent
-with the current verification CSV. The four Figure-2 endpoint values quoted
-in the text were rechecked against `results/figure2_recalculated.csv`, and
-the Figure-3 maximum is \(d_i/l=0.1779333\) at the sampled
-\(\alpha=35^\circ\), consistent with the text's order-\(0.18\) validity
-warning.
+with the current verification CSV. Figures 2 and 3 were regenerated after
+the September-25 analytical corrections. At
+\(\alpha=45^\circ\), \(i=1\), \(\sigma'=-0.5\), the updated checkpoint is
+\(d_1/l=0.14743436\), \(\delta_1'=0.14578703\), and
+\(J_1'=0.08362039\). On the principal negative-load material-1 branch,
+the sampled maxima occur at different but nearby angles:
+\(d_1/l=0.1779333\) at \(35^\circ\),
+\(\delta_1'=0.2077053\) at \(32^\circ\), and
+\(J_1'=0.1139144\) at \(33^\circ\).
 
 The old numerical Author Query boxes are omitted from the clean English
 translation because their agreed substance is already incorporated in the
@@ -92,10 +96,12 @@ the deformation and energy characteristics are uniquely related for fixed
 geometry; Batch 3 expresses the corresponding criteria as equivalent when
 their critical material parameters are chosen consistently.
 
-The numerical implementation uses \(G_i^+(-1-\lambda)\) in the opening
-formula, matching the printed source and the approved numerical curves.
-This reproduction does not independently resolve AQ-AN-02; the analytical
-query remains open in `AUTHOR_QUERIES_BATCH02.md`.
+On September 25, 2026, M. V. Dudyk independently confirmed the analytical
+audit: the opening formula uses \(G_i^+(-1)\), and the coefficients in
+\(W_i\) and \(J_i\) are \(8/\pi\) and \(16/\pi\), respectively.
+The MATLAB implementation, regenerated Figures 2--3, and the English
+analytical and numerical sections now use these corrected relations.
+AQ-AN-02 is closed; AQ-AN-01 remains separate and unresolved.
 
 Repository packaging note: the source and `figures/README.md` refer to
 `figure4_admissible_segments.pdf`, and `matlab/generate_figure4.m` is
