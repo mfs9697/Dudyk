@@ -115,8 +115,8 @@ segments with the representative normalized loads `sigma'=+0.5` and
 \]
 
 its sign is the sign of `C` and therefore selects the admissible branch. Its
-magnitude controls the process-zone length, opening, and energy-release rate
-in the later calculations, but it does not change any of the four
+magnitude controls the process-zone length, opening, and zone-related energy
+parameter in the later calculations, but it does not change any of the four
 characteristic exponents in Figure 4. The remaining portions of `lambda1` and
 `lambda2` are shown as gray dotted complete mathematical branches and are
 identified as such in the legend.
