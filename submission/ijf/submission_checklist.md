@@ -29,7 +29,7 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 ## Items to confirm before clicking Submit
 
 - [ ] Confirm that **M. F. Selivanov** is the corresponding author for this submission.
-- [ ] Confirm the official current English name of affiliation 2: **Uman National University, Uman, Ukraine**.
+- [x] Official current English name of affiliation 2 verified as **Uman National University, Uman, Ukraine** (Unified State Electronic Database on Education).
 - [ ] Confirm all author names exactly as they should appear in the publication.
 - [ ] Add ORCID iDs where available (recommended, not mandatory).
 - [ ] Obtain explicit approval of the final English submission version from all four authors.
