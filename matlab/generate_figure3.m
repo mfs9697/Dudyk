@@ -128,7 +128,7 @@ layout = tiledlayout(fig, 1, 3, 'TileSpacing', 'compact', ...
     'Padding', 'compact');
 yFields = {'d_over_l', 'delta_prime', 'J_prime'};
 yLabels = {'$d_i/l$', '$\delta_i^{\prime}$', '$J_i^{\prime}$'};
-yMaximum = [0.25, 0.25, 0.06];
+yMaximum = [0.25, 0.25, 0.13];
 panelLabels = {'(a)', '(b)', '(c)'};
 legendHandles = gobjects(1, numel(cases));
 legendLabels = figure3_legend_labels(cases);
@@ -197,7 +197,7 @@ xticks(ax, 0:30:180);
 if panel < 3
     yticks(ax, 0:0.05:yMaximum);
 else
-    yticks(ax, 0:0.01:yMaximum);
+    yticks(ax, 0:0.02:yMaximum);
 end
 xlabel(ax, '$\alpha\;({}^{\circ})$', 'Interpreter', 'latex', ...
     'FontSize', 11.5);
