@@ -1,4 +1,4 @@
-\section{Numerical analysis and discussion of results}
+\section{Numerical results and discussion}
 \label{sec:numerical-results}
 
 The numerical analysis is performed for the normalized parameters
@@ -8,7 +8,7 @@ loading sign for which
 \begin{equation*}
   Cg_2<0,\qquad CQ_i>0
 \end{equation*}
-hold simultaneously are regarded as physically admissible. The first
+hold simultaneously are considered physically admissible. The first
 inequality ensures compressive contact between the faces of the
 interfacial shear crack, whereas the second ensures tensile normal stress
 along the bisector of the angular sector of the material in which the
@@ -43,8 +43,8 @@ the boundaries of the angular intervals of physical admissibility.
 
 \input{english/tables/table1_transition_angles.tex}
 
-Cases with $E_1/E_2>1$ are not independent. They are recovered by
-interchanging the materials together with
+Cases with $E_1/E_2>1$ are not independent. They are obtained by
+interchanging the materials according to
 \begin{equation*}
   (E_1,\nu_1)\leftrightarrow(E_2,\nu_2),
   \qquad
@@ -77,8 +77,8 @@ dimensionless loading parameter $\sigma'$ for four reference angles and
 the physically admissible materials.}{fig:load-dependence}
 
 In all four cases, $d_i/l$, $\delta_i'$, and $J_i'$ increase
-monotonically with $|\sigma'|$. This synchronous behavior follows
-directly from the analytical relations
+monotonically with $|\sigma'|$. This common trend follows directly from
+the analytical relations
 $\delta_i'\propto d_i/l$ and $J_i'\propto d_i/l$ for fixed geometry.
 Among the four reference configurations shown, the largest values of all
 three parameters at $|\sigma'|=0.5$ occur for
@@ -88,10 +88,9 @@ $\alpha=45^\circ$, $C<0$; specifically,
   \delta_1'=0.14578703,\qquad
   J_1'=0.08362039.
 \end{equation*}
-This result is also relevant to the small-scale assumption: increasing
-the load simultaneously increases the local deformation and energy
-parameters and moves the model closer to the limit of its asymptotic
-applicability.
+This trend also bears on the small-scale assumption: increasing the load
+raises the local deformation and energy parameters and moves the model
+closer to the limit of its asymptotic applicability.
 
 For a fixed configuration, the opening $\delta_i$ and the zone-related
 energy parameter $J_i$ are both uniquely linked to the equilibrium zone
@@ -122,10 +121,9 @@ analytical limit.}%
 
 On the two broad admissible material-1 branches, the angular dependencies
 have pronounced interior maxima, whereas on the short material-2 branches
-the largest values occur near the admissibility boundaries. After the
-analytical corrections, the maxima of $d_i/l$, $\delta_i'$, and $J_i'$
-remain close but do not occur at exactly the same angle. For the blue
-material-1 branch with $C<0$, the one-degree sweep gives
+the largest values occur near the admissibility boundaries. The maxima of $d_i/l$, $\delta_i'$, and $J_i'$ are close but do not occur
+at exactly the same angle. For the material-1 branch with $C<0$, the
+one-degree sweep gives
 \begin{equation*}
 \begin{aligned}
   \max(d_1/l)&=0.17793332 &&\text{at }\alpha=35^\circ,\\
@@ -137,12 +135,12 @@ Their proximity is consistent with the fact that, at each fixed $\alpha$,
 $\delta_i'$ and $J_i'$ are proportional to $d_i/l$, while the
 proportionality coefficients themselves depend on angle. Thus,
 Figure~\ref{fig:angle-dependence} quantifies how geometry changes the
-deformation and energetic measures attained at a prescribed load. Converting
+deformation and energy measures attained at a prescribed load. Converting
 these curves into an angular dependence of the critical applied load requires
 specifying the corresponding critical material parameter and solving the
 criterion separately for each $\alpha$.
 
-The maximum of the blue branch in
+The maximum of the material-1 branch with $C<0$ in
 Figure~\ref{fig:angle-dependence} corresponds to $d_i/l$ of order
 $0.18$. This value is no longer unambiguously small compared with unity,
 whereas the local formulation is based on the assumption
@@ -155,8 +153,8 @@ Numerical evaluation of the plus factors for
 Figure~\ref{fig:angle-dependence} requires particular care as
 $\alpha\to0$ and $\alpha\to180^\circ$. A fixed factorization contour
 converges slowly near these limits. The calculations therefore use
-adaptive contour extension; a further increase in the tail changed the
-checked plus factors by at most $8.69\times10^{-13}$. Accordingly,
+adaptive contour extension; a further extension of the tail changed the
+computed plus factors by at most $8.69\times10^{-13}$. Accordingly,
 Figure~\ref{fig:angle-dependence} is based on the converged adaptive
 values.
 
@@ -179,8 +177,8 @@ $Cg_2<0$ and $CQ_i>0$.}%
 Within the physically admissible segments for the baseline material pair
 examined here, the configuration containing the interfacial shear crack
 has a substantially stronger singularity than the intact corner:
-$|\lambda|$ exceeds $|\lambda_0|$. Introducing the process zone partly
-reduces this concentration, and for the corresponding material
+$|\lambda|$ exceeds $|\lambda_0|$. Introducing the process zone partly weakens this singularity, and for the
+corresponding material
 \begin{equation*}
   |\lambda_0|<|\lambda_i|<|\lambda|.
 \end{equation*}
