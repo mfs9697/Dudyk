@@ -52,11 +52,11 @@
 \definecolor{authorquerybg}{RGB}{255,250,230}
 \definecolor{manuscriptlink}{RGB}{0,75,145}
 
-% Working notes are suppressed in the integrated manuscript. Author queries
-% remain visible until they are resolved with the authors.
+% Working notes and resolved author queries are suppressed in the clean
+% publication manuscript. Historical query dispositions are kept under docs/.
 \newcommand{\worknote}[1]{}
 \newif\ifshowauthorqueries
-\showauthorqueriestrue
+\showauthorqueriesfalse
 \newcommand{\AuthorQuery}[2]{%
   \ifshowauthorqueries
     \par\smallskip\noindent
