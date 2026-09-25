@@ -11,14 +11,13 @@ coordinate
 \end{equation*}
 and apply the Mellin integral transform to the boundary-value problem
 \eqref{eq:interface-boundary-conditions}--\eqref{eq:matched-far-field}.
-Let $p$ be the complex Mellin variable. The transforms of the normal
-stress outside the zone and the normal displacement gradient within the
-zone are defined, respectively, by
+Let $p$ be the complex Mellin variable. The transforms of the correction normal stress outside the zone and the
+normal displacement gradient within the zone are defined, respectively, by
 \begin{equation*}
 \begin{aligned}
   \Phi_i^+(p)
     &=\int_1^\infty
-      \sigma_\theta(\rho d_i,\beta_i)\rho^p\,\dd\rho,\\
+      \widehat{\sigma}_i(\rho d_i)\rho^p\,\dd\rho,\\
   \Phi_i^-(p)
     &=\frac{E_i}{2(1-\nu_i^2)}
       \int_0^1
@@ -28,12 +27,24 @@ zone are defined, respectively, by
       \rho^p\,\dd\rho.
 \end{aligned}
 \end{equation*}
-The superscripts on $\Phi_i^+$ and $\Phi_i^-$ identify functions assigned
-to the left and right half-planes, respectively; they do not indicate
-the sign of a physical quantity.
-% AQ-AN-01: the integral definition and the claimed strip require clarification;
-% see AUTHOR_QUERIES_BATCH02.md. The approved equations are retained.
+Because $\widehat{\sigma}_i(r)=o(r^{-1})$ as $r\to\infty$, the integral
+for $\Phi_i^+$ defines an analytic function for
+$\operatorname{Re}p<0$. Near the corner, the displacement gradient has
+order $r^{\lambda_i}$, so $\Phi_i^-$ is analytic for
+$\operatorname{Re}p>-1-\lambda_i$. The superscripts on $\Phi_i^+$ and
+$\Phi_i^-$ identify functions assigned to the left and right half-planes,
+respectively; they do not indicate the sign of a physical quantity.
 
+On the active segment $0<\rho<1$, the correction traction is
+$\sigma_i-CQ_i d_i^\lambda\rho^\lambda$, and hence
+\begin{equation*}
+  \int_0^1
+  \left(\sigma_i-CQ_i d_i^\lambda\rho^\lambda\right)
+  \rho^p\,\dd\rho
+  =
+  \frac{\sigma_i}{p+1}
+  -\frac{CQ_i d_i^\lambda}{p+\lambda+1}.
+\end{equation*}
 Eliminating the transforms of the interior field yields the functional
 equation
 \begin{equation}
@@ -43,11 +54,15 @@ equation
   -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
   =-\tan(\pi p)G_i(p)\Phi_i^-(p),
 \end{equation}
-in the common strip of analyticity
-$-\varepsilon_2<\operatorname{Re}p<\varepsilon_1$, where
-$\operatorname{Re}p$ denotes the real part of $p$ and
-$\varepsilon_1,\varepsilon_2>0$ are sufficiently small constants.
-The kernel $G_i(p)$ is
+which is initially valid in the common convergence strip
+\begin{equation*}
+  \max\{-1-\lambda,-1-\lambda_i\}
+  <\operatorname{Re}p<0.
+\end{equation*}
+Here, $\operatorname{Re}p$ denotes the real part of $p$. The subsequent
+Wiener--Hopf separation uses analytic continuation to the boundary
+$\operatorname{Re}p=0$: $\Phi_i^+$ is continued from the left and
+$\Phi_i^-$ from the right. The kernel $G_i(p)$ is
 \begin{equation*}
   G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
 \end{equation*}
