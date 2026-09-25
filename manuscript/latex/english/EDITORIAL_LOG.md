@@ -245,26 +245,26 @@ asset visible rather than silently substituting \`figure4_recalculated.pdf\`.
 M. V. Dudyk independently rechecked the analytical discrepancies found
 during translation and confirmed both corrections:
 
-- the opening formula must use (G_i^+(-1)), not
-  (G_i^+(-1-lambda));
-- the coefficients in (W_i) and (J_i) must be (8/pi) and
-  (16/pi), replacing (32/(9pi)) and (64/(9pi)).
+- the opening formula must use \(G_i^+(-1)\), not
+  \(G_i^+(-1-\lambda)\);
+- the coefficients in \(W_i\) and \(J_i\) must be \(8/\pi\) and
+  \(16/\pi\), replacing \(32/(9\pi)\) and \(64/(9\pi)\).
 
 The English Section 3 formulas and the MATLAB implementation were updated,
 and Figures 2 and 3 were regenerated from the corrected code. The process-zone
 length is unchanged. At the 45-degree reference point the corrected values are
 
-[
-d_1/l=0.1474343617,qquad
-delta_1'=0.1457870324,qquad
+\[
+d_1/l=0.1474343617,\qquad
+\delta_1'=0.1457870324,\qquad
 J_1'=0.0836203872.
-]
+\]
 
 The regenerated Figure-3 sweep also resolves an earlier overstatement:
 the angular maxima are close but not coincident. On the principal
-negative-load material-1 branch they occur at 35 degrees for (d_1/l),
-32 degrees for (delta_1'), and 33 degrees for (J_1'). The English
-discussion now states this explicitly and does not infer a universal
+negative-load material-1 branch they occur at \(35^\circ\) for \(d_1/l\),
+\(32^\circ\) for \(\delta_1'\), and \(33^\circ\) for \(J_1'\). The
+English discussion now states this explicitly and does not infer a universal
 critical-load ranking from a single prescribed-load sweep.
 
 AQ-AN-02 is closed. The August Mathcad opening and energy values are retained
