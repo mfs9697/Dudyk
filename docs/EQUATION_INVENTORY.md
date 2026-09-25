@@ -253,8 +253,10 @@ sign-changing interior root at only 59 of the 179 sampled angles.
    reported Figure-4 roots are valid.
 4. **Process-zone index.** The original material-2 calculation at
    \(\alpha=10^\circ\) used an incorrect index in a Wiener-Hopf plus factor.
-   The corrected Mathcad worksheet uses the material-2 kernel consistently and
-   agrees with the MATLAB implementation.
+   The corrected August Mathcad worksheet uses the material-2 kernel
+   consistently and agrees with the then-current numerical pathway. After the
+   September-25 analytical correction, its opening and energy values are
+   retained only as historical regression data.
 5. **Missing powers.** The draft lost the factor \(\sigma_i^2\) in the
    work and zone-related energy expressions. The authors marked the
    corresponding powers for restoration.
@@ -272,8 +274,8 @@ sign-changing interior root at only 59 of the 179 sampled angles.
    definition such as “the most negative real root in \((-1,0)\), continuously
    connected to the reported branch.”
 10. **Small-angle contour convergence.** The author's fixed contour
-   \([-40,40]\) reproduces the corrected Mathcad table but is not converged
-   at the smallest angles. The publication calculation must use stable
+   \([-40,40]\) reproduces the historical August Mathcad table after
+   reverse mapping but is not converged at the smallest angles. The publication calculation must use stable
    imaginary-axis kernel ratios and an angle-adaptive contour; at one degree
    the converged results differ from the fixed-\(T=40\) values by up to
    \(0.3813\%\).
