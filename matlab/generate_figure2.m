@@ -71,7 +71,7 @@ writetable(combined, fullfile(resultsDir, 'figure2_recalculated.csv'));
 
 % The complete view prevents the 45-degree curve and the printed-equation
 % 10-degree opening/energy curves from being hidden by the manuscript crop.
-write_figure(caseData, cases, [0.16, 0.16, 0.04], ...
+write_figure(caseData, cases, [0.16, 0.16, 0.10], ...
     figuresDir, 'figure2_recalculated');
 
 % These limits approximate the original Figure-2 panels and make visual
