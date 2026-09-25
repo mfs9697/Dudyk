@@ -54,10 +54,10 @@ jobs:
         working-directory: manuscript/latex
         run: |
           set -o pipefail
-          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex | tee english-manuscript-xelatex-1.log
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english_main.tex | tee english-manuscript-xelatex-1.log
           bibtex Dudyk_English_Manuscript | tee english-manuscript-bibtex.log
-          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex | tee english-manuscript-xelatex-2.log
-          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english/main.tex | tee english-manuscript-xelatex-3.log
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english_main.tex | tee english-manuscript-xelatex-2.log
+          xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Manuscript english_main.tex | tee english-manuscript-xelatex-3.log
 
       - name: Check English bibliography and cross-references
         working-directory: manuscript/latex
