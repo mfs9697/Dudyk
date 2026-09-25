@@ -806,6 +806,7 @@ defines the zone-related energy parameter $J_i$:
 For the numerical analysis, introduce the dimensionless loading,
 opening, and energy parameters $\sigmap$, $\delta_i'$, and $J_i'$,
 respectively:
+\begin{strip}
 \begin{equation*}
   \sigmap=\frac{Cl^{\lambda_0}}{\sigma_i},
   \qquad
@@ -815,6 +816,7 @@ respectively:
   J_i'=\frac{E_iJ_i}
   {4(1-\nu_i^2)\sigma_i^2l}.
 \end{equation*}
+\end{strip}
 The primes here denote normalization, not differentiation.
 Equations~\eqref{eq:normalized-process-zone-length},
 \eqref{eq:process-zone-opening}, and
@@ -1383,6 +1385,7 @@ characteristic branch.
 
 For the configuration without an interfacial shear crack, the singular
 part of the interfacial stress field is~\citep{NazarenkoKipnis2022Stress}
+\begin{strip}
 \begin{equation}
 \label{eq:app-intact-field}
 \begin{aligned}
@@ -1393,9 +1396,11 @@ part of the interfacial stress field is~\citep{NazarenkoKipnis2022Stress}
     \qquad r\to0,
 \end{aligned}
 \end{equation}
+\end{strip}
 where $C$ is the local singular-field amplitude, $\lambda_0$ is
 the intact-corner singularity exponent, and the dimensionless angular
 coefficients $g_1$ and $g_2$ are
+\begin{strip}
 \begin{equation*}
 \begin{aligned}
   g_1={}&(1-e)\sin[\lambda_0(\pi-\alpha)]
@@ -1410,6 +1415,7 @@ coefficients $g_1$ and $g_2$ are
       \cos[(\lambda_0+2)\alpha].
 \end{aligned}
 \end{equation*}
+\end{strip}
 The exponent $\lambda_0$ is determined by the characteristic equation
 \begin{equation}
 \label{eq:app-D0-root}
@@ -1421,6 +1427,7 @@ where the intact-corner determinant $D_0(p)$ is
   D_0(p)=b_0(p)+e\,b_1(p)+e^2b_2(p),
 \end{equation*}
 with auxiliary functions $b_0(p)$, $b_1(p)$, and $b_2(p)$ given by
+\begin{strip}
 \begin{equation*}
 \begin{aligned}
   b_0(p)={}&
@@ -1436,12 +1443,14 @@ with auxiliary functions $b_0(p)$, $b_1(p)$, and $b_2(p)$ given by
   [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)].
 \end{aligned}
 \end{equation*}
+\end{strip}
 \subsection{Corner with a stationary V-shaped interfacial shear crack}
 
 For the prescribed stationary V-shaped interfacial shear crack, the two
 symmetric branches have length $l$ each. At distances $r\ll l$, the normal stress along the bisector
 of the sector occupied by material~$i$ has the asymptotic
 form~\citep{NazarenkoKipnis2022Stress}
+\begin{strip}
 \begin{equation}
 \label{eq:app-cracked-field}
   \sigma_\theta(r,\beta_i)
@@ -1450,6 +1459,7 @@ form~\citep{NazarenkoKipnis2022Stress}
   \qquad
   \beta_1=\pi,\quad \beta_2=0.
 \end{equation}
+\end{strip}
 Here, $\lambda$ is the corner singularity exponent for the cracked
 configuration and $\beta_i$ is the corresponding bisector direction.
 The amplitude coefficient $Q_i$ is expressed as
@@ -1458,6 +1468,7 @@ The amplitude coefficient $Q_i$ is expressed as
 \end{equation*}
 where the dimensionless coefficient $q_i$ and the derivative $D'(p)$
 of the cracked-corner determinant are
+\begin{strip}
 \begin{equation*}
   q_i=
   \frac{2S_i(-1-\lambda)K^+(-1-\lambda)G^+(-1-\lambda)}
@@ -1466,11 +1477,13 @@ of the cracked-corner determinant are
   \qquad
   D'(p)=\frac{\dd D(p)}{\dd p}.
 \end{equation*}
+\end{strip}
 The functions $S_i(p)$ are auxiliary numerator functions defined below.
 The factors $K^+(p)$ and $G^+(p)$ are specified later in this subsection.
 The base plus factor $G^+(p)$ must not be confused with $G_i^+(p)$, which
 factorizes the process-zone kernel $G_i(p)$ in
 Section~\ref{sec:derivation}. Explicitly,
+\begin{strip}
 \begin{equation*}
 \begin{aligned}
   S_1(p)={}&2e(1+\kappa_2)s_{11}(p)\sin[(p+1)\alpha]\\
@@ -1483,8 +1496,10 @@ Section~\ref{sec:derivation}. Explicitly,
   &-2(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}\,s_{23}(p),
 \end{aligned}
 \end{equation*}
+\end{strip}
 where the auxiliary functions $s_{mn}(p)$, with $m=1,2$ and
 $n=1,2,3$, are
+\begin{strip}
 \begin{equation*}
 \begin{aligned}
   s_{11}(p)&=p\cos(p\pi-\alpha)\sin\alpha
@@ -1499,6 +1514,7 @@ $n=1,2,3$, are
              +\cos[p(\pi-\alpha)]\sin(p\alpha).
 \end{aligned}
 \end{equation*}
+\end{strip}
 The corner singularity exponent $\lambda$ for the configuration
 containing the prescribed stationary V-shaped interfacial crack satisfies
 \begin{equation}
@@ -1511,6 +1527,7 @@ where the characteristic determinant $D(p)$ is
   D(p)=a_0(p)+e\,a_1(p),
 \end{equation*}
 with auxiliary functions $a_0(p)$ and $a_1(p)$ given by
+\begin{strip}
 \begin{equation*}
 \begin{aligned}
   a_0(p)={}&(1+\kappa_1)
@@ -1521,13 +1538,17 @@ with auxiliary functions $a_0(p)$ and $a_1(p)$ given by
   [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha].
 \end{aligned}
 \end{equation*}
+\end{strip}
 The coefficients $q_i$ use the base kernel
+\begin{strip}
 \begin{equation*}
   G(p)=
   \frac{(e+\kappa_1)(1+e\kappa_2)\sin(\pi p)D(p)}
   {(e+\kappa_1+1+e\kappa_2)\cos(\pi p)D_0(p)}
 \end{equation*}
+\end{strip}
 and its plus factor
+\begin{strip}
 \begin{equation*}
   G^+(p)=
   \exp\!\left\{
@@ -1537,6 +1558,7 @@ and its plus factor
   \right\},
   \qquad \operatorname{Re}p<0.
 \end{equation*}
+\end{strip}
 Here, $z$ is the complex integration variable, $\ii^2=-1$, and the contour
 is directed upward along the imaginary axis. The gamma-function factor is
 \begin{equation*}
