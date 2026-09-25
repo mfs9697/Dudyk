@@ -65,8 +65,8 @@ assumed insufficient to cause loss of local stability at the outer crack
 tips. Branching at the corner and further interfacial propagation from the
 outer tips are competing mechanisms; the latter is not modeled here.
 
-The corner of the cracked interface retains a power-law stress
-singularity~\cite{NazarenkoKipnis2022Stress}. This field can support a process zone in one of the materials that can
+The interfacial crack retains a power-law stress singularity at the
+corner~\cite{NazarenkoKipnis2022Stress}. This field can support a process zone in one of the materials that can
 develop into an opening-mode (Mode~I) branch. Under the assumed geometric and loading symmetry, the bisector of the sector
 occupied by that material is a natural direction for the zone. Along this
 direction, the local Mode~II (in-plane shear) component at the zone tip
@@ -180,7 +180,8 @@ in that limit.
 
 For the subsequent Wiener--Hopf construction, we use superposition as in
 the related problem~\cite{KaminskyDudykPolishchuk2024}. We subtract the
-known no-zone field and introduce the correction normal stress
+known field for the configuration without a process zone and introduce the
+correction normal stress
 \begin{equation*}
   \widehat{\sigma}_i(r)
   =\sigma_\theta(r,\beta_i)-CQ_i r^\lambda.
@@ -195,9 +196,9 @@ while on the process-zone segment $0<r<d_i$,
   \widehat{\sigma}_i(r)
   =\sigma_i-CQ_i r^\lambda.
 \end{equation*}
-The no-zone field satisfies the bisector symmetry condition $u_\theta=0$,
-so subtracting it does not alter the displacement-gradient transform used
-below. The functional problem is therefore formulated for the correction field,
+The field without a process zone satisfies the bisector symmetry condition
+$u_\theta=0$, so subtracting it does not alter the displacement-gradient
+transform used below. The functional problem is therefore formulated for the correction field,
 with the known power-law term included in its prescribed part.
 
 A process zone can form in material~$i$ only if the normal stress on its
