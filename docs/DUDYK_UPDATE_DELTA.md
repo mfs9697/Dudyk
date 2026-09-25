@@ -67,12 +67,13 @@ The stated purpose of the paper is essentially unchanged; the final purpose/cont
 ### ADOPT
 
 1. Start the numerical discussion from the physical-admissibility map based on \(Cg_2<0\) and \(CQ_i>0\), with claims explicitly limited to the investigated material family/baseline when appropriate.
-2. Retain Table 1 after independent recalculation of all listed transition angles. For the baseline \(E_1/E_2=0.5\), \(\nu_1=\nu_2=0.3\), use the verified values
+2. Retain Table 1 after independent recalculation of all listed transition angles. For the baseline \(E_1/E_2=0.5\), \(\nu_1=\nu_2=0.3\), use the direct continuous-transition values
    \[
-   \alpha_1=12.9141^\circ,\qquad \alpha_2=107.0842^\circ.
+   \alpha_1=12.9202^\circ,\qquad \alpha_2=107.0897^\circ.
    \]
+   The earlier values \(12.9141^\circ\) and \(107.0842^\circ\) are retained only as one-degree-grid interpolation checks.
 3. Use the corrected Figure-2 interpretation, but state comparisons conservatively (e.g. among the four plotted control cases, the largest values occur for \(\alpha=45^\circ\), \(C<0\)).
-4. Retain the synchronous angular maxima of \(d_i/l\), \(\delta_i'\), and \(J_i'\) as a central physical result.
+4. After the 25 September analytical correction, do **not** describe the angular maxima of \(d_i/l\), \(\delta_i'\), and \(J_i'\) as coincident. On the principal negative-load material-1 branch the one-degree maxima occur at \(35^\circ\), \(32^\circ\), and \(33^\circ\), respectively. Their proximity is meaningful, but the proportionality coefficients depend on angle.
 5. Retain the three-stage singularity interpretation
    \[
    \lambda_0\rightarrow\lambda\rightarrow\lambda_i,
@@ -82,7 +83,7 @@ The stated purpose of the paper is essentially unchanged; the final purpose/cont
 
 ### ADAPT
 
-1. Replace “least fracture toughness” by “most unfavorable geometry / lowest critical applied loading for a fixed material toughness \(J_{ic}\)”.
+1. Replace “least fracture toughness” by a statement about the larger deformation/energy measure attained at the prescribed load. Do not infer a universal ordering of critical applied loads from Figure 3 alone; specify \(J_{ic}\) (or the corresponding deformation threshold) and solve the criterion separately for each angle.
 2. Treat \(\alpha=90^\circ\) as a degenerate analytical limit corresponding to a straight interface, not as an ordinary numerical point.
 3. Replace deterministic wording that shear-crack singularity “causes” the process zone by wording that it creates conditions for local fracture together with the sign/admissibility and strength conditions.
 4. Do not generalize the sign map or the inequality \(|\lambda_0|<|\lambda_i|<|\lambda|\) beyond the material family actually checked.
@@ -91,7 +92,7 @@ The stated purpose of the paper is essentially unchanged; the final purpose/cont
 
 **AQ-NR-01.** Should a deformation criterion \(\delta_i=\delta_{ic}\) be introduced alongside \(J_i=J_{ic}\)? If yes, define the physical/material meaning and source of \(\delta_{ic}\); otherwise retain only the energy criterion.
 
-**AQ-NR-02.** Confirm that the phrase “least fracture toughness of the joint” is intended to mean the lowest critical external loading (for fixed \(J_{ic}\)) at the angular maxima of the fracture driving force.
+**AQ-NR-02 — superseded by the September-25 recalculation.** The corrected angular curves show nearby but distinct maxima. The final text therefore describes the attained driving measures at prescribed load and does not claim a critical-load ranking without explicitly solving the threshold equation.
 
 **AQ-NR-03.** Figure 3 reaches approximately \(d_i/l\approx0.18\), while the local model assumes \(d_i/l\ll1\). Decide how to present this validity limit: retain the full mathematical curve but explicitly flag the region where the small-scale assumption is weak, and avoid unqualified quantitative conclusions there.
 
