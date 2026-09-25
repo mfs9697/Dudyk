@@ -35,7 +35,7 @@ a regularized transform, or an analytically continued quantity; state
 its actual domain and reconcile the definition with the functional
 equation. Do not silently change the far-field remainder.
 
-## AQ-AN-02: factor argument in the opening formula
+## AQ-AN-02: factor argument in the opening formula — RESOLVED September 25, 2026
 
 Location: eq:process-zone-opening and the normalized delta_i' formula.
 
@@ -65,11 +65,16 @@ delta_i = -4(1-nu_i^2)d_i Phi_i^-(0)/E_i yields
       -4(1-nu_i^2) sigma_i lambda K^+(-1) d_i
       / [E_i sqrt(pi G_i(0)) (1+lambda) G_i^+(-1)].
 
-Requested author decision: confirm whether G_i^+(-1-lambda) is a
-typographical error in both opening formulas, or identify the preceding
-relation or convention that changes this reduction. Then compare the
-confirmed expression against the numerical implementation and opening
-plots before modifying any results.
+Author decision (September 25, 2026): M. V. Dudyk independently rechecked
+the derivation and confirmed that the direct reduction is correct:
+G_i^+(-1) must replace G_i^+(-1-lambda) in the opening formula and its
+normalized form. He also confirmed a second coefficient correction found
+during the same audit: W_i and J_i must contain 8/pi and 16/pi,
+respectively, instead of 32/(9 pi) and 64/(9 pi).
+
+The manuscript formulas and MATLAB implementation are therefore to be
+corrected, followed by regeneration of Figures 2 and 3 and their numerical
+discussion. The process-zone length formula is unaffected.
 
 The derivative J_i = dW_i/dd_i was also checked directly against the
 printed W_i proportional to d_i^2: the factor of two is consistent.
@@ -90,4 +95,6 @@ opening formula. The independently compared corrected author Mathcad values
 documented in \`docs/AUTHOR_VALIDATION_2026-08-18.md\` use the same factor
 convention. Therefore the excellent numerical reproduction establishes
 implementation agreement, but it does not choose between the printed formula
-and the direct algebraic reduction recorded above. AQ-AN-02 remains open.
+and the direct algebraic reduction recorded above. This implementation check is now historical: the author has confirmed the
+analytical correction, so the numerical implementation and plots must be
+updated accordingly. AQ-AN-02 is closed.
