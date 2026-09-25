@@ -514,3 +514,25 @@ After the language sweep:
 
 The final build and visual inspection are recorded with the PR for this
 sweep.
+
+
+### Semantic safety pass
+
+A final pass was performed specifically to ensure that stylistic smoothing did
+not weaken or strengthen the mechanics.
+
+- Retained `line of normal displacement discontinuity` in Section 2 rather
+  than shortening it to `normal displacement discontinuity`, because the
+  line character is part of the geometric model.
+- Retained `approach from ahead of the zone / from within it` for
+  (r\to d_i\pm0), which is mechanically more precise than
+  `outside / inside the zone`.
+- Recast the Abstract opening to avoid the repeated
+  `V-shaped ... V-shaped interface` construction while preserving the
+  kinked-interface geometry.
+- Recast the Introduction novelty sentence from an exhaustive
+  `has not yet been applied` claim to the source-faithful statement that
+  the present study applies the established framework to the specific
+  stationary contacting V-crack field.
+- No modal verbs, criticality statements, admissibility conditions, or
+  criterion-equivalence statements were strengthened during copy-editing.
