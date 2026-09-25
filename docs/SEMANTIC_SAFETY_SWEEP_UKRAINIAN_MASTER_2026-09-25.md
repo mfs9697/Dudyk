@@ -244,3 +244,12 @@ scientific decision from the authors.
 The remaining work before freezing the Ukrainian master is mechanical:
 successful compilation/reference checks and one final rendered-PDF inspection
 for layout or accidental visual defects.
+
+
+## Build verification
+
+GitHub Actions **Manuscript build #107** completed successfully on manuscript
+head `c0113c47c2db213dfa759fbeb2e856f24b195e3a`, which contains the complete
+semantic-safety patch. The Ukrainian manuscript, complete English manuscript,
+bibliography/cross-reference checks, LaTeX-warning checks, and artifact upload
+all passed.
