@@ -703,3 +703,19 @@ implements only items 1–16 above, followed by a build and a semantic diff
 against both:
 1. the Dudyk-approved PDF; and
 2. the immutable post-approval archive.
+
+
+# Implementation checkpoint
+
+The high-confidence recovery patch from this sweep has now been applied to the
+working branch in four narrow manuscript edits:
+
+- `bd2ba439` — approved Abstract details;
+- `dff62671` — approved Introduction details;
+- `f37bcfa3` — approved Problem-statement framing and definitions;
+- `2f9be4fa` — explicit symmetry consequences in Section 4.
+
+The patch deliberately leaves all B/C overrides untouched: corrected
+(G_i^+(-1)), (8/\pi) and (16/\pi) coefficients, AQ-AN-01 transform
+interpretation, AQ-AN-02 energy-parameter interpretation, recalculated figures
+and checkpoints, and the non-sequential competing-mechanism framing.
