@@ -109,6 +109,33 @@ subtracting the matched no-zone eigenfield; the functional equation itself is
 unchanged. Figure 4 has also been regenerated and committed, so all three
 publication figures used in Batch 3 are present.
 
-Next translation batch: Conclusions. The Abstract and Introduction should be
-translated after the body is stable, followed by a final first-use,
-abbreviation, cross-reference, and terminology audit in reading order.
+## Batch 4 (combined with Batches 1--3)
+
+The Conclusions are translated in `sections/05_conclusions.tex`.
+This batch uses the final-swept Ukrainian manuscript after merge of PR #7
+and therefore carries forward the stationary-crack framing, the resolved
+Mellin-transform interpretation, the corrected opening/energy formulas,
+and the regenerated numerical results.
+
+Compile from `manuscript/latex` using XeLaTeX:
+
+```sh
+xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch04 english/batch04.tex
+bibtex Dudyk_English_Batch04
+xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch04 english/batch04.tex
+xelatex -interaction=nonstopmode -halt-on-error -jobname=Dudyk_English_Batch04 english/batch04.tex
+```
+
+Output: `Dudyk_English_Batch04.pdf`.
+
+The Conclusions preserve the distinction between the prescribed stationary
+V-shaped interfacial shear crack and the local branching-initiation model.
+They retain (J_i) as a zone-related energy parameter, present
+(J_i=J_{i\mathrm c}) and (delta_i=delta_{i\mathrm c}) as alternative
+local criteria with independently specified critical material parameters,
+and keep the (d_i/l\approx0.18) small-scale limitation explicit.
+
+Next translation batch: Abstract and Introduction. After those are translated,
+assemble the complete English manuscript and perform a final reading-order
+audit of first use, terminology, abbreviations, citations, cross-references,
+and notation.
