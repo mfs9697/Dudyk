@@ -35,8 +35,9 @@ when the complete English manuscript is assembled.
 
 The analytical derivation and Appendix A are translated in
 `sections/03_process_zone_parameters.tex` and `appendices/appendix_a.tex`.
-All 48 displayed source equations are preserved. Two analytical queries
-are documented in `AUTHOR_QUERIES_BATCH02.md`; these remain open.
+All 48 displayed source equations are preserved. The analytical queries are
+documented in `AUTHOR_QUERIES_BATCH02.md`; AQ-AN-02 was resolved by the
+author on September 25, 2026, while AQ-AN-01 remains open.
 
 Compile from `manuscript/latex` using XeLaTeX:
 
