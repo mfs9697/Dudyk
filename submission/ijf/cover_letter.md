@@ -12,7 +12,7 @@ On behalf of my co-authors, I am pleased to submit the manuscript
 
 **“Analytical Model for Branching Initiation from the Corner of a V-Shaped Interfacial Shear Crack”**
 
-by A. O. Kaminsky, M. F. Selivanov, M. V. Dudyk, and T. V. Polishchuk for consideration as a Research article in the *International Journal of Fracture*.
+by Anatoly Kaminsky, Mikhailo Selivanov, Mykhailo Dudyk, and Tetiana Polishchuk for consideration as a Research article in the *International Journal of Fracture*.
 
 The manuscript develops an analytical fracture-mechanics model for branching initiation from the corner of a prescribed stationary V-shaped interfacial shear crack located along a kinked bimaterial interface. The singular corner field of the stationary crack is used as the outer field for a small tensile process zone in one of the adjoining elastic materials. By combining Mellin transformation, asymptotic matching, Wiener–Hopf factorization, and stress regularity at the process-zone tip, we obtain closed-form relations for the equilibrium zone length, opening, work of separation, and a zone-related energy parameter. The analysis also establishes the physically admissible material/loading branches, quantifies the effects of interface angle and elastic contrast, and distinguishes corner branching from competing interfacial propagation at the crack-branch tips.
 
