@@ -33,9 +33,9 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 - [x] Full author names set as **Anatoly Kaminsky, Mikhailo Selivanov, Mykhailo Dudyk, Tetiana Polishchuk**.
 - [ ] Add ORCID iDs where available (recommended, not mandatory).
 - [ ] Obtain explicit approval of the final English submission version from all four authors.
-- [ ] Confirm the **Funding** statement.
+- [x] **Funding** statement added: no external funding; work carried out within basic institutional funding.
 - [x] **Competing Interests** statement included in the manuscript: “The authors declare no competing interests.”
-- [ ] Confirm the **Author Contributions** statement to be entered in the submission interface.
+- [x] **Author Contributions** statement added to the manuscript and ready for the submission interface.
 - [x] Add the final **Data Availability Statement** to the manuscript.
 - [ ] Decide whether to submit reviewer suggestions; if yes, use institutional emails or verifiable researcher profiles.
 - [ ] Decide whether the standard subscription route or Open Choice is intended after acceptance.
@@ -54,11 +54,11 @@ Current manuscript text:
 
 ### Funding
 
-Choose the statement that is factually correct. If there was no project support:
+> This research received no external funding. The work was carried out within the basic institutional funding of the authors' institutions.
 
-> No funds, grants, or other support was received for conducting this study.
+### Author contributions
 
-If the work belongs to a funded project, replace this with the official funder name and grant/project number.
+> Tetiana Polishchuk carried out the analytical solution of the problem under the supervision of Mykhailo Dudyk. Mykhailo Dudyk contributed to the conceptualization and methodology and supervised the analytical work. Anatoly Kaminsky reviewed the scientific content of the manuscript. Mikhailo Selivanov independently verified and corrected the analytical and numerical results, reproduced and checked the calculations, prepared the figures, contributed to the interpretation of the results, reconstructed and edited the manuscript, prepared the English version, and coordinated the submission. All authors reviewed the final manuscript.
 
 ### Ethics
 
