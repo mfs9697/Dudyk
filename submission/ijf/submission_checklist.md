@@ -31,7 +31,8 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 - [x] Corresponding author set as **Mikhailo Selivanov**.
 - [x] Official current English name of affiliation 2 verified as **Uman National University, Uman, Ukraine** (Unified State Electronic Database on Education).
 - [x] Full author names set as **Anatoly Kaminsky, Mikhailo Selivanov, Mykhailo Dudyk, Tetiana Polishchuk**.
-- [ ] Add ORCID iDs where available (recommended, not mandatory).
+- [x] ORCID iDs verified for all four authors and ready for portal entry:
+  **Anatoly Kaminsky — 0009-0000-9989-6887; Mikhailo Selivanov — 0000-0003-1266-4042; Mykhailo Dudyk — 0000-0002-1399-6367; Tetiana Polishchuk — 0000-0001-7690-7723.**
 - [ ] Obtain explicit approval of the final English submission version from all four authors.
 - [x] **Funding** statement added: no external funding; work carried out within basic institutional funding.
 - [x] **Competing Interests** statement included in the manuscript: “The authors declare no competing interests.”
