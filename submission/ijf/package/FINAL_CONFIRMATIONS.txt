@@ -1,8 +1,16 @@
-FINAL AUTHOR CONFIRMATIONS REQUIRED BEFORE CLICKING SUBMIT
+FINAL ITEMS TO CONFIRM BEFORE CLICKING SUBMIT
 
-1. Competing Interests statement for all four authors.
+1. Funding statement / grant information, if applicable.
 2. Author Contributions information for the submission interface.
-3. Funding statement / grant information, if applicable.
-4. Confirm "Uman National University, Uman, Ukraine" as the official English affiliation.
-5. Confirm M. F. Selivanov as corresponding author.
-6. Add ORCID iDs in the submission interface where available.
+3. ORCID iDs for the authors where available.
+4. Final approval of the submitted English version by all four authors.
+5. Whether reviewer suggestions will be supplied.
+6. Whether the standard subscription route or Open Choice is intended after acceptance.
+
+ALREADY SET IN THE MANUSCRIPT
+
+- Corresponding author: Mikhailo Selivanov.
+- Author names: Anatoly Kaminsky; Mikhailo Selivanov; Mykhailo Dudyk; Tetiana Polishchuk.
+- Affiliation 2: Uman National University, Uman, Ukraine.
+- Data availability statement included.
+- Competing interests statement included: "The authors declare no competing interests."
