@@ -3,7 +3,27 @@ __pycache__/
 *.asv
 *.m~
 .DS_Store
-# LaTeX auxiliary files generated outside manuscript/latex as well
+
+# LaTeX auxiliary files
 *.aux
 *.log
 *.synctex.gz
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.toc
+*.run.xml
+
+# Generated IJF build products
+submission/ijf/build/
+submission/ijf/dist/
+submission/ijf/cover-build/
+submission/ijf/Fig1.pdf
+submission/ijf/Fig2.pdf
+submission/ijf/Fig3.pdf
+submission/ijf/Fig4.pdf
+
+# Temporary batch compilation outputs
+manuscript/latex/batch*.pdf
