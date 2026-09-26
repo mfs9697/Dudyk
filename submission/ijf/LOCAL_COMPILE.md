@@ -1,29 +1,39 @@
 # Local compilation of the IJF manuscript
 
-The file `IJF_manuscript.tex` is intended to compile directly from this folder.
-
-## TeXstudio / MiKTeX
-
-Open:
+The canonical IJF working source is:
 
 `submission/ijf/IJF_manuscript.tex`
 
-and make sure the working directory is the document directory (`submission/ijf`).
+The Springer class and bibliography style are stored beside it:
 
-Run the standard sequence:
+- `sn-jnl.cls`
+- `sn-mathphys-ay.bst`
+
+The journal-facing source uses flat figure names `Fig1.pdf`--`Fig4.pdf`.
+Those files are deliberately generated only in the submission build directory,
+rather than duplicated in the repository source folder.
+
+## Recommended build
+
+From the repository root run:
+
+```bash
+bash submission/ijf/build_submission.sh
+```
+
+This creates a clean flat package under `submission/ijf/build/` and final
+artifacts under `submission/ijf/dist/`. Both directories are generated and
+ignored by Git.
+
+## Direct TeXstudio compilation
+
+For a one-off direct compile of `IJF_manuscript.tex`, copy the generated
+`Fig1.pdf`--`Fig4.pdf` from `submission/ijf/build/` into
+`submission/ijf/`, then run:
 
 1. pdfLaTeX
 2. BibTeX
 3. pdfLaTeX
 4. pdfLaTeX
 
-The required Springer class and bibliography style are stored beside the manuscript:
-
-- `sn-jnl.cls`
-- `sn-mathphys-ay.bst`
-
-The manuscript also has fallbacks to the repository figure sources, so no generated `Fig1.pdf`--`Fig4.pdf` files are required for a normal local checkout.
-
-## Submission artifact
-
-The GitHub Actions workflow still creates a flat self-contained submission ZIP with `main.tex`, the Springer class/style, bibliography, and Fig1--Fig4.
+Do not commit those copied figure files.
