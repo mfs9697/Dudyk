@@ -9,8 +9,8 @@ rm -rf "$OUT" "$DIST"
 mkdir -p "$OUT" "$DIST"
 
 cp "$ROOT/submission/ijf/IJF_manuscript.tex" "$OUT/main.tex"
-cp "$ROOT/submission/ijf/template/sn-jnl.cls" "$OUT/sn-jnl.cls"
-cp "$ROOT/submission/ijf/template/sn-mathphys-ay.bst" "$OUT/sn-mathphys-ay.bst"
+cp "$ROOT/submission/ijf/sn-jnl.cls" "$OUT/sn-jnl.cls"
+cp "$ROOT/submission/ijf/sn-mathphys-ay.bst" "$OUT/sn-mathphys-ay.bst"
 cp "$ROOT/submission/ijf/references.bib" "$OUT/references.bib"
 
 cp "$ROOT/figures/figure2_recalculated.pdf" "$OUT/Fig2.pdf"
@@ -62,10 +62,6 @@ cp "$ROOT/submission/ijf/cover_letter.tex" "$ROOT/submission/ijf/cover-build/cov
   pdflatex -interaction=nonstopmode -halt-on-error cover_letter.tex
 )
 cp "$ROOT/submission/ijf/cover-build/cover_letter.pdf" "$DIST/IJF_Cover_Letter.pdf"
-
-if [ -f "$ROOT/submission/ijf/package/FINAL_CONFIRMATIONS.txt" ]; then
-  cp "$ROOT/submission/ijf/package/FINAL_CONFIRMATIONS.txt" "$DIST/FINAL_CONFIRMATIONS.txt"
-fi
 
 (
   cd "$OUT"
