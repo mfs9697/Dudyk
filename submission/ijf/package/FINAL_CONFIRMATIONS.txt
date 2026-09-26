@@ -1,0 +1,8 @@
+FINAL AUTHOR CONFIRMATIONS REQUIRED BEFORE CLICKING SUBMIT
+
+1. Competing Interests statement for all four authors.
+2. Author Contributions information for the submission interface.
+3. Funding statement / grant information, if applicable.
+4. Confirm "Uman National University, Uman, Ukraine" as the official English affiliation.
+5. Confirm M. F. Selivanov as corresponding author.
+6. Add ORCID iDs in the submission interface where available.

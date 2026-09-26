@@ -1,0 +1,62 @@
+name: IJF submission package
+
+on:
+  push:
+    branches:
+      - submission/ijf-preparation-2026-09-25
+    paths:
+      - 'submission/ijf/**'
+      - 'manuscript/latex/english/**'
+      - 'manuscript/latex/bibliography/**'
+      - 'manuscript/latex/figures/**'
+      - 'figures/**'
+      - '.github/workflows/ijf-submission.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'submission/ijf/**'
+      - '.github/workflows/ijf-submission.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live and packaging tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base texlive-latex-extra texlive-pictures \
+            texlive-science texlive-fonts-recommended texlive-bibtex-extra \
+            latexmk zip poppler-utils
+
+      - name: Build flat IJF submission package with pdflatex
+        run: bash submission/ijf/build_submission.sh
+
+      - name: Preflight PDF
+        run: |
+          pdfinfo submission/ijf/dist/IJF_Manuscript_Submission.pdf
+          pdffonts submission/ijf/dist/IJF_Manuscript_Submission.pdf
+          if grep -E 'Type 3|unknown' <(pdffonts submission/ijf/dist/IJF_Manuscript_Submission.pdf); then
+            echo 'Unexpected font type detected.'
+            exit 1
+          fi
+
+      - name: Upload IJF submission artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ijf-submission-package
+          path: |
+            submission/ijf/dist/IJF_Manuscript_Submission.pdf
+            submission/ijf/dist/IJF_Submission_Source.zip
+            submission/ijf/dist/IJF_Cover_Letter.pdf
+            submission/ijf/dist/cover_letter.md
+            submission/ijf/dist/submission_checklist.md
+            submission/ijf/dist/FINAL_CONFIRMATIONS.txt
+            submission/ijf/build/main.log
+            submission/ijf/build/main-bibtex.log
+          if-no-files-found: error
