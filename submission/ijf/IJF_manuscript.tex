@@ -7,6 +7,33 @@
 \usepackage{amsmath,amssymb,mathtools,bm}
 \usepackage{booktabs,array}
 \usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+
+% Local-compilation fallbacks. The GitHub Actions submission build provides
+% flat Fig1--Fig4 files; a local checkout instead reuses the repository sources.
+\IfFileExists{Fig2.pdf}
+  {\def\FigTwoFile{Fig2.pdf}}
+  {\IfFileExists{../../figures/figure2_recalculated.pdf}
+    {\def\FigTwoFile{../../figures/figure2_recalculated.pdf}}
+    {\def\FigTwoFile{figures/figure2_recalculated.pdf}}}
+\IfFileExists{Fig3.pdf}
+  {\def\FigThreeFile{Fig3.pdf}}
+  {\IfFileExists{../../figures/figure3_recalculated.pdf}
+    {\def\FigThreeFile{../../figures/figure3_recalculated.pdf}}
+    {\def\FigThreeFile{figures/figure3_recalculated.pdf}}}
+\IfFileExists{Fig4.pdf}
+  {\def\FigFourFile{Fig4.pdf}}
+  {\IfFileExists{../../figures/figure4_admissible_segments.pdf}
+    {\def\FigFourFile{../../figures/figure4_admissible_segments.pdf}}
+    {\def\FigFourFile{figures/figure4_admissible_segments.pdf}}}
+
+\newcommand{\FigureOneGraphic}{%
+  \IfFileExists{Fig1.pdf}
+    {\FigureOneGraphic}
+    {\IfFileExists{../../manuscript/latex/figures/figure1_original_tikz.tex}
+      {\resizebox{\linewidth}{!}{\input{../../manuscript/latex/figures/figure1_original_tikz.tex}}}
+      {\resizebox{\linewidth}{!}{\input{manuscript/latex/figures/figure1_original_tikz.tex}}}}}
 
 % Keep DOI strings line-breakable but non-clickable in the bibliography.
 % This improves robustness for long DOI links in the review PDF.
@@ -964,7 +991,7 @@ $105^\circ$ ($i=2$, $C<0$), and
 $135^\circ$ ($i=1$, $C>0$). For each configuration, only the physically
 admissible half-axis of the loading parameter is shown.
 
-\resultfigure{Fig2.pdf}{%
+\resultfigure{\FigTwoFile}{%
 Dependence of the normalized process-zone parameters on the
 dimensionless loading parameter $\sigma'$ for four reference angles and
 the physically admissible materials.}{fig:load-dependence}
@@ -1014,7 +1041,7 @@ combinations satisfying the physical-admissibility conditions are
 retained. Transitions between admissible branches occur at
 $\alpha_1$, $90^\circ$, and $\alpha_2$.
 
-\resultfigure{Fig3.pdf}{%
+\resultfigure{\FigThreeFile}{%
 Dependence of the normalized process-zone parameters on the half-angle
 $\alpha$ at $\sigma'=\pm0.5$. Only physically admissible combinations
 of material and loading sign are shown; $\alpha=90^\circ$ is an
@@ -1074,7 +1101,7 @@ described by the exponents $\lambda_0$, $\lambda$, and $\lambda_i$.
 This comparison characterizes differences among the local field models
 and does not prescribe a chronological sequence of fracture development.
 
-\resultfigure{Fig4.pdf}{%
+\resultfigure{\FigFourFile}{%
 Singularity exponents and physically admissible segments for the
 baseline material pair. Complete mathematical branches and physically
 admissible portions are distinguished according to the conditions
