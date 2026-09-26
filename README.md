@@ -1,5 +1,15 @@
 # Dudyk paper reproducibility workspace
 
+> **IJF status:** submitted to *International Journal of Fracture* on
+> 26 September 2026; submission ID
+> `5ac3be75-f5e7-4fd6-942c-b2bde07c54fc`; current initial stage: technical check.
+>
+> The exact submitted v1.0 repository state is frozen on
+> `submitted/ijf-v1.0`. Future editorial/reviewer work belongs under
+> `revision/` and must modify only the canonical IJF source
+> `submission/ijf/IJF_manuscript.tex`.
+
+
 This repository contains the source manuscript, an equation audit, and two
 independent implementations of the four stress-singularity exponents plotted
 in Figure 4. The MATLAB implementation also contains the Wiener-Hopf
@@ -32,7 +42,11 @@ material-interchange rule stated in the manuscript.
 - `results/`: independently generated CSV and JSON reference results;
 - `figures/`: complete mathematical curves, the physically admissible
   Figure-4 segments, a separate printed-`D1` audit plot, and converged
-  Figure-2 and Figure-3 recalculation outputs.
+  Figure-2 and Figure-3 recalculation outputs;
+- `submission/ijf/`: canonical IJF manuscript source, bibliography, Springer
+  class/style, cover letter, submission metadata, and package builder;
+- `revision/`: round-by-round reviewer-comment ledger, response draft, and
+  revision change log.
 
 ## Verification status
 
