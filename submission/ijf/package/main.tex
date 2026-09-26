@@ -1,15 +1,15 @@
 % International Journal of Fracture submission source
-% Springer Nature sn-jnl, iicol, Math/Physical Sciences author-year style.
+% Springer Nature sn-jnl, single-column, Math/Physical Sciences author-year style.
 % Generated from the synchronized English scientific master.
-\documentclass[pdflatex,iicol,sn-mathphys-ay]{sn-jnl}
+\documentclass[pdflatex,onecolumn,sn-mathphys-ay]{sn-jnl}
 
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb,mathtools,bm}
 \usepackage{booktabs,array}
 \usepackage{xcolor}
 
-% Keep DOI strings line-breakable but non-clickable in the two-column bibliography.
-% This avoids pdfTeX link-nesting failures when a long DOI crosses a column/page boundary.
+% Keep DOI strings line-breakable but non-clickable in the bibliography.
+% This improves robustness for long DOI links in the review PDF.
 \providecommand{\doiurl}[1]{\nolinkurl{https://doi.org/#1}}
 
 \newcommand{\dd}{\mathop{}\!\mathrm{d}}
@@ -24,6 +24,7 @@
   \end{figure}}
 
 \raggedbottom
+\setlength{\emergencystretch}{2em}
 
 \begin{document}
 
