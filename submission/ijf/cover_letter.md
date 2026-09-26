@@ -1,6 +1,6 @@
 # Cover letter — International Journal of Fracture
 
-25 September 2026
+26 September 2026
 
 Professor K. Ravi-Chandar  
 Editor-in-Chief  
