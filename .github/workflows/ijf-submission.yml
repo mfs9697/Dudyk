@@ -56,7 +56,6 @@ jobs:
             submission/ijf/dist/IJF_Cover_Letter.pdf
             submission/ijf/dist/cover_letter.md
             submission/ijf/dist/submission_checklist.md
-            submission/ijf/dist/FINAL_CONFIRMATIONS.txt
             submission/ijf/build/main.log
             submission/ijf/build/main-bibtex.log
           if-no-files-found: error
