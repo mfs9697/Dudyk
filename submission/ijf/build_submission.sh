@@ -35,7 +35,6 @@ EOF
   bibtex main | tee main-bibtex.log
   pdflatex -interaction=nonstopmode -halt-on-error main.tex | tee main-pdflatex-2.log
   pdflatex -interaction=nonstopmode -halt-on-error main.tex | tee main-pdflatex-3.log
-  pdflatex -interaction=nonstopmode -halt-on-error main.tex | tee main-pdflatex-4.log
 )
 
 if grep -E "Citation .* undefined|There were undefined citations|There were undefined references|Warning--I didn't find a database entry" "$OUT/main.log" "$OUT/main-bibtex.log"; then
