@@ -8,6 +8,10 @@
 \usepackage{booktabs,array}
 \usepackage{xcolor}
 
+% Keep DOI strings line-breakable but non-clickable in the two-column bibliography.
+% This avoids pdfTeX link-nesting failures when a long DOI crosses a column/page boundary.
+\providecommand{\doiurl}[1]{\nolinkurl{https://doi.org/#1}}
+
 \newcommand{\dd}{\mathop{}\!\mathrm{d}}
 \newcommand{\ii}{\mathrm{i}}
 \newcommand{\jump}[1]{\left[\!\left[#1\right]\!\right]}
