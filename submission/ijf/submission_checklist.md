@@ -18,7 +18,7 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 - [x] Title is concise and informative.
 - [x] Six keywords are supplied.
 - [x] Corresponding-author email added to the English title page.
-- [x] Abstract revised to the journal-specific preferred range of **150–200 words**, contains no mathematical symbols, and is structured as **Purpose / Methods / Results / Conclusion**.
+- [x] Abstract restored as a conventional single-paragraph journal abstract, faithful to the approved manuscript and free of mathematical display notation.
 - [x] Headings use a decimal hierarchy with no more than three levels.
 - [x] Figures and tables are placed near first discussion in the manuscript.
 - [x] Figures are available as editable/vector PDF or source artwork in the repository.
