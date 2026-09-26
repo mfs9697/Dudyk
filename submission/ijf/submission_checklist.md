@@ -28,13 +28,13 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 
 ## Items to confirm before clicking Submit
 
-- [ ] Confirm that **M. F. Selivanov** is the corresponding author for this submission.
+- [x] Corresponding author set as **Mikhailo Selivanov**.
 - [x] Official current English name of affiliation 2 verified as **Uman National University, Uman, Ukraine** (Unified State Electronic Database on Education).
-- [ ] Confirm all author names exactly as they should appear in the publication.
+- [x] Full author names set as **Anatoly Kaminsky, Mikhailo Selivanov, Mykhailo Dudyk, Tetiana Polishchuk**.
 - [ ] Add ORCID iDs where available (recommended, not mandatory).
 - [ ] Obtain explicit approval of the final English submission version from all four authors.
 - [ ] Confirm the **Funding** statement.
-- [ ] Confirm the **Competing Interests** statement for all authors.
+- [x] **Competing Interests** statement included in the manuscript: “The authors declare no competing interests.”
 - [ ] Confirm the **Author Contributions** statement to be entered in the submission interface.
 - [x] Add the final **Data Availability Statement** to the manuscript.
 - [ ] Decide whether to submit reviewer suggestions; if yes, use institutional emails or verifiable researcher profiles.
@@ -48,9 +48,9 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 
 ### Competing interests
 
-Use only after all authors confirm:
+Current manuscript text:
 
-> The authors have no relevant financial or non-financial interests to disclose.
+> The authors declare no competing interests.
 
 ### Funding
 
