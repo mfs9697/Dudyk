@@ -1,13 +1,16 @@
 FINAL ITEMS TO CONFIRM BEFORE CLICKING SUBMIT
 
-1. ORCID iDs for the authors where available.
-2. Final approval of the submitted English version by all four authors.
-3. Whether reviewer suggestions will be supplied.
-4. Whether the standard subscription route or Open Choice is intended after acceptance.
+1. Final approval of the submitted English version by all four authors.
+2. Whether the standard subscription route or Open Choice is intended after acceptance.
 
 ALREADY SET IN THE MANUSCRIPT
 
 - Corresponding author: Mikhailo Selivanov.
+- ORCID iDs verified:
+  Anatoly Kaminsky — 0009-0000-9989-6887
+  Mikhailo Selivanov — 0000-0003-1266-4042
+  Mykhailo Dudyk — 0000-0002-1399-6367
+  Tetiana Polishchuk — 0000-0001-7690-7723
 - Author names: Anatoly Kaminsky; Mikhailo Selivanov; Mykhailo Dudyk; Tetiana Polishchuk.
 - Affiliation 2: Uman National University, Uman, Ukraine.
 - Author contributions statement included.
