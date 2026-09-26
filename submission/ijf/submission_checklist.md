@@ -66,7 +66,7 @@ No human participants, animals, or identifiable personal data are involved in th
 
 ## Formatting note
 
-The journal currently recommends the Springer Nature LaTeX template with the **[iicol]** option and requires the complete editable source set plus compiled PDF. A dedicated monolithic IJF wrapper using **sn-mathphys-ay** has now been prepared, while the scientific master remains separate.
+The journal currently **recommends** the Springer Nature LaTeX template with the **[iicol]** option, but its instructions do not state that two-column layout is mandatory. Because this manuscript contains many wide analytical equations, an appendix with long formulae, a table, and full-width plots, the submission wrapper now uses the same Springer Nature **sn-jnl** class in explicit **onecolumn** mode with **sn-mathphys-ay** references. This preserves the requested journal structure and editable source files while giving the editor and reviewers a substantially more legible PDF. The scientific master remains separate and unchanged.
 
 ## References style note
 
