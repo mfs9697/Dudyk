@@ -37,7 +37,7 @@ Checked against the journal's current Springer Nature submission guidance on 25 
 - [x] **Competing Interests** statement included in the manuscript: “The authors declare no competing interests.”
 - [x] **Author Contributions** statement added to the manuscript and ready for the submission interface.
 - [x] Add the final **Data Availability Statement** to the manuscript.
-- [ ] Decide whether to submit reviewer suggestions; if yes, use institutional emails or verifiable researcher profiles.
+- [x] Reviewer suggestions approved and recorded in `suggested_reviewers.md`.
 - [ ] Decide whether the standard subscription route or Open Choice is intended after acceptance.
 
 ## Proposed declarations text for confirmation
