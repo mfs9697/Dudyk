@@ -1,16 +1,16 @@
 FINAL ITEMS TO CONFIRM BEFORE CLICKING SUBMIT
 
-1. Funding statement / grant information, if applicable.
-2. Author Contributions information for the submission interface.
-3. ORCID iDs for the authors where available.
-4. Final approval of the submitted English version by all four authors.
-5. Whether reviewer suggestions will be supplied.
-6. Whether the standard subscription route or Open Choice is intended after acceptance.
+1. ORCID iDs for the authors where available.
+2. Final approval of the submitted English version by all four authors.
+3. Whether reviewer suggestions will be supplied.
+4. Whether the standard subscription route or Open Choice is intended after acceptance.
 
 ALREADY SET IN THE MANUSCRIPT
 
 - Corresponding author: Mikhailo Selivanov.
 - Author names: Anatoly Kaminsky; Mikhailo Selivanov; Mykhailo Dudyk; Tetiana Polishchuk.
 - Affiliation 2: Uman National University, Uman, Ukraine.
+- Author contributions statement included.
+- Funding statement included: no external funding; work carried out within basic institutional funding.
 - Data availability statement included.
 - Competing interests statement included: "The authors declare no competing interests."
