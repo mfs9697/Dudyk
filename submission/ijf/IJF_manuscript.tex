@@ -1,23 +1,19 @@
 % International Journal of Fracture submission source
-% Springer Nature sn-jnl, iicol, Math/Physical Sciences author-year style.
+% Springer Nature sn-jnl, single-column, Math/Physical Sciences author-year style.
 % Generated from the synchronized English scientific master.
-\documentclass[pdflatex,iicol,sn-mathphys-ay]{sn-jnl}
+\documentclass[pdflatex,onecolumn,sn-mathphys-ay]{sn-jnl}
 
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb,mathtools,bm}
 \usepackage{booktabs,array}
 \usepackage{xcolor}
 
-% Keep DOI strings line-breakable but non-clickable in the two-column bibliography.
-% This avoids pdfTeX link-nesting failures when a long DOI crosses a column/page boundary.
+% Keep DOI strings line-breakable but non-clickable in the bibliography.
+% This improves robustness for long DOI links in the review PDF.
 \providecommand{\doiurl}[1]{\nolinkurl{https://doi.org/#1}}
 
 \newcommand{\dd}{\mathop{}\!\mathrm{d}}
 \newcommand{\ii}{\mathrm{i}}
-\newcommand{\ee}{\mathrm{e}}
-\newcommand{\sigmap}{\sigma^{\prime}}
-\newcommand{\deltap}{\delta^{\prime}}
-\newcommand{\Jp}{J^{\prime}}
 \newcommand{\jump}[1]{\left[\!\left[#1\right]\!\right]}
 \newcommand{\resultfigure}[4][\linewidth]{%
   \begin{figure}[htbp]
@@ -28,7 +24,6 @@
   \end{figure}}
 
 \raggedbottom
-\setlength{\stripsep}{8pt plus 2pt minus 2pt}
 \setlength{\emergencystretch}{2em}
 
 \begin{document}
@@ -179,7 +174,7 @@ are outside the scope of this local formulation.
 The remainder of the paper is organized as follows. Section~\ref{sec:problem}
 formulates the local boundary-value problem and specifies the geometry,
 boundary conditions, and asymptotic fields for the V-shaped interfacial crack
-and the process zone. Section~3 uses the Mellin transform,
+and the process zone. Section~\ref{sec:derivation} uses the Mellin transform,
 asymptotic matching, and the Wiener--Hopf method to determine the equilibrium
 zone length, opening, and energy characteristics. Section~\ref{sec:numerical-results}
 examines the physically admissible regimes, the dependence of the zone
@@ -333,7 +328,6 @@ $\theta=\alpha$, its jump across the interface is defined by
 where $\alpha+0$ and $\alpha-0$ denote the limiting values approached
 from materials~1 and~2, respectively. Symmetry, traction continuity, and
 frictionless contact give
-\begin{strip}
 \begin{equation}
 \label{eq:interface-boundary-conditions}
 \begin{aligned}
@@ -345,7 +339,6 @@ frictionless contact give
     \quad \jump{u_\theta}=0.
 \end{aligned}
 \end{equation}
-\end{strip}
 The condition $\jump{u_\theta}=0$ imposes normal contact between the crack
 faces, whereas $\tau_{r\theta}=0$ expresses the absence of friction.
 
@@ -431,7 +424,6 @@ process zone.
 Near the outer tip of the displacement discontinuity, the stress and normal
 displacement gradient have the standard inverse-square-root asymptotics for a
 homogeneous material:
-\begin{strip}
 \begin{equation}
 \label{eq:zone-tip-asymptotics}
 \begin{aligned}
@@ -444,7 +436,6 @@ homogeneous material:
     \frac{k_i}{\sqrt{2\pi(d_i-r)}}.
 \end{aligned}
 \end{equation}
-\end{strip}
 Here, $k_i$ is the local Mode~I stress intensity factor at the process-zone
 tip; $r\to d_i+0$ and $r\to d_i-0$ denote approach from ahead of the
 zone and from within it, respectively. The boundary-value problem is closed by
@@ -520,7 +511,6 @@ $\sigma_i-CQ_i d_i^\lambda\rho^\lambda$, and hence
 \end{equation*}
 Eliminating the transforms of the interior field yields the functional
 equation
-\begin{strip}
 \begin{equation}
 \label{eq:wiener-hopf-functional}
   \Phi_i^+(p)
@@ -528,9 +518,7 @@ equation
   -\frac{CQ_i d_i^\lambda}{p+\lambda+1}
   =-\tan(\pi p)G_i(p)\Phi_i^-(p),
 \end{equation}
-\end{strip}
 which is initially valid in the common convergence strip
-
 \begin{equation*}
   \max\{-1-\lambda,-1-\lambda_i\}
   <\operatorname{Re}p<0.
@@ -557,7 +545,6 @@ material parameters $\kappa_i$ by
 \end{equation*}
 The characteristic determinants $D_1(p)$ and $D_2(p)$ for configurations
 with a process zone in materials~1 and~2, respectively, are
-\begin{strip}
 \begin{equation*}
 \begin{aligned}
   D_1(p)={}&2e(1+\kappa_2)
@@ -574,7 +561,6 @@ with a process zone in materials~1 and~2, respectively, are
     [\sin(2p\alpha)+p\sin(2\alpha)].
 \end{aligned}
 \end{equation*}
-\end{strip}
 In particular, the corner singularity exponent $\lambda_i$ in the
 presence of a zone in material~$i$ is determined by
 \begin{equation*}
@@ -591,7 +577,6 @@ We solve Eq.~\eqref{eq:wiener-hopf-functional} by the Wiener--Hopf
 method~\citep{noble1958wienerhopf}, following the approach used for a related
 boundary-value problem~\citep{KaminskyDudykPolishchuk2024}.
 The factors $G_i^\pm(p)$ are defined by the Cauchy integral
-\begin{strip}
 \begin{equation*}
   \exp\left\{
     \frac{1}{2\pi\ii}
@@ -604,7 +589,6 @@ The factors $G_i^\pm(p)$ are defined by the Cauchy integral
     G_i^-(p), & \operatorname{Re}p>0,
   \end{cases}
 \end{equation*}
-\end{strip}
 where $z$ is the complex integration variable and $\ii^2=-1$.
 The contour is directed upward along the imaginary axis. We also introduce
 the auxiliary gamma-function factors
@@ -615,7 +599,6 @@ the auxiliary gamma-function factors
 Here, $\Gamma$ is the Euler gamma function.
 With the normalization $G_i^\pm(p)\to1$ at infinity, the solution of
 the functional equation is
-\begin{strip}
 \begin{equation}
 \label{eq:wiener-hopf-solution}
 \begin{aligned}
@@ -646,7 +629,6 @@ the functional equation is
   \qquad \operatorname{Re}p>0.
 \end{aligned}
 \end{equation}
-\end{strip}
 For the kernels considered here, numerical checks show that
 $G_i(\ii t)$ is real, positive, and even in the real variable $t$ and
 tends to unity as $|t|\to\infty$.
@@ -667,7 +649,6 @@ $|t|$.
 
 As $p\to+\infty$, the second relation in
 Eq.~\eqref{eq:wiener-hopf-solution} gives
-\begin{strip}
 \begin{equation*}
   \Phi_i^-(p)\sim\frac{1}{\sqrt{p}}
   \left[
@@ -676,7 +657,6 @@ Eq.~\eqref{eq:wiener-hopf-solution} gives
     {(\lambda+1)G_i^+(-\lambda-1)}
   \right].
 \end{equation*}
-\end{strip}
 Applying an Abelian-type theorem~\citep{noble1958wienerhopf} to the
 tip asymptotics~\eqref{eq:zone-tip-asymptotics} also gives
 \begin{equation*}
@@ -789,11 +769,9 @@ Within the adopted model, the work $W_i$ done against the resistance
 to separation, per unit out-of-plane thickness, is defined
 by~\citep{Cherepanov1986}
 \begin{equation*}
-\begin{aligned}
-  W_i&=\sigma_i\int_0^{d_i}
-      \jump{u_\theta(r,\beta_i)}\,\dd r\\
-     &=-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
-\end{aligned}
+  W_i=\sigma_i\int_0^{d_i}
+      \jump{u_\theta(r,\beta_i)}\,\dd r
+  =-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
 \end{equation*}
 Using Eq.~\eqref{eq:wiener-hopf-solution}, we obtain
 \begin{equation*}
@@ -812,7 +790,6 @@ defines the zone-related energy parameter $J_i$:
 For the numerical analysis, introduce the dimensionless loading,
 opening, and energy parameters $\sigmap$, $\delta_i'$, and $J_i'$,
 respectively:
-\begin{strip}
 \begin{equation*}
   \sigmap=\frac{Cl^{\lambda_0}}{\sigma_i},
   \qquad
@@ -822,12 +799,10 @@ respectively:
   J_i'=\frac{E_iJ_i}
   {4(1-\nu_i^2)\sigma_i^2l}.
 \end{equation*}
-\end{strip}
 The primes here denote normalization, not differentiation.
 Equations~\eqref{eq:normalized-process-zone-length},
 \eqref{eq:process-zone-opening}, and
 \eqref{eq:process-zone-energy-parameter} then take the form
-\begin{strip}
 \begin{equation*}
 \begin{aligned}
   \frac{d_i}{l}
@@ -846,7 +821,6 @@ Equations~\eqref{eq:normalized-process-zone-length},
       \frac{d_i}{l}.
 \end{aligned}
 \end{equation*}
-\end{strip}
 All three relations use the corner exponent $\lambda$ for the prescribed
 stationary V-shaped interfacial shear crack, i.e., the root of
 $D(-1-\lambda)=0$.
@@ -899,7 +873,7 @@ parameters are calibrated consistently:
 
 The numerical analysis is performed for the normalized parameters
 $\,d_i/l$, $\delta_i'$, and $J_i'$ defined in
-Section~3. Only combinations of material, angle, and
+Section~\ref{sec:derivation}. Only combinations of material, angle, and
 loading sign for which
 \begin{equation*}
   Cg_2<0,\qquad CQ_i>0
@@ -937,7 +911,7 @@ transition angle $\alpha_1$ increases monotonically, whereas $\alpha_2$
 decreases monotonically. Thus, elastic contrast systematically shifts
 the boundaries of the angular intervals of physical admissibility.
 
-\begin{table*}[htbp]
+\begin{table}[htbp]
   \centering
   \caption{Angles at which the coefficient $g_2$ changes sign for
   $\nu_1=\nu_2=0.3$.}
@@ -952,7 +926,7 @@ the boundaries of the angular intervals of physical admissibility.
     $\alpha_2$, $^\circ$ & 108.02 & 107.90 & 107.72 & 107.52 & 107.30 & 107.09 & 106.88 & 106.69 & 106.50 & 106.32 & 106.17 \\
     \bottomrule
   \end{tabular}
-\end{table*}
+\end{table}
 
 
 Cases with $E_1/E_2>1$ are not independent. They are obtained by
@@ -1391,7 +1365,6 @@ characteristic branch.
 
 For the configuration without an interfacial shear crack, the singular
 part of the interfacial stress field is~\citep{NazarenkoKipnis2022Stress}
-\begin{strip}
 \begin{equation}
 \label{eq:app-intact-field}
 \begin{aligned}
@@ -1402,11 +1375,9 @@ part of the interfacial stress field is~\citep{NazarenkoKipnis2022Stress}
     \qquad r\to0,
 \end{aligned}
 \end{equation}
-\end{strip}
 where $C$ is the local singular-field amplitude, $\lambda_0$ is
 the intact-corner singularity exponent, and the dimensionless angular
 coefficients $g_1$ and $g_2$ are
-\begin{strip}
 \begin{equation*}
 \begin{aligned}
   g_1={}&(1-e)\sin[\lambda_0(\pi-\alpha)]
@@ -1421,7 +1392,6 @@ coefficients $g_1$ and $g_2$ are
       \cos[(\lambda_0+2)\alpha].
 \end{aligned}
 \end{equation*}
-\end{strip}
 The exponent $\lambda_0$ is determined by the characteristic equation
 \begin{equation}
 \label{eq:app-D0-root}
@@ -1433,7 +1403,6 @@ where the intact-corner determinant $D_0(p)$ is
   D_0(p)=b_0(p)+e\,b_1(p)+e^2b_2(p),
 \end{equation*}
 with auxiliary functions $b_0(p)$, $b_1(p)$, and $b_2(p)$ given by
-\begin{strip}
 \begin{equation*}
 \begin{aligned}
   b_0(p)={}&
@@ -1449,14 +1418,12 @@ with auxiliary functions $b_0(p)$, $b_1(p)$, and $b_2(p)$ given by
   [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)].
 \end{aligned}
 \end{equation*}
-\end{strip}
 \subsection{Corner with a stationary V-shaped interfacial shear crack}
 
 For the prescribed stationary V-shaped interfacial shear crack, the two
 symmetric branches have length $l$ each. At distances $r\ll l$, the normal stress along the bisector
 of the sector occupied by material~$i$ has the asymptotic
 form~\citep{NazarenkoKipnis2022Stress}
-\begin{strip}
 \begin{equation}
 \label{eq:app-cracked-field}
   \sigma_\theta(r,\beta_i)
@@ -1465,7 +1432,6 @@ form~\citep{NazarenkoKipnis2022Stress}
   \qquad
   \beta_1=\pi,\quad \beta_2=0.
 \end{equation}
-\end{strip}
 Here, $\lambda$ is the corner singularity exponent for the cracked
 configuration and $\beta_i$ is the corresponding bisector direction.
 The amplitude coefficient $Q_i$ is expressed as
@@ -1474,7 +1440,6 @@ The amplitude coefficient $Q_i$ is expressed as
 \end{equation*}
 where the dimensionless coefficient $q_i$ and the derivative $D'(p)$
 of the cracked-corner determinant are
-\begin{strip}
 \begin{equation*}
   q_i=
   \frac{2S_i(-1-\lambda)K^+(-1-\lambda)G^+(-1-\lambda)}
@@ -1483,13 +1448,11 @@ of the cracked-corner determinant are
   \qquad
   D'(p)=\frac{\dd D(p)}{\dd p}.
 \end{equation*}
-\end{strip}
 The functions $S_i(p)$ are auxiliary numerator functions defined below.
 The factors $K^+(p)$ and $G^+(p)$ are specified later in this subsection.
 The base plus factor $G^+(p)$ must not be confused with $G_i^+(p)$, which
 factorizes the process-zone kernel $G_i(p)$ in
-Section~3. Explicitly,
-\begin{strip}
+Section~\ref{sec:derivation}. Explicitly,
 \begin{equation*}
 \begin{aligned}
   S_1(p)={}&2e(1+\kappa_2)s_{11}(p)\sin[(p+1)\alpha]\\
@@ -1502,10 +1465,8 @@ Section~3. Explicitly,
   &-2(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}\,s_{23}(p),
 \end{aligned}
 \end{equation*}
-\end{strip}
 where the auxiliary functions $s_{mn}(p)$, with $m=1,2$ and
 $n=1,2,3$, are
-\begin{strip}
 \begin{equation*}
 \begin{aligned}
   s_{11}(p)&=p\cos(p\pi-\alpha)\sin\alpha
@@ -1520,7 +1481,6 @@ $n=1,2,3$, are
              +\cos[p(\pi-\alpha)]\sin(p\alpha).
 \end{aligned}
 \end{equation*}
-\end{strip}
 The corner singularity exponent $\lambda$ for the configuration
 containing the prescribed stationary V-shaped interfacial crack satisfies
 \begin{equation}
@@ -1533,7 +1493,6 @@ where the characteristic determinant $D(p)$ is
   D(p)=a_0(p)+e\,a_1(p),
 \end{equation*}
 with auxiliary functions $a_0(p)$ and $a_1(p)$ given by
-\begin{strip}
 \begin{equation*}
 \begin{aligned}
   a_0(p)={}&(1+\kappa_1)
@@ -1544,17 +1503,13 @@ with auxiliary functions $a_0(p)$ and $a_1(p)$ given by
   [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha].
 \end{aligned}
 \end{equation*}
-\end{strip}
 The coefficients $q_i$ use the base kernel
-\begin{strip}
 \begin{equation*}
   G(p)=
   \frac{(e+\kappa_1)(1+e\kappa_2)\sin(\pi p)D(p)}
   {(e+\kappa_1+1+e\kappa_2)\cos(\pi p)D_0(p)}
 \end{equation*}
-\end{strip}
 and its plus factor
-\begin{strip}
 \begin{equation*}
   G^+(p)=
   \exp\!\left\{
@@ -1564,7 +1519,6 @@ and its plus factor
   \right\},
   \qquad \operatorname{Re}p<0.
 \end{equation*}
-\end{strip}
 Here, $z$ is the complex integration variable, $\ii^2=-1$, and the contour
 is directed upward along the imaginary axis. The gamma-function factor is
 \begin{equation*}
@@ -1582,12 +1536,11 @@ Here, $t$ is a real integration variable.
 \subsection{Corner with a process zone}
 
 For a process zone in material~$i$, the kernel of the functional equation
-in Section~3 is
+in Section~\ref{sec:derivation} is
 \begin{equation*}
   G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
 \end{equation*}
 The corresponding characteristic determinants are
-\begin{strip}
 \begin{equation}
 \label{eq:app-post-zone-determinants}
 \begin{aligned}
@@ -1605,7 +1558,6 @@ The corresponding characteristic determinants are
   [\sin(2p\alpha)+p\sin2\alpha].
 \end{aligned}
 \end{equation}
-\end{strip}
 % The author-confirmed signs in D_1 are preserved. Their provenance is
 % recorded in EDITORIAL_LOG.md rather than in the clean manuscript.
 The exponent $\lambda_i$ for a configuration with a zone in
