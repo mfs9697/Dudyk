@@ -1,6 +1,6 @@
 # Revision change log — Round 1
 
-Status: WP3 in progress. R1.1--R1.5 implemented; R1.6 remains gated by WP2.
+Status: Reviewer 1 comments R1.1--R1.6 implemented; final package verification in progress.
 
 | ID | Reviewer point | Manuscript location | Change | Verification | Commit |
 |---|---|---|---|---|---|
@@ -9,7 +9,7 @@ Status: WP3 in progress. R1.1--R1.5 implemented; R1.6 remains gated by WP2.
 | R1.3 | Explain matching decay, homogeneous tip field, and \(k_i=0\) | Secs. 2.1--2.3, Sec. 3.1 | Added correction-field analyticity rationale, homogeneous local-tip explanation, free-boundary solvability count, and opening-positive face trace | WP1 independent derivation audit | \`62dcb0c\` |
 | R1.4 | Show elimination and Wiener--Hopf split | Secs. 3.1--3.2 | Added Airy/Mellin elimination, ratio factorization convention, reflection identity, gamma identity, and Liouville split | WP1 independent Airy solve and factorization audit | \`62dcb0c\` |
 | R1.5 | Evaluate \(\Phi_i^-(0)\), \(\Phi_i^-(1)\); settle \(G_i(0)\) placement | Sec. 3.4 | Added regularized transform, explicit zeroth/first moments, and proof that \(\sqrt{G_i(0)}\) is in denominator | WP1: independent 45-deg calculation agrees with MATLAB within \(2\times10^{-11}\) | \`62dcb0c\` |
-| R1.6 | Admissibility scope and competing critical loads | Sec. 4 / Discussion | Pending WP2; no manuscript claim inserted yet | WP2 required | pending |
+| R1.6 | Admissibility scope and competing critical loads | Sec. 2.2, Sec. 4, Sec. 5.2, Conclusions | Scoped exclusivity as numerical; added 92,800-case + 20,000-case audit, high-precision edge checks, branch-tip KII formula, critical-load ratio, and 45-deg mechanism boundary | WP2 run 45407525585: existing tests + all WP2 assertions passed | `258a271` |
 | R2.1 | Positive recommendation; no specific changes | — | No reviewer-specific change | — | — |
 
 ## Verification checklist
@@ -19,9 +19,9 @@ Status: WP3 in progress. R1.1--R1.5 implemented; R1.6 remains gated by WP2.
 - [x] Every R1.1--R1.5 claimed manuscript change exists in the source.
 - [x] Equation changes/clarifications checked independently through WP1.
 - [x] R1.5 numerical values independently reproduced.
-- [ ] R1.6 scientific work completed through WP2.
-- [ ] Figures regenerated if WP2 affects numerical presentation.
-- [ ] References checked if WP2 adds source material to the manuscript.
+- [x] R1.6 scientific work completed through WP2 and merged as PR #18.
+- [x] No existing figure requires regeneration; R1.6 adds parameter-domain verification and analytical mechanism boundaries without altering Figures 2--4.
+- [x] R1.6 uses the existing `NazarenkoKipnis2022Equilibrium` reference already present in the bibliography.
 - [ ] Full manuscript language/style sweep completed.
 - [x] R1.1--R1.5 IJF package builds and passes PDF/font preflight (workflow run #84).
 - [ ] Final post-WP2 IJF package builds without unresolved citations/references.
