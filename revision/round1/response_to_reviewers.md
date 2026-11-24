@@ -267,8 +267,8 @@ J'_1=0.083620387223,
 
 in agreement with the existing MATLAB regression results.
 
-**Revision.** Section 3.4, revised Eqs. (12)–(16), and Section 3.5,
-revised Eq. (17). No coefficient in original Eqs. (9)–(11) has been changed.
+**Revision.** Section 3.4, revised Eqs. (12)–(17). No coefficient in
+original Eqs. (9)–(11) has been changed.
 
 ### Comment 6 — Section 4
 
