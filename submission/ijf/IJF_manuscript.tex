@@ -39,7 +39,7 @@
 \affil[1]{\orgname{S. P. Timoshenko Institute of Mechanics, National Academy of Sciences of Ukraine}, \orgaddress{\city{Kyiv}, \country{Ukraine}}}
 \affil[2]{\orgname{Uman National University}, \orgaddress{\city{Uman}, \country{Ukraine}}}
 
-\abstract{Under plane strain, branching initiation from a V-shaped interfacial shear crack at the corner of a kinked interface between two isotropic elastic materials is investigated. The crack is treated as a prescribed stationary defect with two symmetric branches whose faces are in frictionless contact. The singular field at the crack corner is used as the outer field for a small tensile process zone oriented along the bisector of one of the materials. Conditions are established under which compressive contact of the interfacial crack faces and a tensile normal field in the material containing the process zone are satisfied simultaneously. Mellin transformation, asymptotic matching, the Wiener--Hopf method, and the condition of stress regularity at the process-zone tip are used to derive closed analytical relations for the equilibrium zone length, opening, work done against separation resistance, and the associated energy parameter. The dependence of these characteristics on interface angle, elastic contrast, and load level is examined. Formation of the process zone is shown to weaken the singularity of the initial configuration containing the V-shaped interfacial crack, although it does not eliminate it completely. For fixed geometry, the energy and deformation characteristics of the zone are uniquely related; hence the corresponding branching-initiation criteria are equivalent when the critical material parameters are chosen consistently. The results make it possible to predict initiation of a branched crack once the appropriate fracture-resistance characteristic of the material is specified independently.}
+\abstract{Under plane strain, branching initiation from a V-shaped interfacial shear crack at the corner of a kinked interface between two isotropic elastic materials is investigated. The crack is treated as a prescribed stationary defect with two symmetric branches whose faces are in frictionless contact. The singular field at the crack corner is used as the outer field for a small tensile process zone oriented along the bisector of one of the materials. Conditions are established under which compressive contact of the interfacial crack faces can coexist with a tensile normal field in the material containing the process zone. Mellin transformation, asymptotic matching, the Wiener--Hopf method, and the condition of stress regularity at the process-zone tip are used to derive closed analytical relations for the equilibrium zone length, opening, work done against separation resistance, and the associated energy parameter. The dependence of these characteristics on interface angle, elastic contrast, and load level is examined. Formation of the process zone is shown to weaken the singularity of the initial configuration containing the V-shaped interfacial crack, although it does not eliminate it completely. For fixed geometry, the energy and deformation characteristics of the zone are uniquely related; hence the corresponding branching-initiation criteria are equivalent when the critical material parameters are chosen consistently. The results make it possible to predict initiation of a branched crack once the appropriate fracture-resistance characteristic of the material is specified independently.}
 
 \keywords{piecewise homogeneous body, kinked interface, V-shaped interfacial shear crack, process zone, branching initiation, Wiener--Hopf method}
 
@@ -116,7 +116,7 @@ contacting interfacial shear crack at the corner of a V-shaped interface.
 
 Such an outer field was obtained by Nazarenko and Kipnis for a symmetric
 interfacial shear crack with faces in frictionless contact
-\citep{NazarenkoKipnis2022Stress}. In the present work, the two symmetric
+\citep{NazarenkoKipnis2022Stress}. Here, the two symmetric
 branches of this defect are treated as a single V-shaped interfacial shear
 crack. Each branch has length $l$, so the total length of the two branches is
 $2l$. In the cracked configuration, a power-law singular field remains near
@@ -131,16 +131,19 @@ that this equilibrium is unstable with respect to further interfacial
 propagation~\citeyearpar{NazarenkoKipnis2022Equilibrium}. That mechanism is localized
 at the crack-branch tips and is potentially competitive with the mechanism studied
 here at the corner. In the present work, the V-shaped interfacial crack is
-treated as a prescribed stationary configuration, and the applied loading is
-assumed insufficient to cause loss of its local stability. Under these
-conditions, the singular corner field can support a small tensile process
+treated as a prescribed stationary configuration while the local process-zone
+problem is solved. The consistency of this stationarity assumption up to
+corner branching is assessed a posteriori by comparing the corner critical
+load with the Mode~II branch-tip threshold in
+Section~\ref{subsec:discussion-competing}. Under the stationary-crack
+condition, the singular corner field can support a small tensile process
 zone in one of the materials. The corner and crack-branch-tip mechanisms are
 therefore treated as competing mechanisms rather than as sequential stages
 of a prescribed fracture scenario.
 
 This work focuses on the local process zone near the corner of a V-shaped
-interfacial shear crack and on using its characteristics to predict
-branching initiation into one of the materials. Under the small-scale
+interfacial shear crack and uses its characteristics to predict branching
+initiation into one of the materials. Under the small-scale
 approximation, the zone length in material $i$ ($i=1,2$) is denoted by $d_i$
 and is assumed to be much smaller than the crack-branch length $l$. The crack field in the absence of the zone is used as the outer field, and
 the leading-order feedback of the zone on the crack-branch tips is neglected.
@@ -246,10 +249,12 @@ two branches is $2l$; below, $l$ is referred to as the crack half-length
 \end{equation*}
 for which the normal stress along the interface is compressive. The
 V-shaped interfacial crack is treated as a prescribed stationary
-configuration and $l$ as a prescribed fixed parameter. The applied loading
-is assumed insufficient to cause loss of local stability at the crack-branch
-tips. Interfacial propagation from those tips is outside the local problem
-near $O$ and is considered below only as a competing fracture mechanism.
+configuration and $l$ as a prescribed fixed parameter while the local
+corner problem is solved. This assumption is self-consistent up to the
+corner-initiation load only when the branch-tip Mode~II threshold has not
+already been reached; the corresponding critical-load comparison is given in
+Section~\ref{subsec:discussion-competing}. Interfacial propagation from the
+branch tips remains outside the local boundary-value problem near $O$.
 
 The prescribed interfacial crack retains a power-law stress singularity at
 the corner~\citep{NazarenkoKipnis2022Stress}. This field can support a small
@@ -268,7 +273,13 @@ Let $\beta_i$ denote the polar angle of the bisector in material~$i$:
   \beta_1=\pi,\qquad \beta_2=0.
 \end{equation*}
 The subscript $i$ in $\beta_i$, $d_i$, $\sigma_i$, and $Q_i$ identifies
-the material throughout.
+the material throughout. On a process-zone bisector, the displacement trace
+used below is taken positive in the opening direction, i.e. into the
+corresponding material sector. With the representative upper-half-plane
+trace this coincides with $u_\theta$ at $\beta_2=0$ and with
+$-u_\theta$ at $\beta_1=\pi$. Equivalently, the latter may be evaluated
+on the reflected face. This sign convention is used for the
+displacement-gradient transform and for the zone opening.
 
 The process zone in material~$i$ is modeled as a normal displacement
 discontinuity of length $d_i$ subjected to a constant normal cohesive
@@ -321,39 +332,52 @@ $\theta=\alpha$, its jump across the interface is defined by
   =f(r,\alpha+0)-f(r,\alpha-0),
 \end{equation*}
 where $\alpha+0$ and $\alpha-0$ denote the limiting values approached
-from materials~1 and~2, respectively. Symmetry, traction continuity, and
-frictionless contact give
+from materials~1 and~2, respectively. The boundary conditions have three distinct origins:
+symmetry at the two material-sector bisectors, traction continuity across
+the material interface, and frictionless closed contact on the existing
+interfacial crack. Written separately, they are
 \begin{equation}
 \label{eq:interface-boundary-conditions}
 \begin{aligned}
-  &\theta\in\{0,\pi\}: &&\tau_{r\theta}=0,\\
+  &\theta\in\{0,\pi\}: &&
+    \tau_{r\theta}=0,
+    &&\text{(symmetry)},\\
   &\theta=\alpha: &&
-    \jump{\sigma_\theta}=0,
-    \quad \jump{\tau_{r\theta}}=0,
-    \quad \tau_{r\theta}=0,
-    \quad \jump{u_\theta}=0.
+    \jump{\sigma_\theta}=0,\qquad
+    \jump{\tau_{r\theta}}=0,
+    &&\text{(traction continuity)},\\
+  &\theta=\alpha: &&
+    \tau_{r\theta}=0,\qquad
+    \jump{u_\theta}=0,
+    &&\text{(frictionless closed contact)}.
 \end{aligned}
 \end{equation}
-The condition $\jump{u_\theta}=0$ imposes normal contact between the crack
-faces, whereas $\tau_{r\theta}=0$ expresses the absence of friction.
+The two shear conditions at $\theta=\alpha$ are not redundant:
+$\jump{\tau_{r\theta}}=0$ states that the two limiting tangential tractions
+are equal, whereas $\tau_{r\theta}=0$ sets their common value to zero
+because the contacting crack faces are frictionless. The condition
+$\jump{u_\theta}=0$ prevents normal separation of those faces.
 
-On the bisector of the material sector containing the process zone, the
-following mixed boundary conditions apply:
+Let $j=3-i$ denote the other material. On the active bisector
+$\theta=\beta_i$, the process-zone segment $0<r<d_i$ is traction-controlled,
+whereas the continuation ahead of the zone remains closed by
+symmetry. The inactive bisector $\theta=\beta_j$ remains a symmetry line
+for all $r>0$:
 \begin{equation}
 \label{eq:process-zone-boundary-conditions}
 \begin{aligned}
-  &\theta=\beta_i,\quad 0<r<d_i:
-    &&\sigma_\theta(r,\beta_i)=\sigma_i,\\
-  &\theta=\beta_i,\quad r>d_i:
-    &&u_\theta(r,\beta_i)=0,\\
-  &\theta=\beta_j,\quad r>0,\quad j\ne i:
-    &&u_\theta(r,\beta_j)=0.
+  &\theta=\beta_i: &&
+  \begin{cases}
+    \sigma_\theta(r,\beta_i)=\sigma_i, & 0<r<d_i,\\
+    u_\theta(r,\beta_i)=0, & r>d_i,
+  \end{cases}\\[4pt]
+  &\theta=\beta_j,\quad j\ne i: &&
+    u_\theta(r,\beta_j)=0,\qquad r>0.
 \end{aligned}
 \end{equation}
-Here, $j=3-i$ identifies the other material. Thus, the symmetry
-condition on $u_\theta$ is replaced by a prescribed constant normal
-traction only over $0<r<d_i$ along the active direction
-$\theta=\beta_i$.
+Thus, only the segment occupied by the process zone replaces the symmetry
+condition by the prescribed cohesive traction $\sigma_i$; no boundary
+condition is changed on the opposite material bisector.
 
 At intermediate distances $d_i\ll r\ll l$, the solution must match the
 asymptotic field of the interfacial crack in the absence of a process
@@ -373,10 +397,14 @@ configuration with the prescribed stationary V-shaped interfacial crack. It is t
 $D(-1-\lambda)=0$ in $(-1,0)$ that is continuously connected to the
 physical branch, where $D$ is the characteristic determinant for the
 cracked configuration. Expressions for $D$ and $Q_i$ are given in
-\AsymptoticsAppendix. The limit $r\to\infty$ is understood in the
-inner-scale sense of asymptotic matching, rather than as the far field
-of the finite body; the remainder $o(r^{-1})$ decays faster than $r^{-1}$
-in that limit.
+\AsymptoticsAppendix. The limit $r\to\infty$ is understood in the inner-scale sense of
+asymptotic matching, rather than as the far field of the finite body. The
+remainder $o(r^{-1})$ is an adopted decay condition on the correction after
+the leading outer singular term has been retained; it is not an intrinsic
+statement about the next term of the full outer expansion. This choice is
+sufficient to ensure that the exterior Mellin transform introduced below is
+analytic for $\operatorname{Re}p<0$ (the weaker bound $O(r^{-1})$ would already
+suffice in the open half-plane).
 
 For the subsequent Wiener--Hopf construction, we use superposition as in
 the related problem~\citep{KaminskyDudykPolishchuk2024}. We subtract the known field of the stationary V-shaped interfacial crack
@@ -408,17 +436,22 @@ the physical admissibility condition
 \end{equation*}
 The model thus requires both $Cg_2<0$, for contact between the
 interfacial crack faces, and $CQ_i>0$, for formation of a process zone
-in material~$i$. For the parameter sets examined below, the numerical
-analysis shows that these conditions can hold simultaneously for only one
-of the two materials; only that material admits a physically admissible
-process zone.
+in material~$i$. These admissibility tests are applied independently to
+both candidate materials. For the baseline calculations and for the broader
+parameter scan reported in Section~\ref{sec:numerical-results}, no case was
+found in which both materials are admissible simultaneously. This is treated
+as a numerical observation over the investigated parameter domain rather
+than as a general uniqueness theorem.
 
 \subsection{Asymptotic fields near the process-zone tip}
 \label{subsec:zone-tip-asymptotics}
 
 Near the outer tip of the displacement discontinuity, the stress and normal
 displacement gradient have the standard inverse-square-root asymptotics for a
-homogeneous material:
+homogeneous material. Although the global body is bimaterial, the point
+$r=d_i>0$ lies locally inside material $i$ and away from the interface
+corner, so the leading tip field is the standard homogeneous-medium
+Mode~I field:
 \begin{equation}
 \label{eq:zone-tip-asymptotics}
 \begin{aligned}
@@ -439,9 +472,13 @@ model~\citep{KaminskyDudykPolishchuk2024},
 \begin{equation*}
   k_i=0.
 \end{equation*}
-This condition removes the inverse-square-root singular term and is
-used below to determine the equilibrium zone length $d_i$. It does not
-require the bounded part of the stress at the zone tip to vanish.
+For a prescribed $d_i$, the transformed boundary-value problem generally
+produces a nonzero coefficient $k_i$. The endpoint $d_i$ is itself unknown,
+so the problem is a one-parameter free-boundary problem; the single scalar
+regularity condition $k_i=0$ supplies the corresponding solvability
+condition and determines the equilibrium value of $d_i$. It removes only
+the inverse-square-root singular term and does not require the bounded part
+of the stress at the zone tip to vanish.
 
 
 \section{Determination of the equilibrium process-zone parameters}
@@ -456,8 +493,10 @@ To solve the local problem, we introduce the dimensionless radial coordinate
 \end{equation*}
 and apply the Mellin integral transform to the boundary-value problem
 \eqref{eq:interface-boundary-conditions}--\eqref{eq:matched-far-field}.
-Let $p$ be the complex Mellin variable. We define the transforms of the
-correction normal stress outside the zone and the normal displacement
+Let $p$ be the complex Mellin variable. In the displacement transform,
+$\partial u_\theta/\partial r$ is understood in the opening-positive trace
+sense specified in Section~\ref{subsec:geometry}. We define the transforms
+of the correction normal stress outside the zone and the normal displacement
 gradient within the zone by
 \begin{equation*}
 \begin{aligned}
@@ -504,8 +543,37 @@ $\sigma_i-CQ_i d_i^\lambda\rho^\lambda$, and hence
   \frac{\sigma_i}{p+1}
   -\frac{CQ_i d_i^\lambda}{p+\lambda+1}.
 \end{equation*}
-Eliminating the transforms of the interior field yields the functional
-equation
+For completeness, the elimination leading to the scalar functional
+equation is summarized here. For a Mellin component, an Airy stress function
+of the form $r^{1-p}f(\theta)$ satisfies
+\begin{equation*}
+  \left[\frac{\dd^2}{\dd\theta^2}+(1-p)^2\right]
+  \left[\frac{\dd^2}{\dd\theta^2}+(1+p)^2\right]f=0.
+\end{equation*}
+In each material sector, the four angular coefficients are fixed by
+zero shear traction at the sector bisector and by the normal and tangential
+tractions at the interface. Enforcing zero normal displacement gradient on
+the inactive bisector, together with normal-displacement continuity and
+traction continuity at $\theta=\alpha$, eliminates the interface amplitudes. The
+resulting relation between the transformed active-bisector traction
+$T_i(p)$ and the opening-positive displacement-gradient transform is
+\begin{equation*}
+  T_i(p)=-\frac{D_i(p)}{D(p)}\,\Phi_i^-(p).
+\end{equation*}
+Here $D(p)$ is the determinant of the stationary cracked-corner problem and
+$D_i(p)$ is the determinant obtained when the active bisector admits a
+normal displacement discontinuity; their explicit forms are given below and
+in Appendix~\ref{app:asymptotics}. Since
+\begin{equation*}
+  \frac{D_i(p)}{D(p)}=\tan(\pi p)\,G_i(p)
+\end{equation*}
+and
+\begin{equation*}
+  T_i(p)=
+  \Phi_i^+(p)+\frac{\sigma_i}{p+1}
+  -\frac{CQ_i d_i^\lambda}{p+\lambda+1},
+\end{equation*}
+we obtain the functional equation
 \begin{equation}
 \label{eq:wiener-hopf-functional}
   \Phi_i^+(p)
@@ -585,15 +653,71 @@ The factors $G_i^\pm(p)$ are defined by the Cauchy integral
   \end{cases}
 \end{equation*}
 where $z$ is the complex integration variable and $\ii^2=-1$.
-The contour is directed upward along the imaginary axis. We also introduce
-the auxiliary gamma-function factors
+The contour is directed upward along the imaginary axis, and the factors are
+normalized by $G_i^\pm(p)\to1$ at infinity. The object factorized by this
+Cauchy construction is the positive, zero-index boundary symbol
+$G_i(\ii t)$ on the imaginary axis. With this contour orientation,
+the Plemelj jump relation gives the \emph{ratio} convention
+\begin{equation*}
+  G_i(\ii t)=
+  \frac{G_i^+(\ii t)}{G_i^-(\ii t)}.
+\end{equation*}
+For the even kernel used here, reflection then gives
+\begin{equation}
+\label{eq:factor-reflection}
+  G_i^-(p)=\frac{1}{G_i^+(-p)}
+\end{equation}
+at corresponding points of the two half-planes. In particular, the
+one-sided limits at the removable point $p=0$ satisfy
+\begin{equation}
+\label{eq:factor-zero}
+  G_i^+(0)=\sqrt{G_i(0)},\qquad
+  G_i^-(0)=\frac{1}{\sqrt{G_i(0)}}.
+\end{equation}
+The meromorphic continuation of $G_i(p)$ has off-contour poles and zeros
+associated with the characteristic determinants. These do not make the
+individual Cauchy factor singular at the left-half-plane evaluation points
+$-1$ and $-1-\lambda$; the values $G_i^+(-1)$ and
+$G_i^+(-1-\lambda)$ are ordinary evaluations of the factor defined from
+the boundary symbol.
+
+We also introduce the auxiliary gamma-function factors
 \begin{equation*}
   K^\pm(p)=
   \frac{\Gamma(1\mp p)}{\Gamma(\tfrac12\mp p)}.
 \end{equation*}
-Here, $\Gamma$ is the Euler gamma function.
-With the normalization $G_i^\pm(p)\to1$ at infinity, the solution of
-the functional equation is
+Euler's reflection formulas give the identity
+\begin{equation}
+\label{eq:gamma-factor-identity}
+  K^+(p)K^-(p)=p\cot(\pi p),
+\end{equation}
+which carries the elementary trigonometric factor explicitly.
+
+To display the Wiener--Hopf split, set
+\begin{equation*}
+  a=1+\lambda,\qquad
+  P=CQ_i d_i^\lambda,\qquad
+  L(p)=\frac{K^+(p)}{pG_i^+(p)}.
+\end{equation*}
+Multiplying Eq.~\eqref{eq:wiener-hopf-functional} by $L(p)$ and using
+Eq.~\eqref{eq:gamma-factor-identity} gives
+\begin{equation*}
+\begin{aligned}
+  &L\Phi_i^+
+  +\sigma_i\frac{L(p)-L(-1)}{p+1}
+  -P\frac{L(p)-L(-a)}{p+a}\\
+  &\qquad=
+  -\frac{\Phi_i^-}{K^-(p)G_i^-(p)}
+  -\frac{\sigma_iL(-1)}{p+1}
+  +\frac{PL(-a)}{p+a}.
+\end{aligned}
+\end{equation*}
+The subtractions remove the apparent forcing poles from the left analytic
+part; the remaining forcing poles lie outside the right half-plane.
+The two sides therefore define a common analytic continuation across the
+factorization contour. The endpoint estimates make this continuation vanish
+at infinity, so Liouville's theorem sets it to zero. Solving the
+resulting left and right relations yields
 \begin{equation}
 \label{eq:wiener-hopf-solution}
 \begin{aligned}
@@ -725,8 +849,9 @@ $d_i/l\ll1$ used in the local formulation.
 \label{subsec:zone-parameters}
 
 Let the process-zone opening at the corner be
-$\delta_i=\jump{u_\theta(0,\beta_i)}$.
-The definition of $\Phi_i^-(p)$ gives
+$\delta_i=\jump{u_\theta(0,\beta_i)}$, where the jump is taken between the
+two zone faces in the opening-positive sense specified above. The definition
+of $\Phi_i^-(p)$ gives
 \begin{equation*}
   \delta_i
   =-2
@@ -739,8 +864,48 @@ Here, the asterisk denotes the dimensional transform moment:
 for $f(r)=\partial u_\theta(r,\beta_i)/\partial r$,
 $f^*(p)=\int_0^{d_i}f(r)(r/d_i)^p\,\dd r$.
 The factor of two accounts for the symmetric displacement of the two
-zone faces. Substitution of Eq.~\eqref{eq:wiener-hopf-solution},
-together with Eq.~\eqref{eq:process-zone-length}, gives
+zone faces.
+
+The two transform moments entering the opening and work can be evaluated
+directly. Define
+\begin{equation*}
+  A_i=\frac{\sigma_iK^+(-1)}{G_i^+(-1)}.
+\end{equation*}
+After the regularity condition $k_i=0$ has been imposed,
+Eq.~\eqref{eq:wiener-hopf-solution} reduces to
+\begin{equation}
+\label{eq:phi-minus-regular}
+  \Phi_i^-(p)=
+  \frac{\lambda A_i K^-(p)G_i^-(p)}
+  {(p+1)(p+1+\lambda)}.
+\end{equation}
+Using Eqs.~\eqref{eq:factor-reflection}--\eqref{eq:factor-zero},
+\begin{equation*}
+  K^-(0)=\frac{1}{\sqrt{\pi}},\qquad
+  G_i^-(0)=\frac{1}{\sqrt{G_i(0)}},
+\end{equation*}
+so that
+\begin{equation}
+\label{eq:phi-minus-zero}
+  \Phi_i^-(0)=
+  \frac{\sigma_i\lambda K^+(-1)}
+  {(1+\lambda)G_i^+(-1)\sqrt{\pi G_i(0)}}.
+\end{equation}
+Likewise,
+\begin{equation*}
+  K^-(1)=K^+(-1)=\frac{2}{\sqrt{\pi}},\qquad
+  G_i^-(1)=\frac{1}{G_i^+(-1)},
+\end{equation*}
+and therefore
+\begin{equation}
+\label{eq:phi-minus-one}
+  \Phi_i^-(1)=
+  \frac{2\lambda\sigma_i}
+  {\pi(\lambda+2)[G_i^+(-1)]^2}.
+\end{equation}
+Equation~\eqref{eq:phi-minus-zero} shows explicitly that
+$\sqrt{G_i(0)}$ occurs in the denominator under the present ratio
+factorization convention. Substitution into the opening definition gives
 \begin{equation}
 \label{eq:process-zone-opening}
   \delta_i=
@@ -768,7 +933,7 @@ by~\citep{Cherepanov1986}
       \jump{u_\theta(r,\beta_i)}\,\dd r
   =-\frac{4(1-\nu_i^2)\sigma_i}{E_i}d_i^2\Phi_i^-(1).
 \end{equation*}
-Using Eq.~\eqref{eq:wiener-hopf-solution}, we obtain
+Using Eq.~\eqref{eq:phi-minus-one}, we obtain
 \begin{equation*}
   W_i=-\frac{8\lambda(1-\nu_i^2)\sigma_i^2}
   {\pi(\lambda+2)[G_i^+(-1)]^2E_i}d_i^2.
@@ -869,7 +1034,7 @@ parameters are calibrated consistently:
 The numerical analysis is performed for the normalized parameters
 $\,d_i/l$, $\delta_i'$, and $J_i'$ defined in
 Section~\ref{sec:derivation}. Only combinations of material, angle, and
-loading sign for which
+loading sign for which both inequalities
 \begin{equation*}
   Cg_2<0,\qquad CQ_i>0
 \end{equation*}
@@ -878,6 +1043,31 @@ inequality ensures compressive contact between the faces of the V-shaped
 interfacial shear crack, whereas the second ensures tensile normal stress
 along the bisector of the angular sector of the material in which the
 process zone forms.
+
+To examine whether the single-material admissibility observed for the
+baseline pair is specific to that example, we additionally performed a broad
+numerical sign analysis. Because the expression for $q_i$ in
+Appendix~\ref{app:asymptotics} has the same multiplicative factor for
+$i=1,2$ apart from the numerator function $S_i$, one has
+\begin{equation*}
+  \operatorname{sgn}(Q_1Q_2)
+  =\operatorname{sgn}(S_1S_2).
+\end{equation*}
+Simultaneous admissibility for a fixed sign of $C$ would therefore require
+$S_1S_2>0$. A deterministic scan of 92,800 nondegenerate combinations covered
+$10^{-3}\le E_1/E_2\le10^3$, eight independently varied Poisson-ratio values
+between $-0.95$ and $0.49$ for each material, and
+$\alpha=3^\circ,6^\circ,\ldots,177^\circ$, excluding the straight-interface
+limit. No case with $S_1S_2>0$ was found. A separate seeded random scan of
+20,000 additional points, with $E_1/E_2$ sampled log-uniformly over
+$10^{-3}\le E_1/E_2\le10^3$ and with
+$-0.99<\nu_i<0.499$ and
+$0.2^\circ<\alpha<179.8^\circ$, likewise produced no such case; the two
+sampled points closest to $S_1S_2=0$ retained the negative sign when
+recomputed at 50-digit precision. Thus, within this broad parameter domain,
+at most one material satisfies the tensile-zone condition for a given
+loading sign. This numerical evidence is not taken as a proof of global
+exclusivity outside the scanned domain.
 
 For the baseline material pair
 \begin{equation*}
@@ -1144,28 +1334,106 @@ Two distinct local mechanisms are possible for the stationary V-shaped
 crack. The first is associated with its corner $O$: the singular corner
 field supports a tensile process zone in one of the materials, and
 attainment of a critical $\delta_i$ or $J_i$ marks branching initiation.
-The second mechanism is localized at the tips of the V-shaped crack branches. For those tips, Nazarenko and Kipnis
-\citeyearpar{NazarenkoKipnis2022Equilibrium} determined the Mode~II stress
-intensity factor $K_{\mathrm{II}}$ and formulated the interfacial
-fracture condition
+The second mechanism is localized at the tips of the V-shaped crack branches.
+For those tips, Nazarenko and Kipnis
+\citeyearpar{NazarenkoKipnis2022Equilibrium} obtained the Mode~II
+stress-intensity factor in the present notation as
+\begin{equation}
+\label{eq:branch-tip-KII}
+  K_{\mathrm{II}}
+  =g_1 k\,C\,l^{\lambda_0+1/2},
+\end{equation}
+where
 \begin{equation*}
-  K_{\mathrm{II}}=K_{\mathrm{IIc}}.
+  k=
+  \frac{
+    2\sqrt{2}(1+\kappa_2e)\Gamma(\lambda_0+3/2)
+  }{
+    [1+\kappa_1+(1+\kappa_2)e]\,
+    \Gamma(\lambda_0+2)G^+(-1-\lambda_0)
+  }.
+\end{equation*}
+Here, $G^+$ is the plus factor of the base kernel $G$ defined in
+Appendix~\ref{app:asymptotics}. Their interfacial fracture condition is
+$K_{\mathrm{II}}=K_{\mathrm{IIc}}$; in terms of load magnitude this gives
+\begin{equation*}
+  |C_{\mathrm{tip}}|
+  =
+  \frac{K_{\mathrm{IIc}}}
+  {|g_1k|\,l^{\lambda_0+1/2}}.
 \end{equation*}
 
-Branching from the corner and interfacial propagation from the crack-branch tips
-should therefore be regarded as competing local mechanisms of the same
-stationary geometry, rather than as prescribed sequential stages. Their
-respective critical loads are governed by different material
-characteristics: Mode~II interfacial fracture resistance at the crack-branch tips
-and the critical process-zone characteristic, $\delta_i$ or $J_i$, at
-the corner.
+For corner branching, the normalized critical load
+$\sigma'_c$ is determined from either
+$\delta_i=\delta_{i\mathrm{c}}$ or
+$J_i=J_{i\mathrm{c}}$ using
+Eqs.~\eqref{eq:normalized-process-zone-length}--%
+\eqref{eq:process-zone-energy-parameter}. Since
+$\sigma'=Cl^{\lambda_0}/\sigma_i$, the corresponding load magnitude is
+\begin{equation*}
+  |C_{\mathrm{corner}}|
+  =
+  \sigma_i l^{-\lambda_0}|\sigma'_c|.
+\end{equation*}
+Introducing the dimensionless Mode~II resistance
+\begin{equation*}
+  \mathcal R_{\mathrm{II}}
+  =
+  \frac{K_{\mathrm{IIc}}}{\sigma_i\sqrt{l}},
+\end{equation*}
+the two critical loads are related by
+\begin{equation}
+\label{eq:mechanism-competition-ratio}
+  \frac{|C_{\mathrm{corner}}|}{|C_{\mathrm{tip}}|}
+  =
+  \frac{|g_1k|\,|\sigma'_c|}{\mathcal R_{\mathrm{II}}}.
+\end{equation}
+Consequently, corner branching reaches its threshold first when
+\begin{equation*}
+  |g_1k|\,|\sigma'_c|<\mathcal R_{\mathrm{II}},
+\end{equation*}
+whereas interfacial propagation from the branch tips reaches its threshold
+first when the inequality is reversed; equality defines the competition
+boundary.
+
+For the reference case
+$E_1/E_2=0.5$, $\nu_1=\nu_2=0.3$, and
+$\alpha=45^\circ$, the independently evaluated coefficient is
+$g_1k=-0.6794$. If the corner criterion is expressed through the normalized
+critical opening
+\begin{equation*}
+  \Delta_1=
+  \frac{E_1\delta_{1\mathrm{c}}}
+  {4(1-\nu_1^2)\sigma_1l},
+\end{equation*}
+the competition boundary takes the form
+\begin{equation*}
+  \mathcal R_{\mathrm{II}}^*
+  =1.1064\,\Delta_1^{0.6132}.
+\end{equation*}
+Equivalently, with
+$\mathcal J_1=E_1J_{1\mathrm{c}}/
+[4(1-\nu_1^2)\sigma_1^2l]$,
+\begin{equation*}
+  \mathcal R_{\mathrm{II}}^*
+  =1.5558\,\mathcal J_1^{0.6132}.
+\end{equation*}
+The two representations identify the same boundary when
+$J_{1\mathrm{c}}=\chi_1\sigma_1\delta_{1\mathrm{c}}$.
+
+Thus, branching from the corner and interfacial propagation from the
+crack-branch tips can be compared quantitatively as competing mechanisms of
+the same stationary geometry rather than as prescribed sequential stages. A unique
+numerical ordering for a particular material system still requires the
+independently measured resistances $K_{\mathrm{IIc}}$ and either
+$\delta_{i\mathrm{c}}$ or $J_{i\mathrm{c}}$.
 
 The small-scale assumption $d_i\ll l$ permits the two local regions to be
 treated separately at leading order. The field of the stationary V-shaped
 crack serves as the outer field for the process-zone problem near $O$, and
 the feedback of the small zone on the fields at the crack-branch tips is
-neglected. A coupled boundary-value problem would be required for a
-quantitative analysis of the competition when $d_i/l$ is no longer small.
+neglected. A fully coupled boundary-value problem would be required when
+$d_i/l$ is no longer small.
 
 \subsection{Energy and deformation criteria}
 \label{subsec:discussion-criteria}
@@ -1276,9 +1544,12 @@ and the zone-related energy parameter $J_i=\dd W_i/\dd d_i$.
 \item
 Physical admissibility of the local process zone requires both compressive
 contact of the V-shaped interfacial crack faces, $Cg_2<0$, and a tensile
-normal field in the material containing the zone, $CQ_i>0$. For the
-parameters examined, these conditions can be satisfied simultaneously in
-only one of the two materials for a given angle and loading sign. The
+normal field in the material containing the zone, $CQ_i>0$. A broad
+numerical analysis comprising 92,800 deterministic parameter combinations and
+20,000 additional randomly sampled cases found no configuration in which
+both materials satisfy the tensile-zone condition for the same loading sign.
+Accordingly, single-material admissibility is supported numerically over the
+reported domain, but is not asserted as a general uniqueness theorem. The
 interface angle and elastic contrast shift the admissible ranges and the
 equilibrium zone characteristics.
 
@@ -1309,12 +1580,16 @@ Quantitative use of the model relies on the small-scale assumption
 $d_i\ll l$; $d_i/l<0.1$ is adopted as the principal applicability range,
 whereas portions of the curves reaching approximately $d_i/l=0.18$ should
 be interpreted as extrapolations of the local approximation. Branching
-from the corner and interfacial propagation from the tips of the V-shaped crack
-branches are competing local mechanisms rather than prescribed
-sequential stages. Because the formulation is local, it can be extended
-to developed V-shaped interfacial cracks by replacing the outer-field
-amplitude with the corresponding corner-field amplitude. A related
-application is splitting of a solid by a sharp wedge.
+from the corner and interfacial propagation from the tips of the V-shaped
+crack branches are competing local mechanisms whose critical loads satisfy
+Eq.~\eqref{eq:mechanism-competition-ratio}. Thus their ordering is determined
+by the normalized Mode~II resistance
+$K_{\mathrm{IIc}}/(\sigma_i\sqrt l)$ relative to the corner threshold
+$|g_1k|\,|\sigma'_c|$, rather than by a prescribed sequence. Because the
+formulation is local, it can be extended to developed V-shaped interfacial
+cracks by replacing the outer-field amplitude with the corresponding
+corner-field amplitude. A related application is splitting of a solid by a
+sharp wedge.
 \end{enumerate}
 
 
