@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - submission/ijf-preparation-2026-09-25
+      - verification/ijf-r1-wp3-final-build
     paths:
       - 'submission/ijf/**'
       - 'manuscript/latex/english/**'
