@@ -16,6 +16,8 @@ jobs:
           python-version: '3.11'
       - name: Install verification dependency
         run: python -m pip install mpmath==1.3.0
+      - name: Run existing Python regression suite
+        run: python -m unittest discover -s tests -v
       - name: Run WP2 verification
         run: python revision/round1/verify_wp2.py
       - name: Show verification result
