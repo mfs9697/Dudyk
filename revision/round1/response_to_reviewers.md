@@ -2,12 +2,18 @@
 
 We thank both reviewers for their careful reading of the manuscript and for
 their constructive comments. Reviewer 1 identified several places where the
-analytical reasoning was too compressed, although the underlying derivation
-was found to be correct. We have therefore expanded the intermediate steps,
+analytical reasoning was too compressed. Independent reconstruction confirmed
+the submitted analytical expressions. We have therefore expanded the intermediate steps,
 clarified the Wiener--Hopf factorization convention, strengthened the
 discussion of physical admissibility, and added a quantitative comparison of
 the two competing fracture mechanisms. Reviewer 2 recommended publication
 without requesting specific changes.
+
+**Equation numbering.** Numbers in the quoted comments refer to the original
+submission. The new intermediate equations shift the numbering in the revised
+manuscript: original Eqs. (1)–(5) retain their numbers; original Eqs. (6)–(11)
+correspond, respectively, to revised Eqs. (9), (10), (11), (15), (16), and (17).
+The responses below identify the revised equation numbers where appropriate.
 
 ## Reviewer 1
 
@@ -172,15 +178,15 @@ K^+(p)K^-(p)=p\cot(\pi p)
 \]
 
 and displayed the pole-subtracted left/right split used before applying
-Liouville's theorem. These additions make the passage from Eq. (5) to Eq. (6)
-explicit.
+Liouville's theorem. These additions make the passage from Eq. (5) to revised Eq. (9)
+(original Eq. (6)) explicit.
 
 An independent reconstruction of the transformed two-sector problem and the
-factorization confirmed that Eqs. (5) and (6) are correct as submitted; the
-revision therefore adds the missing derivational steps without changing
-those equations.
+factorization confirmed that original Eqs. (5) and (6) are correct as
+submitted; the revision therefore adds the missing derivational steps without
+changing those equations (now Eqs. (5) and (9)).
 
-**Revision.** Sections 3.1 and 3.2, immediately before Eqs. (5) and (6).
+**Revision.** Sections 3.1 and 3.2, including revised Eqs. (5)–(9).
 
 ### Comment 5 — Section 3.4
 
@@ -194,7 +200,7 @@ those equations.
 > intermediate step would settle this placement unambiguously.
 
 **Response.** We thank the reviewer for identifying this ambiguity. We
-independently rederived the two transform moments. Equation (9) is correct as
+independently rederived the two transform moments. Original Eq. (9), now Eq. (15), is correct as
 submitted, but the factorization convention was not stated explicitly enough
 to make the placement of \(G_i(0)\) transparent.
 
@@ -204,7 +210,7 @@ After imposing \(k_i=0\), define
 A_i=\frac{\sigma_iK^+(-1)}{G_i^+(-1)}.
 \]
 
-Equation (6) then reduces to
+Revised Eq. (9) (original Eq. (6)) then reduces to
 
 \[
 \Phi_i^-(p)=
@@ -228,7 +234,7 @@ and therefore
 {(1+\lambda)G_i^+(-1)\sqrt{\pi G_i(0)}}.
 \]
 
-Thus \(\sqrt{G_i(0)}\) belongs in the denominator of Eq. (9).
+Thus \(\sqrt{G_i(0)}\) belongs in the denominator of revised Eq. (15) (original Eq. (9)).
 
 Similarly,
 
@@ -246,7 +252,8 @@ which gives
 {\pi(\lambda+2)[G_i^+(-1)]^2}.
 \]
 
-This directly recovers the work and energy coefficients in Eq. (10).
+This directly recovers the work and energy coefficients in revised Eq. (16)
+(original Eq. (10)).
 
 As an independent numerical check for
 \(E_1/E_2=0.5\), \(\nu_1=\nu_2=0.3\),
@@ -258,10 +265,10 @@ d_1/l=0.147434361719,\qquad
 J'_1=0.083620387223,
 \]
 
-in agreement with the independent numerical implementation.
+in agreement with the existing MATLAB regression results.
 
-**Revision.** Section 3.4, before Eqs. (9) and (10). No coefficient in
-Eqs. (9)–(11) has been changed.
+**Revision.** Section 3.4, revised Eqs. (12)–(16), and Section 3.5,
+revised Eq. (17). No coefficient in original Eqs. (9)–(11) has been changed.
 
 ### Comment 6 — Section 4
 
@@ -449,7 +456,8 @@ prescribed-stationary-crack assumption explicitly to the a posteriori
 critical-load comparison. Section 2.2 scopes the exclusivity statement as a
 numerical observation. Section 4 reports the broad admissibility analysis and
 its parameter domain. Section 5.2 adds the branch-tip \(K_{\mathrm{II}}\)
-formula, the two critical loads, the dimensionless competition ratio, and the
+formula (revised Eq. (18)), the two critical loads, the dimensionless
+competition ratio (revised Eq. (19)), and the
 \(45^\circ\) mechanism boundary. The corresponding conclusions have also
 been revised.
 
