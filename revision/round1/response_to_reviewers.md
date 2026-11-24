@@ -1,7 +1,7 @@
 # Response to the Editor and Reviewers — Round 1
 
-Status: WP3 draft in progress. Responses R1.1--R1.5 correspond to implemented
-manuscript changes. R1.6 remains gated by WP2 and is not yet final.
+Status: WP3 draft complete for Reviewer 1 comments R1.1--R1.6. All scientific
+changes are implemented; final package verification is in progress.
 
 ## Response conventions
 
@@ -280,23 +280,190 @@ correct but insufficiently explained.
 Section 3.4, before Eqs. (9) and (10). No coefficient in Eqs. (9)--(11) was
 changed.
 
-### R1.6 — Section 4
+### R1.6 — Section 4 and competing fracture mechanisms
 
 **Comment**
 
-> The scope of the single-zone admissibility statement should be established
-> or explicitly limited, and the critical loads of corner branching and
+> The numerical analysis supports the claimed trends, but the two physical
+> selection mechanisms and the single-zone admissibility statement remain
+> unverified. The assertion that the conditions \(Cg_2<0\) and \(CQ_i>0\)
+> can hold simultaneously for only one material should either be proved over
+> the admissible parameter space or explicitly limited to a numerical
+> observation. In addition, the critical loads of corner branching and
 > branch-tip propagation should be compared quantitatively.
 
 **Response**
 
-_In progress under WP2. No reviewer-facing conclusion will be inserted until
-the general admissibility audit and the branch-tip \(K_{II}\) coefficient
-mapping have been independently verified._
+We agree with both points and have revised the manuscript accordingly.
+
+For the first point, we do **not** promote the single-material result to a
+general analytical theorem. Instead, we made its numerical status and scope
+explicit and performed a substantially broader verification than in the
+submitted version.
+
+From the Appendix-A expression for \(q_i\), the multiplicative factor outside
+the numerator function \(S_i\) is common to both candidate materials. Hence
+
+\[
+\operatorname{sgn}(Q_1Q_2)
+=
+\operatorname{sgn}(S_1S_2).
+\]
+
+Simultaneous admissibility for a fixed loading sign would require
+\(Q_1Q_2>0\), and therefore \(S_1S_2>0\). We then evaluated this sign over a
+broad parameter domain. A deterministic scan comprised 92,800 nondegenerate
+cases with
+
+\[
+10^{-3}\le E_1/E_2\le10^3,
+\]
+
+25 logarithmic modulus-ratio values, eight independently varied Poisson-ratio
+values from \(-0.95\) to \(0.49\) for each material, and
+\(\alpha=3^\circ,6^\circ,\ldots,177^\circ\), excluding the degenerate
+straight-interface limit. No case with \(S_1S_2>0\) was found.
+
+A second seeded continuous scan of 20,000 cases over
+\(-0.99<\nu_i<0.499\) and
+\(0.2^\circ<\alpha<179.8^\circ\) likewise found no simultaneous-admissibility
+candidate. The two sampled cases closest to \(S_1S_2=0\) were recomputed at
+50-digit precision and retained the negative sign. Material-interchange
+relations were checked independently on 1,000 additional random cases.
+
+Accordingly, the revised manuscript states only that single-material
+admissibility is **numerically supported over the investigated domain**; it
+explicitly avoids claiming a global uniqueness theorem and continues to apply
+the two admissibility conditions independently to both candidate materials.
+
+For the second point, we added a quantitative critical-load comparison. In
+the notation of the present paper, the Nazarenko--Kipnis solution for the
+branch-tip Mode-II intensity is
+
+\[
+K_{\mathrm{II}}
+=
+g_1k\,C\,l^{\lambda_0+1/2},
+\]
+
+where
+
+\[
+k=
+\frac{
+2\sqrt{2}(1+\kappa_2e)\Gamma(\lambda_0+3/2)
+}{
+[1+\kappa_1+(1+\kappa_2)e]\,
+\Gamma(\lambda_0+2)G^+(-1-\lambda_0)
+}.
+\]
+
+Thus the interfacial branch-tip threshold is
+
+\[
+|C_{\mathrm{tip}}|
+=
+\frac{K_{\mathrm{IIc}}}
+{|g_1k|\,l^{\lambda_0+1/2}}.
+\]
+
+The corner-branching threshold obtained from either
+\(\delta_i=\delta_{i\mathrm{c}}\) or
+\(J_i=J_{i\mathrm{c}}\) is
+
+\[
+|C_{\mathrm{corner}}|
+=
+\sigma_i l^{-\lambda_0}|\sigma'_c|.
+\]
+
+Defining
+
+\[
+\mathcal R_{\mathrm{II}}
+=
+\frac{K_{\mathrm{IIc}}}{\sigma_i\sqrt l},
+\]
+
+gives the dimensionless comparison
+
+\[
+\boxed{
+\frac{|C_{\mathrm{corner}}|}{|C_{\mathrm{tip}}|}
+=
+\frac{|g_1k|\,|\sigma'_c|}
+{\mathcal R_{\mathrm{II}}}
+}.
+\]
+
+Corner branching therefore occurs first when
+\(|g_1k|\,|\sigma'_c|<\mathcal R_{\mathrm{II}}\), while branch-tip
+interfacial propagation occurs first when the inequality is reversed.
+
+For the reference case
+\(E_1/E_2=0.5\), \(\nu_1=\nu_2=0.3\), and
+\(\alpha=45^\circ\), the independently evaluated coefficient is
+
+\[
+g_1k=-0.6794157816.
+\]
+
+Using the normalized critical opening
+
+\[
+\Delta_1=
+\frac{E_1\delta_{1\mathrm{c}}}
+{4(1-\nu_1^2)\sigma_1l},
+\]
+
+the mechanism boundary is
+
+\[
+\mathcal R_{\mathrm{II}}^*
+=
+1.1064\,\Delta_1^{0.6132}.
+\]
+
+The equivalent energy representation is
+
+\[
+\mathcal R_{\mathrm{II}}^*
+=
+1.5558\,\mathcal J_1^{0.6132},
+\]
+
+with
+\(\mathcal J_1=
+E_1J_{1\mathrm{c}}/[4(1-\nu_1^2)\sigma_1^2l]\).
+The two boundaries coincide when
+\(J_{1\mathrm{c}}=\chi_1\sigma_1\delta_{1\mathrm{c}}\).
+
+This comparison does not require arbitrary numerical fracture constants.
+A unique ordering for a particular material system requires the independently
+specified resistances \(K_{\mathrm{IIc}}\) and either
+\(\delta_{i\mathrm{c}}\) or \(J_{i\mathrm{c}}\).
+
+**Verification**
+
+The R1.6 analysis was performed in WP2 before manuscript editing. The final
+verification passed the existing Python regression suite, the 92,800-case
+deterministic scan, the 20,000-case continuous scan, 1,000 material-swap
+checks, 50-digit edge checks, and the independent \(45^\circ\) mechanism
+calculation.
 
 **Change in manuscript**
 
-_None yet. This point is deliberately gated from WP3 until WP2 closes._
+Section 2.2: the exclusivity statement is explicitly scoped as numerical.
+
+Section 4: a broad admissibility audit and its parameter domain have been
+added.
+
+Section 5.2 (Competing fracture mechanisms): the branch-tip
+\(K_{\mathrm{II}}\) formula, the two critical loads, the dimensionless
+competition ratio, and the \(45^\circ\) mechanism boundary have been added.
+
+Conclusions: the admissibility and competing-mechanism conclusions have been
+revised to reflect these verified results.
 
 ## Reviewer 2
 
