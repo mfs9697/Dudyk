@@ -45,3 +45,38 @@ All factors other than the load are positive for positive cohesive resistance. H
 Now $\Phi^-=\lambda A K^-G^-/[(p+1)(p+a)]$. Since $K^-(0)=1/\sqrt\pi$ and $K^-(1)=K^+(-1)=2/\sqrt\pi$, the moments are
 $$m_0=\frac{\lambda A}{a\sqrt{\pi G_0}},\qquad m_1=\frac{2\lambda\sigma_i}{\pi(1+a)[G^+(-1)]^2}.$$
 Integrating the gradient backward from the closed tip and doubling the face displacement gives $\delta=-2c_i d_i m_0$. Integrating once more over the zone (exchange order of integration) gives $W=-2c_i\sigma_i d_i^2m_1$. Along the equilibrium family at fixed cohesive stress, $J=2W/d_i$. Hence (9) has the square root **in the denominator**, (10) has coefficient $-16\lambda(1-\nu_i^2)\sigma_i^2/[\pi(1+a)E_iG^+(-1)^2]$, and (11) has $J/(\sigma_i\delta)=4a\sqrt{\pi G_0}/[\pi(1+a)G^+(-1)K^+(-1)]$.
+
+## Checks and comparison
+
+Contour positivity can also be checked directly. For $p=it,t>0$, $X_w<0$ by $\sinh(tw)>t\sin w$, $Z_w>0$, and $Y_w/i=\sinh(2tw)+t\sin(2w)>0$. Consequently $D/i>0$, $D_i<0$, and $G_i(it)>0$. The leading hyperbolic exponentials give $G_i(it)\to1$. Evenness follows from parity. Thus the real log has index zero. The $x\downarrow0$ Poisson integral gives half the log of the limiting kernel on the left.
+
+Run `python revision/round1/verify_wp1.py` with mpmath installed. It solves the endpoint matrices directly for both active sectors at two complex arguments, checks the rational determinant reduction to absolute error below $10^{-32}$, then independently evaluates the factors by 40-digit quadrature. The existing MATLAB implementation supplies a separate double-precision route. The prescribed outer amplitude in the Python check uses the repository fixture for $g_1,q_1$. Its calibration is outside the independent inner-field test.
+
+For material 1, $E_1/E_2=0.5$, both Poisson ratios 0.3, $\alpha=45^\circ$, $\sigma'=-0.5$, and unit $l,\sigma_i$, the results are
+
+| Quantity | Value |
+|---|---:|
+| $\lambda$ | −0.613197226574 |
+| $G_1(0)$ | 1.049443226928 |
+| $G_1^+(-1)$ | 0.996302154171 |
+| $G_1^+(-1-\lambda)$ | 0.998663862615 |
+| $d_1/l$ | 0.147434361719 |
+| $\Phi^-(0),\ \Phi^-(1)$ | −0.988826693411, −0.283585136627 |
+| $\delta'_1,\ J'_1$ | 0.145787032394, 0.083620387223 |
+| $J_1/(\sigma_1\delta_1)$ | 0.573579047809 |
+
+The two pole residues agree within $10^{-35}$ at this length. The independent moment ratio agrees with (11) within $10^{-35}$. The normalized length, opening and energy agree with the MATLAB regression values within $2\times10^{-11}$. Existing suites passed: six Python unittest cases, MATLAB characteristic-root, Figure 2 process-zone and Figure 3 tests. The MATLAB Table 1 verification also ran successfully.
+
+Comparison sources are `docs/dudyk_process_zone_formula_check_ua.tex` and `docs/AUTHOR_CONFIRMED_FORMULA_CORRECTIONS_2026-09-25.md`. The earlier audit starts with the transformed solution and tests its consequences. Its historical corrections are already present in the submission.
+
+| Item | Independent derivation | Submitted manuscript | Existing internal audit | Verdict |
+|---|---|---|---|---|
+| (5) | Airy endpoint reduction gives $-D_i/D$ for opening-positive face gradient | Same multiplier; interior elimination omitted | Takes transformed relations as input | Correct but insufficiently explained |
+| (6) | Left/right ratio jump and subtracted simple pole terms | Same two transforms; split omitted | Uses these transforms and reciprocal reflection | Correct but insufficiently explained |
+| (7) | Vanishing tip coefficient fixes one unknown length | Same length and sign | Same regularity equation | Correct but insufficiently explained |
+| (8) | Divide by $l$ after substituting outer amplitude | Same scaling | Length unaffected by historical corrections | Verified as written |
+| (9) | Right zero-limit and $A$ give denominator $\sqrt{G_i(0)}G_i^+(-1)$ | Same | Corrects historical factor argument to $-1$ | Correct but insufficiently explained |
+| (10) | First moment gives work and energy magnitudes with coefficients $8/\pi,16/\pi$ | Same | Corrects historical $32/(9\pi),64/(9\pi)$ | Correct but insufficiently explained |
+| (11) | Eliminate the common length, giving the ratio above | Same | Follows from corrected opening and energy | Verified as written |
+
+No coefficient correction to submitted (5)–(11) follows. R1.4 identifies genuine poles of the meromorphic symbol at generic parameters, but evaluation in an assigned half-plane uses a regular individual factor. The matching decay in R1.3 is sufficient rather than necessary for open-half-plane convergence. One notation point merits clarification: when using the representative upper half-plane, opening-positive $u_x$ at $\pi$ equals $-u_\theta$ there. Equivalently evaluate the global component on the reflected face at that bisector. Treating the same upper-face polar component as opening-positive on both rays would reverse the material-1 gradient sign in (4)–(6). The author's intended face trace should be stated.
