@@ -47,5 +47,15 @@ trigger. GitHub Actions run #86 (run ID `45414299720`) completed
 successfully: checkout, TeX installation, flat IJF package build with
 pdflatex, PDF/font preflight, and artifact upload all passed.
 
-WP3 is therefore build-verified. A final human visual inspection of the
-generated PDF and final language/style sweep remain before resubmission.
+WP3 is therefore build-verified.
+
+A final language/style sweep was completed, including removal of internal
+work-package terminology from the reviewer response and several publication-
+style improvements in the manuscript. The polished manuscript was rebuilt in
+GitHub Actions run #87 (run ID `45417996400`), which passed the flat
+pdflatex build, PDF/font preflight, and artifact upload.
+
+The resulting 32-page PDF was visually inspected page by page. No clipping,
+overlap, broken glyphs, figure-scaling problems, or equation-layout defects
+were found. WP3 is now complete from the scientific, language/style, build,
+and visual-preflight perspectives.
