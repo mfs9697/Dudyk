@@ -23,5 +23,6 @@ Status: WP3 in progress. R1.1--R1.5 implemented; R1.6 remains gated by WP2.
 - [ ] Figures regenerated if WP2 affects numerical presentation.
 - [ ] References checked if WP2 adds source material to the manuscript.
 - [ ] Full manuscript language/style sweep completed.
-- [ ] IJF package builds without unresolved citations/references.
+- [x] R1.1--R1.5 IJF package builds and passes PDF/font preflight (workflow run #84).
+- [ ] Final post-WP2 IJF package builds without unresolved citations/references.
 - [ ] Final generated PDF inspected before resubmission.
