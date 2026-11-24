@@ -453,6 +453,10 @@ calculation.
 
 **Change in manuscript**
 
+Introduction and Section 2.1: the prescribed-stationary-crack assumption is
+now tied explicitly to the a posteriori critical-load comparison, rather than
+being stated as an untested loading assumption.
+
 Section 2.2: the exclusivity statement is explicitly scoped as numerical.
 
 Section 4: a broad admissibility audit and its parameter domain have been
