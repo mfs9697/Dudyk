@@ -24,5 +24,5 @@ Status: Reviewer 1 comments R1.1--R1.6 implemented; final package verification i
 - [x] R1.6 uses the existing `NazarenkoKipnis2022Equilibrium` reference already present in the bibliography.
 - [ ] Full manuscript language/style sweep completed.
 - [x] R1.1--R1.5 IJF package builds and passes PDF/font preflight (workflow run #84).
-- [ ] Final post-WP2 IJF package builds without unresolved citations/references.
+- [x] Final post-WP2 IJF package builds and passes PDF/font preflight (workflow run #86, run ID 45414299720).
 - [ ] Final generated PDF inspected before resubmission.
