@@ -431,10 +431,12 @@ the physical admissibility condition
 \end{equation*}
 The model thus requires both $Cg_2<0$, for contact between the
 interfacial crack faces, and $CQ_i>0$, for formation of a process zone
-in material~$i$. For the parameter sets examined below, the numerical
-analysis shows that these conditions can hold simultaneously for only one
-of the two materials; only that material admits a physically admissible
-process zone.
+in material~$i$. These admissibility tests are applied independently to
+both candidate materials. For the baseline calculations and for the broader
+parameter scan reported in Section~\ref{sec:numerical-results}, no case was
+found in which both materials are admissible simultaneously. This is treated
+as a numerical observation over the investigated parameter domain rather
+than as a general uniqueness theorem.
 
 \subsection{Asymptotic fields near the process-zone tip}
 \label{subsec:zone-tip-asymptotics}
@@ -1037,6 +1039,30 @@ interfacial shear crack, whereas the second ensures tensile normal stress
 along the bisector of the angular sector of the material in which the
 process zone forms.
 
+To examine whether the one-material-at-a-time admissibility observed for the
+baseline pair is specific to that example, we additionally performed a broad
+numerical sign audit. Because the expression for $q_i$ in
+Appendix~\ref{app:asymptotics} has the same multiplicative factor for
+$i=1,2$ apart from the numerator function $S_i$, one has
+\begin{equation*}
+  \operatorname{sgn}(Q_1Q_2)
+  =\operatorname{sgn}(S_1S_2).
+\end{equation*}
+Simultaneous admissibility for a fixed sign of $C$ would therefore require
+$S_1S_2>0$. A deterministic scan of 92,800 nondegenerate combinations covered
+$10^{-3}\le E_1/E_2\le10^3$, eight independently varied Poisson-ratio values
+between $-0.95$ and $0.49$ for each material, and
+$\alpha=3^\circ,6^\circ,\ldots,177^\circ$, excluding the straight-interface
+limit. No case with $S_1S_2>0$ was found. A separate seeded continuous scan of
+20,000 additional points over
+$-0.99<\nu_i<0.499$ and
+$0.2^\circ<\alpha<179.8^\circ$ likewise produced no such case; the two
+sampled points closest to $S_1S_2=0$ retained the negative sign when
+recomputed at 50-digit precision. Thus, within this broad investigated
+domain, at most one material satisfies the tensile-zone condition for a
+given loading sign. We do not use this numerical evidence as a proof of
+global exclusivity outside the scanned domain.
+
 For the baseline material pair
 \begin{equation*}
   E_1/E_2=0.5,\qquad \nu_1=\nu_2=0.3,
@@ -1302,28 +1328,106 @@ Two distinct local mechanisms are possible for the stationary V-shaped
 crack. The first is associated with its corner $O$: the singular corner
 field supports a tensile process zone in one of the materials, and
 attainment of a critical $\delta_i$ or $J_i$ marks branching initiation.
-The second mechanism is localized at the tips of the V-shaped crack branches. For those tips, Nazarenko and Kipnis
-\citeyearpar{NazarenkoKipnis2022Equilibrium} determined the Mode~II stress
-intensity factor $K_{\mathrm{II}}$ and formulated the interfacial
-fracture condition
+The second mechanism is localized at the tips of the V-shaped crack branches.
+For those tips, Nazarenko and Kipnis
+\citeyearpar{NazarenkoKipnis2022Equilibrium} obtained the Mode~II
+stress-intensity factor in the present notation as
+\begin{equation}
+\label{eq:branch-tip-KII}
+  K_{\mathrm{II}}
+  =g_1 k\,C\,l^{\lambda_0+1/2},
+\end{equation}
+where
 \begin{equation*}
-  K_{\mathrm{II}}=K_{\mathrm{IIc}}.
+  k=
+  \frac{
+    2\sqrt{2}(1+\kappa_2e)\Gamma(\lambda_0+3/2)
+  }{
+    [1+\kappa_1+(1+\kappa_2)e]\,
+    \Gamma(\lambda_0+2)G^+(-1-\lambda_0)
+  }.
+\end{equation*}
+Here, $G^+$ is the plus factor of the base kernel $G$ defined in
+Appendix~\ref{app:asymptotics}. Their interfacial fracture condition is
+$K_{\mathrm{II}}=K_{\mathrm{IIc}}$; in terms of load magnitude this gives
+\begin{equation*}
+  |C_{\mathrm{tip}}|
+  =
+  \frac{K_{\mathrm{IIc}}}
+  {|g_1k|\,l^{\lambda_0+1/2}}.
 \end{equation*}
 
-Branching from the corner and interfacial propagation from the crack-branch tips
-should therefore be regarded as competing local mechanisms of the same
-stationary geometry, rather than as prescribed sequential stages. Their
-respective critical loads are governed by different material
-characteristics: Mode~II interfacial fracture resistance at the crack-branch tips
-and the critical process-zone characteristic, $\delta_i$ or $J_i$, at
-the corner.
+For corner branching, the normalized critical load
+$\sigma'_c$ is determined from either
+$\delta_i=\delta_{i\mathrm{c}}$ or
+$J_i=J_{i\mathrm{c}}$ using
+Eqs.~\eqref{eq:normalized-process-zone-length}--%
+\eqref{eq:process-zone-energy-parameter}. Since
+$\sigma'=Cl^{\lambda_0}/\sigma_i$, the corresponding load magnitude is
+\begin{equation*}
+  |C_{\mathrm{corner}}|
+  =
+  \sigma_i l^{-\lambda_0}|\sigma'_c|.
+\end{equation*}
+Introducing the dimensionless Mode~II resistance
+\begin{equation*}
+  \mathcal R_{\mathrm{II}}
+  =
+  \frac{K_{\mathrm{IIc}}}{\sigma_i\sqrt{l}},
+\end{equation*}
+the two critical loads are related by
+\begin{equation}
+\label{eq:mechanism-competition-ratio}
+  \frac{|C_{\mathrm{corner}}|}{|C_{\mathrm{tip}}|}
+  =
+  \frac{|g_1k|\,|\sigma'_c|}{\mathcal R_{\mathrm{II}}}.
+\end{equation}
+Consequently, corner branching reaches its threshold first when
+\begin{equation*}
+  |g_1k|\,|\sigma'_c|<\mathcal R_{\mathrm{II}},
+\end{equation*}
+whereas interfacial propagation from the branch tips reaches its threshold
+first when the inequality is reversed; equality defines the competition
+boundary.
+
+For the reference case
+$E_1/E_2=0.5$, $\nu_1=\nu_2=0.3$, and
+$\alpha=45^\circ$, the independently evaluated coefficient is
+$g_1k=-0.6794$. If the corner criterion is expressed through the normalized
+critical opening
+\begin{equation*}
+  \Delta_1=
+  \frac{E_1\delta_{1\mathrm{c}}}
+  {4(1-\nu_1^2)\sigma_1l},
+\end{equation*}
+the competition boundary takes the form
+\begin{equation*}
+  \mathcal R_{\mathrm{II}}^*
+  =1.1064\,\Delta_1^{0.6132}.
+\end{equation*}
+Equivalently, with
+$\mathcal J_1=E_1J_{1\mathrm{c}}/
+[4(1-\nu_1^2)\sigma_1^2l]$,
+\begin{equation*}
+  \mathcal R_{\mathrm{II}}^*
+  =1.5558\,\mathcal J_1^{0.6132}.
+\end{equation*}
+The two representations identify the same boundary when
+$J_{1\mathrm{c}}=\chi_1\sigma_1\delta_{1\mathrm{c}}$.
+
+Thus, branching from the corner and interfacial propagation from the
+crack-branch tips are quantitatively comparable competing mechanisms of the
+same stationary geometry rather than prescribed sequential stages. A unique
+numerical ordering for a particular material system still requires the
+independently measured resistances $K_{\mathrm{IIc}}$ and either
+$\delta_{i\mathrm{c}}$ or $J_{i\mathrm{c}}$.
 
 The small-scale assumption $d_i\ll l$ permits the two local regions to be
 treated separately at leading order. The field of the stationary V-shaped
 crack serves as the outer field for the process-zone problem near $O$, and
 the feedback of the small zone on the fields at the crack-branch tips is
-neglected. A coupled boundary-value problem would be required for a
-quantitative analysis of the competition when $d_i/l$ is no longer small.
+neglected. A fully coupled boundary-value problem would be required when
+$d_i/l$ is no longer small.
 
 \subsection{Energy and deformation criteria}
 \label{subsec:discussion-criteria}
@@ -1434,9 +1538,12 @@ and the zone-related energy parameter $J_i=\dd W_i/\dd d_i$.
 \item
 Physical admissibility of the local process zone requires both compressive
 contact of the V-shaped interfacial crack faces, $Cg_2<0$, and a tensile
-normal field in the material containing the zone, $CQ_i>0$. For the
-parameters examined, these conditions can be satisfied simultaneously in
-only one of the two materials for a given angle and loading sign. The
+normal field in the material containing the zone, $CQ_i>0$. A broad
+numerical audit comprising 92,800 deterministic parameter combinations and
+20,000 additional continuously sampled cases found no configuration in which
+both materials satisfy the tensile-zone condition for the same loading sign.
+Accordingly, single-material admissibility is supported numerically over the
+reported domain, but is not asserted as a general uniqueness theorem. The
 interface angle and elastic contrast shift the admissible ranges and the
 equilibrium zone characteristics.
 
@@ -1467,12 +1574,16 @@ Quantitative use of the model relies on the small-scale assumption
 $d_i\ll l$; $d_i/l<0.1$ is adopted as the principal applicability range,
 whereas portions of the curves reaching approximately $d_i/l=0.18$ should
 be interpreted as extrapolations of the local approximation. Branching
-from the corner and interfacial propagation from the tips of the V-shaped crack
-branches are competing local mechanisms rather than prescribed
-sequential stages. Because the formulation is local, it can be extended
-to developed V-shaped interfacial cracks by replacing the outer-field
-amplitude with the corresponding corner-field amplitude. A related
-application is splitting of a solid by a sharp wedge.
+from the corner and interfacial propagation from the tips of the V-shaped
+crack branches are competing local mechanisms whose critical loads satisfy
+Eq.~\eqref{eq:mechanism-competition-ratio}. Thus their ordering is determined
+by the normalized Mode~II resistance
+$K_{\mathrm{IIc}}/(\sigma_i\sqrt l)$ relative to the corner threshold
+$|g_1k|\,|\sigma'_c|$, rather than by a prescribed sequence. Because the
+formulation is local, it can be extended to developed V-shaped interfacial
+cracks by replacing the outer-field amplitude with the corresponding
+corner-field amplitude. A related application is splitting of a solid by a
+sharp wedge.
 \end{enumerate}
 
 
