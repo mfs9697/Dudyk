@@ -296,7 +296,7 @@ changed.
 
 We agree with both points and have revised the manuscript accordingly.
 
-For the first point, we do **not** promote the single-material result to a
+For the first point, we have not promoted the single-material result to a
 general analytical theorem. Instead, we made its numerical status and scope
 explicit and performed a substantially broader verification than in the
 submitted version.
@@ -324,10 +324,12 @@ values from \(-0.95\) to \(0.49\) for each material, and
 \(\alpha=3^\circ,6^\circ,\ldots,177^\circ\), excluding the degenerate
 straight-interface limit. No case with \(S_1S_2>0\) was found.
 
-A second seeded continuous scan of 20,000 cases over
+A second seeded random scan of 20,000 cases, with the modulus ratio sampled
+log-uniformly over the same range and the Poisson ratios and angle sampled
+continuously over
 \(-0.99<\nu_i<0.499\) and
-\(0.2^\circ<\alpha<179.8^\circ\) likewise found no simultaneous-admissibility
-candidate. The two sampled cases closest to \(S_1S_2=0\) were recomputed at
+\(0.2^\circ<\alpha<179.8^\circ\), likewise found no
+simultaneous-admissibility candidate. The two sampled cases closest to \(S_1S_2=0\) were recomputed at
 50-digit precision and retained the negative sign. Material-interchange
 relations were checked independently on 1,000 additional random cases.
 
