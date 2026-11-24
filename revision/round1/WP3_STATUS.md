@@ -39,6 +39,13 @@ TeX installation, flat IJF package build with pdflatex, PDF preflight/font
 check, and artifact upload all passed. Thus the R1.1--R1.5 manuscript tranche
 is build-verified.
 
-The scientific content for Reviewer 1 comments R1.1--R1.6 is now complete.
-A final post-WP2 IJF build/preflight and generated-PDF inspection remain
-before WP3 can be declared complete.
+The scientific content for Reviewer 1 comments R1.1--R1.6 is complete.
+
+A disposable branch `verification/ijf-r1-wp3-final-build-v2` was created
+from the exact latest WP3 manuscript head and changed only the workflow
+trigger. GitHub Actions run #86 (run ID `45414299720`) completed
+successfully: checkout, TeX installation, flat IJF package build with
+pdflatex, PDF/font preflight, and artifact upload all passed.
+
+WP3 is therefore build-verified. A final human visual inspection of the
+generated PDF and final language/style sweep remain before resubmission.
