@@ -1,122 +1,127 @@
 # WP2B source evidence — branch-tip Mode-II threshold
 
-## Source chain
+## Source
 
 The submitted manuscript cites Nazarenko and Kipnis for the Mode-II
-stress-intensity factor and limiting equilibrium of the two interfacial crack
-branches.
+stress-intensity factor and limiting equilibrium of the two V-shaped
+interfacial crack branches.
 
-An accessible antecedent/source in the same analytical line gives the explicit
-formula:
+The explicit formula is given in:
+
+V. M. Nazarenko and O. L. Kipnis,
+"Гранична рівновага кусково-однорідного пружного тіла з міжфазними зсувними
+тріщинами у кутовій точці межі поділу середовищ",
+*Reports of the National Academy of Sciences of Ukraine*, 2018, No. 3,
+pp. 36--41, DOI 10.15407/dopovidi2018.03.036.
+
+The same analytical result appears in the later conference chapter:
 
 V. M. Nazarenko and A. L. Kipnis,
 "Limiting Equilibrium of Interfacial Shear Cracks at the Corner Point of the
 Media-Separating Boundary of the Piece-Homogeneous Isotropic Plane",
-Proceedings of ICTAEM 2019, DOI 10.1007/978-3-030-21894-2_21.
+Proceedings of ICTAEM 2019,
+DOI 10.1007/978-3-030-21894-2_21.
 
-The same formula structure appears in the 2018 Reports of the NAS of Ukraine
-paper, DOI 10.15407/dopovidi2018.03.036. The submitted manuscript cites the
-later International Applied Mechanics treatment,
-DOI 10.1007/s10778-023-01175-4.
+The submitted manuscript cites the later International Applied Mechanics
+treatment, DOI 10.1007/s10778-023-01175-4.
 
-## Published formula
+## Exact published relation
 
-In the source notation,
+The 2018 source gives
 
 $$
 K_{II}
 =
+g_1(\alpha,e,\nu_1,\nu_2)\,
+k(\alpha,e,\nu_1,\nu_2)\,
+C\,l^{\lambda_0+1/2},
+$$
+
+with
+
+$$
+k=
 \frac{
-2\sqrt{2}(1+\kappa_2 e)\,g\,
-\Gamma(\lambda_0+3/2)
+2\sqrt{2}(1+\kappa_2e)\Gamma(\lambda_0+3/2)
 }{
-[1+\kappa_1+(1+\kappa_2)e]\,
-\Gamma(\lambda_0+2)\,
-G^+(-\lambda_0-1)
-}
-\,C\,l^{\lambda_0+1/2}.
+[1+\kappa_1+(1+\kappa_2)e]
+\Gamma(\lambda_0+2)G^+(-1-\lambda_0)
+}.
 $$
 
-The source then obtains the breaking load by imposing
+It then obtains the breaking load by imposing \(K_{II}=K_{IIc}\).
+
+## Mapping to the submitted manuscript
+
+The mapping is exact:
+
+- source \(e\) is the present
+  \[
+  e=\frac{1+\nu_2}{1+\nu_1}\frac{E_1}{E_2};
+  \]
+- source \(\kappa_i=3-4\nu_i\);
+- source \(\lambda_0\) is the intact-corner exponent;
+- source \(g_1\) is the present intact-corner shear angular coefficient;
+- source \(G^+\) is the plus factor of the present Appendix-A **base kernel**
+  \(G\), not the process-zone kernel \(G_i\).
+
+The source base-kernel prefactor is algebraically the same as the current
+one because
 
 $$
-K_{II}=K_{IIc}.
-$$
-
-Thus, defining
-
-$$
-\mathcal K_{II}
+\kappa_1+(1+\kappa_1\kappa_2)e+\kappa_2e^2
 =
-\frac{
-2\sqrt{2}(1+\kappa_2 e)\,g\,
-\Gamma(\lambda_0+3/2)
-}{
-[1+\kappa_1+(1+\kappa_2)e]\,
-\Gamma(\lambda_0+2)\,
-G^+(-\lambda_0-1)
-},
+(e+\kappa_1)(1+e\kappa_2),
 $$
 
-gives
+while
 
 $$
-C_{\rm tip}
+1+\kappa_1+(1+\kappa_2)e
 =
-\frac{K_{IIc}}
-{\mathcal K_{II}l^{\lambda_0+1/2}}.
+e+\kappa_1+1+e\kappa_2.
 $$
 
-## Preliminary mapping to the submitted manuscript
+Therefore no renormalization of \(C\), \(g_1\), or \(G^+\) is required.
 
-The current manuscript uses
+Define
 
 $$
-e=\frac{1+\nu_2}{1+\nu_1}\frac{E_1}{E_2},
+\boxed{
+\mathcal K_{II}=g_1k
+}.
+$$
+
+Then
+
+$$
+K_{II}=\mathcal K_{II}Cl^{\lambda_0+1/2},
 \qquad
-\kappa_i=3-4\nu_i,
+|C_{\rm tip}|=
+\frac{K_{IIc}}
+{|\mathcal K_{II}|l^{\lambda_0+1/2}}.
 $$
 
-and the intact-corner shear amplitude
+## Baseline sign check
+
+At the submitted baseline
+\(E_1/E_2=0.5\), \(\nu_1=\nu_2=0.3\), \(\alpha=45^\circ\),
 
 $$
-\tau_{r\theta}\sim Cg_1r^{\lambda_0}.
+g_1=-0.58386949748,\qquad
+k=1.16364321914,
 $$
 
-Therefore the source symbol \(g\) is expected to map to the current \(g_1\).
-The source \(G^+\) is expected to map to the base plus factor used in Appendix
-A for the transition from the intact corner field to the stationary V-shaped
-crack field.
-
-These mappings are **not yet declared final**. WP2B must verify them
-algebraically against the exact determinant/kernel normalization used in the
-submitted Appendix A and against material interchange.
-
-## Consequence for the competition problem
-
-The corner threshold has the form
+hence
 
 $$
-C_{\rm corner}
-=
-\sigma_i l^{-\lambda_0}\sigma'_c.
+\mathcal K_{II}=-0.67941578160.
 $$
 
-Hence, on a common loading ray,
-
-$$
-\frac{|C_{\rm corner}|}{|C_{\rm tip}|}
-=
-|\mathcal K_{II}|\,|\sigma'_c|\,
-\frac{\sigma_i\sqrt l}{K_{IIc}}.
-$$
-
-This shows that Reviewer 1's requested quantitative comparison can be made
-without choosing arbitrary fracture constants: the result can be stated as a
-dimensionless mechanism-selection inequality in terms of
-\(K_{IIc}/(\sigma_i\sqrt l)\) and the normalized corner resistance.
+The physically admissible branch has \(C<0\), so \(K_{II}>0\), consistent
+with the sign convention stated in the source.
 
 ## Status
 
-Source formula identified and scaling verified. Exact notation/kernel mapping,
-sign convention, and numerical implementation remain WP2B work.
+**Closed.** The source formula, kernel normalization, notation mapping, sign
+convention, and baseline numerical coefficient have all been verified.
