@@ -15,14 +15,17 @@ point-by-point response.
   solvability, and signed face trace;
 - R1.4: transformed elasticity elimination, factorization convention,
   gamma identity, and Liouville argument;
-- R1.5: explicit \(p=0\) and \(p=1\) moments and verification of Eq. (9).
+- R1.5: explicit \(p=0\) and \(p=1\) moments and verification of Eq. (9);
+- R1.6: scoped numerical admissibility claim, broad parameter audit,
+  branch-tip Mode-II threshold, critical-load competition ratio, and
+  baseline dimensionless mechanism boundary.
 
-### Deliberately gated
+### R1.6 evidence base
 
-R1.6 is not yet inserted into the manuscript because WP2 is not scientifically
-closed. PR #18 presently contains the WP2 framework and preliminary
-reductions, but not the required broad admissibility sweep or final verified
-branch-tip coefficient mapping.
+WP2 was completed and merged into `revision/ijf-round1` as PR #18
+(merge commit `64cef1a9c6c1410ec9ef84703288968bc95d4a02`).
+Verification run `45407525585` passed the existing Python regression suite
+and the full WP2 audit.
 
 ## Verification status
 
@@ -36,5 +39,6 @@ TeX installation, flat IJF package build with pdflatex, PDF preflight/font
 check, and artifact upload all passed. Thus the R1.1--R1.5 manuscript tranche
 is build-verified.
 
-WP3 as a whole is not yet complete because R1.6 remains scientifically gated
-by WP2.
+The scientific content for Reviewer 1 comments R1.1--R1.6 is now complete.
+A final post-WP2 IJF build/preflight and generated-PDF inspection remain
+before WP3 can be declared complete.
