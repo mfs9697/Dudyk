@@ -1,0 +1,77 @@
+{
+  "generated_by": "revision/round1/verify_wp2.py",
+  "verification": {
+    "github_actions_run_id": 45407525585,
+    "disposable_branch": "verification/ijf-r1-wp2-ci",
+    "status": "success",
+    "artifact_name": "wp2-verification",
+    "artifact_sha256": "9361a357c40f634e2f2cec4f375c20898de6fc72c2b1fdab13aa61d01f2cb6b7"
+  },
+  "wp2a": {
+    "analytical_reduction": "sign(Q1*Q2)=sign(S1*S2)",
+    "deterministic_scan": {
+      "cases": 92800,
+      "same_sign_S_cases": 0,
+      "E1_over_E2_range": [
+        0.001,
+        1000
+      ],
+      "ratio_samples": 25,
+      "nu_samples": [
+        -0.95,
+        -0.75,
+        -0.5,
+        -0.25,
+        0,
+        0.25,
+        0.45,
+        0.49
+      ],
+      "alpha_deg": "3,6,...,177 excluding 90",
+      "closest_product_approx": -1.5522e-7
+    },
+    "random_scan": {
+      "seed": 20261124,
+      "cases": 20000,
+      "same_sign_S_cases": 0,
+      "E1_over_E2_range": [
+        0.001,
+        1000
+      ],
+      "nu_range": [
+        -0.99,
+        0.499
+      ],
+      "alpha_deg_range": [
+        0.2,
+        179.8
+      ],
+      "closest_product_approx": -2.3283e-12
+    },
+    "high_precision_edge_checks": "two closest cases recomputed at 50 digits; both S1*S2<0",
+    "material_interchange_cases": 1000,
+    "verdict": "numerically exclusive on the stated domain; not a global theorem"
+  },
+  "wp2b": {
+    "source_relation": "KII=g1*k*C*l^(lambda0+1/2)",
+    "baseline_45deg_material1": {
+      "lambda0": -0.08908980745,
+      "lambda": -0.61319722657,
+      "g1": -0.58386949748,
+      "k_tip": 1.16364321914,
+      "KII_coefficient_g1k": -0.6794157816,
+      "A1": -0.6183253228,
+      "B1": 0.9888266934,
+      "D1_energy": 0.5671702733,
+      "normalized_energy_opening_ratio": 0.5735790479,
+      "opening_boundary": "RII*=1.1063967431*Delta1^0.6131972266",
+      "energy_boundary": "RII*=1.5557536217*Jprime1c^0.6131972266"
+    },
+    "general_selection": {
+      "RII": "KIIc/(sigma_i*sqrt(l))",
+      "corner_first": "|g1*k|*|sigma_prime_c| < RII",
+      "tip_first": "|g1*k|*|sigma_prime_c| > RII",
+      "equality": "mechanism boundary"
+    }
+  }
+}
