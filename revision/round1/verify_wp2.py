@@ -362,6 +362,72 @@ def mp_s1(p, a, e, k1, k2):
     )
 
 
+def mp_s2(p, a, e, k1, k2):
+    beta = mp.pi - a
+    s21 = mp.sin(2 * p * beta) - p * mp.sin(2 * a)
+    s22 = p * mp.cos(p * a) * mp.sin(a) + mp.sin(p * a) * mp.cos(a)
+    s23 = (
+        p * mp.cos(p * mp.pi + a) * mp.sin(a)
+        + mp.cos(p * beta) * mp.sin(p * a)
+    )
+    return (
+        s21
+        * (
+            e * (1 + k2) * mp.sin((p + 1) * a)
+            + 2 * (1 - e) * s22
+        )
+        - 2 * (1 + k1) * mp.sin(p * beta - a) * s23
+    )
+
+
+def high_precision_edge_signs():
+    """Re-evaluate the two closest double-precision cases at 50 digits."""
+    mp.mp.dps = 50
+    cases = [
+        {
+            "label": "deterministic_closest",
+            "E1_over_E2": mp.mpf("0.001"),
+            "nu1": mp.mpf("0.49"),
+            "nu2": mp.mpf("-0.95"),
+            "alpha_deg": mp.mpf("3.0"),
+            "lambda_seed": mp.mpf("-0.9830193530"),
+        },
+        {
+            "label": "random_closest",
+            "E1_over_E2": mp.mpf("0.00300416405"),
+            "nu1": mp.mpf("0.1898462367"),
+            "nu2": mp.mpf("-0.5266363223"),
+            "alpha_deg": mp.mpf("0.2894542315"),
+            "lambda_seed": mp.mpf("-0.9979011805"),
+        },
+    ]
+    out = []
+    for case in cases:
+        a = case["alpha_deg"] * mp.pi / 180
+        e = (1 + case["nu2"]) / (1 + case["nu1"]) * case["E1_over_E2"]
+        k1 = 3 - 4 * case["nu1"]
+        k2 = 3 - 4 * case["nu2"]
+        equation = lambda lam: mp_d(-1 - lam, a, e, k1, k2)
+        lam = mp.findroot(
+            equation,
+            (case["lambda_seed"] - mp.mpf("1e-4"),
+             case["lambda_seed"] + mp.mpf("1e-4")),
+        )
+        p = -1 - lam
+        s1 = mp_s1(p, a, e, k1, k2)
+        s2 = mp_s2(p, a, e, k1, k2)
+        product = s1 * s2
+        out.append({
+            "label": case["label"],
+            "lambda": mp.nstr(lam, 30),
+            "S1": mp.nstr(s1, 30),
+            "S2": mp.nstr(s2, 30),
+            "S1S2": mp.nstr(product, 30),
+            "negative_product": bool(product < 0),
+        })
+    return out
+
+
 def baseline_mechanism():
     mp.mp.dps = 40
     ratio, nu1, nu2, alpha_deg = 0.5, 0.3, 0.3, 45.0
@@ -477,6 +543,7 @@ def main():
             "deterministic": deterministic_scan(),
             "random": random_scan(),
             "material_interchange": interchange_check(),
+            "high_precision_edge_signs": high_precision_edge_signs(),
             "verdict": (
                 "No simultaneous-admissibility candidate was found. "
                 "This is numerical evidence on the stated domain, not a global theorem."
@@ -502,6 +569,10 @@ def main():
     assert output["wp2a"]["deterministic"]["same_sign_S_cases"] == 0
     assert output["wp2a"]["random"]["same_sign_S_cases"] == 0
     assert output["wp2a"]["material_interchange"]["max_lambda_swap_error"] < 1e-9
+    assert all(
+        row["negative_product"]
+        for row in output["wp2a"]["high_precision_edge_signs"]
+    )
     b = output["wp2b"]["baseline"]
     assert abs(b["q1"] - 0.563193382302324) < 2e-9
     assert abs(b["G1_zero"] - 1.04944322692827) < 2e-8
