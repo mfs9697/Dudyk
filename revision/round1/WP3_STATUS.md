@@ -29,6 +29,12 @@ branch-tip coefficient mapping.
 WP1 is merged into \`revision/ijf-round1\` and is the evidence base for
 R1.3--R1.5. The first WP3 manuscript commit is \`62dcb0c\`.
 
-The current environment could not clone GitHub directly for a local PDF build.
-The repository's IJF workflow does not automatically run on this revision
-branch. A package build remains required before WP3 can be declared complete.
+A disposable verification branch `verification/ijf-r1-wp3-build` was created
+from the exact WP3 manuscript head and changed only the workflow trigger.
+GitHub Actions run #84 (run ID 45398938466) completed successfully: checkout,
+TeX installation, flat IJF package build with pdflatex, PDF preflight/font
+check, and artifact upload all passed. Thus the R1.1--R1.5 manuscript tranche
+is build-verified.
+
+WP3 as a whole is not yet complete because R1.6 remains scientifically gated
+by WP2.
