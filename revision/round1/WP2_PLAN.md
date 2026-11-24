@@ -1,8 +1,8 @@
 # WP2 — Reviewer 1 comment 6: physical selection mechanisms
 
-Branch: `verification/ijf-r1-wp2-mechanisms`
+Branch: \`verification/ijf-r1-wp2-mechanisms\`
 
-Base: `revision/ijf-round1` after merge of WP1 (PR #17).
+Base: \`revision/ijf-round1\` after merge of WP1 (PR #17).
 
 ## Purpose
 
@@ -15,16 +15,16 @@ WP2 is split into two independent scientific questions.
 
 Determine whether the two physical conditions
 
-[
-C g_2<0,qquad C Q_i>0
-]
+$$
+Cg_2<0,\qquad CQ_i>0
+$$
 
 can make process zones in both materials simultaneously admissible for any
 elastic contrast, Poisson-ratio pair, interface angle, and loading sign.
 
 The submitted manuscript only reports exclusivity for the parameter sets
 examined. The existing MATLAB helper
-`calculate_figure4_admissibility.m` explicitly refuses non-baseline
+\`calculate_figure4_admissibility.m\` explicitly refuses non-baseline
 materials, so the broader statement has not yet been tested.
 
 WP2A must distinguish among:
@@ -40,58 +40,56 @@ No global theorem may be claimed from a numerical sweep alone.
 Quantitatively compare:
 
 1. corner branching governed by
-   (delta_i=delta_{ic}) or (J_i=J_{ic});
+   \(\delta_i=\delta_{ic}\) or \(J_i=J_{ic}\);
 2. interfacial propagation from the existing V-crack branch tips governed by
-   (K_{II}=K_{IIc}).
+   \(K_{II}=K_{IIc}\).
 
-The comparison must use the same outer loading amplitude (C) and the same
+The comparison must use the same outer loading amplitude \(C\) and the same
 stationary crack geometry.
 
 Nazarenko--Kipnis give the branch-tip scaling
 
-[
-K_{II}=mathcal K_{II}(alpha,E_1/E_2,
-u_1,
-u_2)
-,C,l^{lambda_0+1/2},
-]
+$$
+K_{II}=\mathcal K_{II}(\alpha,E_1/E_2,\nu_1,\nu_2)
+\,C\,l^{\lambda_0+1/2},
+$$
 
 so that
 
-[
-C_{m tip}
+$$
+C_{\rm tip}
 =
-rac{K_{IIc}}
-{mathcal K_{II}l^{lambda_0+1/2}}.
-]
+\frac{K_{IIc}}
+{\mathcal K_{II}l^{\lambda_0+1/2}}.
+$$
 
 The corner model uses
 
-[
-sigma'=rac{Cl^{lambda_0}}{sigma_i},
-qquad
-C_{m corner}=sigma'_{c}sigma_i l^{-lambda_0}.
-]
+$$
+\sigma'=\frac{Cl^{\lambda_0}}{\sigma_i},
+\qquad
+C_{\rm corner}=\sigma'_c\sigma_i l^{-\lambda_0}.
+$$
 
 Therefore, on a common loading ray,
 
-[
-rac{|C_{m corner}|}{|C_{m tip}|}
+$$
+\frac{|C_{\rm corner}|}{|C_{\rm tip}|}
 =
-|mathcal K_{II}|,|sigma'_c|,
-rac{sigma_isqrt l}{K_{IIc}}.
-]
+|\mathcal K_{II}|\,|\sigma'_c|\,
+\frac{\sigma_i\sqrt l}{K_{IIc}}.
+$$
 
 This is only the starting form. WP2B must verify the exact coefficient and
-sign convention in the source paper, derive (sigma'_c) explicitly from
+sign convention in the source paper, derive \(\sigma'_c\) explicitly from
 the opening and energy criteria, and formulate a reviewer-ready mechanism
 selection inequality.
 
 ## Guardrails
 
-- Do not edit `submission/ijf/IJF_manuscript.tex` during WP2.
+- Do not edit \`submission/ijf/IJF_manuscript.tex\` during WP2.
 - Do not modify the frozen submitted branch.
-- Do not invent (delta_{ic}), (J_{ic}), (K_{IIc}), or other material
+- Do not invent \(\delta_{ic}\), \(J_{ic}\), \(K_{IIc}\), or other material
   fracture properties.
 - Any illustrative mechanism map must be parameterized by dimensionless
   resistance groups unless independently sourced material data are added and
