@@ -5,7 +5,7 @@
 The manuscript identifies two competing local mechanisms but does not compare
 their critical load levels. Provide a quantitative comparison.
 
-## Mechanism 1 — corner branching
+## 1. Corner-branching threshold
 
 For an admissible material \(i\),
 
@@ -30,9 +30,9 @@ g_1q_iK^+(-1-\lambda)G_i^+(-1)
 }.
 $$
 
-For the physically admissible loading ray, \(A_i\sigma'>0\).
+On the physically admissible loading ray \(A_i\sigma'>0\).
 
-Define the positive geometry coefficients
+Define
 
 $$
 B_i=
@@ -41,11 +41,7 @@ B_i=
 }{
 \sqrt{\pi G_i(0)}(1+\lambda)G_i^+(-1)
 },
-$$
-
-and
-
-$$
+\qquad
 D_i=
 -\frac{
 4\lambda
@@ -54,62 +50,47 @@ D_i=
 }.
 $$
 
-Then the submitted normalized relations are
+Then
 
 $$
-\delta'_i=B_i\frac{d_i}{l},
-\qquad
+\delta'_i=B_i\frac{d_i}{l},\qquad
 J'_i=D_i\frac{d_i}{l}.
 $$
 
-### Explicit opening-based threshold
-
-Let
+For the normalized critical opening
 
 $$
-\Delta_i\equiv\delta'_{ic}
-=
+\Delta_i=
 \frac{E_i\delta_{ic}}
-{4(1-\nu_i^2)\sigma_i l}.
+{4(1-\nu_i^2)\sigma_i l},
 $$
 
-At initiation,
-
-$$
-\Delta_i
-=
-B_i[A_i\sigma'_c]^{-1/\lambda},
-$$
-
-so
+the critical normalized load magnitude is
 
 $$
 \boxed{
-\sigma'_{c,\delta}
+|\sigma'_{c,\delta}|
 =
-\frac{1}{A_i}
+\frac{1}{|A_i|}
 \left(\frac{\Delta_i}{B_i}\right)^{-\lambda}
 }.
 $$
 
-### Explicit energy-based threshold
-
-Let
+For
 
 $$
-\mathcal J_i\equiv J'_{ic}
-=
+\mathcal J_i=
 \frac{E_iJ_{ic}}
-{4(1-\nu_i^2)\sigma_i^2 l}.
+{4(1-\nu_i^2)\sigma_i^2l},
 $$
 
-Then
+the energy-based value is
 
 $$
 \boxed{
-\sigma'_{c,J}
+|\sigma'_{c,J}|
 =
-\frac{1}{A_i}
+\frac{1}{|A_i|}
 \left(\frac{\mathcal J_i}{D_i}\right)^{-\lambda}
 }.
 $$
@@ -120,48 +101,76 @@ $$
 J_{ic}=\chi_i\sigma_i\delta_{ic},
 $$
 
-Eq. (11) implies \(\mathcal J_i/D_i=\Delta_i/B_i\), and therefore
+Eq. (11) gives
+\(\mathcal J_i/D_i=\Delta_i/B_i\), so the two critical-load
+expressions coincide.
+
+The dimensional threshold is
 
 $$
-\sigma'_{c,J}=\sigma'_{c,\delta}.
-$$
-
-The dimensional corner threshold is
-
-$$
-C_{\rm corner}
+|C_{\rm corner}|
 =
-\sigma_i l^{-\lambda_0}\sigma'_c.
+\sigma_i l^{-\lambda_0}|\sigma'_c|.
 $$
 
-## Mechanism 2 — interfacial propagation from the V-crack tips
+## 2. Branch-tip propagation threshold
 
-Nazarenko--Kipnis derive the Mode-II stress-intensity factor in the form
+The Nazarenko--Kipnis solution for the same stationary V-shaped
+interfacial shear crack gives
 
 $$
-K_{II}
+\boxed{
+K_{II}=g_1k\,C\,l^{\lambda_0+1/2}
+}
+$$
+
+with
+
+$$
+k=
+\frac{
+2\sqrt{2}(1+\kappa_2e)\Gamma(\lambda_0+3/2)
+}{
+[1+\kappa_1+(1+\kappa_2)e]\Gamma(\lambda_0+2)
+G^+(-1-\lambda_0)
+}.
+$$
+
+The quantities \(e,\kappa_i,\lambda_0,g_1\), and the base factor
+\(G^+(-1-\lambda_0)\) are exactly the quantities used in Appendix A of the
+submitted manuscript. The source kernel is algebraically identical to the
+current base kernel because
+
+$$
+\kappa_1+(1+\kappa_1\kappa_2)e+\kappa_2e^2
 =
-\mathcal K_{II}(\alpha,E_1/E_2,\nu_1,\nu_2)
-\,C\,l^{\lambda_0+1/2}.
+(e+\kappa_1)(1+e\kappa_2)
 $$
 
-The exact coefficient must be mapped into the current notation and current
-base-kernel normalization before implementation.
+and the denominators are likewise identical.
 
-The branch-tip threshold is
+Hence
 
 $$
-C_{\rm tip}
+\mathcal K_{II}=g_1k
+$$
+
+and
+
+$$
+|C_{\rm tip}|
 =
 \frac{K_{IIc}}
-{\mathcal K_{II}l^{\lambda_0+1/2}},
+{|\mathcal K_{II}|l^{\lambda_0+1/2}}.
 $$
 
-with the sign handled on the physically relevant loading ray.
+The signs on a particular admissible loading ray are retained in the actual
+\(C\) and \(K_{II}\); magnitudes are used here only to compare which threshold
+is reached first.
 
-## Dimensionless mechanism-selection inequality
+## 3. Dimensionless mechanism selection
 
-Define
+Define the independent normalized branch-tip resistance
 
 $$
 \mathcal R_{II}
@@ -169,49 +178,131 @@ $$
 \frac{K_{IIc}}{\sigma_i\sqrt l}.
 $$
 
-Combining the two thresholds gives
+Combining the two critical loads gives
 
 $$
+\boxed{
 \frac{|C_{\rm corner}|}{|C_{\rm tip}|}
 =
 \frac{
 |\mathcal K_{II}|\,|\sigma'_c|
 }{
 \mathcal R_{II}
+}
 }.
 $$
 
-Therefore
+Thus:
+
+- **corner branching first** if
+  \[
+  |\mathcal K_{II}|\,|\sigma'_c|<\mathcal R_{II};
+  \]
+- **interfacial branch-tip propagation first** if
+  \[
+  |\mathcal K_{II}|\,|\sigma'_c|>\mathcal R_{II};
+  \]
+- equality gives the competition boundary.
+
+This is a quantitative comparison even when the independent critical material
+parameters are left symbolic.
+
+Substitution of the opening criterion gives the mechanism boundary
 
 $$
 \boxed{
-|\mathcal K_{II}|\,|\sigma'_c|<\mathcal R_{II}
+\mathcal R_{II}^{*}(\Delta_i)
+=
+\frac{|\mathcal K_{II}|}{|A_i|}
+B_i^{\lambda}\Delta_i^{-\lambda}
+}.
+$$
+
+The energy form is
+
+$$
+\boxed{
+\mathcal R_{II}^{*}(\mathcal J_i)
+=
+\frac{|\mathcal K_{II}|}{|A_i|}
+D_i^{\lambda}\mathcal J_i^{-\lambda}
+}.
+$$
+
+## 4. Baseline verification
+
+For
+
+$$
+E_1/E_2=0.5,\qquad
+\nu_1=\nu_2=0.3,\qquad
+\alpha=45^\circ,
+$$
+
+with material 1 active, the independent calculation gives
+
+| Quantity | Value |
+|---|---:|
+| \(\lambda_0\) | \(-0.08908980745\) |
+| \(\lambda\) | \(-0.61319722657\) |
+| \(g_1\) | \(-0.58386949748\) |
+| \(k\) | \(1.16364321914\) |
+| \(\mathcal K_{II}=g_1k\) | \(-0.67941578160\) |
+| \(A_1\) | \(-0.6183253228\) |
+| \(B_1\) | \(0.9888266934\) |
+| \(D_1\) | \(0.5671702733\) |
+
+The signs are consistent with the admissible \(45^\circ\) branch:
+\(C<0\) and \(g_1<0\), giving positive Mode-II intensity in the source
+convention.
+
+The opening-based competition boundary is
+
+$$
+\boxed{
+\mathcal R_{II}^{*}
+=
+1.1063967431\,\Delta_1^{0.6131972266}
 }
 $$
 
-means corner branching reaches its threshold first, while the opposite
-inequality means branch-tip interfacial propagation reaches its threshold
-first. Equality gives the competition boundary.
+and the energy-based boundary is
 
-Substituting either explicit expression for \(\sigma'_c\) above produces a
-mechanism map in the two independent normalized fracture-resistance
-parameters \(\Delta_i\) (or \(\mathcal J_i\)) and \(\mathcal R_{II}\).
+$$
+\boxed{
+\mathcal R_{II}^{*}
+=
+1.5557536217\,\mathcal J_1^{0.6131972266}
+}.
+$$
 
-No numerical ordering can be claimed until the independent material
-quantities \(\delta_{ic}\) or \(J_{ic}\), and \(K_{IIc}\), are specified.
+Their equivalence follows from
+\(\mathcal J_1=(D_1/B_1)\Delta_1\), with
 
-## Required outputs
+$$
+\frac{D_1}{B_1}=0.5735790479,
+$$
 
-1. exact notation mapping to the current manuscript;
-2. verified formula for \(\mathcal K_{II}\);
-3. verification of the two explicit corner critical-load formulas above;
-4. sign-consistent dimensionless mechanism-selection inequality;
-5. reproducible numerical implementation for the baseline material pair;
-6. optional parameterized mechanism map, with no invented fracture data;
-7. concise reviewer-facing conclusion.
+consistent with Eq. (11).
 
-## Initial status
+## 5. Verification
 
-Started. The corner side of the comparison is now explicit. The remaining
-scientific work is the exact Nazarenko--Kipnis coefficient/kernel mapping,
-sign handling, and reproducible numerical evaluation.
+The implementation is in
+\`revision/round1/verify_wp2.py\`.
+
+GitHub Actions run \`45407525585\` passed the existing Python tests and the
+complete WP2 verification. The baseline calculation independently reproduces
+the previously verified \(q_1\), \(G_1(0)\), \(G_1^+(-1)\), \(A_1\), and
+\(B_1\) checkpoints before evaluating the new branch-tip coefficient and
+competition boundary.
+
+No material toughness/opening values were invented.
+
+## Verdict
+
+Reviewer 1's requested quantitative comparison is feasible and is now
+derived. The revised manuscript should add the dimensionless critical-load
+ratio and explain that a numerical ordering of the mechanisms requires the
+independent material properties \(K_{IIc}\) and either
+\(\delta_{ic}\) or \(J_{ic}\). The comparison itself is complete without
+assigning arbitrary values to those properties.
