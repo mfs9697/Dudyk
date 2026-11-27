@@ -1,496 +1,497 @@
 source,first_line,last_line,unit,kind,target,target_anchor,status
-submission/ijf/IJF_manuscript.tex,32,32,M0032,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,34,37,M0034,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,39,40,M0039,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,42,42,M0042,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,44,44,M0044,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,46,46,M0046,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,48,48,M0048,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,49,49,M0049,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,51,67,M0051,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,69,84,M0069,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,86,100,M0086,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,102,115,M0102,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,117,125,M0117,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,127,142,M0127,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,144,154,M0144,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,156,170,M0156,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,172,183,M0172,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,186,186,M0186,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,187,187,M0187,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,188,188,M0188,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,190,190,M0190,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,191,191,M0191,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,193,198,M0193,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,199,201,M0199,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,202,203,M0202,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,205,215,M0205,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,217,219,M0217,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,220,228,M0220,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,229,239,M0229,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,241,246,M0241,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,247,249,M0247,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,250,257,M0250,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,259,269,M0259,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,271,271,M0271,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,272,274,M0272,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,275,282,M0275,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,284,292,M0284,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,294,294,M0294,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,295,295,M0295,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,296,296,M0296,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,297,303,M0297,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,304,304,M0304,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,305,305,M0305,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,307,307,M0307,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,308,308,M0308,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,310,311,M0310,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,312,314,M0312,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,315,326,M0315,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,328,329,M0328,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,330,333,M0330,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,334,338,M0334,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,339,354,M0339,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,355,359,M0355,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,361,365,M0361,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,366,377,M0366,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,378,380,M0378,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,382,385,M0382,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,386,391,M0386,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,392,407,M0392,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,409,411,M0409,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,412,415,M0412,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,416,416,M0416,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,417,420,M0417,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,421,421,M0421,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,422,425,M0422,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,426,429,M0426,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,431,433,M0431,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,434,436,M0434,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,437,444,M0437,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,446,446,M0446,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,447,447,M0447,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,449,454,M0449,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,455,466,M0455,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,467,471,M0467,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,472,474,M0472,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,475,481,M0475,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,484,484,M0484,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,485,485,M0485,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,487,487,M0487,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,488,488,M0488,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,490,490,M0490,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,491,493,M0491,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,494,500,M0494,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,501,514,M0501,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,515,518,M0515,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,519,523,M0519,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,524,524,M0524,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,525,529,M0525,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,530,534,M0530,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,536,537,M0536,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,538,545,M0538,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,546,548,M0546,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,549,552,M0549,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,553,559,M0553,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,560,562,M0560,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,563,566,M0563,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,567,569,M0567,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,570,570,M0570,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,571,575,M0571,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,576,576,M0576,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,577,583,M0577,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,584,584,M0584,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,585,588,M0585,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,589,595,M0589,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,596,598,M0596,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,599,603,M0599,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,604,608,M0604,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,609,610,M0609,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,611,626,M0611,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,627,628,M0627,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,629,631,M0629,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,632,634,M0632,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,636,636,M0636,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,637,637,M0637,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,639,642,M0639,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,643,654,M0643,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,655,660,M0655,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,661,664,M0661,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,665,665,M0665,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,666,669,M0666,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,670,671,M0670,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,672,676,M0672,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,677,682,M0677,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,684,684,M0684,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,685,688,M0685,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,689,689,M0689,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,690,693,M0690,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,694,694,M0694,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,696,696,M0696,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,697,701,M0697,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,702,703,M0702,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,704,714,M0704,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,715,720,M0715,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,721,750,M0721,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,751,755,M0751,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,756,761,M0756,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,762,764,M0762,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,766,766,M0766,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,767,767,M0767,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,769,770,M0769,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,771,778,M0771,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,779,780,M0779,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,781,783,M0781,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,784,784,M0784,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,785,792,M0785,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,793,794,M0793,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,795,802,M0795,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,803,816,M0803,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,818,820,M0818,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,821,824,M0821,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,825,826,M0825,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,828,828,M0828,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,829,831,M0829,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,832,835,M0832,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,836,844,M0836,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,845,846,M0845,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,848,848,M0848,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,849,849,M0849,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,851,854,M0851,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,855,862,M0855,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,863,867,M0863,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,869,870,M0869,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,871,873,M0871,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,874,875,M0874,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,876,881,M0876,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,882,882,M0882,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,883,886,M0883,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,887,887,M0887,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,888,893,M0888,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,894,894,M0894,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,895,898,M0895,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,899,899,M0899,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,900,905,M0900,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,906,908,M0906,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,909,914,M0909,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,915,919,M0915,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,920,924,M0920,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,925,926,M0925,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,928,930,M0928,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,931,935,M0931,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,936,936,M0936,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,937,940,M0937,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,941,943,M0941,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,944,949,M0944,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,950,952,M0950,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,953,961,M0953,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,962,965,M0962,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,966,983,M0966,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,984,989,M0984,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,991,994,M0991,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,995,1002,M0995,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1003,1004,M1003,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1006,1010,M1006,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1011,1013,M1011,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1014,1015,M1014,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1016,1018,M1016,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1019,1024,M1019,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1025,1028,M1025,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1031,1031,M1031,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1032,1032,M1032,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1034,1037,M1034,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1038,1040,M1038,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1041,1045,M1041,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1047,1051,M1047,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1052,1055,M1052,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1056,1070,M1056,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1072,1072,M1072,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1073,1075,M1073,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1076,1076,M1076,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1077,1080,M1077,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1081,1089,M1081,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1091,1097,M1091,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1099,1099,M1099,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1100,1100,M1100,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1101,1102,M1101,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1103,1103,M1103,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1104,1104,M1104,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1105,1105,M1105,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1106,1106,M1106,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1107,1107,M1107,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1108,1108,M1108,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1109,1109,M1109,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1110,1110,M1110,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1111,1111,M1111,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1112,1112,M1112,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1113,1113,M1113,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1114,1114,M1114,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1117,1118,M1117,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1119,1125,M1119,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1126,1132,M1126,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1134,1134,M1134,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1135,1135,M1135,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1137,1138,M1137,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1139,1141,M1139,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1142,1147,M1142,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1149,1152,M1149,caption,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1154,1160,M1154,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1161,1165,M1161,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1166,1168,M1166,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1170,1176,M1170,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1177,1179,M1177,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1180,1187,M1180,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1189,1189,M1189,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1190,1190,M1190,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1192,1196,M1192,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1197,1197,M1197,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1199,1204,M1199,caption,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1206,1210,M1206,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1211,1217,M1211,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1218,1225,M1218,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1227,1236,M1227,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1238,1245,M1238,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1247,1247,M1247,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1248,1248,M1248,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1250,1257,M1250,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1259,1264,M1259,caption,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1266,1270,M1266,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1271,1273,M1271,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1274,1277,M1274,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1278,1280,M1278,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1281,1285,M1281,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1287,1295,M1287,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1298,1298,M1298,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1299,1299,M1299,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1301,1301,M1301,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1302,1302,M1302,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1304,1308,M1304,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1309,1313,M1309,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1314,1315,M1314,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1317,1320,M1317,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1321,1325,M1321,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1326,1328,M1326,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1330,1330,M1330,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1331,1331,M1331,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1333,1340,M1333,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1341,1345,M1341,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1346,1346,M1346,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1347,1355,M1347,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1356,1358,M1356,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1359,1364,M1359,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1366,1372,M1366,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1373,1377,M1373,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1378,1378,M1378,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1379,1383,M1379,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1384,1384,M1384,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1385,1390,M1385,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1391,1391,M1391,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1392,1394,M1392,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1395,1397,M1395,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1399,1403,M1399,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1404,1408,M1404,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1409,1409,M1409,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1410,1413,M1410,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1414,1416,M1414,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1417,1420,M1417,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1421,1422,M1421,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1424,1429,M1424,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1431,1436,M1431,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1438,1438,M1438,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1439,1439,M1439,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1441,1442,M1441,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1443,1445,M1443,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1446,1450,M1446,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1451,1454,M1451,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1456,1462,M1456,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1464,1464,M1464,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1465,1465,M1465,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1467,1469,M1467,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1470,1472,M1470,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1473,1473,M1473,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1474,1476,M1474,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1477,1478,M1477,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1479,1483,M1479,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1485,1486,M1485,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1487,1489,M1487,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1490,1493,M1490,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1495,1505,M1495,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1507,1507,M1507,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1508,1508,M1508,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1510,1517,M1510,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1519,1528,M1519,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1531,1531,M1531,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1532,1532,M1532,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1534,1534,M1534,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1535,1542,M1535,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1544,1554,M1544,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1556,1564,M1556,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1566,1576,M1566,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1578,1592,M1578,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1593,1593,M1593,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1596,1596,M1596,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1597,1606,M1597,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1608,1610,M1608,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1612,1615,M1612,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1617,1618,M1617,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1620,1620,M1620,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1621,1621,M1621,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1622,1622,M1622,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1623,1623,M1623,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1625,1625,M1625,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1626,1626,M1626,structure,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1628,1630,M1628,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1631,1635,M1631,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1636,1637,M1636,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1638,1641,M1638,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1642,1646,M1642,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1648,1648,M1648,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1650,1651,M1650,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1652,1661,M1652,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1662,1664,M1662,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1665,1678,M1665,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1679,1679,M1679,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1680,1684,M1680,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1685,1685,M1685,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1686,1688,M1686,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1689,1689,M1689,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1690,1704,M1690,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1705,1705,M1705,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1707,1710,M1707,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1711,1718,M1711,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1719,1721,M1719,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1722,1724,M1722,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1725,1726,M1725,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1727,1734,M1727,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1735,1739,M1735,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1740,1751,M1740,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1752,1753,M1752,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1754,1767,M1754,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1768,1769,M1768,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1770,1774,M1770,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1775,1775,M1775,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1776,1778,M1776,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1779,1779,M1779,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1780,1789,M1780,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1790,1790,M1790,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1791,1795,M1791,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1796,1796,M1796,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1797,1805,M1797,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1806,1807,M1806,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1808,1810,M1808,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1811,1812,M1811,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1813,1817,M1813,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1818,1818,M1818,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1820,1820,M1820,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1822,1823,M1822,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1824,1826,M1824,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1827,1827,M1827,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1828,1844,M1828,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1845,1846,M1845,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1847,1852,M1847,display,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1853,1857,M1853,text,IJF_Manuscript_UA.tex,,pending
-submission/ijf/IJF_manuscript.tex,1860,1860,M1860,structure,IJF_Manuscript_UA.tex,,pending
-revision/round1/response_to_reviewers.md,1,1,R0001,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,2,10,R0002,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,11,16,R0011,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,17,18,R0017,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,19,28,R0019,quote,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,29,33,R0029,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,34,35,R0034,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,36,46,R0036,quote,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,47,49,R0047,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,50,58,R0050,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,59,63,R0059,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,64,66,R0064,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,67,68,R0067,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,69,72,R0069,quote,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,73,78,R0073,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,79,80,R0079,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,81,82,R0081,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,83,96,R0083,quote,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,97,98,R0097,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,99,105,R0099,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,106,110,R0106,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,111,116,R0111,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,117,120,R0117,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,121,123,R0121,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,124,125,R0124,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,126,142,R0126,quote,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,143,144,R0143,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,145,151,R0145,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,152,155,R0152,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,156,159,R0156,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,160,163,R0160,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,164,167,R0164,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,168,172,R0168,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,173,174,R0173,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,175,178,R0175,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,179,182,R0179,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,183,187,R0183,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,188,189,R0188,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,190,191,R0190,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,192,200,R0192,quote,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,201,205,R0201,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,206,207,R0206,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,208,211,R0208,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,212,213,R0212,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,214,219,R0214,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,220,221,R0220,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,222,227,R0222,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,228,229,R0228,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,230,235,R0230,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,236,237,R0236,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,238,239,R0238,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,240,245,R0240,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,246,247,R0246,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,248,253,R0248,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,254,256,R0254,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,257,260,R0257,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,261,266,R0261,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,267,268,R0267,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,269,271,R0269,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,272,273,R0272,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,274,285,R0274,quote,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,286,288,R0286,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,289,293,R0289,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,294,296,R0294,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,297,302,R0297,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,303,306,R0303,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,307,310,R0307,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,311,315,R0311,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,316,319,R0316,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,320,325,R0320,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,326,330,R0326,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,331,335,R0331,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,336,339,R0336,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,340,345,R0340,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,346,347,R0346,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,348,357,R0348,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,358,359,R0358,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,360,366,R0360,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,367,370,R0367,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,371,376,R0371,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,377,378,R0377,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,379,384,R0379,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,385,386,R0385,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,387,395,R0387,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,396,397,R0396,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,398,401,R0398,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,402,404,R0402,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,405,408,R0405,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,409,412,R0409,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,413,414,R0413,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,415,420,R0415,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,421,422,R0421,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,423,428,R0423,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,429,430,R0429,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,431,436,R0431,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,437,438,R0437,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,439,444,R0439,display,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,445,447,R0445,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,448,452,R0448,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,453,462,R0453,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,463,464,R0463,text,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,465,480,R0465,quote,IJF_Response_to_Reviewers_UA.tex,,pending
-revision/round1/response_to_reviewers.md,481,483,R0481,text,IJF_Response_to_Reviewers_UA.tex,,pending
+submission/ijf/IJF_manuscript.tex,32,32,M0032,text,UA1_Sections_1-3.tex,% M0032,translated
+submission/ijf/IJF_manuscript.tex,34,37,M0034,text,UA1_Sections_1-3.tex,% M0034,translated
+submission/ijf/IJF_manuscript.tex,39,40,M0039,text,UA1_Sections_1-3.tex,% M0039,translated
+submission/ijf/IJF_manuscript.tex,42,42,M0042,text,UA1_Sections_1-3.tex,% M0042,translated
+submission/ijf/IJF_manuscript.tex,44,44,M0044,text,UA1_Sections_1-3.tex,% M0044,translated
+submission/ijf/IJF_manuscript.tex,46,46,M0046,structure,UA1_Sections_1-3.tex,% M0046,preserved
+submission/ijf/IJF_manuscript.tex,48,48,M0048,text,UA1_Sections_1-3.tex,% M0048,translated
+submission/ijf/IJF_manuscript.tex,49,49,M0049,structure,UA1_Sections_1-3.tex,% M0049,preserved
+submission/ijf/IJF_manuscript.tex,51,67,M0051,text,UA1_Sections_1-3.tex,% M0051,translated
+submission/ijf/IJF_manuscript.tex,69,84,M0069,text,UA1_Sections_1-3.tex,% M0069,translated
+submission/ijf/IJF_manuscript.tex,86,100,M0086,text,UA1_Sections_1-3.tex,% M0086,translated
+submission/ijf/IJF_manuscript.tex,102,115,M0102,text,UA1_Sections_1-3.tex,% M0102,translated
+submission/ijf/IJF_manuscript.tex,117,125,M0117,text,UA1_Sections_1-3.tex,% M0117,translated
+submission/ijf/IJF_manuscript.tex,127,142,M0127,text,UA1_Sections_1-3.tex,% M0127,translated
+submission/ijf/IJF_manuscript.tex,144,154,M0144,text,UA1_Sections_1-3.tex,% M0144,translated
+submission/ijf/IJF_manuscript.tex,156,170,M0156,text,UA1_Sections_1-3.tex,% M0156,translated
+submission/ijf/IJF_manuscript.tex,172,183,M0172,text,UA1_Sections_1-3.tex,% M0172,translated
+submission/ijf/IJF_manuscript.tex,186,186,M0186,text,UA1_Sections_1-3.tex,% M0186,translated
+submission/ijf/IJF_manuscript.tex,187,187,M0187,structure,UA1_Sections_1-3.tex,% M0187,preserved
+submission/ijf/IJF_manuscript.tex,188,188,M0188,text,UA1_Sections_1-3.tex,% M0188,translated
+submission/ijf/IJF_manuscript.tex,190,190,M0190,text,UA1_Sections_1-3.tex,% M0190,translated
+submission/ijf/IJF_manuscript.tex,191,191,M0191,structure,UA1_Sections_1-3.tex,% M0191,preserved
+submission/ijf/IJF_manuscript.tex,193,198,M0193,text,UA1_Sections_1-3.tex,% M0193,translated
+submission/ijf/IJF_manuscript.tex,199,201,M0199,display,UA1_Sections_1-3.tex,% M0199,preserved
+submission/ijf/IJF_manuscript.tex,202,203,M0202,text,UA1_Sections_1-3.tex,% M0202,translated
+submission/ijf/IJF_manuscript.tex,205,215,M0205,text,UA1_Sections_1-3.tex,% M0205,translated
+submission/ijf/IJF_manuscript.tex,217,219,M0217,text,UA1_Sections_1-3.tex,% M0217,translated
+submission/ijf/IJF_manuscript.tex,220,228,M0220,display,UA1_Sections_1-3.tex,% M0220,preserved
+submission/ijf/IJF_manuscript.tex,229,239,M0229,text,UA1_Sections_1-3.tex,% M0229,translated
+submission/ijf/IJF_manuscript.tex,241,246,M0241,text,UA1_Sections_1-3.tex,% M0241,translated
+submission/ijf/IJF_manuscript.tex,247,249,M0247,display,UA1_Sections_1-3.tex,% M0247,preserved
+submission/ijf/IJF_manuscript.tex,250,257,M0250,text,UA1_Sections_1-3.tex,% M0250,translated
+submission/ijf/IJF_manuscript.tex,259,269,M0259,text,UA1_Sections_1-3.tex,% M0259,translated
+submission/ijf/IJF_manuscript.tex,271,271,M0271,text,UA1_Sections_1-3.tex,% M0271,translated
+submission/ijf/IJF_manuscript.tex,272,274,M0272,display,UA1_Sections_1-3.tex,% M0272,preserved
+submission/ijf/IJF_manuscript.tex,275,282,M0275,text,UA1_Sections_1-3.tex,% M0275,translated
+submission/ijf/IJF_manuscript.tex,284,292,M0284,text,UA1_Sections_1-3.tex,% M0284,translated
+submission/ijf/IJF_manuscript.tex,294,294,M0294,structure,UA1_Sections_1-3.tex,% M0294,preserved
+submission/ijf/IJF_manuscript.tex,295,295,M0295,structure,UA1_Sections_1-3.tex,% M0295,preserved
+submission/ijf/IJF_manuscript.tex,296,296,M0296,structure,UA1_Sections_1-3.tex,% M0296,preserved
+submission/ijf/IJF_manuscript.tex,297,303,M0297,text,UA1_Sections_1-3.tex,% M0297,translated
+submission/ijf/IJF_manuscript.tex,304,304,M0304,structure,UA1_Sections_1-3.tex,% M0304,preserved
+submission/ijf/IJF_manuscript.tex,305,305,M0305,structure,UA1_Sections_1-3.tex,% M0305,preserved
+submission/ijf/IJF_manuscript.tex,307,307,M0307,text,UA1_Sections_1-3.tex,% M0307,translated
+submission/ijf/IJF_manuscript.tex,308,308,M0308,structure,UA1_Sections_1-3.tex,% M0308,preserved
+submission/ijf/IJF_manuscript.tex,310,311,M0310,text,UA1_Sections_1-3.tex,% M0310,translated
+submission/ijf/IJF_manuscript.tex,312,314,M0312,display,UA1_Sections_1-3.tex,% M0312,preserved
+submission/ijf/IJF_manuscript.tex,315,326,M0315,text,UA1_Sections_1-3.tex,% M0315,translated
+submission/ijf/IJF_manuscript.tex,328,329,M0328,text,UA1_Sections_1-3.tex,% M0328,translated
+submission/ijf/IJF_manuscript.tex,330,333,M0330,display,UA1_Sections_1-3.tex,% M0330,preserved
+submission/ijf/IJF_manuscript.tex,334,338,M0334,text,UA1_Sections_1-3.tex,% M0334,translated
+submission/ijf/IJF_manuscript.tex,339,354,M0339,display,UA1_Sections_1-3.tex,% M0339,preserved_with_prose_translated
+submission/ijf/IJF_manuscript.tex,355,359,M0355,text,UA1_Sections_1-3.tex,% M0355,translated
+submission/ijf/IJF_manuscript.tex,361,365,M0361,text,UA1_Sections_1-3.tex,% M0361,translated
+submission/ijf/IJF_manuscript.tex,366,377,M0366,display,UA1_Sections_1-3.tex,% M0366,preserved
+submission/ijf/IJF_manuscript.tex,378,380,M0378,text,UA1_Sections_1-3.tex,% M0378,translated
+submission/ijf/IJF_manuscript.tex,382,385,M0382,text,UA1_Sections_1-3.tex,% M0382,translated
+submission/ijf/IJF_manuscript.tex,386,391,M0386,display,UA1_Sections_1-3.tex,% M0386,preserved
+submission/ijf/IJF_manuscript.tex,392,407,M0392,text,UA1_Sections_1-3.tex,% M0392,translated
+submission/ijf/IJF_manuscript.tex,409,411,M0409,text,UA1_Sections_1-3.tex,% M0409,translated
+submission/ijf/IJF_manuscript.tex,412,415,M0412,display,UA1_Sections_1-3.tex,% M0412,preserved
+submission/ijf/IJF_manuscript.tex,416,416,M0416,text,UA1_Sections_1-3.tex,% M0416,translated
+submission/ijf/IJF_manuscript.tex,417,420,M0417,display,UA1_Sections_1-3.tex,% M0417,preserved
+submission/ijf/IJF_manuscript.tex,421,421,M0421,text,UA1_Sections_1-3.tex,% M0421,translated
+submission/ijf/IJF_manuscript.tex,422,425,M0422,display,UA1_Sections_1-3.tex,% M0422,preserved
+submission/ijf/IJF_manuscript.tex,426,429,M0426,text,UA1_Sections_1-3.tex,% M0426,translated
+submission/ijf/IJF_manuscript.tex,431,433,M0431,text,UA1_Sections_1-3.tex,% M0431,translated
+submission/ijf/IJF_manuscript.tex,434,436,M0434,display,UA1_Sections_1-3.tex,% M0434,preserved
+submission/ijf/IJF_manuscript.tex,437,444,M0437,text,UA1_Sections_1-3.tex,% M0437,translated
+submission/ijf/IJF_manuscript.tex,446,446,M0446,text,UA1_Sections_1-3.tex,% M0446,translated
+submission/ijf/IJF_manuscript.tex,447,447,M0447,structure,UA1_Sections_1-3.tex,% M0447,preserved
+submission/ijf/IJF_manuscript.tex,449,454,M0449,text,UA1_Sections_1-3.tex,% M0449,translated
+submission/ijf/IJF_manuscript.tex,455,466,M0455,display,UA1_Sections_1-3.tex,% M0455,preserved
+submission/ijf/IJF_manuscript.tex,467,471,M0467,text,UA1_Sections_1-3.tex,% M0467,translated
+submission/ijf/IJF_manuscript.tex,472,474,M0472,display,UA1_Sections_1-3.tex,% M0472,preserved
+submission/ijf/IJF_manuscript.tex,475,481,M0475,text,UA1_Sections_1-3.tex,% M0475,translated
+submission/ijf/IJF_manuscript.tex,484,484,M0484,text,UA1_Sections_1-3.tex,% M0484,translated
+submission/ijf/IJF_manuscript.tex,485,485,M0485,structure,UA1_Sections_1-3.tex,% M0485,preserved
+submission/ijf/IJF_manuscript.tex,487,487,M0487,text,UA1_Sections_1-3.tex,% M0487,translated
+submission/ijf/IJF_manuscript.tex,488,488,M0488,structure,UA1_Sections_1-3.tex,% M0488,preserved
+submission/ijf/IJF_manuscript.tex,490,490,M0490,text,UA1_Sections_1-3.tex,% M0490,translated
+submission/ijf/IJF_manuscript.tex,491,493,M0491,display,UA1_Sections_1-3.tex,% M0491,preserved
+submission/ijf/IJF_manuscript.tex,494,500,M0494,text,UA1_Sections_1-3.tex,% M0494,translated
+submission/ijf/IJF_manuscript.tex,501,514,M0501,display,UA1_Sections_1-3.tex,% M0501,preserved
+submission/ijf/IJF_manuscript.tex,515,518,M0515,text,UA1_Sections_1-3.tex,% M0515,translated
+submission/ijf/IJF_manuscript.tex,519,523,M0519,display,UA1_Sections_1-3.tex,% M0519,preserved
+submission/ijf/IJF_manuscript.tex,524,524,M0524,text,UA1_Sections_1-3.tex,% M0524,translated
+submission/ijf/IJF_manuscript.tex,525,529,M0525,display,UA1_Sections_1-3.tex,% M0525,preserved
+submission/ijf/IJF_manuscript.tex,530,534,M0530,text,UA1_Sections_1-3.tex,% M0530,translated
+submission/ijf/IJF_manuscript.tex,536,537,M0536,text,UA1_Sections_1-3.tex,% M0536,translated
+submission/ijf/IJF_manuscript.tex,538,545,M0538,display,UA1_Sections_1-3.tex,% M0538,preserved
+submission/ijf/IJF_manuscript.tex,546,548,M0546,text,UA1_Sections_1-3.tex,% M0546,translated
+submission/ijf/IJF_manuscript.tex,549,552,M0549,display,UA1_Sections_1-3.tex,% M0549,preserved
+submission/ijf/IJF_manuscript.tex,553,559,M0553,text,UA1_Sections_1-3.tex,% M0553,translated
+submission/ijf/IJF_manuscript.tex,560,562,M0560,display,UA1_Sections_1-3.tex,% M0560,preserved
+submission/ijf/IJF_manuscript.tex,563,566,M0563,text,UA1_Sections_1-3.tex,% M0563,translated
+submission/ijf/IJF_manuscript.tex,567,569,M0567,display,UA1_Sections_1-3.tex,% M0567,preserved
+submission/ijf/IJF_manuscript.tex,570,570,M0570,text,UA1_Sections_1-3.tex,% M0570,translated
+submission/ijf/IJF_manuscript.tex,571,575,M0571,display,UA1_Sections_1-3.tex,% M0571,preserved
+submission/ijf/IJF_manuscript.tex,576,576,M0576,text,UA1_Sections_1-3.tex,% M0576,translated
+submission/ijf/IJF_manuscript.tex,577,583,M0577,display,UA1_Sections_1-3.tex,% M0577,preserved
+submission/ijf/IJF_manuscript.tex,584,584,M0584,text,UA1_Sections_1-3.tex,% M0584,translated
+submission/ijf/IJF_manuscript.tex,585,588,M0585,display,UA1_Sections_1-3.tex,% M0585,preserved
+submission/ijf/IJF_manuscript.tex,589,595,M0589,text,UA1_Sections_1-3.tex,% M0589,translated
+submission/ijf/IJF_manuscript.tex,596,598,M0596,display,UA1_Sections_1-3.tex,% M0596,preserved
+submission/ijf/IJF_manuscript.tex,599,603,M0599,text,UA1_Sections_1-3.tex,% M0599,translated
+submission/ijf/IJF_manuscript.tex,604,608,M0604,display,UA1_Sections_1-3.tex,% M0604,preserved
+submission/ijf/IJF_manuscript.tex,609,610,M0609,text,UA1_Sections_1-3.tex,% M0609,translated
+submission/ijf/IJF_manuscript.tex,611,626,M0611,display,UA1_Sections_1-3.tex,% M0611,preserved
+submission/ijf/IJF_manuscript.tex,627,628,M0627,text,UA1_Sections_1-3.tex,% M0627,translated
+submission/ijf/IJF_manuscript.tex,629,631,M0629,display,UA1_Sections_1-3.tex,% M0629,preserved
+submission/ijf/IJF_manuscript.tex,632,634,M0632,text,UA1_Sections_1-3.tex,% M0632,translated
+submission/ijf/IJF_manuscript.tex,636,636,M0636,text,UA1_Sections_1-3.tex,% M0636,translated
+submission/ijf/IJF_manuscript.tex,637,637,M0637,structure,UA1_Sections_1-3.tex,% M0637,preserved
+submission/ijf/IJF_manuscript.tex,639,642,M0639,text,UA1_Sections_1-3.tex,% M0639,translated
+submission/ijf/IJF_manuscript.tex,643,654,M0643,display,UA1_Sections_1-3.tex,% M0643,preserved
+submission/ijf/IJF_manuscript.tex,655,660,M0655,text,UA1_Sections_1-3.tex,% M0655,translated
+submission/ijf/IJF_manuscript.tex,661,664,M0661,display,UA1_Sections_1-3.tex,% M0661,preserved
+submission/ijf/IJF_manuscript.tex,665,665,M0665,text,UA1_Sections_1-3.tex,% M0665,translated
+submission/ijf/IJF_manuscript.tex,666,669,M0666,display,UA1_Sections_1-3.tex,% M0666,preserved
+submission/ijf/IJF_manuscript.tex,670,671,M0670,text,UA1_Sections_1-3.tex,% M0670,translated
+submission/ijf/IJF_manuscript.tex,672,676,M0672,display,UA1_Sections_1-3.tex,% M0672,preserved
+submission/ijf/IJF_manuscript.tex,677,682,M0677,text,UA1_Sections_1-3.tex,% M0677,translated
+submission/ijf/IJF_manuscript.tex,684,684,M0684,text,UA1_Sections_1-3.tex,% M0684,translated
+submission/ijf/IJF_manuscript.tex,685,688,M0685,display,UA1_Sections_1-3.tex,% M0685,preserved
+submission/ijf/IJF_manuscript.tex,689,689,M0689,text,UA1_Sections_1-3.tex,% M0689,translated
+submission/ijf/IJF_manuscript.tex,690,693,M0690,display,UA1_Sections_1-3.tex,% M0690,preserved
+submission/ijf/IJF_manuscript.tex,694,694,M0694,text,UA1_Sections_1-3.tex,% M0694,translated
+submission/ijf/IJF_manuscript.tex,696,696,M0696,text,UA1_Sections_1-3.tex,% M0696,translated
+submission/ijf/IJF_manuscript.tex,697,701,M0697,display,UA1_Sections_1-3.tex,% M0697,preserved
+submission/ijf/IJF_manuscript.tex,702,703,M0702,text,UA1_Sections_1-3.tex,% M0702,translated
+submission/ijf/IJF_manuscript.tex,704,714,M0704,display,UA1_Sections_1-3.tex,% M0704,preserved
+submission/ijf/IJF_manuscript.tex,715,720,M0715,text,UA1_Sections_1-3.tex,% M0715,translated
+submission/ijf/IJF_manuscript.tex,721,750,M0721,display,UA1_Sections_1-3.tex,% M0721,preserved
+submission/ijf/IJF_manuscript.tex,751,755,M0751,text,UA1_Sections_1-3.tex,% M0751,translated
+submission/ijf/IJF_manuscript.tex,756,761,M0756,display,UA1_Sections_1-3.tex,% M0756,preserved
+submission/ijf/IJF_manuscript.tex,762,764,M0762,text,UA1_Sections_1-3.tex,% M0762,translated
+submission/ijf/IJF_manuscript.tex,766,766,M0766,text,UA1_Sections_1-3.tex,% M0766,translated
+submission/ijf/IJF_manuscript.tex,767,767,M0767,structure,UA1_Sections_1-3.tex,% M0767,preserved
+submission/ijf/IJF_manuscript.tex,769,770,M0769,text,UA1_Sections_1-3.tex,% M0769,translated
+submission/ijf/IJF_manuscript.tex,771,778,M0771,display,UA1_Sections_1-3.tex,% M0771,preserved
+submission/ijf/IJF_manuscript.tex,779,780,M0779,text,UA1_Sections_1-3.tex,% M0779,translated
+submission/ijf/IJF_manuscript.tex,781,783,M0781,display,UA1_Sections_1-3.tex,% M0781,preserved
+submission/ijf/IJF_manuscript.tex,784,784,M0784,text,UA1_Sections_1-3.tex,% M0784,translated
+submission/ijf/IJF_manuscript.tex,785,792,M0785,display,UA1_Sections_1-3.tex,% M0785,preserved
+submission/ijf/IJF_manuscript.tex,793,794,M0793,text,UA1_Sections_1-3.tex,% M0793,translated
+submission/ijf/IJF_manuscript.tex,795,802,M0795,display,UA1_Sections_1-3.tex,% M0795,preserved
+submission/ijf/IJF_manuscript.tex,803,816,M0803,text,UA1_Sections_1-3.tex,% M0803,translated
+submission/ijf/IJF_manuscript.tex,818,820,M0818,text,UA1_Sections_1-3.tex,% M0818,translated
+submission/ijf/IJF_manuscript.tex,821,824,M0821,display,UA1_Sections_1-3.tex,% M0821,preserved
+submission/ijf/IJF_manuscript.tex,825,826,M0825,text,UA1_Sections_1-3.tex,% M0825,translated
+submission/ijf/IJF_manuscript.tex,828,828,M0828,text,UA1_Sections_1-3.tex,% M0828,translated
+submission/ijf/IJF_manuscript.tex,829,831,M0829,display,UA1_Sections_1-3.tex,% M0829,preserved
+submission/ijf/IJF_manuscript.tex,832,835,M0832,text,UA1_Sections_1-3.tex,% M0832,translated
+submission/ijf/IJF_manuscript.tex,836,844,M0836,display,UA1_Sections_1-3.tex,% M0836,preserved
+submission/ijf/IJF_manuscript.tex,845,846,M0845,text,UA1_Sections_1-3.tex,% M0845,translated
+submission/ijf/IJF_manuscript.tex,848,848,M0848,text,UA1_Sections_1-3.tex,% M0848,translated
+submission/ijf/IJF_manuscript.tex,849,849,M0849,structure,UA1_Sections_1-3.tex,% M0849,preserved
+submission/ijf/IJF_manuscript.tex,851,854,M0851,text,UA1_Sections_1-3.tex,% M0851,translated
+submission/ijf/IJF_manuscript.tex,855,862,M0855,display,UA1_Sections_1-3.tex,% M0855,preserved
+submission/ijf/IJF_manuscript.tex,863,867,M0863,text,UA1_Sections_1-3.tex,% M0863,translated
+submission/ijf/IJF_manuscript.tex,869,870,M0869,text,UA1_Sections_1-3.tex,% M0869,translated
+submission/ijf/IJF_manuscript.tex,871,873,M0871,display,UA1_Sections_1-3.tex,% M0871,preserved
+submission/ijf/IJF_manuscript.tex,874,875,M0874,text,UA1_Sections_1-3.tex,% M0874,translated
+submission/ijf/IJF_manuscript.tex,876,881,M0876,display,UA1_Sections_1-3.tex,% M0876,preserved
+submission/ijf/IJF_manuscript.tex,882,882,M0882,text,UA1_Sections_1-3.tex,% M0882,translated
+submission/ijf/IJF_manuscript.tex,883,886,M0883,display,UA1_Sections_1-3.tex,% M0883,preserved
+submission/ijf/IJF_manuscript.tex,887,887,M0887,text,UA1_Sections_1-3.tex,% M0887,translated
+submission/ijf/IJF_manuscript.tex,888,893,M0888,display,UA1_Sections_1-3.tex,% M0888,preserved
+submission/ijf/IJF_manuscript.tex,894,894,M0894,text,UA1_Sections_1-3.tex,% M0894,translated
+submission/ijf/IJF_manuscript.tex,895,898,M0895,display,UA1_Sections_1-3.tex,% M0895,preserved
+submission/ijf/IJF_manuscript.tex,899,899,M0899,text,UA1_Sections_1-3.tex,% M0899,translated
+submission/ijf/IJF_manuscript.tex,900,905,M0900,display,UA1_Sections_1-3.tex,% M0900,preserved
+submission/ijf/IJF_manuscript.tex,906,908,M0906,text,UA1_Sections_1-3.tex,% M0906,translated
+submission/ijf/IJF_manuscript.tex,909,914,M0909,display,UA1_Sections_1-3.tex,% M0909,preserved
+submission/ijf/IJF_manuscript.tex,915,919,M0915,text,UA1_Sections_1-3.tex,% M0915,translated
+submission/ijf/IJF_manuscript.tex,920,924,M0920,display,UA1_Sections_1-3.tex,% M0920,preserved
+submission/ijf/IJF_manuscript.tex,925,926,M0925,text,UA1_Sections_1-3.tex,% M0925,translated
+submission/ijf/IJF_manuscript.tex,928,930,M0928,text,UA1_Sections_1-3.tex,% M0928,translated
+submission/ijf/IJF_manuscript.tex,931,935,M0931,display,UA1_Sections_1-3.tex,% M0931,preserved
+submission/ijf/IJF_manuscript.tex,936,936,M0936,text,UA1_Sections_1-3.tex,% M0936,translated
+submission/ijf/IJF_manuscript.tex,937,940,M0937,display,UA1_Sections_1-3.tex,% M0937,preserved
+submission/ijf/IJF_manuscript.tex,941,943,M0941,text,UA1_Sections_1-3.tex,% M0941,translated
+submission/ijf/IJF_manuscript.tex,944,949,M0944,display,UA1_Sections_1-3.tex,% M0944,preserved
+submission/ijf/IJF_manuscript.tex,950,952,M0950,text,UA1_Sections_1-3.tex,% M0950,translated
+submission/ijf/IJF_manuscript.tex,953,961,M0953,display,UA1_Sections_1-3.tex,% M0953,preserved
+submission/ijf/IJF_manuscript.tex,962,965,M0962,text,UA1_Sections_1-3.tex,% M0962,translated
+submission/ijf/IJF_manuscript.tex,966,983,M0966,display,UA1_Sections_1-3.tex,% M0966,preserved
+submission/ijf/IJF_manuscript.tex,984,989,M0984,text,UA1_Sections_1-3.tex,% M0984,translated
+submission/ijf/IJF_manuscript.tex,991,994,M0991,text,UA1_Sections_1-3.tex,% M0991,translated
+submission/ijf/IJF_manuscript.tex,995,1002,M0995,display,UA1_Sections_1-3.tex,% M0995,preserved
+submission/ijf/IJF_manuscript.tex,1003,1004,M1003,text,UA1_Sections_1-3.tex,% M1003,translated
+submission/ijf/IJF_manuscript.tex,1006,1010,M1006,text,UA1_Sections_1-3.tex,% M1006,translated
+submission/ijf/IJF_manuscript.tex,1011,1013,M1011,display,UA1_Sections_1-3.tex,% M1011,preserved
+submission/ijf/IJF_manuscript.tex,1014,1015,M1014,text,UA1_Sections_1-3.tex,% M1014,translated
+submission/ijf/IJF_manuscript.tex,1016,1018,M1016,display,UA1_Sections_1-3.tex,% M1016,preserved
+submission/ijf/IJF_manuscript.tex,1019,1024,M1019,text,UA1_Sections_1-3.tex,% M1019,translated
+submission/ijf/IJF_manuscript.tex,1025,1028,M1025,display,UA1_Sections_1-3.tex,% M1025,preserved
+submission/ijf/IJF_manuscript.tex,1031,1031,M1031,text,UA2_Sections_4-6.tex,% M1031,translated
+submission/ijf/IJF_manuscript.tex,1032,1032,M1032,structure,UA2_Sections_4-6.tex,% M1032,preserved
+submission/ijf/IJF_manuscript.tex,1034,1037,M1034,text,UA2_Sections_4-6.tex,% M1034,translated
+submission/ijf/IJF_manuscript.tex,1038,1040,M1038,display,UA2_Sections_4-6.tex,% M1038,preserved
+submission/ijf/IJF_manuscript.tex,1041,1045,M1041,text,UA2_Sections_4-6.tex,% M1041,translated
+submission/ijf/IJF_manuscript.tex,1047,1051,M1047,text,UA2_Sections_4-6.tex,% M1047,translated
+submission/ijf/IJF_manuscript.tex,1052,1055,M1052,display,UA2_Sections_4-6.tex,% M1052,preserved
+submission/ijf/IJF_manuscript.tex,1056,1070,M1056,text,UA2_Sections_4-6.tex,% M1056,translated
+submission/ijf/IJF_manuscript.tex,1072,1072,M1072,text,UA2_Sections_4-6.tex,% M1072,translated
+submission/ijf/IJF_manuscript.tex,1073,1075,M1073,display,UA2_Sections_4-6.tex,% M1073,preserved
+submission/ijf/IJF_manuscript.tex,1076,1076,M1076,text,UA2_Sections_4-6.tex,% M1076,translated
+submission/ijf/IJF_manuscript.tex,1077,1080,M1077,display,UA2_Sections_4-6.tex,% M1077,preserved
+submission/ijf/IJF_manuscript.tex,1081,1089,M1081,text,UA2_Sections_4-6.tex,% M1081,translated
+submission/ijf/IJF_manuscript.tex,1091,1097,M1091,text,UA2_Sections_4-6.tex,% M1091,translated
+submission/ijf/IJF_manuscript.tex,1099,1099,M1099,structure,UA2_Sections_4-6.tex,% M1099,preserved
+submission/ijf/IJF_manuscript.tex,1100,1100,M1100,structure,UA2_Sections_4-6.tex,% M1100,preserved
+submission/ijf/IJF_manuscript.tex,1101,1102,M1101,text,UA2_Sections_4-6.tex,% M1101,translated
+submission/ijf/IJF_manuscript.tex,1103,1103,M1103,structure,UA2_Sections_4-6.tex,% M1103,preserved
+submission/ijf/IJF_manuscript.tex,1104,1104,M1104,structure,UA2_Sections_4-6.tex,% M1104,preserved
+submission/ijf/IJF_manuscript.tex,1105,1105,M1105,structure,UA2_Sections_4-6.tex,% M1105,preserved
+submission/ijf/IJF_manuscript.tex,1106,1106,M1106,structure,UA2_Sections_4-6.tex,% M1106,preserved
+submission/ijf/IJF_manuscript.tex,1107,1107,M1107,structure,UA2_Sections_4-6.tex,% M1107,preserved
+submission/ijf/IJF_manuscript.tex,1108,1108,M1108,structure,UA2_Sections_4-6.tex,% M1108,preserved
+submission/ijf/IJF_manuscript.tex,1109,1109,M1109,structure,UA2_Sections_4-6.tex,% M1109,preserved
+submission/ijf/IJF_manuscript.tex,1110,1110,M1110,structure,UA2_Sections_4-6.tex,% M1110,preserved
+submission/ijf/IJF_manuscript.tex,1111,1111,M1111,structure,UA2_Sections_4-6.tex,% M1111,preserved
+submission/ijf/IJF_manuscript.tex,1112,1112,M1112,structure,UA2_Sections_4-6.tex,% M1112,preserved
+submission/ijf/IJF_manuscript.tex,1113,1113,M1113,structure,UA2_Sections_4-6.tex,% M1113,preserved
+submission/ijf/IJF_manuscript.tex,1114,1114,M1114,structure,UA2_Sections_4-6.tex,% M1114,preserved
+submission/ijf/IJF_manuscript.tex,1117,1118,M1117,text,UA2_Sections_4-6.tex,% M1117,translated
+submission/ijf/IJF_manuscript.tex,1119,1125,M1119,display,UA2_Sections_4-6.tex,% M1119,preserved
+submission/ijf/IJF_manuscript.tex,1126,1132,M1126,text,UA2_Sections_4-6.tex,% M1126,translated
+submission/ijf/IJF_manuscript.tex,1134,1134,M1134,text,UA2_Sections_4-6.tex,% M1134,translated
+submission/ijf/IJF_manuscript.tex,1135,1135,M1135,structure,UA2_Sections_4-6.tex,% M1135,preserved
+submission/ijf/IJF_manuscript.tex,1137,1138,M1137,text,UA2_Sections_4-6.tex,% M1137,translated
+submission/ijf/IJF_manuscript.tex,1139,1141,M1139,display,UA2_Sections_4-6.tex,% M1139,preserved
+submission/ijf/IJF_manuscript.tex,1142,1147,M1142,text,UA2_Sections_4-6.tex,% M1142,translated
+submission/ijf/IJF_manuscript.tex,1149,1152,M1149,caption,UA2_Sections_4-6.tex,% M1149,translated
+submission/ijf/IJF_manuscript.tex,1154,1160,M1154,text,UA2_Sections_4-6.tex,% M1154,translated
+submission/ijf/IJF_manuscript.tex,1161,1165,M1161,display,UA2_Sections_4-6.tex,% M1161,preserved
+submission/ijf/IJF_manuscript.tex,1166,1168,M1166,text,UA2_Sections_4-6.tex,% M1166,translated
+submission/ijf/IJF_manuscript.tex,1170,1176,M1170,text,UA2_Sections_4-6.tex,% M1170,translated
+submission/ijf/IJF_manuscript.tex,1177,1179,M1177,display,UA2_Sections_4-6.tex,% M1177,preserved
+submission/ijf/IJF_manuscript.tex,1180,1187,M1180,text,UA2_Sections_4-6.tex,% M1180,translated
+submission/ijf/IJF_manuscript.tex,1189,1189,M1189,text,UA2_Sections_4-6.tex,% M1189,translated
+submission/ijf/IJF_manuscript.tex,1190,1190,M1190,structure,UA2_Sections_4-6.tex,% M1190,preserved
+submission/ijf/IJF_manuscript.tex,1192,1196,M1192,text,UA2_Sections_4-6.tex,% M1192,translated
+submission/ijf/IJF_manuscript.tex,1197,1197,M1197,text,UA2_Sections_4-6.tex,% M1197,translated
+submission/ijf/IJF_manuscript.tex,1199,1204,M1199,caption,UA2_Sections_4-6.tex,% M1199,translated
+submission/ijf/IJF_manuscript.tex,1206,1210,M1206,text,UA2_Sections_4-6.tex,% M1206,translated
+submission/ijf/IJF_manuscript.tex,1211,1217,M1211,display,UA2_Sections_4-6.tex,% M1211,preserved_with_prose_translated
+submission/ijf/IJF_manuscript.tex,1218,1225,M1218,text,UA2_Sections_4-6.tex,% M1218,translated
+submission/ijf/IJF_manuscript.tex,1227,1236,M1227,text,UA2_Sections_4-6.tex,% M1227,translated
+submission/ijf/IJF_manuscript.tex,1238,1245,M1238,text,UA2_Sections_4-6.tex,% M1238,translated
+submission/ijf/IJF_manuscript.tex,1247,1247,M1247,text,UA2_Sections_4-6.tex,% M1247,translated
+submission/ijf/IJF_manuscript.tex,1248,1248,M1248,structure,UA2_Sections_4-6.tex,% M1248,preserved
+submission/ijf/IJF_manuscript.tex,1250,1257,M1250,text,UA2_Sections_4-6.tex,% M1250,translated
+submission/ijf/IJF_manuscript.tex,1259,1264,M1259,caption,UA2_Sections_4-6.tex,% M1259,translated
+submission/ijf/IJF_manuscript.tex,1266,1270,M1266,text,UA2_Sections_4-6.tex,% M1266,translated
+submission/ijf/IJF_manuscript.tex,1271,1273,M1271,display,UA2_Sections_4-6.tex,% M1271,preserved
+submission/ijf/IJF_manuscript.tex,1274,1277,M1274,text,UA2_Sections_4-6.tex,% M1274,translated
+submission/ijf/IJF_manuscript.tex,1278,1280,M1278,display,UA2_Sections_4-6.tex,% M1278,preserved
+submission/ijf/IJF_manuscript.tex,1281,1285,M1281,text,UA2_Sections_4-6.tex,% M1281,translated
+submission/ijf/IJF_manuscript.tex,1287,1295,M1287,text,UA2_Sections_4-6.tex,% M1287,translated
+submission/ijf/IJF_manuscript.tex,1298,1298,M1298,text,UA2_Sections_4-6.tex,% M1298,translated
+submission/ijf/IJF_manuscript.tex,1299,1299,M1299,structure,UA2_Sections_4-6.tex,% M1299,preserved
+submission/ijf/IJF_manuscript.tex,1301,1301,M1301,text,UA2_Sections_4-6.tex,% M1301,translated
+submission/ijf/IJF_manuscript.tex,1302,1302,M1302,structure,UA2_Sections_4-6.tex,% M1302,preserved
+submission/ijf/IJF_manuscript.tex,1304,1308,M1304,text,UA2_Sections_4-6.tex,% M1304,translated
+submission/ijf/IJF_manuscript.tex,1309,1313,M1309,display,UA2_Sections_4-6.tex,% M1309,preserved
+submission/ijf/IJF_manuscript.tex,1314,1315,M1314,text,UA2_Sections_4-6.tex,% M1314,translated
+submission/ijf/IJF_manuscript.tex,1317,1320,M1317,text,UA2_Sections_4-6.tex,% M1317,translated
+submission/ijf/IJF_manuscript.tex,1321,1325,M1321,display,UA2_Sections_4-6.tex,% M1321,preserved_with_prose_translated
+submission/ijf/IJF_manuscript.tex,1326,1328,M1326,text,UA2_Sections_4-6.tex,% M1326,translated
+submission/ijf/IJF_manuscript.tex,1330,1330,M1330,text,UA2_Sections_4-6.tex,% M1330,translated
+submission/ijf/IJF_manuscript.tex,1331,1331,M1331,structure,UA2_Sections_4-6.tex,% M1331,preserved
+submission/ijf/IJF_manuscript.tex,1333,1340,M1333,text,UA2_Sections_4-6.tex,% M1333,translated
+submission/ijf/IJF_manuscript.tex,1341,1345,M1341,display,UA2_Sections_4-6.tex,% M1341,preserved
+submission/ijf/IJF_manuscript.tex,1346,1346,M1346,text,UA2_Sections_4-6.tex,% M1346,translated
+submission/ijf/IJF_manuscript.tex,1347,1355,M1347,display,UA2_Sections_4-6.tex,% M1347,preserved
+submission/ijf/IJF_manuscript.tex,1356,1358,M1356,text,UA2_Sections_4-6.tex,% M1356,translated
+submission/ijf/IJF_manuscript.tex,1359,1364,M1359,display,UA2_Sections_4-6.tex,% M1359,preserved
+submission/ijf/IJF_manuscript.tex,1366,1372,M1366,text,UA2_Sections_4-6.tex,% M1366,translated
+submission/ijf/IJF_manuscript.tex,1373,1377,M1373,display,UA2_Sections_4-6.tex,% M1373,preserved
+submission/ijf/IJF_manuscript.tex,1378,1378,M1378,text,UA2_Sections_4-6.tex,% M1378,translated
+submission/ijf/IJF_manuscript.tex,1379,1383,M1379,display,UA2_Sections_4-6.tex,% M1379,preserved
+submission/ijf/IJF_manuscript.tex,1384,1384,M1384,text,UA2_Sections_4-6.tex,% M1384,translated
+submission/ijf/IJF_manuscript.tex,1385,1390,M1385,display,UA2_Sections_4-6.tex,% M1385,preserved
+submission/ijf/IJF_manuscript.tex,1391,1391,M1391,text,UA2_Sections_4-6.tex,% M1391,translated
+submission/ijf/IJF_manuscript.tex,1392,1394,M1392,display,UA2_Sections_4-6.tex,% M1392,preserved
+submission/ijf/IJF_manuscript.tex,1395,1397,M1395,text,UA2_Sections_4-6.tex,% M1395,translated
+submission/ijf/IJF_manuscript.tex,1399,1403,M1399,text,UA2_Sections_4-6.tex,% M1399,translated
+submission/ijf/IJF_manuscript.tex,1404,1408,M1404,display,UA2_Sections_4-6.tex,% M1404,preserved
+submission/ijf/IJF_manuscript.tex,1409,1409,M1409,text,UA2_Sections_4-6.tex,% M1409,translated
+submission/ijf/IJF_manuscript.tex,1410,1413,M1410,display,UA2_Sections_4-6.tex,% M1410,preserved
+submission/ijf/IJF_manuscript.tex,1414,1416,M1414,text,UA2_Sections_4-6.tex,% M1414,translated
+submission/ijf/IJF_manuscript.tex,1417,1420,M1417,display,UA2_Sections_4-6.tex,% M1417,preserved
+submission/ijf/IJF_manuscript.tex,1421,1422,M1421,text,UA2_Sections_4-6.tex,% M1421,translated
+submission/ijf/IJF_manuscript.tex,1424,1429,M1424,text,UA2_Sections_4-6.tex,% M1424,translated
+submission/ijf/IJF_manuscript.tex,1431,1436,M1431,text,UA2_Sections_4-6.tex,% M1431,translated
+submission/ijf/IJF_manuscript.tex,1438,1438,M1438,text,UA2_Sections_4-6.tex,% M1438,translated
+submission/ijf/IJF_manuscript.tex,1439,1439,M1439,structure,UA2_Sections_4-6.tex,% M1439,preserved
+submission/ijf/IJF_manuscript.tex,1441,1442,M1441,text,UA2_Sections_4-6.tex,% M1441,translated
+submission/ijf/IJF_manuscript.tex,1443,1445,M1443,display,UA2_Sections_4-6.tex,% M1443,preserved
+submission/ijf/IJF_manuscript.tex,1446,1450,M1446,text,UA2_Sections_4-6.tex,% M1446,translated
+submission/ijf/IJF_manuscript.tex,1451,1454,M1451,display,UA2_Sections_4-6.tex,% M1451,preserved
+submission/ijf/IJF_manuscript.tex,1456,1462,M1456,text,UA2_Sections_4-6.tex,% M1456,translated
+submission/ijf/IJF_manuscript.tex,1464,1464,M1464,text,UA2_Sections_4-6.tex,% M1464,translated
+submission/ijf/IJF_manuscript.tex,1465,1465,M1465,structure,UA2_Sections_4-6.tex,% M1465,preserved
+submission/ijf/IJF_manuscript.tex,1467,1469,M1467,text,UA2_Sections_4-6.tex,% M1467,translated
+submission/ijf/IJF_manuscript.tex,1470,1472,M1470,display,UA2_Sections_4-6.tex,% M1470,preserved
+submission/ijf/IJF_manuscript.tex,1473,1473,M1473,text,UA2_Sections_4-6.tex,% M1473,translated
+submission/ijf/IJF_manuscript.tex,1474,1476,M1474,display,UA2_Sections_4-6.tex,% M1474,preserved
+submission/ijf/IJF_manuscript.tex,1477,1478,M1477,text,UA2_Sections_4-6.tex,% M1477,translated
+submission/ijf/IJF_manuscript.tex,1479,1483,M1479,display,UA2_Sections_4-6.tex,% M1479,preserved
+submission/ijf/IJF_manuscript.tex,1485,1486,M1485,text,UA2_Sections_4-6.tex,% M1485,translated
+submission/ijf/IJF_manuscript.tex,1487,1489,M1487,display,UA2_Sections_4-6.tex,% M1487,preserved
+submission/ijf/IJF_manuscript.tex,1490,1493,M1490,text,UA2_Sections_4-6.tex,% M1490,translated
+submission/ijf/IJF_manuscript.tex,1495,1505,M1495,text,UA2_Sections_4-6.tex,% M1495,translated
+submission/ijf/IJF_manuscript.tex,1507,1507,M1507,text,UA2_Sections_4-6.tex,% M1507,translated
+submission/ijf/IJF_manuscript.tex,1508,1508,M1508,structure,UA2_Sections_4-6.tex,% M1508,preserved
+submission/ijf/IJF_manuscript.tex,1510,1517,M1510,text,UA2_Sections_4-6.tex,% M1510,translated
+submission/ijf/IJF_manuscript.tex,1519,1528,M1519,text,UA2_Sections_4-6.tex,% M1519,translated
+submission/ijf/IJF_manuscript.tex,1531,1531,M1531,text,UA2_Sections_4-6.tex,% M1531,translated
+submission/ijf/IJF_manuscript.tex,1532,1532,M1532,structure,UA2_Sections_4-6.tex,% M1532,preserved
+submission/ijf/IJF_manuscript.tex,1534,1534,M1534,structure,UA2_Sections_4-6.tex,% M1534,preserved
+submission/ijf/IJF_manuscript.tex,1535,1542,M1535,text,UA2_Sections_4-6.tex,% M1535,translated
+submission/ijf/IJF_manuscript.tex,1544,1554,M1544,text,UA2_Sections_4-6.tex,% M1544,translated
+submission/ijf/IJF_manuscript.tex,1556,1564,M1556,text,UA2_Sections_4-6.tex,% M1556,translated
+submission/ijf/IJF_manuscript.tex,1566,1576,M1566,text,UA2_Sections_4-6.tex,% M1566,translated
+submission/ijf/IJF_manuscript.tex,1578,1592,M1578,text,UA2_Sections_4-6.tex,% M1578,translated
+submission/ijf/IJF_manuscript.tex,1593,1593,M1593,structure,UA2_Sections_4-6.tex,% M1593,preserved
+submission/ijf/IJF_manuscript.tex,1596,1596,M1596,text,UA3_Appendix_and_Declarations.tex,% M1596,translated
+submission/ijf/IJF_manuscript.tex,1597,1606,M1597,text,UA3_Appendix_and_Declarations.tex,% M1597,translated
+submission/ijf/IJF_manuscript.tex,1608,1610,M1608,text,UA3_Appendix_and_Declarations.tex,% M1608,translated
+submission/ijf/IJF_manuscript.tex,1612,1615,M1612,text,UA3_Appendix_and_Declarations.tex,% M1612,translated
+submission/ijf/IJF_manuscript.tex,1617,1618,M1617,text,UA3_Appendix_and_Declarations.tex,% M1617,translated
+submission/ijf/IJF_manuscript.tex,1620,1620,M1620,structure,UA3_Appendix_and_Declarations.tex,% M1620,preserved
+submission/ijf/IJF_manuscript.tex,1621,1621,M1621,text,UA3_Appendix_and_Declarations.tex,% M1621,translated
+submission/ijf/IJF_manuscript.tex,1622,1622,M1622,structure,UA3_Appendix_and_Declarations.tex,% M1622,preserved
+submission/ijf/IJF_manuscript.tex,1623,1623,M1623,text,UA3_Appendix_and_Declarations.tex,% M1623,translated
+submission/ijf/IJF_manuscript.tex,1625,1625,M1625,structure,UA3_Appendix_and_Declarations.tex,% M1625,preserved
+submission/ijf/IJF_manuscript.tex,1626,1626,M1626,structure,UA3_Appendix_and_Declarations.tex,% M1626,preserved
+submission/ijf/IJF_manuscript.tex,1628,1630,M1628,text,UA3_Appendix_and_Declarations.tex,% M1628,translated
+submission/ijf/IJF_manuscript.tex,1631,1635,M1631,display,UA3_Appendix_and_Declarations.tex,% M1631,preserved
+submission/ijf/IJF_manuscript.tex,1636,1637,M1636,text,UA3_Appendix_and_Declarations.tex,% M1636,translated
+submission/ijf/IJF_manuscript.tex,1638,1641,M1638,display,UA3_Appendix_and_Declarations.tex,% M1638,preserved
+submission/ijf/IJF_manuscript.tex,1642,1646,M1642,text,UA3_Appendix_and_Declarations.tex,% M1642,translated
+submission/ijf/IJF_manuscript.tex,1648,1648,M1648,text,UA3_Appendix_and_Declarations.tex,% M1648,translated
+submission/ijf/IJF_manuscript.tex,1650,1651,M1650,text,UA3_Appendix_and_Declarations.tex,% M1650,translated
+submission/ijf/IJF_manuscript.tex,1652,1661,M1652,display,UA3_Appendix_and_Declarations.tex,% M1652,preserved
+submission/ijf/IJF_manuscript.tex,1662,1664,M1662,text,UA3_Appendix_and_Declarations.tex,% M1662,translated
+submission/ijf/IJF_manuscript.tex,1665,1678,M1665,display,UA3_Appendix_and_Declarations.tex,% M1665,preserved
+submission/ijf/IJF_manuscript.tex,1679,1679,M1679,text,UA3_Appendix_and_Declarations.tex,% M1679,translated
+submission/ijf/IJF_manuscript.tex,1680,1684,M1680,display,UA3_Appendix_and_Declarations.tex,% M1680,preserved
+submission/ijf/IJF_manuscript.tex,1685,1685,M1685,text,UA3_Appendix_and_Declarations.tex,% M1685,translated
+submission/ijf/IJF_manuscript.tex,1686,1688,M1686,display,UA3_Appendix_and_Declarations.tex,% M1686,preserved
+submission/ijf/IJF_manuscript.tex,1689,1689,M1689,text,UA3_Appendix_and_Declarations.tex,% M1689,translated
+submission/ijf/IJF_manuscript.tex,1690,1704,M1690,display,UA3_Appendix_and_Declarations.tex,% M1690,preserved
+submission/ijf/IJF_manuscript.tex,1705,1705,M1705,text,UA3_Appendix_and_Declarations.tex,% M1705,translated
+submission/ijf/IJF_manuscript.tex,1707,1710,M1707,text,UA3_Appendix_and_Declarations.tex,% M1707,translated
+submission/ijf/IJF_manuscript.tex,1711,1718,M1711,display,UA3_Appendix_and_Declarations.tex,% M1711,preserved
+submission/ijf/IJF_manuscript.tex,1719,1721,M1719,text,UA3_Appendix_and_Declarations.tex,% M1719,translated
+submission/ijf/IJF_manuscript.tex,1722,1724,M1722,display,UA3_Appendix_and_Declarations.tex,% M1722,preserved
+submission/ijf/IJF_manuscript.tex,1725,1726,M1725,text,UA3_Appendix_and_Declarations.tex,% M1725,translated
+submission/ijf/IJF_manuscript.tex,1727,1734,M1727,display,UA3_Appendix_and_Declarations.tex,% M1727,preserved
+submission/ijf/IJF_manuscript.tex,1735,1739,M1735,text,UA3_Appendix_and_Declarations.tex,% M1735,translated
+submission/ijf/IJF_manuscript.tex,1740,1751,M1740,display,UA3_Appendix_and_Declarations.tex,% M1740,preserved
+submission/ijf/IJF_manuscript.tex,1752,1753,M1752,text,UA3_Appendix_and_Declarations.tex,% M1752,translated
+submission/ijf/IJF_manuscript.tex,1754,1767,M1754,display,UA3_Appendix_and_Declarations.tex,% M1754,preserved
+submission/ijf/IJF_manuscript.tex,1768,1769,M1768,text,UA3_Appendix_and_Declarations.tex,% M1768,translated
+submission/ijf/IJF_manuscript.tex,1770,1774,M1770,display,UA3_Appendix_and_Declarations.tex,% M1770,preserved
+submission/ijf/IJF_manuscript.tex,1775,1775,M1775,text,UA3_Appendix_and_Declarations.tex,% M1775,translated
+submission/ijf/IJF_manuscript.tex,1776,1778,M1776,display,UA3_Appendix_and_Declarations.tex,% M1776,preserved
+submission/ijf/IJF_manuscript.tex,1779,1779,M1779,text,UA3_Appendix_and_Declarations.tex,% M1779,translated
+submission/ijf/IJF_manuscript.tex,1780,1789,M1780,display,UA3_Appendix_and_Declarations.tex,% M1780,preserved
+submission/ijf/IJF_manuscript.tex,1790,1790,M1790,text,UA3_Appendix_and_Declarations.tex,% M1790,translated
+submission/ijf/IJF_manuscript.tex,1791,1795,M1791,display,UA3_Appendix_and_Declarations.tex,% M1791,preserved
+submission/ijf/IJF_manuscript.tex,1796,1796,M1796,text,UA3_Appendix_and_Declarations.tex,% M1796,translated
+submission/ijf/IJF_manuscript.tex,1797,1805,M1797,display,UA3_Appendix_and_Declarations.tex,% M1797,preserved
+submission/ijf/IJF_manuscript.tex,1806,1807,M1806,text,UA3_Appendix_and_Declarations.tex,% M1806,translated
+submission/ijf/IJF_manuscript.tex,1808,1810,M1808,display,UA3_Appendix_and_Declarations.tex,% M1808,preserved
+submission/ijf/IJF_manuscript.tex,1811,1812,M1811,text,UA3_Appendix_and_Declarations.tex,% M1811,translated
+submission/ijf/IJF_manuscript.tex,1813,1817,M1813,display,UA3_Appendix_and_Declarations.tex,% M1813,preserved
+submission/ijf/IJF_manuscript.tex,1818,1818,M1818,text,UA3_Appendix_and_Declarations.tex,% M1818,translated
+submission/ijf/IJF_manuscript.tex,1820,1820,M1820,text,UA3_Appendix_and_Declarations.tex,% M1820,translated
+submission/ijf/IJF_manuscript.tex,1822,1823,M1822,text,UA3_Appendix_and_Declarations.tex,% M1822,translated
+submission/ijf/IJF_manuscript.tex,1824,1826,M1824,display,UA3_Appendix_and_Declarations.tex,% M1824,preserved
+submission/ijf/IJF_manuscript.tex,1827,1827,M1827,text,UA3_Appendix_and_Declarations.tex,% M1827,translated
+submission/ijf/IJF_manuscript.tex,1828,1844,M1828,display,UA3_Appendix_and_Declarations.tex,% M1828,preserved
+submission/ijf/IJF_manuscript.tex,1845,1846,M1845,text,UA3_Appendix_and_Declarations.tex,% M1845,translated
+submission/ijf/IJF_manuscript.tex,1847,1852,M1847,display,UA3_Appendix_and_Declarations.tex,% M1847,preserved
+submission/ijf/IJF_manuscript.tex,1853,1857,M1853,text,UA3_Appendix_and_Declarations.tex,% M1853,translated
+submission/ijf/IJF_manuscript.tex,1860,1860,M1860,structure,UA3_Appendix_and_Declarations.tex,% M1860,preserved
+revision/round1/response_to_reviewers.md,1,1,R0001,text,IJF_Response_to_Reviewers_UA.tex,% R0001,translated
+revision/round1/response_to_reviewers.md,3,10,R0002,text,IJF_Response_to_Reviewers_UA.tex,% R0002,translated
+revision/round1/response_to_reviewers.md,12,16,R0011,text,IJF_Response_to_Reviewers_UA.tex,% R0011,translated
+revision/round1/response_to_reviewers.md,18,18,R0017,text,IJF_Response_to_Reviewers_UA.tex,% R0017,translated
+revision/round1/response_to_reviewers.md,20,28,R0019,quote,IJF_Response_to_Reviewers_UA.tex,% R0019,translated
+revision/round1/response_to_reviewers.md,30,33,R0029,text,IJF_Response_to_Reviewers_UA.tex,% R0029,translated
+revision/round1/response_to_reviewers.md,35,35,R0034,text,IJF_Response_to_Reviewers_UA.tex,% R0034,translated
+revision/round1/response_to_reviewers.md,37,46,R0036,quote,IJF_Response_to_Reviewers_UA.tex,% R0036,translated
+revision/round1/response_to_reviewers.md,48,49,R0047,text,IJF_Response_to_Reviewers_UA.tex,% R0047,translated
+revision/round1/response_to_reviewers.md,51,58,R0050,text,IJF_Response_to_Reviewers_UA.tex,% R0050,translated
+revision/round1/response_to_reviewers.md,60,63,R0059,text,IJF_Response_to_Reviewers_UA.tex,% R0059,translated
+revision/round1/response_to_reviewers.md,65,66,R0064,text,IJF_Response_to_Reviewers_UA.tex,% R0064,translated
+revision/round1/response_to_reviewers.md,68,68,R0067,text,IJF_Response_to_Reviewers_UA.tex,% R0067,translated
+revision/round1/response_to_reviewers.md,70,72,R0069,quote,IJF_Response_to_Reviewers_UA.tex,% R0069,translated
+revision/round1/response_to_reviewers.md,74,78,R0073,text,IJF_Response_to_Reviewers_UA.tex,% R0073,translated
+revision/round1/response_to_reviewers.md,80,80,R0079,text,IJF_Response_to_Reviewers_UA.tex,% R0079,translated
+revision/round1/response_to_reviewers.md,82,82,R0081,text,IJF_Response_to_Reviewers_UA.tex,% R0081,translated
+revision/round1/response_to_reviewers.md,84,96,R0083,quote,IJF_Response_to_Reviewers_UA.tex,% R0083,translated
+revision/round1/response_to_reviewers.md,98,98,R0097,text,IJF_Response_to_Reviewers_UA.tex,% R0097,translated
+revision/round1/response_to_reviewers.md,100,105,R0099,text,IJF_Response_to_Reviewers_UA.tex,% R0099,translated
+revision/round1/response_to_reviewers.md,107,110,R0106,text,IJF_Response_to_Reviewers_UA.tex,% R0106,translated
+revision/round1/response_to_reviewers.md,112,116,R0111,text,IJF_Response_to_Reviewers_UA.tex,% R0111,translated
+revision/round1/response_to_reviewers.md,118,120,R0117,text,IJF_Response_to_Reviewers_UA.tex,% R0117,translated
+revision/round1/response_to_reviewers.md,122,123,R0121,text,IJF_Response_to_Reviewers_UA.tex,% R0121,translated
+revision/round1/response_to_reviewers.md,125,125,R0124,text,IJF_Response_to_Reviewers_UA.tex,% R0124,translated
+revision/round1/response_to_reviewers.md,127,142,R0126,quote,IJF_Response_to_Reviewers_UA.tex,% R0126,translated
+revision/round1/response_to_reviewers.md,144,144,R0143,text,IJF_Response_to_Reviewers_UA.tex,% R0143,translated
+revision/round1/response_to_reviewers.md,146,151,R0145,text,IJF_Response_to_Reviewers_UA.tex,% R0145,translated
+revision/round1/response_to_reviewers.md,153,155,R0152,display,IJF_Response_to_Reviewers_UA.tex,% R0152,preserved
+revision/round1/response_to_reviewers.md,157,159,R0156,text,IJF_Response_to_Reviewers_UA.tex,% R0156,translated
+revision/round1/response_to_reviewers.md,161,163,R0160,text,IJF_Response_to_Reviewers_UA.tex,% R0160,translated
+revision/round1/response_to_reviewers.md,165,167,R0164,display,IJF_Response_to_Reviewers_UA.tex,% R0164,preserved
+revision/round1/response_to_reviewers.md,169,172,R0168,text,IJF_Response_to_Reviewers_UA.tex,% R0168,translated
+revision/round1/response_to_reviewers.md,174,174,R0173,text,IJF_Response_to_Reviewers_UA.tex,% R0173,translated
+revision/round1/response_to_reviewers.md,176,178,R0175,display,IJF_Response_to_Reviewers_UA.tex,% R0175,preserved
+revision/round1/response_to_reviewers.md,180,182,R0179,text,IJF_Response_to_Reviewers_UA.tex,% R0179,translated
+revision/round1/response_to_reviewers.md,184,187,R0183,text,IJF_Response_to_Reviewers_UA.tex,% R0183,translated
+revision/round1/response_to_reviewers.md,189,189,R0188,text,IJF_Response_to_Reviewers_UA.tex,% R0188,translated
+revision/round1/response_to_reviewers.md,191,191,R0190,text,IJF_Response_to_Reviewers_UA.tex,% R0190,translated
+revision/round1/response_to_reviewers.md,193,200,R0192,quote,IJF_Response_to_Reviewers_UA.tex,% R0192,translated
+revision/round1/response_to_reviewers.md,202,205,R0201,text,IJF_Response_to_Reviewers_UA.tex,% R0201,translated
+revision/round1/response_to_reviewers.md,207,207,R0206,text,IJF_Response_to_Reviewers_UA.tex,% R0206,translated
+revision/round1/response_to_reviewers.md,209,211,R0208,display,IJF_Response_to_Reviewers_UA.tex,% R0208,preserved
+revision/round1/response_to_reviewers.md,213,213,R0212,text,IJF_Response_to_Reviewers_UA.tex,% R0212,translated
+revision/round1/response_to_reviewers.md,215,219,R0214,display,IJF_Response_to_Reviewers_UA.tex,% R0214,preserved
+revision/round1/response_to_reviewers.md,221,221,R0220,text,IJF_Response_to_Reviewers_UA.tex,% R0220,translated
+revision/round1/response_to_reviewers.md,223,227,R0222,display,IJF_Response_to_Reviewers_UA.tex,% R0222,preserved
+revision/round1/response_to_reviewers.md,229,229,R0228,text,IJF_Response_to_Reviewers_UA.tex,% R0228,translated
+revision/round1/response_to_reviewers.md,231,235,R0230,display,IJF_Response_to_Reviewers_UA.tex,% R0230,preserved
+revision/round1/response_to_reviewers.md,237,237,R0236,text,IJF_Response_to_Reviewers_UA.tex,% R0236,translated
+revision/round1/response_to_reviewers.md,239,239,R0238,text,IJF_Response_to_Reviewers_UA.tex,% R0238,translated
+revision/round1/response_to_reviewers.md,241,245,R0240,display,IJF_Response_to_Reviewers_UA.tex,% R0240,preserved
+revision/round1/response_to_reviewers.md,247,247,R0246,text,IJF_Response_to_Reviewers_UA.tex,% R0246,translated
+revision/round1/response_to_reviewers.md,249,253,R0248,display,IJF_Response_to_Reviewers_UA.tex,% R0248,preserved
+revision/round1/response_to_reviewers.md,255,256,R0254,text,IJF_Response_to_Reviewers_UA.tex,% R0254,translated
+revision/round1/response_to_reviewers.md,258,260,R0257,text,IJF_Response_to_Reviewers_UA.tex,% R0257,translated
+revision/round1/response_to_reviewers.md,262,266,R0261,display,IJF_Response_to_Reviewers_UA.tex,% R0261,preserved
+revision/round1/response_to_reviewers.md,268,268,R0267,text,IJF_Response_to_Reviewers_UA.tex,% R0267,translated
+revision/round1/response_to_reviewers.md,270,271,R0269,text,IJF_Response_to_Reviewers_UA.tex,% R0269,translated
+revision/round1/response_to_reviewers.md,273,273,R0272,text,IJF_Response_to_Reviewers_UA.tex,% R0272,translated
+revision/round1/response_to_reviewers.md,275,285,R0274,quote,IJF_Response_to_Reviewers_UA.tex,% R0274,translated
+revision/round1/response_to_reviewers.md,287,288,R0286,text,IJF_Response_to_Reviewers_UA.tex,% R0286,translated
+revision/round1/response_to_reviewers.md,290,293,R0289,text,IJF_Response_to_Reviewers_UA.tex,% R0289,translated
+revision/round1/response_to_reviewers.md,295,296,R0294,text,IJF_Response_to_Reviewers_UA.tex,% R0294,translated
+revision/round1/response_to_reviewers.md,298,302,R0297,display,IJF_Response_to_Reviewers_UA.tex,% R0297,preserved
+revision/round1/response_to_reviewers.md,304,306,R0303,text,IJF_Response_to_Reviewers_UA.tex,% R0303,translated
+revision/round1/response_to_reviewers.md,308,310,R0307,display,IJF_Response_to_Reviewers_UA.tex,% R0307,preserved
+revision/round1/response_to_reviewers.md,312,315,R0311,text,IJF_Response_to_Reviewers_UA.tex,% R0311,translated
+revision/round1/response_to_reviewers.md,317,319,R0316,text,IJF_Response_to_Reviewers_UA.tex,% R0316,translated
+revision/round1/response_to_reviewers.md,321,325,R0320,display,IJF_Response_to_Reviewers_UA.tex,% R0320,preserved
+revision/round1/response_to_reviewers.md,327,330,R0326,text,IJF_Response_to_Reviewers_UA.tex,% R0326,translated
+revision/round1/response_to_reviewers.md,332,335,R0331,text,IJF_Response_to_Reviewers_UA.tex,% R0331,translated
+revision/round1/response_to_reviewers.md,337,339,R0336,text,IJF_Response_to_Reviewers_UA.tex,% R0336,translated
+revision/round1/response_to_reviewers.md,341,345,R0340,display,IJF_Response_to_Reviewers_UA.tex,% R0340,preserved
+revision/round1/response_to_reviewers.md,347,347,R0346,text,IJF_Response_to_Reviewers_UA.tex,% R0346,translated
+revision/round1/response_to_reviewers.md,349,357,R0348,display,IJF_Response_to_Reviewers_UA.tex,% R0348,preserved
+revision/round1/response_to_reviewers.md,359,359,R0358,text,IJF_Response_to_Reviewers_UA.tex,% R0358,translated
+revision/round1/response_to_reviewers.md,361,366,R0360,display,IJF_Response_to_Reviewers_UA.tex,% R0360,preserved
+revision/round1/response_to_reviewers.md,368,370,R0367,text,IJF_Response_to_Reviewers_UA.tex,% R0367,translated
+revision/round1/response_to_reviewers.md,372,376,R0371,display,IJF_Response_to_Reviewers_UA.tex,% R0371,preserved
+revision/round1/response_to_reviewers.md,378,378,R0377,text,IJF_Response_to_Reviewers_UA.tex,% R0377,translated
+revision/round1/response_to_reviewers.md,380,384,R0379,display,IJF_Response_to_Reviewers_UA.tex,% R0379,preserved
+revision/round1/response_to_reviewers.md,386,386,R0385,text,IJF_Response_to_Reviewers_UA.tex,% R0385,translated
+revision/round1/response_to_reviewers.md,388,395,R0387,display,IJF_Response_to_Reviewers_UA.tex,% R0387,preserved
+revision/round1/response_to_reviewers.md,397,397,R0396,text,IJF_Response_to_Reviewers_UA.tex,% R0396,translated
+revision/round1/response_to_reviewers.md,399,401,R0398,display,IJF_Response_to_Reviewers_UA.tex,% R0398,preserved
+revision/round1/response_to_reviewers.md,403,404,R0402,text,IJF_Response_to_Reviewers_UA.tex,% R0402,translated
+revision/round1/response_to_reviewers.md,406,408,R0405,text,IJF_Response_to_Reviewers_UA.tex,% R0405,translated
+revision/round1/response_to_reviewers.md,410,412,R0409,display,IJF_Response_to_Reviewers_UA.tex,% R0409,preserved
+revision/round1/response_to_reviewers.md,414,414,R0413,text,IJF_Response_to_Reviewers_UA.tex,% R0413,translated
+revision/round1/response_to_reviewers.md,416,420,R0415,display,IJF_Response_to_Reviewers_UA.tex,% R0415,preserved
+revision/round1/response_to_reviewers.md,422,422,R0421,text,IJF_Response_to_Reviewers_UA.tex,% R0421,translated
+revision/round1/response_to_reviewers.md,424,428,R0423,display,IJF_Response_to_Reviewers_UA.tex,% R0423,preserved
+revision/round1/response_to_reviewers.md,430,430,R0429,text,IJF_Response_to_Reviewers_UA.tex,% R0429,translated
+revision/round1/response_to_reviewers.md,432,436,R0431,display,IJF_Response_to_Reviewers_UA.tex,% R0431,preserved
+revision/round1/response_to_reviewers.md,438,438,R0437,text,IJF_Response_to_Reviewers_UA.tex,% R0437,translated
+revision/round1/response_to_reviewers.md,440,444,R0439,display,IJF_Response_to_Reviewers_UA.tex,% R0439,preserved
+revision/round1/response_to_reviewers.md,446,447,R0445,text,IJF_Response_to_Reviewers_UA.tex,% R0445,translated
+revision/round1/response_to_reviewers.md,449,452,R0448,text,IJF_Response_to_Reviewers_UA.tex,% R0448,translated
+revision/round1/response_to_reviewers.md,454,462,R0453,text,IJF_Response_to_Reviewers_UA.tex,% R0453,translated
+revision/round1/response_to_reviewers.md,464,464,R0463,text,IJF_Response_to_Reviewers_UA.tex,% R0463,translated
+revision/round1/response_to_reviewers.md,466,477,R0465,quote,IJF_Response_to_Reviewers_UA.tex,% R0465,translated
+revision/round1/response_to_reviewers.md,479,480,R0465-P2,quote,IJF_Response_to_Reviewers_UA.tex,% R0465-P2,translated
+revision/round1/response_to_reviewers.md,482,483,R0481,text,IJF_Response_to_Reviewers_UA.tex,% R0481,translated
