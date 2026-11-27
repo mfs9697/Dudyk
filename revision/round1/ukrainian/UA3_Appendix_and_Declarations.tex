@@ -1,0 +1,286 @@
+% M1596
+\section*{Заяви та декларації}
+% M1597
+\subsection*{Внески авторів}
+Тетяна Поліщук аналітично розв’язала задачу під керівництвом Михайла Дудика. Михайло Дудик брав участь у розробленні концепції та методики й керував аналітичною роботою. Анатолій Камінський рецензував науковий зміст рукопису. Михайло Селіванов незалежно перевірив і виправив аналітичні й числові результати, відтворив і перевірив розрахунки, підготував рисунки, брав участь в інтерпретації результатів, відновив і відредагував рукопис, підготував англомовну версію та координував подання. Усі автори переглянули остаточний рукопис.
+
+% M1608
+\subsection*{Фінансування}
+Дослідження не отримувало зовнішнього фінансування. Роботу виконано в межах базового фінансування установ авторів.
+
+% M1612
+\subsection*{Доступність даних}
+Усі дані, які підтверджують результати дослідження, наведено в статті. Числові криві й табличні значення отримано за аналітичними співвідношеннями, наведеними в рукописі.
+
+% M1617
+\subsection*{Конфлікт інтересів}
+Автори заявляють про відсутність конфлікту інтересів.
+
+% M1620
+\appendix
+\renewcommand{\theHequation}{appendix.\arabic{equation}}
+% M1621
+\section{Поля напружень і переміщень поблизу кутової точки}
+% M1622
+\label{app:asymptotics}
+% M1623
+\providecommand{\SingularityExponentFigure}{рис.~\ref{fig:singularity-exponents}}
+
+% M1625
+\setcounter{equation}{0}
+% M1626
+\renewcommand{\theequation}{A.\arabic{equation}}
+
+% M1628
+У цьому додатку зібрано характеристичні співвідношення та коефіцієнти асимптотичних полів, використані в основному тексті. Для плоскої деформації безрозмірне відношення пружних характеристик $e$ і параметри матеріалів $\kappa_i$ мають вигляд
+% M1631
+\begin{equation*}
+  e=\frac{1+\nu_2}{1+\nu_1}\frac{E_1}{E_2},
+  \qquad
+  \kappa_i=3-4\nu_i,\qquad i=1,2.
+\end{equation*}
+% M1636
+Для кожного характеристичного показника комплексна змінна перетворення Мелліна $p$ та узагальнене позначення показника сингулярності $\lambda_*$ пов’язані співвідношенням
+% M1638
+\begin{equation*}
+  p=-1-\lambda_*,
+  \qquad -1<\lambda_*<0.
+\end{equation*}
+% M1642
+За фізичний показник беремо найменший дійсний корінь в інтервалі $(-1,0)$, неперервно пов’язаний із відповідною гілкою розв’язку. Випадок $\alpha=\pi/2$ відповідає виродженій границі прямолінійної межі поділу й не розглядається як звичайна внутрішня точка характеристичної гілки.
+
+% M1648
+\subsection{Кутова точка непошкодженої межі поділу}
+
+% M1650
+Для конфігурації без міжфазної тріщини зсуву сингулярна частина поля напружень на межі поділу має вигляд~\citep{NazarenkoKipnis2022Stress}
+% M1652
+\begin{equation}
+\label{eq:app-intact-field}
+\begin{aligned}
+  \tau_{r\theta}(r,\alpha)
+    &=Cg_1r^{\lambda_0}+o\!\left(r^{\lambda_0}\right),\\
+  \sigma_\theta(r,\alpha)
+    &=Cg_2r^{\lambda_0}+o\!\left(r^{\lambda_0}\right),
+    \qquad r\to0,
+\end{aligned}
+\end{equation}
+% M1662
+де $C$ — амплітуда локального сингулярного поля, $\lambda_0$ — показник сингулярності в кутовій точці непошкодженої межі поділу, а $g_1$ і $g_2$ — безрозмірні кутові коефіцієнти, що дорівнюють
+% M1665
+\begin{equation*}
+\begin{aligned}
+  g_1={}&(1-e)\sin[\lambda_0(\pi-\alpha)]
+  \bigl[(\lambda_0+1)\sin2\alpha
+       +\sin\{2(\lambda_0+1)\alpha\}\bigr]\\
+  &+e(1+\kappa_2)\sin(\lambda_0\pi)
+      \sin[(\lambda_0+2)\alpha],\\[2pt]
+  g_2={}&(1-e)\cos[\lambda_0(\pi-\alpha)]
+  \bigl[(\lambda_0+1)\sin2\alpha
+       +\sin\{2(\lambda_0+1)\alpha\}\bigr]\\
+  &+e(1+\kappa_2)\sin(\lambda_0\pi)
+      \cos[(\lambda_0+2)\alpha].
+\end{aligned}
+\end{equation*}
+% M1679
+Показник $\lambda_0$ визначається характеристичним рівнянням
+% M1680
+\begin{equation}
+\label{eq:app-D0-root}
+  D_0(-1-\lambda_0)=0,
+  \qquad -1<\lambda_0<0,
+\end{equation}
+% M1685
+де визначник $D_0(p)$ для кутової точки непошкодженої межі має вигляд
+% M1686
+\begin{equation*}
+  D_0(p)=b_0(p)+e\,b_1(p)+e^2b_2(p),
+\end{equation*}
+% M1689
+а допоміжні функції $b_0(p)$, $b_1(p)$ й $b_2(p)$ задано формулами
+% M1690
+\begin{equation*}
+\begin{aligned}
+  b_0(p)={}&
+  [\sin(2p\alpha)+p\sin(2\alpha)]
+  [\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)],\\[2pt]
+  b_1(p)={}&(1+\kappa_1)(1+\kappa_2)\sin^2(p\pi)\\
+  &-[\sin(2p\alpha)+p\sin(2\alpha)]
+    [\kappa_1\sin\{2p(\pi-\alpha)\}+p\sin(2\alpha)]\\
+  &-[\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]
+    [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)],\\[2pt]
+  b_2(p)={}&
+  [\sin\{2p(\pi-\alpha)\}-p\sin(2\alpha)]
+  [\kappa_2\sin(2p\alpha)-p\sin(2\alpha)].
+\end{aligned}
+\end{equation*}
+% M1705
+\subsection{Кутова точка зі стаціонарною V-подібною міжфазною тріщиною зсуву}
+
+% M1707
+Для заданої стаціонарної V-подібної міжфазної тріщини зсуву кожна з двох симетричних гілок має довжину $l$. На відстанях $r\ll l$ нормальне напруження вздовж бісектриси сектора, зайнятого матеріалом~$i$, має асимптотичний вигляд~\citep{NazarenkoKipnis2022Stress}
+% M1711
+\begin{equation}
+\label{eq:app-cracked-field}
+  \sigma_\theta(r,\beta_i)
+  =CQ_i r^\lambda+o\!\left(r^\lambda\right),
+  \qquad r\to0,
+  \qquad
+  \beta_1=\pi,\quad \beta_2=0.
+\end{equation}
+% M1719
+Тут $\lambda$ — показник сингулярності в кутовій точці конфігурації з тріщиною, а $\beta_i$ — напрямок відповідної бісектриси. Амплітудний коефіцієнт $Q_i$ має вигляд
+% M1722
+\begin{equation*}
+  Q_i=g_1q_i l^{\lambda_0-\lambda},
+\end{equation*}
+% M1725
+де безрозмірний коефіцієнт $q_i$ і похідна $D'(p)$ визначника для кутової точки з тріщиною дорівнюють
+% M1727
+\begin{equation*}
+  q_i=
+  \frac{2S_i(-1-\lambda)K^+(-1-\lambda)G^+(-1-\lambda)}
+  {(\lambda-\lambda_0)D'(-1-\lambda)
+   K^+(-1-\lambda_0)G^+(-1-\lambda_0)},
+  \qquad
+  D'(p)=\frac{\dd D(p)}{\dd p}.
+\end{equation*}
+% M1735
+Функції $S_i(p)$ — допоміжні функції чисельника, визначені нижче. Множники $K^+(p)$ і $G^+(p)$ задано далі в цьому підрозділі. Плюс-фактор базового ядра $G^+(p)$ слід відрізняти від $G_i^+(p)$, який бере участь у факторизації ядра $G_i(p)$ для зони передруйнування в розділі~\ref{sec:derivation}. У явному вигляді маємо
+% M1740
+\begin{equation*}
+\begin{aligned}
+  S_1(p)={}&2e(1+\kappa_2)s_{11}(p)\sin[(p+1)\alpha]\\
+  &+s_{12}(p)
+  \Bigl[(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}
+        +2(1-e)s_{13}(p)\Bigr],\\[2pt]
+  S_2(p)={}&s_{21}(p)
+  \Bigl[e(1+\kappa_2)\sin[(p+1)\alpha]
+        +2(1-e)s_{22}(p)\Bigr]\\
+  &-2(1+\kappa_1)\sin\{p(\pi-\alpha)-\alpha\}\,s_{23}(p),
+\end{aligned}
+\end{equation*}
+% M1752
+де допоміжні функції $s_{mn}(p)$, при $m=1,2$ і $n=1,2,3$, мають вигляд
+% M1754
+\begin{equation*}
+\begin{aligned}
+  s_{11}(p)&=p\cos(p\pi-\alpha)\sin\alpha
+             -\sin[p(\pi-\alpha)]\cos(p\alpha),\\
+  s_{12}(p)&=p\sin2\alpha+\sin(2p\alpha),\\
+  s_{13}(p)&=p\cos[p(\pi-\alpha)]\sin\alpha
+             -\sin[p(\pi-\alpha)]\cos\alpha,\\
+  s_{21}(p)&=\sin[2p(\pi-\alpha)]-p\sin2\alpha,\\
+  s_{22}(p)&=p\cos(p\alpha)\sin\alpha
+             +\sin(p\alpha)\cos\alpha,\\
+  s_{23}(p)&=p\cos(p\pi+\alpha)\sin\alpha
+             +\cos[p(\pi-\alpha)]\sin(p\alpha).
+\end{aligned}
+\end{equation*}
+% M1768
+Показник сингулярності $\lambda$ у кутовій точці конфігурації із заданою стаціонарною V-подібною міжфазною тріщиною задовольняє рівняння
+% M1770
+\begin{equation}
+\label{eq:app-D-root}
+  D(-1-\lambda)=0,
+  \qquad -1<\lambda<0,
+\end{equation}
+% M1775
+де характеристичний визначник $D(p)$ має вигляд
+% M1776
+\begin{equation*}
+  D(p)=a_0(p)+e\,a_1(p),
+\end{equation*}
+% M1779
+а допоміжні функції $a_0(p)$ й $a_1(p)$ задано формулами
+% M1780
+\begin{equation*}
+\begin{aligned}
+  a_0(p)={}&(1+\kappa_1)
+  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]
+  [\sin(2p\alpha)+p\sin2\alpha],\\
+  a_1(p)={}&(1+\kappa_2)
+  [\cos(2p\alpha)-\cos2\alpha]
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha].
+\end{aligned}
+\end{equation*}
+% M1790
+У виразах для коефіцієнтів $q_i$ використано базове ядро
+% M1791
+\begin{equation*}
+  G(p)=
+  \frac{(e+\kappa_1)(1+e\kappa_2)\sin(\pi p)D(p)}
+  {(e+\kappa_1+1+e\kappa_2)\cos(\pi p)D_0(p)}
+\end{equation*}
+% M1796
+і його плюс-фактор
+% M1797
+\begin{equation*}
+  G^+(p)=
+  \exp\!\left\{
+    \frac{1}{2\pi\ii}
+    \int_{-\ii\infty}^{\ii\infty}
+    \frac{\log G(z)}{z-p}\,\dd z
+  \right\},
+  \qquad \operatorname{Re}p<0.
+\end{equation*}
+% M1806
+Тут $z$ — комплексна змінна інтегрування, $\ii^2=-1$, а контур спрямовано вгору вздовж уявної осі. Гамма-функціональний множник має вигляд
+% M1808
+\begin{equation*}
+  K^+(p)=\frac{\Gamma(1-p)}{\Gamma(\tfrac12-p)}.
+\end{equation*}
+% M1811
+Тут $\Gamma$ — гамма-функція Ейлера. Для дійсного $p<0$ величину $G^+(p)$ рівнозначно можна обчислити за допомогою дійсного інтеграла
+% M1813
+\begin{equation*}
+  \log G^+(p)
+  =-\frac{p}{\pi}\int_0^\infty
+    \frac{\log G(\ii t)}{t^2+p^2}\,\dd t.
+\end{equation*}
+% M1818
+Тут $t$ — дійсна змінна інтегрування.
+
+% M1820
+\subsection{Кутова точка із зоною передруйнування}
+
+% M1822
+Для зони передруйнування в матеріалі~$i$ ядро функціонального рівняння з розділу~\ref{sec:derivation} має вигляд
+% M1824
+\begin{equation*}
+  G_i(p)=\frac{D_i(p)\cos(\pi p)}{D(p)\sin(\pi p)}.
+\end{equation*}
+% M1827
+Відповідні характеристичні визначники дорівнюють
+% M1828
+\begin{equation}
+\label{eq:app-post-zone-determinants}
+\begin{aligned}
+  D_1(p)={}&2e(1+\kappa_2)
+  [\cos(2p\alpha)-\cos2\alpha]
+  \{\sin^2[p(\pi-\alpha)]-p^2\sin^2\alpha\}\\
+  &+(1+\kappa_1)
+  [\sin(2p\alpha)+p\sin2\alpha]
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha],\\[3pt]
+  D_2(p)={}&2(1+\kappa_1)
+  [\cos\{2p(\pi-\alpha)\}-\cos2\alpha]
+  [\sin^2(p\alpha)-p^2\sin^2\alpha]\\
+  &+e(1+\kappa_2)
+  [\sin\{2p(\pi-\alpha)\}-p\sin2\alpha]
+  [\sin(2p\alpha)+p\sin2\alpha].
+\end{aligned}
+\end{equation}
+% M1845
+Показник $\lambda_i$ для конфігурації із зоною в матеріалі~$i$ визначається рівнянням
+% M1847
+\begin{equation}
+\label{eq:app-post-zone-root}
+  D_i(-1-\lambda_i)=0,
+  \qquad -1<\lambda_i<0,
+  \qquad i=1,2.
+\end{equation}
+% M1853
+Ці корені визначають криві $\lambda_1$ і $\lambda_2$ на \SingularityExponentFigure. Вони характеризують сингулярність кутової точки за наявності зони передруйнування. У формулах для $d_i$, $\delta_i$ й $J_i$ використовують $\lambda$ з рівняння~\eqref{eq:app-D-root}.
+
+% M1860
+\begin{english}\bibliography{references}\end{english}

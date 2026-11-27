@@ -1,0 +1,33 @@
+\documentclass[11pt]{article}
+\usepackage[authoryear]{natbib}
+\usepackage{authblk}
+\renewcommand{\Authand}{, }
+\renewcommand{\Authands}{, }
+\input{UA_Preamble.tex}
+
+\date{}
+\renewcommand{\bibsection}{\section*{Література}}
+\providecommand{\bibcommenthead}{}
+\bibliographystyle{sn-mathphys-ay}
+\providecommand{\doiurl}[1]{\url{https://doi.org/#1}}
+
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\sigmap}{\sigma^{\prime}}
+\newcommand{\deltap}{\delta^{\prime}}
+\newcommand{\Jp}{J^{\prime}}
+\newcommand{\jump}[1]{\left[\!\left[#1\right]\!\right]}
+\newcommand{\resultfigure}[4][\linewidth]{%
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=#1]{#2}
+    \caption{#3}
+    \label{#4}
+  \end{figure}}
+
+
+\begin{document}
+\input{UA1_Sections_1-3.tex}
+\input{UA2_Sections_4-6.tex}
+\input{UA3_Appendix_and_Declarations.tex}
+\end{document}
