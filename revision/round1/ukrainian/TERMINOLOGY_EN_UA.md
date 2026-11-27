@@ -31,7 +31,7 @@
 | Stress intensity factor | Коефіцієнт інтенсивності напружень |
 | Generalized stress intensity factor | Узагальнений коефіцієнт інтенсивності напружень |
 | Mode I | Мода I (нормальний відрив) |
-| Mode II | Мода II (поперечний зсув) |
+| Mode II | Мода II (зсув у площині) |
 | Fracture toughness | Тріщиностійкість |
 | Mode-II interfacial fracture resistance | Міжфазна тріщиностійкість за модою II |
 | Limiting equilibrium | Гранична рівновага |
@@ -51,7 +51,8 @@
 | Resistance to separation | Опір відриву |
 | Displacement discontinuity | Розрив переміщення |
 | Displacement jump | Стрибок переміщення |
-| Opening-positive displacement trace | Значення переміщення на березі, додатне в напрямку розкриття |
+| Opening-positive displacement trace | Переміщення на березі зони, додатне в напрямку розкриття |
+| Opening-positive displacement-gradient transform | Трансформанта градієнта переміщення на березі зони з урахуванням додатного напрямку розкриття |
 | Displacement gradient | Градієнт переміщення |
 | Tensile normal stress | Розтягувальне нормальне напруження |
 | Compressive normal stress | Стискальне нормальне напруження |
@@ -224,3 +225,12 @@
 У висловах «граничний символ» і «граничне значення» слово «граничний»
 стосується границі аналітичної функції або підходу до поверхні. У
 формулюванні «гранична рівновага» воно стосується механічного стану.
+
+### Уточнення UA6
+
+| English | Preferred Ukrainian |
+|---|---|
+| Energy release rate | Інтенсивність вивільнення енергії |
+| Pole-subtracted split | Розділення з виділенням полюсних доданків |
+| 50-digit precision | 50 десяткових цифр точності |
+| Single-material admissibility | Допустимість зони передруйнування лише в одному з матеріалів |
